@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+@utility container{
+    margin-inline: auto;
+}
+
+:root {
+  --main-color:#155DFC;
+  --bg-color:#DBEAFE;
+;
+}
+
+.main-color{
+    color: var(--main-color);
+}
+
+.bg-color{
+    background-color: var(--bg-color);
+}
+
+.btn-main{
+color: #fff;
+background-color: var(--main-color);
+padding: 2px 10px;
+border: 1px solid #ccc;
+border-radius: 7px;
+cursor: pointer;
+font-size: 14px;
+font-weight: 100;
+}
+
+.btn-main:disabled{
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.btn-main:disabled:hover{
+    background-color: #ccc;
+}
+
+.btn-main:hover{
+    background-color: #0d47a1;
+}
+
+body {
+font-family: "Noto Sans", sans-serif;
+}
+.card{
+    @apply  bg-white border border-gray-200 p-6 rounded relative shadow;
+}

@@ -1,0 +1,50 @@
+<header class="mt-6 mb-10 shadow-md rounded-xl bg-white mx-auto w-full max-w-4xl px-4 sm:px-8 py-8">
+        <div class="w-full max-w-2xl mx-auto justify-center text-center space-y-4">
+            <h2 class="text-black text-2xl sm:text-3xl font-semibold">Get Started</h2>
+            <p class="text-[#837D7D] text-base sm:text-lg">Register and sign up to get started</p>
+            <div class="flex flex-wrap justify-center gap-7 sm:gap-6 text-center mt-5">
+                <button class="px-22 py-3 rounded-lg border border-[#CACACA] bg-white hover:bg-gray-50 transition">
+                    <img  src="/assets/devicon_google.png" alt="google ">
+                </button>
+                <button class="px-22 py-3 rounded-lg border border-[#CACACA] bg-white hover:bg-gray-50 transition">
+                    <img  src="/assets/logos_facebook.png" alt="facebook">
+                </button>
+                <button class="px-22 py-3 rounded-lg border border-[#CACACA] bg-white hover:bg-gray-50 transition">
+                    <img  src="/assets/mdi_apple.png" alt="apple">
+                </button>
+            </div>
+            <!-- the line  (or) -->
+            <div class="flex items-center gap-4 text-sm text-gray-400">
+                <span class="flex-1 h-px bg-gray-200"></span>
+                <span class="text-black text-base font-medium">or</span>
+                <span class="flex-1 h-px bg-gray-200"></span>
+            </div>
+            <!-- regestraion form -->
+            <form action="" class="mt-5 text-left space-y-4">
+                <div>
+                    <label for="fullName" class="text-sm font-medium text-gray-700">Full Name</label>
+                    <input class="mt-1 rounded-lg w-full px-3 py-3 border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400" type="text" name="name" id="fullName" placeholder="Enter Full Name" required>
+                </div>
+                <div>
+                    <label for="email" class="text-sm font-medium text-gray-700">Email</label>
+                    <input class="mt-1 rounded-lg w-full px-3 py-3 border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"  type="email" name="email" id="email" placeholder="Enter Email address" required>
+                </div>
+                <div class="relative">
+                    <label for="password" class="text-sm font-medium text-gray-700">Password</label>
+                    <div class="relative">
+                        <input class="mt-1 rounded-lg w-full px-3 py-3 pr-10 border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"  type="password" name="password" id="password" placeholder="Enter Password" required>
+                        <i class="fa-solid fa-eye absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"></i>
+                    </div>
+                </div>
+                <div class="relative">
+                    <label for="confirmPassword" class="text-sm font-medium text-gray-700">Confirm Password</label>
+                    <div class="relative">
+                        <input class="mt-1 rounded-lg w-full px-3 py-3 pr-10 border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"  type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
+                        <i class="fa-solid fa-eye absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"></i>
+                    </div>
+                </div>
+                <button type="submit" class="w-full bg-blue-500 text-white font-semibold py-3 rounded-lg hover:bg-blue-600 transition">Register</button>
+                <p class="text-center text-md mr-3"> Already have an account?<a href="" class="text-blue-500 underline text-md ml-2 font-semibold"> Login</a> </p>
+            </form>
+        </div>
+    </header>
