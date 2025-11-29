@@ -8,7 +8,7 @@
         public string SiteEngineerPhone { get; set; } = string.Empty;
         public string SiteEngineerSpeciality { get; set; } = string.Empty;
         public ICollection<Store>? Stores { get; set; }
-        public ICollection<ProjectSiteEngineer> ProjectSiteEngineers { get; set; }
+        public ICollection<ProjectSiteEngineer>? ProjectSiteEngineers { get; set; }
 
 
         // public ICollection<ProjectEngineer> ProjectEngineers { get; set; }
