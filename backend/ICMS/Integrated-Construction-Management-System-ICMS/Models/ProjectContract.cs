@@ -17,11 +17,11 @@
 
         public string ClientCondition { get; set; } = string.Empty;
         public string ClientSignature { get; set; } = string.Empty;
-       // public Client? Client { get; set; }
+    
 
         public string ManagerSignature { get; set; } = string.Empty;
         public string ManagerCondition { get; set; } = string.Empty;
-     //  public Manager? Manager { get; set; }
+        
 
 
     }

@@ -9,7 +9,7 @@
         public string SubContractorSpeciality { get; set; } = string.Empty;
         public ICollection<Store>? Stores { get; set; }
 
-        public ICollection<ProjectSubContractor> ProjectSubContractors { get; set; }
+        public ICollection<ProjectSubContractor>? ProjectSubContractors { get; set; }
 
     }
 }

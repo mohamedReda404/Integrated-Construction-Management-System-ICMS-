@@ -8,7 +8,7 @@
         public string MainClintEmail { get; set; } = string.Empty;
         public int MainClientNationalId { get; set; }
         
-        public ICollection<ProjectContract> ProjectContracts { get; set; }
+        public ICollection<ProjectContract>? ProjectContracts { get; set; }
         
 
     }
