@@ -1,0 +1,16 @@
+# Visual Studio temporary files
+.vs/
+
+# Build results
+bin/
+obj/
+Debug/
+Release/
+
+# Logs
+*.log
+
+# IDE files
+.vscode/
+*.user
+*.suo
