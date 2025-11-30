@@ -9,7 +9,8 @@
         public int MainClientNationalId { get; set; }
         
         public ICollection<ProjectContract>? ProjectContracts { get; set; }
-        
+        public ICollection<Project>? Projects { get; set; }
+
 
     }
 }
