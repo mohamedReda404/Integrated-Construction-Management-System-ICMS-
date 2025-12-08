@@ -1,20 +1,23 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿
 
 namespace Integrated_Construction_Management_System_ICMS.Models
 {
     public class ProjectSubContractor
     {
+        //===============INFO==========
         [Key]
         public int ProjectSubContractorId { get; set; }
 
 
-        [Required,ForeignKey("ProjectId")]
-        public int ProjectId { get; set; }
-        public Project? Project { get; set; }
+
+        //===================Relationships(M:1)===============
+        [Required,ForeignKey("ProjectID")]
+        public int ProjectID { get; set; }
+        public Project? project { get; set; }
+
 
         [Required, ForeignKey("SubContractorId")]
         public int SubContractorId { get; set; }
-        public SubContractor? SubContractor { get; set; }
+        public SubContractor? subContractor { get; set; }
     }
 }
