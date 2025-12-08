@@ -7,5 +7,11 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
     [ApiController]
     public class ProjectManeger : ControllerBase
     {
+
+        [HttpGet("GetAllProjects")]
+       public IActionResult GetAll()
+        {
+            return Ok("200");
+        }
     }
 }

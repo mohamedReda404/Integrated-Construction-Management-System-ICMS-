@@ -1,10 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿
 
 namespace Integrated_Construction_Management_System_ICMS.Models
 {
     public class Project
     {
+
+        //========================ProjectINFO=========================
         [Key]
         public int  ProjectID { get; set; }
         [Required,MaxLength(100)]
@@ -15,12 +16,14 @@ namespace Integrated_Construction_Management_System_ICMS.Models
         public string  ProjectDescritpion { get; set; }= string.Empty;
 
 
+
+        //======================ProjectRelations(M:1)===========================
         [Required,ForeignKey("MainClientID")]
         public  int MainClientID { get; set; }
         public MainClient? _mainclinet { get; set; }
 
 
-
+     
         [Required, ForeignKey("ProjectManagerID")]
         public int ProjectManagerID { get; set; }
         public ProjectManager? _ProjectManager { get; set; }
@@ -30,12 +33,34 @@ namespace Integrated_Construction_Management_System_ICMS.Models
         [Required, ForeignKey("FormanID")]
         public int FormanID { get; set; }
         public Foreman? _foreman {  get; set; }
-       
-        public Store? _Store { get; set; }
-        public ProjectContract? _PrjectContract {  get; set; }
-        public ProjectContract? _ProjectContract { get; set; }
+
+
+
+        [Required, ForeignKey("MainCosultantID")]
+        public int MainCosultantID { get; set; }
         public MainConsultant? _mainConsultant { get; set; }
-        public ICollection<ProjectSubContractor>? ProjectSubContractors { get; set; }
+
+        
+        //===========================ProjectRelationships(1:M)====================
+        public List<FormanTasks>? formanTasks {  get; set; }
+        public List<ProjectSubContractor>? projectSubContractors { get; set; }
+        public List<ProjectSiteEngineer>? projectsiteEngineer { get; set; }
+        public List<EngineerBoq>? engineerBoq { get; set; }
+        public List<SubConstractorInvoice>? subConstractorInvoice { get; set; }
+        public List<EngineerInvoice>? engineerInvoice { get; set; }
+        public List<ShopDrawing>? shopDrawing { get; set; }
+        public List<ProjectSubConsultant>? projectSubConsultant { get; set; }
+        public List<GeneralDrowing>? generalDrowing { get; set; }
+        public List<ConsultantBoq>? consultantBoq { get; set; }
+
+
+
+        //======================================ProjectRealtinship (1:1)=============
+        public ProjectContract? prjectContract { get; set; }
+        public Store? store { get; set; }
+       
+       
+       
 
 
     }
