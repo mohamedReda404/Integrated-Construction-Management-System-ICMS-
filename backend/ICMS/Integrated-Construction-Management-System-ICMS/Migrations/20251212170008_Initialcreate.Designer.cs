@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Integrated_Construction_Management_System_ICMS.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251207120856_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20251212170008_Initialcreate")]
+    partial class Initialcreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,7 +46,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                     b.HasIndex("ConsultantBoqId")
                         .IsUnique();
 
-                    b.ToTable("BoqCondtionConsultant");
+                    b.ToTable("BoqCondtionConsultants");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.BoqCondtionEng", b =>
@@ -69,7 +69,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                     b.HasIndex("EngineerBoqID")
                         .IsUnique();
 
-                    b.ToTable("BoqCondtionEng");
+                    b.ToTable("BoqCondtionEngs");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.ConsultantBoq", b =>
@@ -116,7 +116,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
 
                     b.HasIndex("SubConsultantID");
 
-                    b.ToTable("ConsultantBoq");
+                    b.ToTable("ConsultantBoqs");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.EngineerBoq", b =>
@@ -167,7 +167,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
 
                     b.HasIndex("SubContractorId");
 
-                    b.ToTable("EngineerBoq");
+                    b.ToTable("EngineerBoqs");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.EngineerInvoice", b =>
@@ -231,7 +231,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
 
                     b.HasIndex("subConsultantSubCosultantID");
 
-                    b.ToTable("EngineerInvoice");
+                    b.ToTable("EngineerInvoices");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.Foreman", b =>
@@ -264,7 +264,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                     b.HasIndex("ProjectManagerId")
                         .IsUnique();
 
-                    b.ToTable("Foreman");
+                    b.ToTable("Foremen");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.FormanTasks", b =>
@@ -341,7 +341,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
 
                     b.HasIndex("subConsultantSubCosultantID");
 
-                    b.ToTable("GeneralDrowing");
+                    b.ToTable("GeneralDrowings");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.MainClient", b =>
@@ -366,7 +366,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
 
                     b.HasKey("MainClientID");
 
-                    b.ToTable("MainClients");
+                    b.ToTable("MainClient");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.MainConsultant", b =>
@@ -399,7 +399,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                     b.HasIndex("ProjectManagerId")
                         .IsUnique();
 
-                    b.ToTable("MainConsultant");
+                    b.ToTable("MainConsultants");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.Material", b =>
@@ -556,7 +556,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                     b.HasIndex("ProjectManagerId")
                         .IsUnique();
 
-                    b.ToTable("ProjectContract");
+                    b.ToTable("ProjectContracts");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.ProjectManager", b =>
@@ -606,7 +606,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
 
                     b.HasIndex("SiteEngineerId");
 
-                    b.ToTable("ProjectSiteEngineer");
+                    b.ToTable("ProjectSiteEngineers");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.ProjectSubConsultant", b =>
@@ -632,7 +632,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
 
                     b.HasIndex("subConsultantSubCosultantID");
 
-                    b.ToTable("ProjectSubConsultant");
+                    b.ToTable("ProjectSubConsultants");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.ProjectSubContractor", b =>
@@ -655,7 +655,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
 
                     b.HasIndex("SubContractorId");
 
-                    b.ToTable("ProjectSubContractor");
+                    b.ToTable("ProjectSubContractors");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.ShopDrawing", b =>
@@ -697,7 +697,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
 
                     b.HasIndex("subConsultantSubCosultantID");
 
-                    b.ToTable("ShopDrawing");
+                    b.ToTable("ShopDrawings");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.SiteEngineer", b =>
@@ -772,7 +772,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
 
                     b.HasIndex("SubContractorId");
 
-                    b.ToTable("Store");
+                    b.ToTable("Stores");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.SubConstractorInvoice", b =>
@@ -834,7 +834,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
 
                     b.HasIndex("SubContractorId");
 
-                    b.ToTable("SubConstractorInvoice");
+                    b.ToTable("SubConstractorInvoices");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.SubConsultant", b =>
@@ -878,7 +878,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
 
                     b.HasIndex("mainConsultantMainCosultantID");
 
-                    b.ToTable("SubConsultant");
+                    b.ToTable("SubConsultants");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.SubContractor", b =>
@@ -909,7 +909,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
 
                     b.HasKey("SubContractorId");
 
-                    b.ToTable("SubContractor");
+                    b.ToTable("SubContractors");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.BoqCondtionConsultant", b =>
