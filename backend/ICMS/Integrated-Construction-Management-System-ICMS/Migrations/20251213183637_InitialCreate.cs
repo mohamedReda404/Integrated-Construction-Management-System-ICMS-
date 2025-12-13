@@ -12,7 +12,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "MainClients",
+                name: "MainClient",
                 columns: table => new
                 {
                     MainClientID = table.Column<int>(type: "int", nullable: false)
@@ -23,7 +23,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MainClients", x => x.MainClientID);
+                    table.PrimaryKey("PK_MainClient", x => x.MainClientID);
                 });
 
             migrationBuilder.CreateTable(
@@ -42,7 +42,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "SubContractor",
+                name: "SubContractors",
                 columns: table => new
                 {
                     SubContractorId = table.Column<int>(type: "int", nullable: false)
@@ -54,11 +54,11 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SubContractor", x => x.SubContractorId);
+                    table.PrimaryKey("PK_SubContractors", x => x.SubContractorId);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Foreman",
+                name: "Foremen",
                 columns: table => new
                 {
                     ForemanId = table.Column<int>(type: "int", nullable: false)
@@ -70,17 +70,16 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Foreman", x => x.ForemanId);
+                    table.PrimaryKey("PK_Foremen", x => x.ForemanId);
                     table.ForeignKey(
-                        name: "FK_Foreman_ProjectManagers_ProjectManagerId",
+                        name: "FK_Foremen_ProjectManagers_ProjectManagerId",
                         column: x => x.ProjectManagerId,
                         principalTable: "ProjectManagers",
-                        principalColumn: "ProjectManagerId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectManagerId");
                 });
 
             migrationBuilder.CreateTable(
-                name: "MainConsultant",
+                name: "MainConsultants",
                 columns: table => new
                 {
                     MainCosultantID = table.Column<int>(type: "int", nullable: false)
@@ -92,13 +91,12 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MainConsultant", x => x.MainCosultantID);
+                    table.PrimaryKey("PK_MainConsultants", x => x.MainCosultantID);
                     table.ForeignKey(
-                        name: "FK_MainConsultant_ProjectManagers_ProjectManagerId",
+                        name: "FK_MainConsultants_ProjectManagers_ProjectManagerId",
                         column: x => x.ProjectManagerId,
                         principalTable: "ProjectManagers",
-                        principalColumn: "ProjectManagerId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectManagerId");
                 });
 
             migrationBuilder.CreateTable(
@@ -120,8 +118,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                         name: "FK_SiteEngineer_ProjectManagers_ProjectManagerID",
                         column: x => x.ProjectManagerID,
                         principalTable: "ProjectManagers",
-                        principalColumn: "ProjectManagerId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectManagerId");
                 });
 
             migrationBuilder.CreateTable(
@@ -144,27 +141,25 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 {
                     table.PrimaryKey("PK_Projects", x => x.ProjectID);
                     table.ForeignKey(
-                        name: "FK_Projects_Foreman__foremanForemanId",
+                        name: "FK_Projects_Foremen__foremanForemanId",
                         column: x => x._foremanForemanId,
-                        principalTable: "Foreman",
+                        principalTable: "Foremen",
                         principalColumn: "ForemanId");
                     table.ForeignKey(
-                        name: "FK_Projects_MainClients_MainClientID",
+                        name: "FK_Projects_MainClient_MainClientID",
                         column: x => x.MainClientID,
-                        principalTable: "MainClients",
-                        principalColumn: "MainClientID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalTable: "MainClient",
+                        principalColumn: "MainClientID");
                     table.ForeignKey(
-                        name: "FK_Projects_MainConsultant__mainConsultantMainCosultantID",
+                        name: "FK_Projects_MainConsultants__mainConsultantMainCosultantID",
                         column: x => x._mainConsultantMainCosultantID,
-                        principalTable: "MainConsultant",
+                        principalTable: "MainConsultants",
                         principalColumn: "MainCosultantID");
                     table.ForeignKey(
                         name: "FK_Projects_ProjectManagers_ProjectManagerID",
                         column: x => x.ProjectManagerID,
                         principalTable: "ProjectManagers",
-                        principalColumn: "ProjectManagerId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectManagerId");
                 });
 
             migrationBuilder.CreateTable(
@@ -185,20 +180,19 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 {
                     table.PrimaryKey("PK_SubConsultant", x => x.SubCosultantID);
                     table.ForeignKey(
-                        name: "FK_SubConsultant_MainConsultant_mainConsultantMainCosultantID",
+                        name: "FK_SubConsultant_MainConsultants_mainConsultantMainCosultantID",
                         column: x => x.mainConsultantMainCosultantID,
-                        principalTable: "MainConsultant",
+                        principalTable: "MainConsultants",
                         principalColumn: "MainCosultantID");
                     table.ForeignKey(
                         name: "FK_SubConsultant_ProjectManagers_ProjectManagerID",
                         column: x => x.ProjectManagerID,
                         principalTable: "ProjectManagers",
-                        principalColumn: "ProjectManagerId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectManagerId");
                 });
 
             migrationBuilder.CreateTable(
-                name: "EngineerBoq",
+                name: "EngineerBoqs",
                 columns: table => new
                 {
                     EngineerBoqID = table.Column<int>(type: "int", nullable: false)
@@ -215,24 +209,22 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_EngineerBoq", x => x.EngineerBoqID);
+                    table.PrimaryKey("PK_EngineerBoqs", x => x.EngineerBoqID);
                     table.ForeignKey(
-                        name: "FK_EngineerBoq_Projects_ProjectID",
+                        name: "FK_EngineerBoqs_Projects_ProjectID",
                         column: x => x.ProjectID,
                         principalTable: "Projects",
-                        principalColumn: "ProjectID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectID");
                     table.ForeignKey(
-                        name: "FK_EngineerBoq_SiteEngineer_SiteEngineerId",
+                        name: "FK_EngineerBoqs_SiteEngineer_SiteEngineerId",
                         column: x => x.SiteEngineerId,
                         principalTable: "SiteEngineer",
                         principalColumn: "SiteEngineerId");
                     table.ForeignKey(
-                        name: "FK_EngineerBoq_SubContractor_SubContractorId",
+                        name: "FK_EngineerBoqs_SubContractors_SubContractorId",
                         column: x => x.SubContractorId,
-                        principalTable: "SubContractor",
-                        principalColumn: "SubContractorId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalTable: "SubContractors",
+                        principalColumn: "SubContractorId");
                 });
 
             migrationBuilder.CreateTable(
@@ -253,21 +245,19 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 {
                     table.PrimaryKey("PK_FormanTasks", x => x.TaskID);
                     table.ForeignKey(
-                        name: "FK_FormanTasks_Foreman_ForemanId",
+                        name: "FK_FormanTasks_Foremen_ForemanId",
                         column: x => x.ForemanId,
-                        principalTable: "Foreman",
-                        principalColumn: "ForemanId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalTable: "Foremen",
+                        principalColumn: "ForemanId");
                     table.ForeignKey(
                         name: "FK_FormanTasks_Projects_ProjectID",
                         column: x => x.ProjectID,
                         principalTable: "Projects",
-                        principalColumn: "ProjectID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectID");
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProjectContract",
+                name: "ProjectContracts",
                 columns: table => new
                 {
                     ProjectContractId = table.Column<int>(type: "int", nullable: false)
@@ -285,29 +275,26 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProjectContract", x => x.ProjectContractId);
+                    table.PrimaryKey("PK_ProjectContracts", x => x.ProjectContractId);
                     table.ForeignKey(
-                        name: "FK_ProjectContract_MainClients_MainClientId",
+                        name: "FK_ProjectContracts_MainClient_MainClientId",
                         column: x => x.MainClientId,
-                        principalTable: "MainClients",
-                        principalColumn: "MainClientID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalTable: "MainClient",
+                        principalColumn: "MainClientID");
                     table.ForeignKey(
-                        name: "FK_ProjectContract_ProjectManagers_ProjectManagerId",
+                        name: "FK_ProjectContracts_ProjectManagers_ProjectManagerId",
                         column: x => x.ProjectManagerId,
                         principalTable: "ProjectManagers",
-                        principalColumn: "ProjectManagerId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectManagerId");
                     table.ForeignKey(
-                        name: "FK_ProjectContract_Projects_ProjectID",
+                        name: "FK_ProjectContracts_Projects_ProjectID",
                         column: x => x.ProjectID,
                         principalTable: "Projects",
-                        principalColumn: "ProjectID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectID");
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProjectSiteEngineer",
+                name: "ProjectSiteEngineers",
                 columns: table => new
                 {
                     ProjectSiteEngineerID = table.Column<int>(type: "int", nullable: false)
@@ -317,23 +304,21 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProjectSiteEngineer", x => x.ProjectSiteEngineerID);
+                    table.PrimaryKey("PK_ProjectSiteEngineers", x => x.ProjectSiteEngineerID);
                     table.ForeignKey(
-                        name: "FK_ProjectSiteEngineer_Projects_ProjectID",
+                        name: "FK_ProjectSiteEngineers_Projects_ProjectID",
                         column: x => x.ProjectID,
                         principalTable: "Projects",
-                        principalColumn: "ProjectID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectID");
                     table.ForeignKey(
-                        name: "FK_ProjectSiteEngineer_SiteEngineer_SiteEngineerId",
+                        name: "FK_ProjectSiteEngineers_SiteEngineer_SiteEngineerId",
                         column: x => x.SiteEngineerId,
                         principalTable: "SiteEngineer",
-                        principalColumn: "SiteEngineerId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "SiteEngineerId");
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProjectSubContractor",
+                name: "ProjectSubContractors",
                 columns: table => new
                 {
                     ProjectSubContractorId = table.Column<int>(type: "int", nullable: false)
@@ -343,23 +328,21 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProjectSubContractor", x => x.ProjectSubContractorId);
+                    table.PrimaryKey("PK_ProjectSubContractors", x => x.ProjectSubContractorId);
                     table.ForeignKey(
-                        name: "FK_ProjectSubContractor_Projects_ProjectID",
+                        name: "FK_ProjectSubContractors_Projects_ProjectID",
                         column: x => x.ProjectID,
                         principalTable: "Projects",
-                        principalColumn: "ProjectID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectID");
                     table.ForeignKey(
-                        name: "FK_ProjectSubContractor_SubContractor_SubContractorId",
+                        name: "FK_ProjectSubContractors_SubContractors_SubContractorId",
                         column: x => x.SubContractorId,
-                        principalTable: "SubContractor",
-                        principalColumn: "SubContractorId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalTable: "SubContractors",
+                        principalColumn: "SubContractorId");
                 });
 
             migrationBuilder.CreateTable(
-                name: "Store",
+                name: "Stores",
                 columns: table => new
                 {
                     StoreID = table.Column<int>(type: "int", nullable: false)
@@ -372,35 +355,31 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Store", x => x.StoreID);
+                    table.PrimaryKey("PK_Stores", x => x.StoreID);
                     table.ForeignKey(
-                        name: "FK_Store_Foreman_ForemanId",
+                        name: "FK_Stores_Foremen_ForemanId",
                         column: x => x.ForemanId,
-                        principalTable: "Foreman",
-                        principalColumn: "ForemanId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalTable: "Foremen",
+                        principalColumn: "ForemanId");
                     table.ForeignKey(
-                        name: "FK_Store_Projects_ProjectID",
+                        name: "FK_Stores_Projects_ProjectID",
                         column: x => x.ProjectID,
                         principalTable: "Projects",
-                        principalColumn: "ProjectID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectID");
                     table.ForeignKey(
-                        name: "FK_Store_SiteEngineer_SiteEngineerId",
+                        name: "FK_Stores_SiteEngineer_SiteEngineerId",
                         column: x => x.SiteEngineerId,
                         principalTable: "SiteEngineer",
-                        principalColumn: "SiteEngineerId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "SiteEngineerId");
                     table.ForeignKey(
-                        name: "FK_Store_SubContractor_SubContractorId",
+                        name: "FK_Stores_SubContractors_SubContractorId",
                         column: x => x.SubContractorId,
-                        principalTable: "SubContractor",
-                        principalColumn: "SubContractorId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalTable: "SubContractors",
+                        principalColumn: "SubContractorId");
                 });
 
             migrationBuilder.CreateTable(
-                name: "SubConstractorInvoice",
+                name: "SubConstractorInvoices",
                 columns: table => new
                 {
                     SubConstractorInvoiceId = table.Column<int>(type: "int", nullable: false)
@@ -421,29 +400,26 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SubConstractorInvoice", x => x.SubConstractorInvoiceId);
+                    table.PrimaryKey("PK_SubConstractorInvoices", x => x.SubConstractorInvoiceId);
                     table.ForeignKey(
-                        name: "FK_SubConstractorInvoice_Projects_ProjectID",
+                        name: "FK_SubConstractorInvoices_Projects_ProjectID",
                         column: x => x.ProjectID,
                         principalTable: "Projects",
-                        principalColumn: "ProjectID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectID");
                     table.ForeignKey(
-                        name: "FK_SubConstractorInvoice_SiteEngineer_SiteEngineerId",
+                        name: "FK_SubConstractorInvoices_SiteEngineer_SiteEngineerId",
                         column: x => x.SiteEngineerId,
                         principalTable: "SiteEngineer",
-                        principalColumn: "SiteEngineerId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "SiteEngineerId");
                     table.ForeignKey(
-                        name: "FK_SubConstractorInvoice_SubContractor_SubContractorId",
+                        name: "FK_SubConstractorInvoices_SubContractors_SubContractorId",
                         column: x => x.SubContractorId,
-                        principalTable: "SubContractor",
-                        principalColumn: "SubContractorId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalTable: "SubContractors",
+                        principalColumn: "SubContractorId");
                 });
 
             migrationBuilder.CreateTable(
-                name: "ConsultantBoq",
+                name: "ConsultantBoqs",
                 columns: table => new
                 {
                     ConsultantBoqId = table.Column<int>(type: "int", nullable: false)
@@ -459,29 +435,26 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ConsultantBoq", x => x.ConsultantBoqId);
+                    table.PrimaryKey("PK_ConsultantBoqs", x => x.ConsultantBoqId);
                     table.ForeignKey(
-                        name: "FK_ConsultantBoq_Projects_ProjectID",
+                        name: "FK_ConsultantBoqs_Projects_ProjectID",
                         column: x => x.ProjectID,
                         principalTable: "Projects",
-                        principalColumn: "ProjectID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectID");
                     table.ForeignKey(
-                        name: "FK_ConsultantBoq_SiteEngineer_SiteEngineerId",
+                        name: "FK_ConsultantBoqs_SiteEngineer_SiteEngineerId",
                         column: x => x.SiteEngineerId,
                         principalTable: "SiteEngineer",
-                        principalColumn: "SiteEngineerId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "SiteEngineerId");
                     table.ForeignKey(
-                        name: "FK_ConsultantBoq_SubConsultant_SubConsultantID",
+                        name: "FK_ConsultantBoqs_SubConsultant_SubConsultantID",
                         column: x => x.SubConsultantID,
                         principalTable: "SubConsultant",
-                        principalColumn: "SubCosultantID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "SubCosultantID");
                 });
 
             migrationBuilder.CreateTable(
-                name: "EngineerInvoice",
+                name: "EngineerInvoices",
                 columns: table => new
                 {
                     EngineerInvoiceId = table.Column<int>(type: "int", nullable: false)
@@ -503,28 +476,26 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_EngineerInvoice", x => x.EngineerInvoiceId);
+                    table.PrimaryKey("PK_EngineerInvoices", x => x.EngineerInvoiceId);
                     table.ForeignKey(
-                        name: "FK_EngineerInvoice_Projects_ProjectID",
+                        name: "FK_EngineerInvoices_Projects_ProjectID",
                         column: x => x.ProjectID,
                         principalTable: "Projects",
-                        principalColumn: "ProjectID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectID");
                     table.ForeignKey(
-                        name: "FK_EngineerInvoice_SiteEngineer_SiteEngineerId",
+                        name: "FK_EngineerInvoices_SiteEngineer_SiteEngineerId",
                         column: x => x.SiteEngineerId,
                         principalTable: "SiteEngineer",
-                        principalColumn: "SiteEngineerId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "SiteEngineerId");
                     table.ForeignKey(
-                        name: "FK_EngineerInvoice_SubConsultant_subConsultantSubCosultantID",
+                        name: "FK_EngineerInvoices_SubConsultant_subConsultantSubCosultantID",
                         column: x => x.subConsultantSubCosultantID,
                         principalTable: "SubConsultant",
                         principalColumn: "SubCosultantID");
                 });
 
             migrationBuilder.CreateTable(
-                name: "GeneralDrowing",
+                name: "GeneralDrowings",
                 columns: table => new
                 {
                     GeneralDrowingId = table.Column<int>(type: "int", nullable: false)
@@ -537,22 +508,21 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_GeneralDrowing", x => x.GeneralDrowingId);
+                    table.PrimaryKey("PK_GeneralDrowings", x => x.GeneralDrowingId);
                     table.ForeignKey(
-                        name: "FK_GeneralDrowing_Projects_ProjectID",
+                        name: "FK_GeneralDrowings_Projects_ProjectID",
                         column: x => x.ProjectID,
                         principalTable: "Projects",
-                        principalColumn: "ProjectID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectID");
                     table.ForeignKey(
-                        name: "FK_GeneralDrowing_SubConsultant_subConsultantSubCosultantID",
+                        name: "FK_GeneralDrowings_SubConsultant_subConsultantSubCosultantID",
                         column: x => x.subConsultantSubCosultantID,
                         principalTable: "SubConsultant",
                         principalColumn: "SubCosultantID");
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProjectSubConsultant",
+                name: "ProjectSubConsultants",
                 columns: table => new
                 {
                     ProjectSubConsultantId = table.Column<int>(type: "int", nullable: false)
@@ -563,22 +533,21 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProjectSubConsultant", x => x.ProjectSubConsultantId);
+                    table.PrimaryKey("PK_ProjectSubConsultants", x => x.ProjectSubConsultantId);
                     table.ForeignKey(
-                        name: "FK_ProjectSubConsultant_Projects_ProjectID",
+                        name: "FK_ProjectSubConsultants_Projects_ProjectID",
                         column: x => x.ProjectID,
                         principalTable: "Projects",
-                        principalColumn: "ProjectID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectID");
                     table.ForeignKey(
-                        name: "FK_ProjectSubConsultant_SubConsultant_subConsultantSubCosultantID",
+                        name: "FK_ProjectSubConsultants_SubConsultant_subConsultantSubCosultantID",
                         column: x => x.subConsultantSubCosultantID,
                         principalTable: "SubConsultant",
                         principalColumn: "SubCosultantID");
                 });
 
             migrationBuilder.CreateTable(
-                name: "ShopDrawing",
+                name: "ShopDrawings",
                 columns: table => new
                 {
                     ShopDrawingId = table.Column<int>(type: "int", nullable: false)
@@ -593,28 +562,26 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ShopDrawing", x => x.ShopDrawingId);
+                    table.PrimaryKey("PK_ShopDrawings", x => x.ShopDrawingId);
                     table.ForeignKey(
-                        name: "FK_ShopDrawing_Projects_ProjectID",
+                        name: "FK_ShopDrawings_Projects_ProjectID",
                         column: x => x.ProjectID,
                         principalTable: "Projects",
-                        principalColumn: "ProjectID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectID");
                     table.ForeignKey(
-                        name: "FK_ShopDrawing_SiteEngineer_SiteEngineerId",
+                        name: "FK_ShopDrawings_SiteEngineer_SiteEngineerId",
                         column: x => x.SiteEngineerId,
                         principalTable: "SiteEngineer",
-                        principalColumn: "SiteEngineerId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "SiteEngineerId");
                     table.ForeignKey(
-                        name: "FK_ShopDrawing_SubConsultant_subConsultantSubCosultantID",
+                        name: "FK_ShopDrawings_SubConsultant_subConsultantSubCosultantID",
                         column: x => x.subConsultantSubCosultantID,
                         principalTable: "SubConsultant",
                         principalColumn: "SubCosultantID");
                 });
 
             migrationBuilder.CreateTable(
-                name: "BoqCondtionEng",
+                name: "BoqCondtionEngs",
                 columns: table => new
                 {
                     BoqCondtionEngId = table.Column<int>(type: "int", nullable: false)
@@ -624,13 +591,12 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BoqCondtionEng", x => x.BoqCondtionEngId);
+                    table.PrimaryKey("PK_BoqCondtionEngs", x => x.BoqCondtionEngId);
                     table.ForeignKey(
-                        name: "FK_BoqCondtionEng_EngineerBoq_EngineerBoqID",
+                        name: "FK_BoqCondtionEngs_EngineerBoqs_EngineerBoqID",
                         column: x => x.EngineerBoqID,
-                        principalTable: "EngineerBoq",
-                        principalColumn: "EngineerBoqID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalTable: "EngineerBoqs",
+                        principalColumn: "EngineerBoqID");
                 });
 
             migrationBuilder.CreateTable(
@@ -645,7 +611,8 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                     MaterialDescription = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     DateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ProjectManagerID = table.Column<int>(type: "int", nullable: false),
-                    StoreId = table.Column<int>(type: "int", nullable: false)
+                    StoreId = table.Column<int>(type: "int", nullable: false),
+                    SubContractorId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -654,18 +621,21 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                         name: "FK_Material_ProjectManagers_ProjectManagerID",
                         column: x => x.ProjectManagerID,
                         principalTable: "ProjectManagers",
-                        principalColumn: "ProjectManagerId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ProjectManagerId");
                     table.ForeignKey(
-                        name: "FK_Material_Store_StoreId",
+                        name: "FK_Material_Stores_StoreId",
                         column: x => x.StoreId,
-                        principalTable: "Store",
-                        principalColumn: "StoreID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalTable: "Stores",
+                        principalColumn: "StoreID");
+                    table.ForeignKey(
+                        name: "FK_Material_SubContractors_SubContractorId",
+                        column: x => x.SubContractorId,
+                        principalTable: "SubContractors",
+                        principalColumn: "SubContractorId");
                 });
 
             migrationBuilder.CreateTable(
-                name: "BoqCondtionConsultant",
+                name: "BoqCondtionConsultants",
                 columns: table => new
                 {
                     BoqCondtionConsultantId = table.Column<int>(type: "int", nullable: false)
@@ -675,75 +645,74 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BoqCondtionConsultant", x => x.BoqCondtionConsultantId);
+                    table.PrimaryKey("PK_BoqCondtionConsultants", x => x.BoqCondtionConsultantId);
                     table.ForeignKey(
-                        name: "FK_BoqCondtionConsultant_ConsultantBoq_ConsultantBoqId",
+                        name: "FK_BoqCondtionConsultants_ConsultantBoqs_ConsultantBoqId",
                         column: x => x.ConsultantBoqId,
-                        principalTable: "ConsultantBoq",
-                        principalColumn: "ConsultantBoqId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalTable: "ConsultantBoqs",
+                        principalColumn: "ConsultantBoqId");
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_BoqCondtionConsultant_ConsultantBoqId",
-                table: "BoqCondtionConsultant",
+                name: "IX_BoqCondtionConsultants_ConsultantBoqId",
+                table: "BoqCondtionConsultants",
                 column: "ConsultantBoqId",
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_BoqCondtionEng_EngineerBoqID",
-                table: "BoqCondtionEng",
+                name: "IX_BoqCondtionEngs_EngineerBoqID",
+                table: "BoqCondtionEngs",
                 column: "EngineerBoqID",
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_ConsultantBoq_ProjectID",
-                table: "ConsultantBoq",
+                name: "IX_ConsultantBoqs_ProjectID",
+                table: "ConsultantBoqs",
                 column: "ProjectID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ConsultantBoq_SiteEngineerId",
-                table: "ConsultantBoq",
+                name: "IX_ConsultantBoqs_SiteEngineerId",
+                table: "ConsultantBoqs",
                 column: "SiteEngineerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ConsultantBoq_SubConsultantID",
-                table: "ConsultantBoq",
+                name: "IX_ConsultantBoqs_SubConsultantID",
+                table: "ConsultantBoqs",
                 column: "SubConsultantID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_EngineerBoq_ProjectID",
-                table: "EngineerBoq",
+                name: "IX_EngineerBoqs_ProjectID",
+                table: "EngineerBoqs",
                 column: "ProjectID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_EngineerBoq_SiteEngineerId",
-                table: "EngineerBoq",
+                name: "IX_EngineerBoqs_SiteEngineerId",
+                table: "EngineerBoqs",
                 column: "SiteEngineerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_EngineerBoq_SubContractorId",
-                table: "EngineerBoq",
+                name: "IX_EngineerBoqs_SubContractorId",
+                table: "EngineerBoqs",
                 column: "SubContractorId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_EngineerInvoice_ProjectID",
-                table: "EngineerInvoice",
+                name: "IX_EngineerInvoices_ProjectID",
+                table: "EngineerInvoices",
                 column: "ProjectID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_EngineerInvoice_SiteEngineerId",
-                table: "EngineerInvoice",
+                name: "IX_EngineerInvoices_SiteEngineerId",
+                table: "EngineerInvoices",
                 column: "SiteEngineerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_EngineerInvoice_subConsultantSubCosultantID",
-                table: "EngineerInvoice",
+                name: "IX_EngineerInvoices_subConsultantSubCosultantID",
+                table: "EngineerInvoices",
                 column: "subConsultantSubCosultantID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Foreman_ProjectManagerId",
-                table: "Foreman",
+                name: "IX_Foremen_ProjectManagerId",
+                table: "Foremen",
                 column: "ProjectManagerId",
                 unique: true);
 
@@ -758,18 +727,18 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 column: "ProjectID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_GeneralDrowing_ProjectID",
-                table: "GeneralDrowing",
+                name: "IX_GeneralDrowings_ProjectID",
+                table: "GeneralDrowings",
                 column: "ProjectID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_GeneralDrowing_subConsultantSubCosultantID",
-                table: "GeneralDrowing",
+                name: "IX_GeneralDrowings_subConsultantSubCosultantID",
+                table: "GeneralDrowings",
                 column: "subConsultantSubCosultantID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MainConsultant_ProjectManagerId",
-                table: "MainConsultant",
+                name: "IX_MainConsultants_ProjectManagerId",
+                table: "MainConsultants",
                 column: "ProjectManagerId",
                 unique: true);
 
@@ -784,20 +753,25 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 column: "StoreId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProjectContract_MainClientId",
-                table: "ProjectContract",
+                name: "IX_Material_SubContractorId",
+                table: "Material",
+                column: "SubContractorId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProjectContracts_MainClientId",
+                table: "ProjectContracts",
                 column: "MainClientId",
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProjectContract_ProjectID",
-                table: "ProjectContract",
+                name: "IX_ProjectContracts_ProjectID",
+                table: "ProjectContracts",
                 column: "ProjectID",
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProjectContract_ProjectManagerId",
-                table: "ProjectContract",
+                name: "IX_ProjectContracts_ProjectManagerId",
+                table: "ProjectContracts",
                 column: "ProjectManagerId",
                 unique: true);
 
@@ -822,48 +796,48 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 column: "ProjectManagerID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProjectSiteEngineer_ProjectID",
-                table: "ProjectSiteEngineer",
+                name: "IX_ProjectSiteEngineers_ProjectID",
+                table: "ProjectSiteEngineers",
                 column: "ProjectID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProjectSiteEngineer_SiteEngineerId",
-                table: "ProjectSiteEngineer",
+                name: "IX_ProjectSiteEngineers_SiteEngineerId",
+                table: "ProjectSiteEngineers",
                 column: "SiteEngineerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProjectSubConsultant_ProjectID",
-                table: "ProjectSubConsultant",
+                name: "IX_ProjectSubConsultants_ProjectID",
+                table: "ProjectSubConsultants",
                 column: "ProjectID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProjectSubConsultant_subConsultantSubCosultantID",
-                table: "ProjectSubConsultant",
+                name: "IX_ProjectSubConsultants_subConsultantSubCosultantID",
+                table: "ProjectSubConsultants",
                 column: "subConsultantSubCosultantID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProjectSubContractor_ProjectID",
-                table: "ProjectSubContractor",
+                name: "IX_ProjectSubContractors_ProjectID",
+                table: "ProjectSubContractors",
                 column: "ProjectID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProjectSubContractor_SubContractorId",
-                table: "ProjectSubContractor",
+                name: "IX_ProjectSubContractors_SubContractorId",
+                table: "ProjectSubContractors",
                 column: "SubContractorId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ShopDrawing_ProjectID",
-                table: "ShopDrawing",
+                name: "IX_ShopDrawings_ProjectID",
+                table: "ShopDrawings",
                 column: "ProjectID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ShopDrawing_SiteEngineerId",
-                table: "ShopDrawing",
+                name: "IX_ShopDrawings_SiteEngineerId",
+                table: "ShopDrawings",
                 column: "SiteEngineerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ShopDrawing_subConsultantSubCosultantID",
-                table: "ShopDrawing",
+                name: "IX_ShopDrawings_subConsultantSubCosultantID",
+                table: "ShopDrawings",
                 column: "subConsultantSubCosultantID");
 
             migrationBuilder.CreateIndex(
@@ -872,39 +846,39 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 column: "ProjectManagerID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Store_ForemanId",
-                table: "Store",
+                name: "IX_Stores_ForemanId",
+                table: "Stores",
                 column: "ForemanId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Store_ProjectID",
-                table: "Store",
+                name: "IX_Stores_ProjectID",
+                table: "Stores",
                 column: "ProjectID",
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Store_SiteEngineerId",
-                table: "Store",
+                name: "IX_Stores_SiteEngineerId",
+                table: "Stores",
                 column: "SiteEngineerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Store_SubContractorId",
-                table: "Store",
+                name: "IX_Stores_SubContractorId",
+                table: "Stores",
                 column: "SubContractorId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SubConstractorInvoice_ProjectID",
-                table: "SubConstractorInvoice",
+                name: "IX_SubConstractorInvoices_ProjectID",
+                table: "SubConstractorInvoices",
                 column: "ProjectID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SubConstractorInvoice_SiteEngineerId",
-                table: "SubConstractorInvoice",
+                name: "IX_SubConstractorInvoices_SiteEngineerId",
+                table: "SubConstractorInvoices",
                 column: "SiteEngineerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SubConstractorInvoice_SubContractorId",
-                table: "SubConstractorInvoice",
+                name: "IX_SubConstractorInvoices_SubContractorId",
+                table: "SubConstractorInvoices",
                 column: "SubContractorId");
 
             migrationBuilder.CreateIndex(
@@ -922,49 +896,49 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "BoqCondtionConsultant");
+                name: "BoqCondtionConsultants");
 
             migrationBuilder.DropTable(
-                name: "BoqCondtionEng");
+                name: "BoqCondtionEngs");
 
             migrationBuilder.DropTable(
-                name: "EngineerInvoice");
+                name: "EngineerInvoices");
 
             migrationBuilder.DropTable(
                 name: "FormanTasks");
 
             migrationBuilder.DropTable(
-                name: "GeneralDrowing");
+                name: "GeneralDrowings");
 
             migrationBuilder.DropTable(
                 name: "Material");
 
             migrationBuilder.DropTable(
-                name: "ProjectContract");
+                name: "ProjectContracts");
 
             migrationBuilder.DropTable(
-                name: "ProjectSiteEngineer");
+                name: "ProjectSiteEngineers");
 
             migrationBuilder.DropTable(
-                name: "ProjectSubConsultant");
+                name: "ProjectSubConsultants");
 
             migrationBuilder.DropTable(
-                name: "ProjectSubContractor");
+                name: "ProjectSubContractors");
 
             migrationBuilder.DropTable(
-                name: "ShopDrawing");
+                name: "ShopDrawings");
 
             migrationBuilder.DropTable(
-                name: "SubConstractorInvoice");
+                name: "SubConstractorInvoices");
 
             migrationBuilder.DropTable(
-                name: "ConsultantBoq");
+                name: "ConsultantBoqs");
 
             migrationBuilder.DropTable(
-                name: "EngineerBoq");
+                name: "EngineerBoqs");
 
             migrationBuilder.DropTable(
-                name: "Store");
+                name: "Stores");
 
             migrationBuilder.DropTable(
                 name: "SubConsultant");
@@ -976,16 +950,16 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 name: "SiteEngineer");
 
             migrationBuilder.DropTable(
-                name: "SubContractor");
+                name: "SubContractors");
 
             migrationBuilder.DropTable(
-                name: "Foreman");
+                name: "Foremen");
 
             migrationBuilder.DropTable(
-                name: "MainClients");
+                name: "MainClient");
 
             migrationBuilder.DropTable(
-                name: "MainConsultant");
+                name: "MainConsultants");
 
             migrationBuilder.DropTable(
                 name: "ProjectManagers");

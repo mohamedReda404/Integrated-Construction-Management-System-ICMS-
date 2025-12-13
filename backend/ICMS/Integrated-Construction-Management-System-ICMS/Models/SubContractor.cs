@@ -19,7 +19,7 @@ namespace Integrated_Construction_Management_System_ICMS.Models
 
         //===========Relationships(1:M)===========
         public ICollection<EngineerBoq>? engineerBoq { get; set; }
-        public ICollection<Store>? stores { get; set; }
+        public ICollection<Material>? materials { get; set; }
         public ICollection<ProjectSubContractor>? projectSubContractors { get; set; }
         public ICollection<SubConstractorInvoice>? subConstractorInvoice { get; set; }
 

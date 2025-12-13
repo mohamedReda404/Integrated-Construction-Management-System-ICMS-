@@ -1,2 +1,3 @@
 ﻿global using System.ComponentModel.DataAnnotations;
 global using System.ComponentModel.DataAnnotations.Schema;
+global using Integrated_Construction_Management_System_ICMS.Persistence;
