@@ -82,7 +82,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 name: "MainConsultants",
                 columns: table => new
                 {
-                    MainCosultantID = table.Column<int>(type: "int", nullable: false)
+                    MaincosultantID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MainCosultantName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(11)", maxLength: 11, nullable: false),
@@ -91,7 +91,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MainConsultants", x => x.MainCosultantID);
+                    table.PrimaryKey("PK_MainConsultants", x => x.MaincosultantID);
                     table.ForeignKey(
                         name: "FK_MainConsultants_ProjectManagers_ProjectManagerId",
                         column: x => x.ProjectManagerId,
@@ -131,18 +131,16 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                     ProjectLocation = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     ProjectDescritpion = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
                     MainClientID = table.Column<int>(type: "int", nullable: false),
-                    ProjectManagerID = table.Column<int>(type: "int", nullable: false),
-                    FormanID = table.Column<int>(type: "int", nullable: false),
-                    _foremanForemanId = table.Column<int>(type: "int", nullable: true),
-                    MainCosultantID = table.Column<int>(type: "int", nullable: false),
-                    _mainConsultantMainCosultantID = table.Column<int>(type: "int", nullable: true)
+                    ProjectManagerId = table.Column<int>(type: "int", nullable: false),
+                    ForemanId = table.Column<int>(type: "int", nullable: false),
+                    mainConsultanttMaincosultantID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Projects", x => x.ProjectID);
                     table.ForeignKey(
-                        name: "FK_Projects_Foremen__foremanForemanId",
-                        column: x => x._foremanForemanId,
+                        name: "FK_Projects_Foremen_ForemanId",
+                        column: x => x.ForemanId,
                         principalTable: "Foremen",
                         principalColumn: "ForemanId");
                     table.ForeignKey(
@@ -151,13 +149,13 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                         principalTable: "MainClient",
                         principalColumn: "MainClientID");
                     table.ForeignKey(
-                        name: "FK_Projects_MainConsultants__mainConsultantMainCosultantID",
-                        column: x => x._mainConsultantMainCosultantID,
+                        name: "FK_Projects_MainConsultants_mainConsultanttMaincosultantID",
+                        column: x => x.mainConsultanttMaincosultantID,
                         principalTable: "MainConsultants",
-                        principalColumn: "MainCosultantID");
+                        principalColumn: "MaincosultantID");
                     table.ForeignKey(
-                        name: "FK_Projects_ProjectManagers_ProjectManagerID",
-                        column: x => x.ProjectManagerID,
+                        name: "FK_Projects_ProjectManagers_ProjectManagerId",
+                        column: x => x.ProjectManagerId,
                         principalTable: "ProjectManagers",
                         principalColumn: "ProjectManagerId");
                 });
@@ -174,16 +172,16 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                     Speciality = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ProjectManagerID = table.Column<int>(type: "int", nullable: false),
                     MainCosultantID = table.Column<int>(type: "int", nullable: false),
-                    mainConsultantMainCosultantID = table.Column<int>(type: "int", nullable: true)
+                    mainConsultantMaincosultantID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_SubConsultant", x => x.SubCosultantID);
                     table.ForeignKey(
-                        name: "FK_SubConsultant_MainConsultants_mainConsultantMainCosultantID",
-                        column: x => x.mainConsultantMainCosultantID,
+                        name: "FK_SubConsultant_MainConsultants_mainConsultantMaincosultantID",
+                        column: x => x.mainConsultantMaincosultantID,
                         principalTable: "MainConsultants",
-                        principalColumn: "MainCosultantID");
+                        principalColumn: "MaincosultantID");
                     table.ForeignKey(
                         name: "FK_SubConsultant_ProjectManagers_ProjectManagerID",
                         column: x => x.ProjectManagerID,
@@ -776,14 +774,9 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Projects__foremanForemanId",
+                name: "IX_Projects_ForemanId",
                 table: "Projects",
-                column: "_foremanForemanId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Projects__mainConsultantMainCosultantID",
-                table: "Projects",
-                column: "_mainConsultantMainCosultantID");
+                column: "ForemanId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Projects_MainClientID",
@@ -791,9 +784,14 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 column: "MainClientID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Projects_ProjectManagerID",
+                name: "IX_Projects_mainConsultanttMaincosultantID",
                 table: "Projects",
-                column: "ProjectManagerID");
+                column: "mainConsultanttMaincosultantID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Projects_ProjectManagerId",
+                table: "Projects",
+                column: "ProjectManagerId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ProjectSiteEngineers_ProjectID",
@@ -882,9 +880,9 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                 column: "SubContractorId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SubConsultant_mainConsultantMainCosultantID",
+                name: "IX_SubConsultant_mainConsultantMaincosultantID",
                 table: "SubConsultant",
-                column: "mainConsultantMainCosultantID");
+                column: "mainConsultantMaincosultantID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_SubConsultant_ProjectManagerID",

@@ -7,7 +7,7 @@ namespace Integrated_Construction_Management_System_ICMS.Services
     {
         private readonly AppDbContext _context= context;
         public async Task<Foreman> Get(int id)
-        {
+        {   
             return await _context.Foremen.FindAsync(id);
         }
     }
