@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Integrated_Construction_Management_System_ICMS.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251213183637_InitialCreate")]
+    [Migration("20251214012254_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -371,11 +371,11 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.MainConsultant", b =>
                 {
-                    b.Property<int>("MainCosultantID")
+                    b.Property<int>("MaincosultantID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MainCosultantID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaincosultantID"));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -394,7 +394,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                     b.Property<int>("ProjectManagerId")
                         .HasColumnType("int");
 
-                    b.HasKey("MainCosultantID");
+                    b.HasKey("MaincosultantID");
 
                     b.HasIndex("ProjectManagerId")
                         .IsUnique();
@@ -458,13 +458,10 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProjectID"));
 
-                    b.Property<int>("FormanID")
+                    b.Property<int>("ForemanId")
                         .HasColumnType("int");
 
                     b.Property<int>("MainClientID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MainCosultantID")
                         .HasColumnType("int");
 
                     b.Property<string>("ProjectDescritpion")
@@ -477,7 +474,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<int>("ProjectManagerID")
+                    b.Property<int>("ProjectManagerId")
                         .HasColumnType("int");
 
                     b.Property<string>("ProjectName")
@@ -485,21 +482,18 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int?>("_foremanForemanId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("_mainConsultantMainCosultantID")
+                    b.Property<int?>("mainConsultanttMaincosultantID")
                         .HasColumnType("int");
 
                     b.HasKey("ProjectID");
 
+                    b.HasIndex("ForemanId");
+
                     b.HasIndex("MainClientID");
 
-                    b.HasIndex("ProjectManagerID");
+                    b.HasIndex("ProjectManagerId");
 
-                    b.HasIndex("_foremanForemanId");
-
-                    b.HasIndex("_mainConsultantMainCosultantID");
+                    b.HasIndex("mainConsultanttMaincosultantID");
 
                     b.ToTable("Projects");
                 });
@@ -874,14 +868,14 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int?>("mainConsultantMainCosultantID")
+                    b.Property<int?>("mainConsultantMaincosultantID")
                         .HasColumnType("int");
 
                     b.HasKey("SubCosultantID");
 
                     b.HasIndex("ProjectManagerID");
 
-                    b.HasIndex("mainConsultantMainCosultantID");
+                    b.HasIndex("mainConsultantMaincosultantID");
 
                     b.ToTable("SubConsultant");
                 });
@@ -1103,7 +1097,13 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.Project", b =>
                 {
-                    b.HasOne("Integrated_Construction_Management_System_ICMS.Models.MainClient", "_mainclinet")
+                    b.HasOne("Integrated_Construction_Management_System_ICMS.Models.Foreman", "foreman")
+                        .WithMany("projects")
+                        .HasForeignKey("ForemanId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Integrated_Construction_Management_System_ICMS.Models.MainClient", "mainClinet")
                         .WithMany("Projects")
                         .HasForeignKey("MainClientID")
                         .OnDelete(DeleteBehavior.NoAction)
@@ -1111,27 +1111,22 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
 
                     b.HasOne("Integrated_Construction_Management_System_ICMS.Models.ProjectManager", "_ProjectManager")
                         .WithMany("projects")
-                        .HasForeignKey("ProjectManagerID")
+                        .HasForeignKey("ProjectManagerId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("Integrated_Construction_Management_System_ICMS.Models.Foreman", "_foreman")
+                    b.HasOne("Integrated_Construction_Management_System_ICMS.Models.MainConsultant", "mainConsultantt")
                         .WithMany("projects")
-                        .HasForeignKey("_foremanForemanId")
-                        .OnDelete(DeleteBehavior.NoAction);
-
-                    b.HasOne("Integrated_Construction_Management_System_ICMS.Models.MainConsultant", "_mainConsultant")
-                        .WithMany("projects")
-                        .HasForeignKey("_mainConsultantMainCosultantID")
+                        .HasForeignKey("mainConsultanttMaincosultantID")
                         .OnDelete(DeleteBehavior.NoAction);
 
                     b.Navigation("_ProjectManager");
 
-                    b.Navigation("_foreman");
+                    b.Navigation("foreman");
 
-                    b.Navigation("_mainConsultant");
+                    b.Navigation("mainClinet");
 
-                    b.Navigation("_mainclinet");
+                    b.Navigation("mainConsultantt");
                 });
 
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.ProjectContract", b =>
@@ -1326,7 +1321,7 @@ namespace Integrated_Construction_Management_System_ICMS.Migrations
 
                     b.HasOne("Integrated_Construction_Management_System_ICMS.Models.MainConsultant", "mainConsultant")
                         .WithMany("subConsultant")
-                        .HasForeignKey("mainConsultantMainCosultantID")
+                        .HasForeignKey("mainConsultantMaincosultantID")
                         .OnDelete(DeleteBehavior.NoAction);
 
                     b.Navigation("_ProjectManager");

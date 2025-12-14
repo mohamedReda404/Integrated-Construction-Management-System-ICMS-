@@ -6,7 +6,7 @@ namespace Integrated_Construction_Management_System_ICMS.Models
     {
         //================INFO============
         [Key]
-        public int MainCosultantID { get; set; }
+        public int MaincosultantID { get; set; }
         [Required,MaxLength(100)]
         public string MainCosultantName { get; set; } = string.Empty;
         [Required,MaxLength(11)]

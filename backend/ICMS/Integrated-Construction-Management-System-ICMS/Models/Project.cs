@@ -20,25 +20,25 @@ namespace Integrated_Construction_Management_System_ICMS.Models
         //======================ProjectRelations(M:1)===========================
         [Required,ForeignKey("MainClientID")]
         public  int MainClientID { get; set; }
-        public MainClient? _mainclinet { get; set; }
+        public MainClient? mainClinet { get; set; }
 
 
      
-        [Required, ForeignKey("ProjectManagerID")]
-        public int ProjectManagerID { get; set; }
+        [Required, ForeignKey("ProjectManagerId")]
+        public int ProjectManagerId { get; set; }
         public ProjectManager? _ProjectManager { get; set; }
 
 
 
-        [Required, ForeignKey("FormanID")]
-        public int FormanID { get; set; }
-        public Foreman? _foreman {  get; set; }
+        [Required, ForeignKey("ForemanId")]
+        public int ForemanId { get; set; }
+        public Foreman? foreman {  get; set; }
 
 
 
-        [Required, ForeignKey("MainCosultantID")]
-        public int MainCosultantID { get; set; }
-        public MainConsultant? _mainConsultant { get; set; }
+        //[Required, ForeignKey("mconID")]
+        //public int mconID { get; set; }
+        public MainConsultant? mainConsultantt { get; set; }
 
         
         //===========================ProjectRelationships(1:M)====================

@@ -8,22 +8,22 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
     [ApiController]
     public class ForemanController(IForeman formamn) : ControllerBase
     {
-        //private readonly IForeman _foreman= formamn;
+        private readonly IForeman _foreman = formamn;
 
 
-        //[HttpGet("{id}")]
-        //public async Task<IActionResult> GetById([FromRoute]int id)
-        //{
-        //    var foreman = await _foreman.Get(id);
-        //    if (foreman == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    else
-        //    {
-                
-        //        return Ok(foreman);
-        //    }
-        //}
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById([FromRoute] int id)
+        {
+            var foreman = await _foreman.Get(id);
+            if (foreman == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+
+                return Ok(foreman);
+            }
+        }
     }
 }
