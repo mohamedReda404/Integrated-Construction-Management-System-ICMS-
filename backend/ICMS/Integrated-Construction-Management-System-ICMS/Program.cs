@@ -1,5 +1,6 @@
 using Integrated_Construction_Management_System_ICMS.Persistence;
 using Integrated_Construction_Management_System_ICMS.Services;
+using Integrated_Construction_Management_System_ICMS.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,7 +14,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
 
-builder.Services.AddScoped<IForeman, foremenService>();
+builder.Services.AddScoped<IForemanService, IForemanService>();
 
 var app = builder.Build();
 

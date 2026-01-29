@@ -1,54 +1,52 @@
 ﻿using Integrated_Construction_Management_System_ICMS.Models;
-using Integrated_Construction_Management_System_ICMS.Services;
-using Microsoft.AspNetCore.Http;
+using Integrated_Construction_Management_System_ICMS.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Integrated_Construction_Management_System_ICMS.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProjectManagerController(IProjectManager manager) : ControllerBase
+    public class ProjectManagerController : ControllerBase
     {
-        private readonly IProjectManager _manager = manager;
+        private readonly IProjectManagerService _manager;
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetById([FromRoute] int id)
+        public ProjectManagerController(IProjectManagerService manager)
         {
-            var foreman = await _manager.Get(id);
-            if (foreman == null)
-            {
-                return NotFound();
-            }
-            else
-            {
-                return Ok(foreman);
-            }
+            _manager = manager;
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var managerEntity = await _manager.GetByIdAsync(id);
 
-        [HttpPost(" ")]
+            if (managerEntity == null)
+                return NotFound();
+
+            return Ok(managerEntity);
+        }
+
+        [HttpPost]
         public async Task<IActionResult> AddNew([FromBody] ProjectManager manager)
         {
-            var mmangaer = await _manager.AddNew(manager);
-                    return CreatedAtAction(
-                    nameof(GetById),
-                    new { id = mmangaer.ProjectManagerId },
-                    mmangaer
-                     );
+            var createdManager = await _manager.AddAsync(manager);
 
+            return CreatedAtAction(
+                nameof(GetById),
+                new { id = createdManager.ProjectManagerId },
+                createdManager
+            );
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var deleted = await _manager.Delete(id);
+            var deleted = await _manager.DeleteAsync(id);
 
             if (deleted == null)
                 return NotFound();
 
             return Ok(deleted);
         }
-
-
     }
 }
