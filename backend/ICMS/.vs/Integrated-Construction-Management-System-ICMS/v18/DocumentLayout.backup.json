@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|c:\\users\\awaad\\desktop\\graduation project\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\services\\interfaces\\igenericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\services\\interfaces\\igenericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|c:\\users\\awaad\\desktop\\graduation project\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\services\\classes\\genericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\services\\classes\\genericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|c:\\users\\awaad\\desktop\\graduation project\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\controllers\\foremancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\controllers\\foremancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -141,14 +149,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|c:\\users\\awaad\\desktop\\graduation project\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\services\\classes\\mainclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\services\\classes\\mainclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|c:\\users\\awaad\\desktop\\graduation project\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\services\\classes\\genericserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\services\\classes\\genericserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|c:\\users\\awaad\\desktop\\graduation project\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\services\\interfaces\\igenericserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\services\\interfaces\\igenericserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|c:\\users\\awaad\\desktop\\graduation project\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\services\\interfaces\\iengineerinvoiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -449,7 +449,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -470,32 +470,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "SubConsultantService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubConsultantService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubConsultantService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubConsultantService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubConsultantService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:40:46.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ISubContractorService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubContractorService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubContractorService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubContractorService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubContractorService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:56:40.303Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "SubContractorService.cs",
               "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubContractorService.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubContractorService.cs",
@@ -503,12 +477,11 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubContractorService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:41:06.144Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T12:41:06.144Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Program.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Program.cs",
@@ -516,12 +489,11 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T22:36:25.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T22:36:25.829Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "IForemanService.cs",
               "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IForemanService.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IForemanService.cs",
@@ -529,12 +501,11 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IForemanService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:51:26.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T12:51:26.19Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ForemanService.cs",
               "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ForemanService.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ForemanService.cs",
@@ -542,25 +513,24 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ForemanService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:24:13.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T12:24:13.598Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ForemanController.cs",
               "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Controllers\\ForemanController.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Controllers\\ForemanController.cs",
               "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Controllers\\ForemanController.cs",
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Controllers\\ForemanController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-13T13:26:44.469Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ProjectManagerController.cs",
               "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Controllers\\ProjectManagerController.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Controllers\\ProjectManagerController.cs",
@@ -568,368 +538,16 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Controllers\\ProjectManagerController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T22:36:25.685Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T22:36:25.685Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ISubConsultantService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubConsultantService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubConsultantService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubConsultantService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubConsultantService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:56:23.366Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SubConstractorInvoiceService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubConstractorInvoiceService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubConstractorInvoiceService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubConstractorInvoiceService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubConstractorInvoiceService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:37:57.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ISubConstractorInvoiceService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubConstractorInvoiceService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubConstractorInvoiceService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubConstractorInvoiceService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubConstractorInvoiceService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:56:07.688Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "StoreService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\StoreService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\StoreService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\StoreService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\StoreService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:37:38.235Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IStoreService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IStoreService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IStoreService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IStoreService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IStoreService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:55:53.631Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SiteEngineerService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SiteEngineerService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SiteEngineerService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SiteEngineerService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SiteEngineerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:35:04.181Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ISiteEngineerService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISiteEngineerService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISiteEngineerService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISiteEngineerService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISiteEngineerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T14:25:42.549Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IShopDrawingService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IShopDrawingService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IShopDrawingService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IShopDrawingService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IShopDrawingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:55:13.659Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ShopDrawingService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ShopDrawingService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ShopDrawingService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ShopDrawingService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ShopDrawingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:34:50.944Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ProjectSubContractorService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSubContractorService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSubContractorService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSubContractorService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSubContractorService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:34:33.461Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "IProjectSubContractorService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSubContractorService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSubContractorService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSubContractorService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSubContractorService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T14:22:00.638Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IProjectSubConsultantService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSubConsultantService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSubConsultantService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSubConsultantService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSubConsultantService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:54:36.838Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ProjectSiteEngineerService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSiteEngineerService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSiteEngineerService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSiteEngineerService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSiteEngineerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:31:01.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "IProjectSiteEngineerService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSiteEngineerService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSiteEngineerService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSiteEngineerService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSiteEngineerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:54:20.436Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ProjectService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:30:16.701Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "IProjectService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:54:00.189Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ProjectManagerService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectManagerService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectManagerService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectManagerService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:30:47.318Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ProjectSubConsultantService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSubConsultantService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSubConsultantService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSubConsultantService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSubConsultantService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:34:18.498Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "IProjectManagerService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectManagerService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectManagerService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectManagerService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:53:47.206Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ProjectContractService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectContractService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectContractService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectContractService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectContractService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:30:30.65Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "IProjectContractService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectContractService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectContractService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectContractService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectContractService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:53:30.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "IMaterialService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMaterialService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMaterialService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMaterialService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMaterialService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:53:12.512Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "MaterialService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MaterialService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MaterialService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MaterialService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MaterialService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:47:49.029Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "MainConsultantService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MainConsultantService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MainConsultantService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MainConsultantService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MainConsultantService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:47:18.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "IMainConsultantService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMainConsultantService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMainConsultantService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMainConsultantService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMainConsultantService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:52:57.614Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "IMainClientService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMainClientService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMainClientService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMainClientService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMainClientService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:52:37.35Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "MainClientService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MainClientService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MainClientService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MainClientService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MainClientService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:30:00.405Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "GenericServiceService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\GenericServiceService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\GenericServiceService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\GenericServiceService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\GenericServiceService.cs",
+              "DocumentIndex": 1,
+              "Title": "GenericService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\GenericService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\GenericService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\GenericService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\GenericService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-29T12:41:35.505Z",
@@ -937,16 +555,364 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "IGenericServiceService.cs",
-              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IGenericServiceService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IGenericServiceService.cs",
-              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IGenericServiceService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IGenericServiceService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "IGenericService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IGenericService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IGenericService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IGenericService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IGenericService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-29T12:49:15.521Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ISubContractorService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubContractorService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubContractorService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubContractorService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubContractorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:56:40.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SubConsultantService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubConsultantService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubConsultantService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubConsultantService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubConsultantService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:40:46.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ISubConsultantService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubConsultantService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubConsultantService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubConsultantService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubConsultantService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:56:23.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SubConstractorInvoiceService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubConstractorInvoiceService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubConstractorInvoiceService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubConstractorInvoiceService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SubConstractorInvoiceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:37:57.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ISubConstractorInvoiceService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubConstractorInvoiceService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubConstractorInvoiceService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubConstractorInvoiceService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISubConstractorInvoiceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:56:07.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "StoreService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\StoreService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\StoreService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\StoreService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\StoreService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:37:38.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IStoreService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IStoreService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IStoreService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IStoreService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IStoreService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:55:53.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SiteEngineerService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SiteEngineerService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SiteEngineerService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SiteEngineerService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\SiteEngineerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:35:04.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ISiteEngineerService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISiteEngineerService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISiteEngineerService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISiteEngineerService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\ISiteEngineerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T14:25:42.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IShopDrawingService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IShopDrawingService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IShopDrawingService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IShopDrawingService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IShopDrawingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:55:13.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ShopDrawingService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ShopDrawingService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ShopDrawingService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ShopDrawingService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ShopDrawingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:34:50.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ProjectSubContractorService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSubContractorService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSubContractorService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSubContractorService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSubContractorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:34:33.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IProjectSubContractorService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSubContractorService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSubContractorService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSubContractorService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSubContractorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T14:22:00.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IProjectSubConsultantService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSubConsultantService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSubConsultantService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSubConsultantService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSubConsultantService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:54:36.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ProjectSiteEngineerService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSiteEngineerService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSiteEngineerService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSiteEngineerService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSiteEngineerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:31:01.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IProjectSiteEngineerService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSiteEngineerService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSiteEngineerService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSiteEngineerService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectSiteEngineerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:54:20.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ProjectService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:30:16.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IProjectService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:54:00.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ProjectManagerService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectManagerService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectManagerService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectManagerService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectManagerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:30:47.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProjectSubConsultantService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSubConsultantService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSubConsultantService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSubConsultantService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectSubConsultantService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:34:18.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IProjectManagerService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectManagerService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectManagerService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectManagerService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectManagerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:53:47.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ProjectContractService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectContractService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectContractService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectContractService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectContractService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:30:30.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IProjectContractService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectContractService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectContractService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectContractService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectContractService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:53:30.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IMaterialService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMaterialService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMaterialService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMaterialService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMaterialService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:53:12.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "MaterialService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MaterialService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MaterialService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MaterialService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MaterialService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:47:49.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "MainConsultantService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MainConsultantService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MainConsultantService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MainConsultantService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MainConsultantService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:47:18.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IMainConsultantService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMainConsultantService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMainConsultantService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMainConsultantService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMainConsultantService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:52:57.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "IMainClientService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMainClientService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMainClientService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMainClientService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IMainClientService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:52:37.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "MainClientService.cs",
+              "DocumentMoniker": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MainClientService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MainClientService.cs",
+              "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MainClientService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MainClientService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:30:00.405Z"
             },
             {
               "$type": "Document",
@@ -958,8 +924,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IEngineerInvoiceService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:51:06.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T12:51:06.094Z"
             },
             {
               "$type": "Document",
@@ -971,8 +936,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\GeneralDrowingService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:27:31.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T12:27:31.751Z"
             },
             {
               "$type": "Document",
@@ -984,8 +948,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IGeneralDrowingService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:52:14.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T12:52:14.138Z"
             },
             {
               "$type": "Document",
@@ -997,8 +960,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\FormanTasksService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:27:12.404Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T12:27:12.404Z"
             },
             {
               "$type": "Document",
@@ -1010,8 +972,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IFormanTasksService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:51:40.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T12:51:40.451Z"
             },
             {
               "$type": "Document",
@@ -1023,8 +984,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\EngineerInvoiceService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:23:49.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T12:23:49.031Z"
             },
             {
               "$type": "Document",
@@ -1036,8 +996,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ConsultantBoqService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:23:18.606Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T12:23:18.606Z"
             },
             {
               "$type": "Document",
@@ -1049,8 +1008,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\EngineerBoqService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:23:31.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T12:23:31.869Z"
             },
             {
               "$type": "Document",
@@ -1062,8 +1020,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IEngineerBoqService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:50:48.929Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T12:50:48.929Z"
             },
             {
               "$type": "Document",
@@ -1075,8 +1032,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IConsultantBoqService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:50:30.898Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T12:50:30.898Z"
             },
             {
               "$type": "Document",
@@ -1088,8 +1044,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\BoqCondtionEngService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:22:59.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T12:22:59.841Z"
             },
             {
               "$type": "Document",
@@ -1101,8 +1056,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IBoqCondtionEngService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:50:08.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T12:50:08.576Z"
             },
             {
               "$type": "Document",
@@ -1114,8 +1068,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\BoqCondtionConsultantService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:22:29.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T12:22:29.932Z"
             },
             {
               "$type": "Document",
@@ -1127,8 +1080,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IBoqCondtionConsultantService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T12:49:41.503Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T12:49:41.503Z"
             },
             {
               "$type": "Document",
@@ -1140,8 +1092,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Models\\Material.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAswB8AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T11:32:48.016Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T11:32:48.016Z"
             },
             {
               "$type": "Document",
@@ -1153,8 +1104,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Models\\MainConsultant.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T10:51:06.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T10:51:06.601Z"
             },
             {
               "$type": "Document",
@@ -1166,8 +1116,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Models\\ProjectSubConsultant.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T11:32:01.088Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T11:32:01.088Z"
             },
             {
               "$type": "Document",
@@ -1179,8 +1128,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Models\\ProjectManager.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAowBUAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T09:13:37.796Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T09:13:37.796Z"
             },
             {
               "$type": "Document",
@@ -1192,8 +1140,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Models\\MainClient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T11:02:35.789Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T11:02:35.789Z"
             },
             {
               "$type": "Document",
@@ -1205,8 +1152,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Models\\FormanTasks.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T11:33:20.871Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T11:33:20.871Z"
             },
             {
               "$type": "Document",
@@ -1254,8 +1200,7 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-29T22:36:25.753Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T22:36:25.753Z"
             },
             {
               "$type": "Document",
@@ -1354,8 +1299,7 @@
               "ToolTip": "C:\\Users\\Awaad\\Desktop\\graduation project\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj",
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-13T18:30:46.801Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T18:30:46.801Z"
             },
             {
               "$type": "Document",
