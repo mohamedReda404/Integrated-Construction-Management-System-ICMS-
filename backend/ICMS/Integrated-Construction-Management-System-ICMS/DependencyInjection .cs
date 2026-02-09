@@ -1,4 +1,5 @@
-﻿using Integrated_Construction_Management_System_ICMS.Services.Interfaces;
+﻿using Integrated_Construction_Management_System_ICMS.Services.Classes;
+using Integrated_Construction_Management_System_ICMS.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace Integrated_Construction_Management_System_ICMS
@@ -15,7 +16,7 @@ namespace Integrated_Construction_Management_System_ICMS
 
         public static IServiceCollection AddapplicationServices(this IServiceCollection services)
         {
-           // services.AddScoped<IForemanService, ForemanService>();
+           // services.AddScoped<IProjectService, ProjectService>();
             return services;
         }
 
