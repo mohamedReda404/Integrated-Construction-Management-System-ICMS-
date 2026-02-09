@@ -5,11 +5,8 @@ using Microsoft.EntityFrameworkCore;
 namespace Integrated_Construction_Management_System_ICMS.Services.Classes
 {
     public class ShopDrawingService
-        :GenericService<ShopDrawing>, IShopDrawingService
+        : IShopDrawingService
     {
-        public ShopDrawingService(DbContext context)
-            : base(context)
-        {
-        }
+        
     }
 }

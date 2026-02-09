@@ -5,6 +5,7 @@ namespace Integrated_Construction_Management_System_ICMS.Persistence
 {
     public class AppDbContext: DbContext
     {
+       
         public AppDbContext(DbContextOptions<AppDbContext> options)
       : base(options)
         {
@@ -22,7 +23,7 @@ namespace Integrated_Construction_Management_System_ICMS.Persistence
         }
 
 
-        public DbSet<Project> Projects { get; set; }
+        public DbSet<Project> projects { get; set; }
         public DbSet<ProjectManager> ProjectManagers { get; set; }
         public DbSet<MainClient> MainClients { get; set; }
         public DbSet<ProjectContract> ProjectContracts { get; set; }

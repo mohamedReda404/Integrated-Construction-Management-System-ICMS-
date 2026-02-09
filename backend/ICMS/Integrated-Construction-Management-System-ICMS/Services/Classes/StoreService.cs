@@ -5,11 +5,8 @@ using Microsoft.EntityFrameworkCore;
 namespace Integrated_Construction_Management_System_ICMS.Services.Classes
 {
     public class StoreService
-        :GenericService<Store>, IStoreService
+        : IStoreService
     {
-        public StoreService(DbContext context)
-            : base(context)
-        {
-        }
+       
     }
 }

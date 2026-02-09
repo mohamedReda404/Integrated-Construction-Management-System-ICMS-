@@ -5,11 +5,8 @@ using Microsoft.EntityFrameworkCore;
 namespace Integrated_Construction_Management_System_ICMS.Services.Classes
 {
     public class BoqCondtionEngService
-        : GenericService<BoqCondtionEng>, IBoqCondtionEngService
+       : IBoqCondtionEngService
     {
-        public BoqCondtionEngService(DbContext context)
-            : base(context)
-        {
-        }
+       
     }
 }

@@ -5,11 +5,8 @@ using Microsoft.EntityFrameworkCore;
 namespace Integrated_Construction_Management_System_ICMS.Services.Classes
 {
     public class ProjectManagerService
-        :GenericService<ProjectManager>, IProjectManagerService
+        : IProjectManagerService
     {
-        public ProjectManagerService(DbContext context)
-            : base(context)
-        {
-        }
+      
     }
 }

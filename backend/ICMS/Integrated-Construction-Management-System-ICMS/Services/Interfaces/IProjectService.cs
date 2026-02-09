@@ -3,7 +3,7 @@
 namespace Integrated_Construction_Management_System_ICMS.Services.Interfaces
 {
     public interface IProjectService
-        :IGenericService<Project>
     {
+        Task<IEnumerable<Project>> GetAll();
     }
 }

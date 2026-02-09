@@ -5,12 +5,9 @@ using Microsoft.EntityFrameworkCore;
 namespace Integrated_Construction_Management_System_ICMS.Services.Classes
 {
     public class GeneralDrowingService
-        : GenericService<GeneralDrowing>, IGeneralDrowingService
+        : IGeneralDrowingService
     {
-        public GeneralDrowingService(DbContext context)
-            : base(context)
-        {
-        }
+       
 
     }
 }

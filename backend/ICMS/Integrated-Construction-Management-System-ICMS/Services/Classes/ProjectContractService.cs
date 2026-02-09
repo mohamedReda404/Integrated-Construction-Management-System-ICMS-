@@ -5,11 +5,8 @@ using Microsoft.EntityFrameworkCore;
 namespace Integrated_Construction_Management_System_ICMS.Services.Classes
 {
     public class ProjectContractService
-        :GenericService<ProjectContract>, IProjectContractService
+        : IProjectContractService
     {
-        public ProjectContractService(DbContext context)
-            : base(context)
-        {
-        }
+       
     }
 }

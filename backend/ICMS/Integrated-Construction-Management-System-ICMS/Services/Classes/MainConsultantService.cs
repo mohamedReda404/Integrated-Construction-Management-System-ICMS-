@@ -5,11 +5,8 @@ using Microsoft.EntityFrameworkCore;
 namespace Integrated_Construction_Management_System_ICMS.Services.Classes
 {
     public class MainConsultantService
-        : GenericService<MainConsultant>, IMainConsultantService
+        :  IMainConsultantService
     {
-        public MainConsultantService(DbContext context)
-            : base(context)
-        {
-        }
+       
     }
 }

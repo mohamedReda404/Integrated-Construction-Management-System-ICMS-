@@ -1,15 +1,22 @@
 ﻿using Integrated_Construction_Management_System_ICMS.Models;
-using Integrated_Construction_Management_System_ICMS.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Integrated_Construction_Management_System_ICMS.Persistence;
+using Integrated_Construction_Management_System_ICMS.Services.Interfaces;
 
 namespace Integrated_Construction_Management_System_ICMS.Services.Classes
 {
-    public class ProjectService
-        :GenericService<Project>, IProjectService
+    public class ProjectService : IProjectService
     {
-        public ProjectService(DbContext context)
-            : base(context)
+        private readonly AppDbContext _dbContext;
+
+        public ProjectService(AppDbContext dbContext)
         {
+            _dbContext = dbContext;
         }
+
+        public async Task<IEnumerable<Project>> GetAll()=>
+            await _dbContext.projects.ToListAsync();
+           
+        
     }
 }

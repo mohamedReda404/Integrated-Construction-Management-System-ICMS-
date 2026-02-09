@@ -5,11 +5,8 @@ using Microsoft.EntityFrameworkCore;
 namespace Integrated_Construction_Management_System_ICMS.Services.Classes
 {
     public class SiteEngineerService
-        :GenericService<SiteEngineer>, ISiteEngineerService
+        : ISiteEngineerService
     {
-        public SiteEngineerService(DbContext context)
-            : base(context)
-        {
-        }
+     
     }
 }
