@@ -1,29 +1,29 @@
-﻿using Integrated_Construction_Management_System_ICMS.Services;
-using Microsoft.AspNetCore.Http;
+﻿using Integrated_Construction_Management_System_ICMS.Services.Classes;
+using Integrated_Construction_Management_System_ICMS.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Integrated_Construction_Management_System_ICMS.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ForemanController(IForeman formamn) : ControllerBase
+    public class ForemanController : ControllerBase
     {
-        private readonly IForeman _foreman = formamn;
+        private readonly IForemanService _foreman;
 
+        public ForemanController(IForemanService foreman)
+        {
+            _foreman = foreman;
+        }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
-            var foreman = await _foreman.Get(id);
-            if (foreman == null)
-            {
-                return NotFound();
-            }
-            else
-            {
+            var foreman = await _foreman.GetByIdAsync(id);
 
-                return Ok(foreman);
-            }
+            if (foreman == null)
+                return NotFound();
+
+            return Ok(foreman);
         }
     }
 }
