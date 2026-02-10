@@ -1,6 +1,9 @@
-﻿using Integrated_Construction_Management_System_ICMS.Services.Classes;
+﻿using FluentValidation;
+using Integrated_Construction_Management_System_ICMS.Services.Classes;
 using Integrated_Construction_Management_System_ICMS.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using SharpGrip.FluentValidation.AutoValidation.Mvc.Extensions;
+using System.Reflection;
 
 namespace Integrated_Construction_Management_System_ICMS
 {
@@ -47,9 +50,18 @@ namespace Integrated_Construction_Management_System_ICMS
 
         public static IServiceCollection AddDBContext(this IServiceCollection services, IConfiguration configuration)
         {
-            
+            services.AddFluentValidationAutoValidation();
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             var connectionString = configuration.GetConnectionString("DatabaseConnection");
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
+            return services;
+        }
+
+
+        public static IServiceCollection AddValidation(this IServiceCollection services)
+        {
+            services.AddFluentValidationAutoValidation();
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             return services;
         }
     }

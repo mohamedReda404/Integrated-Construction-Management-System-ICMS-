@@ -32,6 +32,25 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
             {
                 return NotFound();
             }
-            }
         }
+        
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
+        {
+            var responce=await _projectService.GetId(id);
+            
+            if (responce != null)
+            {
+                var responceMapping = responce.Adapt<ProjectResponce>();
+                return Ok(responceMapping);
+            }
+            else
+            {
+                return NotFound();
+            }
+
+        }
+
+    }
 }

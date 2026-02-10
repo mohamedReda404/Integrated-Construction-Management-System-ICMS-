@@ -16,7 +16,9 @@ namespace Integrated_Construction_Management_System_ICMS.Services.Classes
 
         public async Task<IEnumerable<Project>> GetAll()=>
             await _dbContext.projects.ToListAsync();
-           
-        
+
+        public async Task<Project> GetId(int id) =>
+            await _dbContext.projects.FirstOrDefaultAsync(i => i.ProjectID==id);
+       
     }
 }
