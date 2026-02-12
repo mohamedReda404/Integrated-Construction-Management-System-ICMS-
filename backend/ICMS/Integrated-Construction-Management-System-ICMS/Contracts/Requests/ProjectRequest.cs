@@ -2,7 +2,6 @@
 {
     public record ProjectRequest
     (
-        int ProjectID,
         string ProjectName,
         string ProjectLocation,
         string ProjectDescritpion,
