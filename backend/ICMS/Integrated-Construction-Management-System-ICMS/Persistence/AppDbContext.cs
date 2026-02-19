@@ -1,9 +1,10 @@
 ﻿using Integrated_Construction_Management_System_ICMS.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Integrated_Construction_Management_System_ICMS.Persistence
 {
-    public class AppDbContext: DbContext
+    public class AppDbContext: IdentityDbContext<ApplicationUser>
     {
        
         public AppDbContext(DbContextOptions<AppDbContext> options)
