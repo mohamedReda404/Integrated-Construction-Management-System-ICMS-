@@ -27,7 +27,7 @@ namespace Integrated_Construction_Management_System_ICMS.Services.Classes
             }
             else
             {
-                _dbContext.Remove(_dbContext);
+                _dbContext.projects.Remove(_project);
                 await _dbContext.SaveChangesAsync(cancellationToken);
                 return true;
             }
