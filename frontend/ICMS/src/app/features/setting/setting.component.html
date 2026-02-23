@@ -1,0 +1,143 @@
+
+  <!-- CONTENT WRAPPER -->
+  <div class="max-w-4xl mx-auto mt-10">
+
+    <!-- SETTINGS TITLE -->
+    <h1 class="text-2xl font-semibold">Settings</h1>
+    <p class="text-gray-500 mt-1 mb-6">Manage your account preferences and app settings</p>
+
+    <!-- PROFILE CARD -->
+    <section class="bg-white rounded-2xl shadow-sm p-6 mb-6">
+      <div class="flex items-center gap-2 mb-6 text-gray-600">
+        <i class="fa-regular fa-user"></i>
+        <span class="font-medium">Profile</span>
+      </div>
+
+      <div class="flex items-center gap-6 mb-6">
+        <div class="w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center text-white text-xl font-semibold">
+          AM
+        </div>
+        <div>
+          <p class="font-semibold text-lg">Ahmed Mohamed</p>
+          <p class="text-gray-500 -mt-1">Project Manager</p>
+          <button class="mt-2 text-blue-600 text-sm hover:underline">
+            Change Photo
+          </button>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+
+        <div>
+          <label class="text-gray-700 font-medium">Full Name</label>
+          <input class="w-full bg-gray-100 border rounded-xl p-3 mt-1" value="Ahmed Mohamed">
+        </div>
+
+        <div>
+          <label class="text-gray-700 font-medium">Email Address</label>
+          <div class="flex items-center bg-gray-100 border rounded-xl p-3 mt-1">
+            <i class="fa-regular fa-envelope mr-3 text-gray-500"></i>
+            <input class="w-full bg-transparent outline-none" value="ahmed@aec-hub.com">
+          </div>
+        </div>
+
+        <div>
+          <label class="text-gray-700 font-medium">Phone Number</label>
+          <div class="flex items-center bg-gray-100 border rounded-xl p-3 mt-1">
+            <i class="fa-solid fa-phone mr-3 text-gray-500"></i>
+            <input class="w-full bg-transparent outline-none" value="+971 50 123 4567">
+          </div>
+        </div>
+
+      </div>
+
+      <button class="mt-6 w-full bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700 transition text-center font-medium text-lg flex items-center justify-center gap-2">
+        <i class="fa-regular fa-pen-to-square"></i> Edit Account
+      </button>
+    </section>
+
+    <!-- NOTIFICATIONS -->
+    <section class="bg-white rounded-2xl shadow-sm p-6 mb-6">
+      <div class="flex items-center gap-2 text-gray-600 mb-6">
+        <i class="fa-regular fa-bell text-orange-500"></i>
+        <span class="font-medium">Notifications</span>
+      </div>
+
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="font-medium">Allow Notifications</p>
+          <p class="text-gray-500 text-sm">Receive notifications continuously</p>
+        </div>
+
+        
+
+           <div class="px-6 py-6 flex items-center justify-between">
+
+           <label class="relative inline-block w-12 h-6 cursor-pointer">
+             <input type="checkbox" checked class="sr-only peer">
+           <div class="w-full h-full bg-gray-300 rounded-full peer-checked:bg-blue-600 transition-all"></div>
+
+             <span class="absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow 
+                   peer-checked:translate-x-6 transition-transform"></span>
+          </label>
+            </div>
+
+      </div>
+    </section>
+
+    <!-- SECURITY -->
+    <section class="bg-white rounded-2xl shadow-sm p-6 mb-6">
+      <div class="flex items-center gap-2 text-gray-600 mb-6">
+        <i class="fa-solid fa-shield-halved text-green-500"></i>
+        <span class="font-medium">Security & Privacy</span>
+      </div>
+
+      <div class="divide-y">
+        <button class="w-full text-left py-4 hover:bg-gray-50 flex justify-between items-center">
+          Change Password <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <button class="w-full text-left py-4 hover:bg-gray-50 flex justify-between items-center">
+          Two-Factor Authentication <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <button class="w-full text-left py-4 hover:bg-gray-50 flex justify-between items-center">
+          Connected Devices <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <button class="w-full text-left py-4 hover:bg-gray-50 flex justify-between items-center">
+          Login History <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- GENERAL -->
+    <section class="bg-white rounded-2xl shadow-sm p-6 mb-6">
+      <div class="flex items-center gap-2 text-gray-600 mb-6">
+        <i class="fa-solid fa-gear text-blue-500"></i>
+        <span class="font-medium">General</span>
+      </div>
+
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="font-medium">Auto-Save</p>
+          <p class="text-gray-500 text-sm">Save changes automatically</p>
+        </div>
+
+
+
+          <label class="relative inline-flex items-center cursor-pointer">
+    <input type="checkbox" class="sr-only peer">
+    <div class="w-11 h-6 bg-gray-300 peer-focus:outline-none rounded-full peer peer-checked:bg-blue-600 transition-all duration-300"></div>
+    <span class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-all duration-300 peer-checked:translate-x-5"></span>
+  </label>
+
+      </div>
+    </section>
+
+    <!-- DELETE ACCOUNT -->
+    <button class="w-full bg-red-50 text-red-600 border border-red-300 py-3 mb-3 rounded-xl hover:bg-red-100 font-medium text-lg">
+      Delete Account
+    </button>
+
+  </div>

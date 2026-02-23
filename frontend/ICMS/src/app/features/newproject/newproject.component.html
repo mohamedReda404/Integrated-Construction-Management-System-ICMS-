@@ -1,0 +1,135 @@
+<section class="bg-wheate font-semibold p-6 text-sm md:text-lg xl:text-xl shadow-sm  ">
+        <p class="text-[#4A5565] pb-4 hover:text-blue-400"  > <img class="hover:bg-blue-400 inline" src="assets/NewProject/Icon (1).png" width="19" alt="" ><a href="">Back to Projects</a></p>
+        <h3 class="text-[#101828] pb-1">Create New Project</h3>
+        <p class="text-[#4A5565]">Fill in the project details and add team members</p>
+    </section>
+    <!-- main sections -->
+    <main class=" max-w-7xl  mx-auto  p-6 bg-white mt-6 rounded-lg shadow-sm">
+    <!-- project details sections -->
+    <div class="shadow-md  bg-white rounded-lg  mt-6 p-6">
+            <h2 class="py-4 font-bold  ">Project Details</h2>
+            <hr>
+            <div class="pt-4">
+                <label for="projectName" >Project Name*</label><br>
+                <input class="w-full bg-gray-50 py-3 rounded-xl" type="text" id="projectName" name="projectName" placeholder="  Enter project name"><br><br>
+                
+                <label for="projectDetails">Description</label><br>
+                <textarea class="w-full bg-gray-50 py-2 rounded-xl h-32" type="text" id="projectName" name="projectName" placeholder="  Enter project description" class="w-full bg-gray-50 py-3 rounded-xl">
+                </textarea>
+        </div>
+        <div class="mt-5 grid  md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4  " >
+            <section class="mr-2">
+                <label for="date">Start Date *</label>
+                <input class="w-full bg-gray-50 py-3 rounded-xl  border border-[#E5E7EB] " type="date" id="date" name="date"><br><br>
+            </section>
+            <section>
+                <label for="date">End Date *</label>
+                <input class="w-full bg-gray-50 py-3 rounded-xl bg-grauy-50  border border-[#E5E7EB]" type="date" id="date" name="date"><br><br>
+            </section>
+            <section class="mr-2">
+                <label for="date">Budget</label>
+                <input class="w-full bg-gray-50 py-3 rounded-xl  border border-[#E5E7EB]" type="text" id="date" name="date" placeholder="  $  0.00"><br><br>
+            </section>
+            <section>
+                <label for="date">Location</label>
+                <input class="w-full bg-gray-50 py-3 rounded-xl bg-grauy-50 border border-[#E5E7EB]" type="text" id="date" name="date" placeholder="  Project location"><br><br>
+            </section>
+        </div>
+            <section class="w-full shadow-sm">
+            <label for="date">Category</label>
+            <input class="w-full bg-gray-50 py-3 rounded-xl bg-grauy-50 border border-[#E5E7EB]" type="text" id="date" name="date"><br><br>
+            </section>
+        </div>
+        <!-- project details sections -->
+        <!-- team member section -->
+        <div class="shadow-md  bg-white rounded-lg  mt-6 p-6">
+            <div >
+            <div class="flex items-center justify-between gap-4 md:gap-6 xl:gap-8 font-semibold shadow-sm mt-6 p-4 rounded-lg">
+            <div class="flex gap-1 md:gap-2 xl:gap-2 items-center ">
+                <img src="assets/NewProject/Container (1).png" alt="">
+                <h2 class="text-sm md:text-xl hidden lg:block" >Team Members</h2>
+            </div>
+            <button class="bg-blue-600 text-white text-sm md:text-xl  px-4 py-3 p-0  md:px-4   xl:text rounded-lg  hover:bg-blue-700"> <span>+</span>Add Member</button>
+            </div>
+            <div class="mt-5 grid  md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4  " >
+            <section class="mr-2">
+                <label for="date">Full Name *</label>
+                <input class="w-full bg-gray-50 py-3 rounded-xl  border border-[#E5E7EB] " placeholder="  Enter member name" type="text" id="date" required name="date"><br><br>
+            </section>
+            <section>
+                <label for="date">Role / Specialization *</label>
+                <input class="w-full bg-gray-50 py-3 rounded-xl bg-grauy-50  border border-[#E5E7EB]" type="text" placeholder="  e.g. Project Manager" id="date" name="date" required><br><br>
+            </section>
+            <section class="mr-2">
+                <label for="date">Email Address *</label>
+                <input  class="w-full bg-gray-50 py-3 rounded-xl  border border-[#E5E7EB]" type="text" id="date" name="date" placeholder="  email@example.com"  required><br><br>
+            </section>
+            <section>
+                <label for="date">Phone Number *</label>
+                <input class="w-full bg-gray-50 py-3 rounded-xl bg-grauy-50 border border-[#E5E7EB]" type="text" id="date" name="date" placeholder="  +971 50 123 4567" required><br><br>
+            </section>
+            </div>
+    
+            </div>
+            <section class="w-full shadow-sm">
+            <label for="date">Access Permission</label>
+            <input class="w-full bg-gray-50 py-3 rounded-xl bg-grauy-50 border border-[#E5E7EB]" type="text" id="date" name="date"><br><br>
+            </section>
+            
+        </div>
+            <!-- team member section end-->
+
+        <!-- project summary section -->
+        <div class="shadow-sm bg-white  font-semibold rounded-lg  mt-6 p-6">
+            <section  class=" mb-4 p-4 rounded-sm flex items-center gap-2">
+                <h2>Project Summary</h2>
+            </section>
+            <hr>
+            <div>
+            <section class="my-4">
+                <p class="text-[#4A5565]">Project Name</p>
+                <p>Not specified</p>
+            </section>
+            <section class="mb-4 p-2">
+                <p class="text-[#4A5565]">Duration</p>
+                <p>Not specified</p>
+            </section>
+            <section class="mb-4 p-2">
+                <p class="text-[#4A5565]">Budget</p>
+                <p>Not specified</p>
+            </section>
+            <section class="mb-4 p-2">
+                <p class="text-[#4A5565]">Team Members</p>
+                <p>1 member(s)</p>
+            </section>
+
+            </div>
+        </div>
+        <!-- project summary section end -->
+        
+        <!-- button action scetion -->
+        <div class="  justify-center items-center bg-blue-700 text-center gap-4  mt-6 p-3 l:p-6 xl:p-6   md:p-4 rounded-lg shadow-md">
+            <p class="text-[#FFFFFF] p-6 text-start ">Actions</p>
+            <div class="flex flex-col justify-center gap-4 p-2  ">
+                <button class="text-[#155DFC]  bg-white p-3  rounded-xl"><span ><img src="assets/NewProject/Icon (3).png" class="inline pr-3" alt=""></span>Save as Draft</button>
+                <button class="text-[#FFFFFF] font-semibold bg-blue-600 p-3 rounded-xl  ">Cancel</button>
+            </div>
+        </div>
+        <!-- button action scetion end-->
+
+        <div class="text-[#193CB8] text-sm lg:text-lg mt-6  bg-green-100 p-6 rounded-lg">
+            <p class="py-2"><span><img src="assets/NewProject/💡 Tips.png" alt=""></span></p>
+            <p class="py-1"> • you can add members after the project is established</p>
+            <p class="py-1">• Assign appropriate permissions to each member</p>
+            <p class="py-1">• Ensure all contact information is accurate</p>
+        </div>
+
+        <div class="flex items-center justify-between gap-4 md:gap-6 xl:gap-8 font-semibold shadow-sm mt-6 p-4 rounded-lg">
+            <div class="flex gap-1 md:gap-2 xl:gap-2 items-center ">
+                <img src="assets/NewProject/Container (1).png" alt="">
+                <h2 class="text-sm md:text-xl hidden lg:block" >Team Members</h2>
+            </div>
+            <button class="bg-blue-600 text-white text-sm md:text-xl  px-3 py-2 p-0  md:px-3   xl:text rounded-lg  hover:bg-blue-700"> <span>+</span>Add Member</button>
+        </div>
+    </main>
+    <!-- main sections end -->
