@@ -1,0 +1,12 @@
+﻿global using System.ComponentModel.DataAnnotations;
+global using System.ComponentModel.DataAnnotations.Schema;
+global using Integrated_Construction_Management_System_ICMS.Persistence;
+global using Integrated_Construction_Management_System_ICMS.Contracts.Requests;
+global using Integrated_Construction_Management_System_ICMS.Contracts.Responces;
+global using Integrated_Construction_Management_System_ICMS.Models;
+global using Integrated_Construction_Management_System_ICMS.Services.Interfaces;
+global using Mapster;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Http.HttpResults;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.EntityFrameworkCore;
