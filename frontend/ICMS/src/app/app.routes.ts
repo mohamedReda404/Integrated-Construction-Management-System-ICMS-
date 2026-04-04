@@ -13,6 +13,8 @@ import { LandLayoutComponent } from './core/layouts/land-layout/land-layout.comp
 import { NewprojectComponent } from './features/newproject/newproject.component';
 import { AllprojectComponent } from './features/allproject/allproject.component';
 import { SubcontractorsComponent } from './features/subcontractors/subcontractors.component';
+import { ConsultEngineeringComponent } from './features/consult-engineering/consult-engineering.component';
+import { WorkersComponent } from './features/workers/workers.component';
 
 export const routes: Routes = [
 
@@ -41,6 +43,9 @@ export const routes: Routes = [
             { path: 'newproject', component: NewprojectComponent, title: "New Project" },
             { path: 'allprojects', component: AllprojectComponent, title: "All Projects" },
             { path: 'subcontractors', component: SubcontractorsComponent, title: "Subcontractors" },
+            { path: 'consultengineering', component: ConsultEngineeringComponent, title: "Consult Engineering" },
+            { path: 'workers', component: WorkersComponent, title: "Workers" },
+
 
 
 

@@ -1,93 +1,206 @@
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200 shadow-sm">
 
-<!-- <nav class="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-b border-default">
-  <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="https://flowbite.com/docs/Navbar/logo.svg" class="h-7" alt="Flowbite Logo" />
-        <span class="self-center text-xl text-heading font-semibold whitespace-nowrap">Flowbite</span>
+  <div class="w-full px-6 lg:px-12 xl:px-20 h-16 flex justify-between items-center">
+
+    <!-- Logo -->
+    <section class="shrink-0">
+      <img src="assets/Navbar/logo.png" alt="logo" class="h-9 w-auto">
+    </section>
+
+    <!-- ================= LANDING NAV ================= -->
+    @if (isLand && !isLogin) {
+
+    <ul class="hidden md:flex items-center gap-10 text-[15px] font-semibold text-slate-700">
+
+      <li>
+        <a routerLink="/" routerLinkActive="text-[#155DFC] border-b-2 border-[#155DFC]"
+          class="pb-1 hover:text-[#155DFC] transition">
+          Home
+        </a>
+      </li>
+
+      <li><a href="#services" class="pb-1 hover:text-[#155DFC] transition">Services</a></li>
+      <li><a href="#how-it-works" class="pb-1 hover:text-[#155DFC] transition">How It Works</a></li>
+      <li><a href="#projects" class="pb-1 hover:text-[#155DFC] transition">Projects</a></li>
+      <li><a href="#contact" class="pb-1 hover:text-[#155DFC] transition">Contact</a></li>
+
+    </ul>
+    }
+
+
+
+    <!-- ================= DASHBOARD NAV ================= -->
+    @if (isLogin) {
+
+    <ul class="hidden lg:flex items-center gap-14 text-[15px] font-semibold text-slate-700">
+
+      <!-- Dashboard -->
+      <li>
+        <a routerLink="/dashboard" routerLinkActive="text-[#155DFC] border-b-2 border-[#155DFC]"
+          class="flex items-center gap-2 pb-1 hover:text-[#155DFC] transition">
+          <i class="fa-solid fa-chart-line text-[#155DFC] text-sm"></i>
+          Dashboard
+        </a>
+      </li>
+
+      <!-- All Projects -->
+      <li>
+        <a routerLink="/allprojects" routerLinkActive="text-[#155DFC] border-b-2 border-[#155DFC]"
+          class="flex items-center gap-2 pb-1 hover:text-[#155DFC] transition">
+          <i class="fa-solid fa-diagram-project text-[#155DFC] text-sm"></i>
+          All Projects
+        </a>
+      </li>
+
+      <!-- Subcontractors -->
+      <li>
+        <a routerLink="/subcontractors" routerLinkActive="text-[#155DFC] border-b-2 border-[#155DFC]"
+          class="flex items-center gap-2 pb-1 hover:text-[#155DFC] transition">
+          <i class="fa-solid fa-helmet-safety text-[#155DFC] text-sm"></i>
+          Subcontractors
+        </a>
+      </li>
+
+      <!-- Consult Engineering -->
+      <li>
+        <a routerLink="/consultengineering" routerLinkActive="text-[#155DFC] border-b-2 border-[#155DFC]"
+          class="flex items-center gap-2 pb-1 hover:text-[#155DFC] transition">
+          <i class="fa-solid fa-compass-drafting text-[#155DFC] text-sm"></i>
+          Consult Engineering
+        </a>
+      </li>
+
+    </ul>
+    }
+
+
+
+    <!-- ================= RIGHT SIDE ================= -->
+    <div class="flex items-center gap-6">
+
+      <!-- Auth -->
+      
+  @if (!isLogin) {
+
+    <!-- Sign In -->
+    <a
+      routerLink="/login"
+      class="text-sm font-semibold text-slate-700
+             hover:text-[#155DFC]
+             transition duration-200
+             relative group">
+
+      Sign In
+
+      <!-- subtle underline animation -->
+      <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#155DFC]
+                   transition-all duration-300 group-hover:w-full">
+      </span>
+
     </a>
-    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-default" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
+
+
+    <!-- Get Started -->
+    <button
+      routerLink="/register"
+      class="bg-[#155DFC]
+             hover:bg-[#104bbf]
+             active:scale-[0.98]
+             text-white
+             px-6 py-2.5
+             text-sm font-semibold
+             rounded-lg
+             shadow-md hover:shadow-lg
+             transition-all duration-200
+             focus:outline-none focus:ring-2 focus:ring-[#155DFC]/40 cursor-pointer">
+
+      Get Started
+
     </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
-        <li>
-          <a href="#" class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Home</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">About</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Services</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Pricing</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav> -->
+
+  }
 
 
+      <!-- Profile -->
+      @if (isLogin) {
+
+      <div class="relative">
+
+        <!-- Profile Button -->
+        <button (click)="isProfileOpen = !isProfileOpen" class="flex items-center gap-3 bg-white hover:bg-gray-50
+             px-3 py-2 rounded-xl border border-gray-200
+             shadow-sm transition">
+
+          <div
+            class="w-9 h-9 bg-[#155DFC] rounded-full flex items-center justify-center text-white text-sm font-semibold">
+            AM
+          </div>
+
+          <div class="hidden md:flex flex-col text-left leading-tight">
+            <span class="text-sm font-semibold text-slate-800">Ahmed</span>
+            <span class="text-xs text-slate-500">Project Manager</span>
+          </div>
+
+          <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition duration-200"
+            [class.rotate-180]="isProfileOpen">
+          </i>
+
+        </button>
 
 
+        <!-- Dropdown -->
+        <div *ngIf="isProfileOpen"
+          class="absolute right-0 mt-3 w-64 bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
 
+          <!-- Header -->
+          <div class="px-5 py-4 border-b bg-gray-50">
+            <p class="text-sm font-semibold text-slate-800">Ahmed Mohamed</p>
+            <p class="text-xs text-slate-500">ahmed@company.com</p>
+          </div>
 
+          <!-- Links -->
+          <div class="py-2">
 
+            <a routerLink="/setting" class="flex items-center gap-3 px-5 py-3 text-sm text-slate-700
+                  hover:bg-gray-50 transition">
 
-<nav class="flex flex-wrap justify-between items-center bg-white min-h-16 w-full gap-4 px-4 md:px-10 py-3 md:py-4 fixed top-0 left-0 right-0 z-50 shadow-md">
-        <section class="shrink-0">
-            <img src="assets/Navbar/logo.png" alt="logo" class="h-8 md:h-10 w-auto">
-        </section>
-        
-        <section class="w-full md:w-auto order-3 md:order-2">
-            @if (isLand == true)
-            {
+              <i class="fa-solid fa-gear text-[#155DFC] text-sm"></i>
+              Settings
+            </a>
 
-              <ul id="navLinks" class="hidden md:flex gap-4 lg:gap-6 items-center text-black font-medium">
-                <li><a href="#" class="hover:text-blue-500 transition-all duration-300 whitespace-nowrap">Services</a></li>
-                <li><a href="#" class="hover:text-blue-500 transition-all duration-300 whitespace-nowrap">How It Works</a></li>
-                <li><a href="#" class="hover:text-blue-500 transition-all duration-300 whitespace-nowrap">Projects</a></li>
-                <li><a href="#" class="hover:text-blue-500 transition-all duration-300 whitespace-nowrap">Contact</a></li>
-            </ul>
+            <a routerLink="/dashboard" class="flex items-center gap-3 px-5 py-3 text-sm text-slate-700
+                  hover:bg-gray-50 transition">
 
-            }
-        </section>
-        
-        <section class="flex flex-wrap gap-3 md:gap-6 items-center justify-end md:justify-start order-2 md:order-3 relative">
-            <button type="button" aria-label="Toggle theme">
-                <img src="assets/Navbar/dark mode icon.png" alt="Toggle theme" class="h-6 w-6">
+              <i class="fa-solid fa-chart-line text-[#155DFC] text-sm"></i>
+              Dashboard
+            </a>
+
+          </div>
+
+          <!-- Divider -->
+          <div class="border-t"></div>
+
+          <!-- Logout -->
+          <div class="py-2">
+
+            <button routerLink="/landing" class="flex items-center gap-3 px-5 py-3 text-sm text-red-500
+                 hover:bg-red-50 w-full text-left transition">
+
+              <i class="fa-solid fa-right-from-bracket text-sm"></i>
+              Logout
             </button>
 
-            @if (isLogin == false || isLand == true) 
-            {
+          </div>
 
-              <a routerLink="/login" class="hidden sm:inline-block text-black font-medium text-md md:text-base hover:text-red-500 transition-all duration-300 whitespace-nowrap">Sign In</a>
-              <button routerLink="/register" class="cursor-pointer bg-blue-500 text-white px-3 md:px-4 py-1.5 md:py-2 text-sm md:text-base rounded-md hover:bg-blue-600 transition-all duration-300 whitespace-nowrap">Get Started</button>
+        </div>
 
-            }
-            
-            <i class="fa-solid fa-bars text-black text-xl cursor-pointer z-10" id="menu-btn" aria-label="Toggle menu"></i>
+      </div>
+      }
 
-            <div class="flex items-center gap-2 text-xs sm:text-sm md:text-base text-black font-medium bg-white  px-3 py-1 ">
-                <img src="assets/Navbar/ion_language-sharp.png" alt="Language" class="h-4 w-4 sm:h-5 sm:w-5">
-                <label for="languageSelect" class="sr-only">Select language</label>
-                <select id="languageSelect" class="bg-transparent border-none  px-0 py-0 focus:outline-none">
-                    <option value="en">Eng</option>
-                    <option value="ar">العربية</option>
-                </select>
-            </div>
+    </div>
 
-            <!-- Mobile menu dropdown from top right -->
-            <div id="mobileMenu" class="md:hidden absolute top-full right-0 mt-2 bg-white shadow-xl rounded-lg hidden flex flex-col min-w-[180px] overflow-hidden border border-gray-100 ">
-                <a href="#" class="text-black hover:bg-gray-50 hover:text-blue-500 transition-all duration-200 px-5 py-3 text-sm font-medium border-b border-gray-100">Services</a>
-                <a href="#" class="text-black hover:bg-gray-50 hover:text-blue-500 transition-all duration-200 px-5 py-3 text-sm font-medium border-b border-gray-100">How It Works</a>
-                <a href="#" class="text-black hover:bg-gray-50 hover:text-blue-500 transition-all duration-200 px-5 py-3 text-sm font-medium border-b border-gray-100">Projects</a>
-                <a href="#" class="text-black hover:bg-gray-50 hover:text-blue-500 transition-all duration-200 px-5 py-3 text-sm font-medium">Contact</a>
-            </div>
-        </section>
-    </nav>
-    <br><br><br><br>
+  </div>
+
+</nav>
+
+<div class="h-16"></div>

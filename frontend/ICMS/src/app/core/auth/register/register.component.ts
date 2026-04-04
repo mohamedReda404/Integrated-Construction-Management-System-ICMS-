@@ -1,14 +1,20 @@
+import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ReactiveFormsModule, FormGroup ,FormControl , Validators, AbstractControl, FormBuilder } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-register',
-  imports:  [ReactiveFormsModule , RouterModule],
+  imports:  [ReactiveFormsModule , RouterModule , CommonModule],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
 })
 export class RegisterComponent {
+
+
+  showPassword = false;
+  showConfirmPassword = false;
+
 
   private readonly fb = inject(FormBuilder);
   private readonly router = inject(Router);

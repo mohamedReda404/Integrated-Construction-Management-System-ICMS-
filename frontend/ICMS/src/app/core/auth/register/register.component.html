@@ -1,159 +1,221 @@
-<header class="mt-6 mb-10 shadow-md rounded-xl bg-white mx-auto w-full max-w-4xl px-4 sm:px-8 py-8">
-        <div class="w-full max-w-2xl mx-auto justify-center text-center space-y-4">
-            <h2 class="text-black text-2xl sm:text-3xl font-semibold">Get Started</h2>
-            <p class="text-[#837D7D] text-base sm:text-lg">Register and sign up to get started</p>
-            <div class="flex flex-wrap justify-center gap-7 sm:gap-6 text-center mt-5">
-                <button class="px-22 py-3 rounded-lg border border-[#CACACA] bg-white hover:bg-gray-50 transition">
-                    <img  src="/assets/Register/devicon_google.png" alt="google ">
-                </button>
-                <button class="px-22 py-3 rounded-lg border border-[#CACACA] bg-white hover:bg-gray-50 transition">
-                    <img  src="/assets/Register/logos_facebook.png" alt="facebook">
-                </button>
-                <button class="px-22 py-3 rounded-lg border border-[#CACACA] bg-white hover:bg-gray-50 transition">
-                    <img  src="/assets/Register/mdi_apple.png" alt="apple">
-                </button>
-            </div>
-            <!-- the line  (or) -->
-            <div class="flex items-center gap-4 text-sm text-gray-400">
-                <span class="flex-1 h-px bg-gray-200"></span>
-                <span class="text-black text-base font-medium">or</span>
-                <span class="flex-1 h-px bg-gray-200"></span>
-            </div>
-            <!-- regestraion form -->
-            <form [formGroup]="registerForm" (ngSubmit)="submitForm()"  class="mt-5 text-left space-y-4">
+<section class="min-h-screen flex items-center justify-center bg-linear-to-br from-slate-50 to-blue-50 px-6 py-10">
+
+  <div class="w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-gray-100 p-14">
+
+    <!-- Header -->
+    <div class="text-center space-y-4 mb-10">
+      <h2 class="text-5xl font-bold text-slate-800">
+        Create Account
+      </h2>
+      <p class="text-slate-500 text-xl">
+        Register to start managing your construction projects
+      </p>
+    </div>
+
+    <!-- Form -->
+    <form [formGroup]="registerForm"
+          (ngSubmit)="submitForm()"
+          class="space-y-8">
+
+      <!-- ================= NAME ================= -->
+      <div>
+        <label class="text-lg font-semibold text-slate-700">
+          Full Name
+        </label>
+
+        <input
+          formControlName="name"
+          type="text"
+          placeholder="Enter your full name"
+          class="mt-3 w-full px-6 py-4 rounded-2xl border bg-gray-50 text-lg
+                 focus:outline-none focus:ring-2 focus:ring-[#155DFC]"
+          [ngClass]="{
+            'border-red-400 focus:ring-red-400 bg-red-50':
+              registerForm.get('name')?.invalid &&
+              registerForm.get('name')?.touched,
+            'border-gray-200':
+              !(registerForm.get('name')?.invalid &&
+                registerForm.get('name')?.touched)
+          }">
+
+        @let nameControl = registerForm.get('name');
+
+        @if (nameControl?.touched && nameControl?.errors) {
+          <div class="mt-3 bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-xl text-sm">
+
+            @if (nameControl?.getError('required')) {
+              Full name is required.
+            }
+
+            @if (nameControl?.getError('minlength')) {
+              Minimum 3 characters required.
+            }
+
+            @if (nameControl?.getError('maxlength')) {
+              Maximum 50 characters allowed.
+            }
+
+          </div>
+        }
+      </div>
 
 
-                <div class="relative">
+      <!-- ================= EMAIL ================= -->
+      <div>
+        <label class="text-lg font-semibold text-slate-700">
+          Email Address
+        </label>
 
-                    <label for="fullName" class="text-sm font-medium text-gray-700">Full Name</label>
-                    <input formControlName="name" class="mt-1 rounded-lg w-full px-3 py-3 border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400" type="text" name="name" id="fullName" placeholder="Enter Full Name" required>
-                    @let nameControl =registerForm.get('name');
-                    @if (nameControl?.errors && nameControl?.touched) {
+        <input
+          formControlName="email"
+          type="email"
+          placeholder="Enter your email"
+          class="mt-3 w-full px-6 py-4 rounded-2xl border bg-gray-50 text-lg
+                 focus:outline-none focus:ring-2 focus:ring-[#155DFC]"
+          [ngClass]="{
+            'border-red-400 focus:ring-red-400 bg-red-50':
+              registerForm.get('email')?.invalid &&
+              registerForm.get('email')?.touched,
+            'border-gray-200':
+              !(registerForm.get('email')?.invalid &&
+                registerForm.get('email')?.touched)
+          }">
 
-                        <div class="flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 " role="alert">
-                        <ul class="mt-1.5 list-disc list-inside ">
-                            @if (nameControl?.getError('required')) {
-                                <li>Input Is required</li>
-                            }
-                            @else if (nameControl?.getError('minlength')) {
-                                <li>Input Should be more than or equal 2 chars</li>
-                            }
-                            @else if (nameControl?.getError('maxlength')) {
-                                <li>Input Should be less than or equal 20 chars</li>
-                            }
-                        </ul>
-                    </div>
-                    }
+        @let emailControl = registerForm.get('email');
 
-                </div>
+        @if (emailControl?.touched && emailControl?.errors) {
+          <div class="mt-3 bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-xl text-sm">
 
+            @if (emailControl?.getError('required')) {
+              Email is required.
+            }
 
-                <div class="relative">
+            @if (emailControl?.getError('email')) {
+              Please enter a valid email address.
+            }
 
-                    <label for="email" class="text-sm font-medium text-gray-700">Email</label>
-                    <input formControlName="email" class="mt-1 rounded-lg w-full px-3 py-3 border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"  type="email" name="email" id="email" placeholder="Enter Email address" required>
-                    @let emailControl = registerForm.get('email');
-                    @if (emailControl?.errors && emailControl?.touched) {
-                        <div class="flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 " role="alert">
-                        <ul class="mt-1.5 list-disc list-inside ">
-                            @if (emailControl?.getError('required')) {
-                                <li>Input Is required</li>
-                            }
-                            @else if (emailControl?.getError('email')) {
-                                <li>Please enter a valid email address</li>
-                            }
-                            
-                        </ul>
-                    </div>
-                    }
-
-                </div>
+          </div>
+        }
+      </div>
 
 
-                <div class="relative">
+      <!-- ================= PASSWORD ================= -->
+      <div>
+        <label class="text-lg font-semibold text-slate-700">
+          Password
+        </label>
 
-                    <label for="password" class="text-sm font-medium text-gray-700">Password</label>
-                    <div class="relative">
-                        <input formControlName="password" class="mt-1 rounded-lg w-full px-3 py-3 pr-10 border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"  type="password" name="password" id="password" placeholder="Enter Password" required>
-                        <i class="fa-solid fa-eye absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"></i>
-                    </div>
-                    @let passwordControl = registerForm.get('password');
-                        @if (passwordControl?.errors && passwordControl?.touched) {
-                            <div class="flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 " role="alert">
-                            <ul class="mt-1.5 list-disc list-inside ">
-                                @if (passwordControl?.getError('required')) {
-                                    <li>Input Is required</li>
-                                }
-                                @else if (passwordControl?.getError('pattern')) {
-                                    <li>Custom field should match the pattern</li>
-                                }
-                                
-                            </ul>
-                        </div>
-                        }
-                </div>
+        <div class="relative mt-3">
+          <input
+            formControlName="password"
+            [type]="showPassword ? 'text' : 'password'"
+            placeholder="Enter password"
+            class="w-full px-6 py-4 pr-14 rounded-2xl border bg-gray-50 text-lg
+                   focus:outline-none focus:ring-2 focus:ring-[#155DFC]"
+            [ngClass]="{
+              'border-red-400 focus:ring-red-400 bg-red-50':
+                registerForm.get('password')?.invalid &&
+                registerForm.get('password')?.touched,
+              'border-gray-200':
+                !(registerForm.get('password')?.invalid &&
+                  registerForm.get('password')?.touched)
+            }">
 
-
-                <div class="relative">
-
-                    <label for="confirmPassword" class="text-sm font-medium text-gray-700">Confirm Password</label>
-                    <div class="relative">
-                        <input formControlName="rePassword" class="mt-1 rounded-lg w-full px-3 py-3 pr-10 border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"  type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
-                        <i class="fa-solid fa-eye absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"></i>
-                    </div>
-                    @if (registerForm.getError('mismatch') && (registerForm.get('rePassword')?.touched || registerForm.get('password')?.touched)) {
-                        <div class="flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 " role="alert">
-                        <ul class="mt-1.5 list-disc list-inside ">
-                            <li>Password confirmation is incorrect</li>
-                        </ul>
-                    </div>
-                    }
-                </div>
-
-                
-                <button  type="submit" class="w-full bg-blue-500 text-white font-semibold py-3 rounded-lg cursor-pointer hover:bg-blue-600 transition">Register</button>
-                <!-- <p class="text-center text-md mr-3"> Already have an account?<a href="" class="text-blue-500 underline text-md ml-2 font-semibold"> Login</a> </p> -->
-
-                <p class="text-center text-md mr-3">
-                Already have an account?
-                <a
-                    routerLink="/login"
-                    class="text-blue-500 underline text-md ml-2 font-semibold cursor-pointer"
-                >
-                    Login
-                </a>
-                </p>
-                
-
-
-
-            </form>
+          <button type="button"
+                  (click)="showPassword = !showPassword"
+                  class="absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-[#155DFC] transition">
+            <i class="fa-solid"
+               [class.fa-eye]="!showPassword"
+               [class.fa-eye-slash]="showPassword"></i>
+          </button>
         </div>
-    </header>
+
+        @let passwordControl = registerForm.get('password');
+
+        @if (passwordControl?.touched && passwordControl?.errors) {
+          <div class="mt-3 bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-xl text-sm">
+
+            @if (passwordControl?.getError('required')) {
+              Password is required.
+            }
+
+            @if (passwordControl?.getError('pattern')) {
+              Password must contain:
+              <br>• 8 characters minimum
+              <br>• Uppercase letter
+              <br>• Lowercase letter
+              <br>• Number
+              <br>• Special character (@$!%*?&)
+            }
+
+          </div>
+        }
+      </div>
 
 
+      <!-- ================= CONFIRM PASSWORD ================= -->
+      <div>
+        <label class="text-lg font-semibold text-slate-700">
+          Confirm Password
+        </label>
+
+        <div class="relative mt-3">
+          <input
+            formControlName="rePassword"
+            [type]="showConfirmPassword ? 'text' : 'password'"
+            placeholder="Confirm password"
+            class="w-full px-6 py-4 pr-14 rounded-2xl border bg-gray-50 text-lg
+                   focus:outline-none focus:ring-2 focus:ring-[#155DFC]"
+            [ngClass]="{
+              'border-red-400 focus:ring-red-400 bg-red-50':
+                registerForm.getError('mismatch') &&
+                (registerForm.get('rePassword')?.touched ||
+                 registerForm.get('password')?.touched),
+              'border-gray-200':
+                !(registerForm.getError('mismatch'))
+            }">
+
+          <button type="button"
+                  (click)="showConfirmPassword = !showConfirmPassword"
+                  class="absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-[#155DFC] transition">
+            <i class="fa-solid"
+               [class.fa-eye]="!showConfirmPassword"
+               [class.fa-eye-slash]="showConfirmPassword"></i>
+          </button>
+        </div>
+
+        @if (registerForm.getError('mismatch') &&
+            (registerForm.get('rePassword')?.touched ||
+             registerForm.get('password')?.touched)) {
+
+          <div class="mt-3 bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-xl text-sm">
+            Password confirmation does not match.
+          </div>
+        }
+      </div>
 
 
+      <!-- ================= SUBMIT ================= -->
+      <button
+        type="submit"
+        [disabled]="registerForm.invalid"
+        class="w-full py-5 text-xl font-semibold rounded-2xl transition
+               bg-[#155DFC] hover:bg-[#104bbf] text-white shadow-md hover:shadow-xl
+               disabled:bg-gray-300 disabled:cursor-not-allowed">
 
+        Create Account
+      </button>
 
+      <p class="text-center text-lg text-slate-600 mt-6">
+        Already have an account?
+        <a routerLink="/login"
+           class="text-[#155DFC] font-semibold hover:underline">
+          Login
+        </a>
+      </p>
 
+    </form>
 
+  </div>
 
-
-
-
-
-
-
-
-
-
-                    <!-- <div class="flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 " role="alert">
-                        <ul class="mt-1.5 list-disc list-inside ">
-                            <li>Input Is required</li>
-                            <li>Input Should be more than or equal 2 chars</li>
-                            <li>Input Should be less than or equal 20 chars</li>
-                            <li>Please enter a valid email address</li>
-                            <li>Password confirmation is incorrect</li>
-                        </ul>
-                    </div> -->
+</section>

@@ -1,143 +1,165 @@
+<div class="bg-slate-100 min-h-screen pb-20">
 
-  <!-- CONTENT WRAPPER -->
-  <div class="max-w-4xl mx-auto mt-10">
+  <!-- ================= HEADER ================= -->
+  <div class="bg-gradient-to-r from-white via-slate-50 to-[#155DFC]/5 border-b border-slate-200">
+    <div class="w-full px-6 md:px-10 xl:px-16 py-10">
+      <div class="mb-8">
+        <a routerLink="/home" class="group inline-flex items-center gap-3 
+           bg-linear-to-r from-white to-[#155DFC]/5
+           px-6 py-3 rounded-xl border border-slate-200 shadow-sm
+           text-[#155DFC] text-base md:text-lg font-medium
+           hover:shadow-lg hover:-translate-y-0.5 transition duration-300 cursor-pointer">
 
-    <!-- SETTINGS TITLE -->
-    <h1 class="text-2xl font-semibold">Settings</h1>
-    <p class="text-gray-500 mt-1 mb-6">Manage your account preferences and app settings</p>
-
-    <!-- PROFILE CARD -->
-    <section class="bg-white rounded-2xl shadow-sm p-6 mb-6">
-      <div class="flex items-center gap-2 mb-6 text-gray-600">
-        <i class="fa-regular fa-user"></i>
-        <span class="font-medium">Profile</span>
+          <i class="fa-solid fa-arrow-left transition group-hover:-translate-x-1"></i>
+          <span>Back to Projects</span>
+        </a>
       </div>
-
-      <div class="flex items-center gap-6 mb-6">
-        <div class="w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center text-white text-xl font-semibold">
-          AM
-        </div>
-        <div>
-          <p class="font-semibold text-lg">Ahmed Mohamed</p>
-          <p class="text-gray-500 -mt-1">Project Manager</p>
-          <button class="mt-2 text-blue-600 text-sm hover:underline">
-            Change Photo
-          </button>
-        </div>
+      <div class="text-center">
+        <h1 class="text-3xl md:text-4xl font-bold text-slate-800">
+          Account Settings
+        </h1>
+        <p class="text-slate-500 mt-3 text-base md:text-lg">
+          Manage your profile, security and system preferences
+        </p>
       </div>
+    </div>
+  </div>
 
-      <div class="space-y-4">
+  <!-- ================= CONTENT ================= -->
+  <div class="w-full px-6 md:px-10 xl:px-16 mt-12 max-w-6xl mx-auto space-y-10">
 
-        <div>
-          <label class="text-gray-700 font-medium">Full Name</label>
-          <input class="w-full bg-gray-100 border rounded-xl p-3 mt-1" value="Ahmed Mohamed">
-        </div>
+    <!-- ================= PROFILE CARD ================= -->
+    <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-8">
 
-        <div>
-          <label class="text-gray-700 font-medium">Email Address</label>
-          <div class="flex items-center bg-gray-100 border rounded-xl p-3 mt-1">
-            <i class="fa-regular fa-envelope mr-3 text-gray-500"></i>
-            <input class="w-full bg-transparent outline-none" value="ahmed@aec-hub.com">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+
+        <!-- Left -->
+        <div class="flex items-center gap-6">
+          <div
+            class="w-24 h-24 rounded-full bg-[#155DFC] flex items-center justify-center text-white text-2xl font-bold shadow-md">
+            AM
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-semibold text-slate-800">
+              Ahmed Mohamed
+            </h2>
+            <p class="text-slate-500">Project Manager</p>
+            <p class="text-sm text-slate-400 mt-1">
+              Member since 2024
+            </p>
           </div>
         </div>
 
+        <!-- Edit Button -->
+        <button
+          class="bg-[#155DFC] hover:bg-[#104bbf] text-white px-6 py-3 rounded-xl transition font-medium flex items-center gap-2">
+          <i class="fa-regular fa-pen-to-square"></i>
+          Edit Profile
+        </button>
+
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-slate-200 my-8"></div>
+
+      <!-- Info Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
         <div>
-          <label class="text-gray-700 font-medium">Phone Number</label>
-          <div class="flex items-center bg-gray-100 border rounded-xl p-3 mt-1">
-            <i class="fa-solid fa-phone mr-3 text-gray-500"></i>
-            <input class="w-full bg-transparent outline-none" value="+971 50 123 4567">
+          <p class="text-sm text-slate-500">Full Name</p>
+          <p class="font-medium text-slate-800 mt-1">Ahmed Mohamed</p>
+        </div>
+
+        <div>
+          <p class="text-sm text-slate-500">Email Address</p>
+          <p class="font-medium text-slate-800 mt-1">ahmed@aec-hub.com</p>
+        </div>
+
+        <div>
+          <p class="text-sm text-slate-500">Phone Number</p>
+          <p class="font-medium text-slate-800 mt-1">+971 50 123 4567</p>
+        </div>
+
+        <div>
+          <p class="text-sm text-slate-500">Role</p>
+          <p class="font-medium text-slate-800 mt-1">Project Manager</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= PREFERENCES GRID ================= -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+      <!-- Notifications -->
+      <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-8">
+
+        <div class="flex items-center gap-3 mb-6">
+          <i class="fa-regular fa-bell text-[#155DFC]"></i>
+          <h3 class="text-lg font-semibold text-slate-800">Notifications</h3>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="font-medium text-slate-800">Enable Notifications</p>
+            <p class="text-slate-500 text-sm">Receive system alerts & updates</p>
           </div>
-        </div>
-
-      </div>
-
-      <button class="mt-6 w-full bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700 transition text-center font-medium text-lg flex items-center justify-center gap-2">
-        <i class="fa-regular fa-pen-to-square"></i> Edit Account
-      </button>
-    </section>
-
-    <!-- NOTIFICATIONS -->
-    <section class="bg-white rounded-2xl shadow-sm p-6 mb-6">
-      <div class="flex items-center gap-2 text-gray-600 mb-6">
-        <i class="fa-regular fa-bell text-orange-500"></i>
-        <span class="font-medium">Notifications</span>
-      </div>
-
-      <div class="flex items-center justify-between">
-        <div>
-          <p class="font-medium">Allow Notifications</p>
-          <p class="text-gray-500 text-sm">Receive notifications continuously</p>
-        </div>
-
-        
-
-           <div class="px-6 py-6 flex items-center justify-between">
-
-           <label class="relative inline-block w-12 h-6 cursor-pointer">
-             <input type="checkbox" checked class="sr-only peer">
-           <div class="w-full h-full bg-gray-300 rounded-full peer-checked:bg-blue-600 transition-all"></div>
-
-             <span class="absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow 
-                   peer-checked:translate-x-6 transition-transform"></span>
-          </label>
-            </div>
-
-      </div>
-    </section>
-
-    <!-- SECURITY -->
-    <section class="bg-white rounded-2xl shadow-sm p-6 mb-6">
-      <div class="flex items-center gap-2 text-gray-600 mb-6">
-        <i class="fa-solid fa-shield-halved text-green-500"></i>
-        <span class="font-medium">Security & Privacy</span>
-      </div>
-
-      <div class="divide-y">
-        <button class="w-full text-left py-4 hover:bg-gray-50 flex justify-between items-center">
-          Change Password <i class="fa-solid fa-chevron-right"></i>
-        </button>
-
-        <button class="w-full text-left py-4 hover:bg-gray-50 flex justify-between items-center">
-          Two-Factor Authentication <i class="fa-solid fa-chevron-right"></i>
-        </button>
-
-        <button class="w-full text-left py-4 hover:bg-gray-50 flex justify-between items-center">
-          Connected Devices <i class="fa-solid fa-chevron-right"></i>
-        </button>
-
-        <button class="w-full text-left py-4 hover:bg-gray-50 flex justify-between items-center">
-          Login History <i class="fa-solid fa-chevron-right"></i>
-        </button>
-      </div>
-    </section>
-
-    <!-- GENERAL -->
-    <section class="bg-white rounded-2xl shadow-sm p-6 mb-6">
-      <div class="flex items-center gap-2 text-gray-600 mb-6">
-        <i class="fa-solid fa-gear text-blue-500"></i>
-        <span class="font-medium">General</span>
-      </div>
-
-      <div class="flex items-center justify-between">
-        <div>
-          <p class="font-medium">Auto-Save</p>
-          <p class="text-gray-500 text-sm">Save changes automatically</p>
-        </div>
-
-
 
           <label class="relative inline-flex items-center cursor-pointer">
-    <input type="checkbox" class="sr-only peer">
-    <div class="w-11 h-6 bg-gray-300 peer-focus:outline-none rounded-full peer peer-checked:bg-blue-600 transition-all duration-300"></div>
-    <span class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-all duration-300 peer-checked:translate-x-5"></span>
-  </label>
+            <input type="checkbox" checked class="sr-only peer">
+            <div class="w-11 h-6 bg-slate-300 rounded-full peer-checked:bg-[#155DFC] transition-all"></div>
+            <span class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow 
+                          transition-transform peer-checked:translate-x-5"></span>
+          </label>
+        </div>
 
+      </section>
+
+      <!-- Security -->
+      <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-8">
+
+        <div class="flex items-center gap-3 mb-6">
+          <i class="fa-solid fa-shield-halved text-[#155DFC]"></i>
+          <h3 class="text-lg font-semibold text-slate-800">Security</h3>
+        </div>
+
+        <div class="space-y-4">
+
+          <button
+            class="w-full text-left py-3 px-4 rounded-xl hover:bg-slate-50 transition flex justify-between items-center">
+            Change Password
+            <i class="fa-solid fa-chevron-right text-slate-400"></i>
+          </button>
+
+          <button
+            class="w-full text-left py-3 px-4 rounded-xl hover:bg-slate-50 transition flex justify-between items-center">
+            Two-Factor Authentication
+            <i class="fa-solid fa-chevron-right text-slate-400"></i>
+          </button>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- ================= DANGER ZONE ================= -->
+    <section class="bg-white rounded-2xl border border-red-200 shadow-sm p-8">
+
+      <div class="flex items-center gap-3 mb-6">
+        <i class="fa-solid fa-triangle-exclamation text-red-500"></i>
+        <h3 class="text-lg font-semibold text-red-600">Danger Zone</h3>
       </div>
+
+      <button
+        class="bg-red-50 text-red-600 border border-red-300 px-6 py-3 rounded-xl hover:bg-red-100 transition font-medium">
+        Delete Account
+      </button>
+
     </section>
 
-    <!-- DELETE ACCOUNT -->
-    <button class="w-full bg-red-50 text-red-600 border border-red-300 py-3 mb-3 rounded-xl hover:bg-red-100 font-medium text-lg">
-      Delete Account
-    </button>
-
   </div>
+
+</div>

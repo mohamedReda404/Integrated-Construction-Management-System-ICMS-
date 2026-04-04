@@ -51,3 +51,7 @@ font-family: "Noto Sans", sans-serif;
 .card{
     @apply  bg-white border border-gray-200 p-6 rounded relative shadow;
 }
+
+
+
+
