@@ -1,14 +1,17 @@
+import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, Validators, ɵInternalFormsSharedModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  imports: [ɵInternalFormsSharedModule, ReactiveFormsModule ,RouterModule],
+  imports: [ɵInternalFormsSharedModule, ReactiveFormsModule ,RouterModule , CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
 export class LoginComponent {
+
+  showPassword = false;
 
   private readonly fb = inject(FormBuilder);
   private readonly router = inject(Router);

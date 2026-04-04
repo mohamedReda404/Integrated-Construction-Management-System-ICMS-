@@ -1,59 +1,78 @@
-<!-- Build and Manage Your Construction Projects with Confidence -->
+<section class="relative py-20 overflow-hidden">
 
+  <!-- Background Gradient -->
+  <div class="absolute inset-0 bg-gradient-to-br from-white via-blue-50 to-[#155DFC]/10 -z-10"></div>
 
-<section class="py-8 mx-5 md:mx-30">
-  <div class="container mx-auto px-4">
-    <div class="body">
+  <div class="max-w-7xl mx-auto px-6">
 
-      <div class="parent flex flex-col md:flex-row justify-between items-center gap-5">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-16">
 
-        <!-- Left -->
-        <div class="left w-full md:w-[47%] mt-5 md:mt-0">
-          <div class="item pb-10 border-b border-gray-200">
-            <span class="text-sm main-color bg-color rounded-lg p-2">Trusted by 500+ Companies</span>
+      <!-- LEFT SIDE -->
+      <div class="w-full md:w-1/2">
 
-            <h3 class="text-2xl md:text-3xl my-8 font-semibold">
-              Build and Manage Your Construction <span class="main-color">Projects</span> with Confidence
-            </h3>
+        <span class="text-sm text-[#155DFC] bg-[#155DFC]/10 px-4 py-2 rounded-full font-medium">
+          Trusted by 500+ Companies
+        </span>
 
-            <p class="font-light mb-5 text-base md:text-lg">
-              Streamline every stage of your construction operations — from planning to delivery — with one powerful management platform.
-            </p>
+        <h1 class="text-4xl md:text-5xl font-bold mt-8 leading-tight text-slate-800">
+          Build and Manage Your Construction
+          <span class="text-[#155DFC]">Projects</span>
+          with Confidence
+        </h1>
 
-            <div class="buttons flex flex-wrap gap-3">
-              <button routerLink="/register" class="btn font-light px-3 py-2 rounded cursor-pointer" style="background-color:#155DFC; color:#fff;">
-                Get Started <i class="fa-solid fa-sm fa-arrow-right"></i>
-              </button>
+        <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+          Streamline every stage of your construction operations —
+          from planning to execution and final delivery —
+          using one powerful and integrated management platform.
+        </p>
 
-              <button class="btn font-light px-3 py-2 rounded border border-gray-300">
-                <i class="fa-solid fa-caret-right"></i> Watch Demo
-              </button>
-            </div>
-          </div>
+        <!-- Buttons -->
+        <div class="flex flex-wrap gap-4 mt-8">
 
-          <div class="parent flex justify-between items-center mt-10 text-center md:text-left">
-            <div>
-              <p class="font-medium text-2xl md:text-3xl">500+</p>
-              <span class="font-light">Companies</span>
-            </div>
+          <button routerLink="/register"
+            class="bg-[#155DFC] hover:bg-[#104bbf] text-white px-6 py-3 rounded-xl transition shadow-md hover:shadow-lg cursor-pointer">
+            Get Started
+            <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+          </button>
 
-            <div>
-              <p class="font-medium text-2xl md:text-3xl">10K+</p>
-              <span class="font-light">Projects</span>
-            </div>
+          <button class="border border-slate-300 px-6 py-3 rounded-xl hover:bg-slate-100 transition text-slate-700">
+            <i class="fa-solid fa-play mr-2 text-sm text-[#155DFC]"></i>
+            Watch Demo
+          </button>
 
-            <div>
-              <p class="font-medium text-2xl md:text-3xl">98%</p>
-              <span class="font-light">Satisfaction</span>
-            </div>
-          </div>
         </div>
 
-        <!-- Right -->
-        <div class="right w-full md:w-[45%] mt-8 md:mt-0">
-          <img src="assets/Landing/Build.jpg"
-               class="w-full rounded h-[300px] md:h-[600px] object-cover"
-               alt="HomeInspectionServices">
+        <!-- STATS -->
+        <div class="flex flex-wrap gap-12 mt-14 border-t pt-8 border-slate-200">
+
+          <div>
+            <p class="text-3xl font-bold text-slate-800">500+</p>
+            <span class="text-slate-500 text-sm">Companies</span>
+          </div>
+
+          <div>
+            <p class="text-3xl font-bold text-slate-800">10K+</p>
+            <span class="text-slate-500 text-sm">Projects</span>
+          </div>
+
+          <div>
+            <p class="text-3xl font-bold text-slate-800">98%</p>
+            <span class="text-slate-500 text-sm">Satisfaction</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="w-full md:w-1/2">
+
+        <div class="relative">
+          <img src="assets/Landing/Build.jpg" class="w-full h-[350px] md:h-[550px] object-cover rounded-3xl shadow-2xl"
+            alt="Construction Management">
+
+          <!-- subtle overlay glow -->
+          <div class="absolute inset-0 rounded-3xl ring-1 ring-[#155DFC]/10"></div>
         </div>
 
       </div>
@@ -62,417 +81,468 @@
   </div>
 </section>
 
- <!-- <section class=" py-8  mx-5 md:mx-30 ">
-    <div class="container mx-auto px-4 ">
-        
-        <div class="body">
-            
-            
-            <div class="parent flex justify-between items-center gap-5 ">
 
-                <div class="left w-[47%] m-8 ">
-                    <div class="item pb-10 border-b border-gray-200">
-                        <span class="text-sm  main-color bg-color rounded-lg  p-2"> Trusted by 500+ Companies</span>
-                        <h3 class="text-3xl my-8 font-semibold">Build and Manage Your Construction<span class="main-color">Projects</span> with Confidence</h3>
-                        <p class="font-light mb-5 text-lg ">Streamline every stage of your construction operations — from planning to delivery — with one powerful management platform. Track progress, manage teams, control budgets, and collaborate with clients in real time.</p>
-                        <div class="buttons ">
-                            <button class="btn me-5 font-light px-2 py-1 rounded" style="background-color: #155DFC; color: #fff;">Get Started <i class="fa-solid fa-sm fa-arrow-right" style="color:#fff;"></i></button>
-                            <button class="btn font-light px-2 py-1 rounded border border-gray-300"><i class="fa-solid fa-caret-right"></i>Watch Demo</button>
-                        </div>
-                    </div> 
-                    <div class="parent flex w-3/4  justify-between items-center mt-10">
-                        <div class="child ">
-                            <p class="font-medium text-3xl">500+</p>
-                            <span class="font-light" >Companies</span>
-                        </div>
-                        <div class="child ">
-                            <p class="font-medium text-3xl">10K+</p>
-                            <span class="font-light" >Projects</span>
-                        </div>
-                        <div class="child ">
-                            <p class="font-medium text-3xl">98%</p>
-                            <span class="font-light" >Satisfaction</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="right w-[45%]">
-                    <div class=""> <img src="assets/Landing/Build.jpg" class="w-full rounded h-[600px] " alt="HomeInspectionServices"></div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
- </section> -->
 
 
 <!-- Everything You Need in One Platform -->
-<section class="bg-gray-50 py-8 border-gray-400  mx-5 md:mx-30">
-<div class="container mx-auto px-4 ">
-    <div class="title text-center">
-        <span class="text-sm font-light main-color bg-color rounded-lg  p-2">Our Services</span>
-        <h2 class="text-3xl my-5 font-semibold">Everything You Need in <span class="main-color">One</span> Platform</h2>
-        <p class="text-xl font-light">From initial inspection to final construction, we provide comprehensive services<br/> to make your building project seamless and stress-free.</p>
+<section class="py-20 bg-linear-to-b from-white to-blue-50">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- TITLE -->
+    <div class="text-center mb-16">
+
+      <span class="text-sm text-[#155DFC] bg-[#155DFC]/10 px-4 py-2 rounded-full font-medium">
+        Our Services
+      </span>
+
+      <h2 class="text-3xl md:text-4xl font-bold mt-6 text-slate-800">
+        Everything You Need in <span class="text-[#155DFC]">One</span> Platform
+      </h2>
+
+      <p class="text-slate-600 text-lg mt-6 max-w-3xl mx-auto">
+        From initial planning to final delivery, our construction management
+        system provides complete visibility, control, and collaboration
+        across every project phase.
+      </p>
+
     </div>
-    <div class="body">
-        <div class="parent m-8 grid sm:grid-cols-1 md:grid-cols-3 gap-10">
 
-            <div class="card">
-               <div class="item w-[80%]">
-                 <span class="icon p-2 rounded bg-color"><i class="fa-regular main-color fa-lg fa-clock  "></i></span>
-                <h3 class="text-lg my-3 ">Centralized Management</h3>
-                <p class="text-xs">Manage all projects, clients, and teams in one secure platform with full visibility and control.</p>
-               </div>
-            </div>
-           <div class="card">
-                <div class="item w-[80%]">
-                    <span class="icon p-2 rounded bg-color"><i class="fa-regular main-color fa-lg fa-clock  "></i></span>
-                <h3 class="text-lg my-3 ">Progress & Quality Tracking</h3>
-                <p class="text-xs">Monitor tasks, timelines, inspections, and site reports to ensure every phase meets the highest standards.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="item w-[80%]">
-                    <span class="icon p-2 rounded bg-color"><i class="fa-solid fa-user-group main-color fa-lg "></i></span>
-                <h3 class="text-lg my-3 ">Team Collaboration</h3>
-                <p class="text-xs">Connect office and field teams seamlessly with built-in communication and reporting tools.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="item w-[80%]">
-                    <span class="icon p-2 rounded bg-color"><i class="fa-regular main-color fa-lg fa-clock  "></i></span>
-                <h3 class="text-lg my-3 ">Quality Assurance</h3>
-                <p class="text-xs">All companies are vetted and reviewed. Get guarantees on workmanship and project completion.All companies are vetted and reviewed. Get guarantees on workmanship and project completion.</p>
-                </div>    
-            </div>
-            <div class="card">
-                <div class="item w-[80%]">
-                    <span class="icon p-2 rounded bg-color"><i class="fa-regular main-color fa-lg fa-clock  "></i></span>
-                <h3 class="text-lg my-3 ">Real-Time Insights</h3>
-                <p class="text-xs">Get live updates on site activities, performance analytics, and project milestones.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="item w-[80%]">
-                    <span class="icon p-2 rounded bg-color"><i class="fa-regular main-color fa-lg fa-clock  "></i></span>
-                <h3 class="text-lg my-3 ">Budget & Resource Management</h3>
-                <p class="text-xs">Track costs, allocate resources, and forecast budgets with precision to maximize profitability.</p>
-                </div>
-            </div>
+    <!-- CARDS GRID -->
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
+      <!-- CARD 1 -->
+      <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition group">
+
+        <div
+          class="w-12 h-12 bg-[#155DFC]/10 text-[#155DFC] flex items-center justify-center rounded-xl mb-6 group-hover:bg-[#155DFC] group-hover:text-white transition">
+          <i class="fa-solid fa-building"></i>
         </div>
+
+        <h3 class="text-xl font-semibold mb-4 text-slate-800">
+          Centralized Management
+        </h3>
+
+        <p class="text-slate-600 leading-relaxed">
+          Manage all projects, clients, documentation, and teams
+          in one secure and organized dashboard.
+        </p>
+
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition group">
+
+        <div
+          class="w-12 h-12 bg-[#155DFC]/10 text-[#155DFC] flex items-center justify-center rounded-xl mb-6 group-hover:bg-[#155DFC] group-hover:text-white transition">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+
+        <h3 class="text-xl font-semibold mb-4 text-slate-800">
+          Progress & Quality Tracking
+        </h3>
+
+        <p class="text-slate-600 leading-relaxed">
+          Monitor tasks, timelines, inspections, and site reports
+          to ensure every phase meets the highest standards.
+        </p>
+
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition group">
+
+        <div
+          class="w-12 h-12 bg-[#155DFC]/10 text-[#155DFC] flex items-center justify-center rounded-xl mb-6 group-hover:bg-[#155DFC] group-hover:text-white transition">
+          <i class="fa-solid fa-users"></i>
+        </div>
+
+        <h3 class="text-xl font-semibold mb-4 text-slate-800">
+          Team Collaboration
+        </h3>
+
+        <p class="text-slate-600 leading-relaxed">
+          Connect office and field teams seamlessly with
+          built-in communication and reporting tools.
+        </p>
+
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition group">
+
+        <div
+          class="w-12 h-12 bg-[#155DFC]/10 text-[#155DFC] flex items-center justify-center rounded-xl mb-6 group-hover:bg-[#155DFC] group-hover:text-white transition">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+        <h3 class="text-xl font-semibold mb-4 text-slate-800">
+          Quality Assurance
+        </h3>
+
+        <p class="text-slate-600 leading-relaxed">
+          Ensure compliance, safety, and performance standards
+          with structured approval and inspection workflows.
+        </p>
+
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition group">
+
+        <div
+          class="w-12 h-12 bg-[#155DFC]/10 text-[#155DFC] flex items-center justify-center rounded-xl mb-6 group-hover:bg-[#155DFC] group-hover:text-white transition">
+          <i class="fa-solid fa-chart-pie"></i>
+        </div>
+
+        <h3 class="text-xl font-semibold mb-4 text-slate-800">
+          Real-Time Insights
+        </h3>
+
+        <p class="text-slate-600 leading-relaxed">
+          Access live dashboards, analytics, and performance metrics
+          for smarter and faster decision-making.
+        </p>
+
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition group">
+
+        <div
+          class="w-12 h-12 bg-[#155DFC]/10 text-[#155DFC] flex items-center justify-center rounded-xl mb-6 group-hover:bg-[#155DFC] group-hover:text-white transition">
+          <i class="fa-solid fa-wallet"></i>
+        </div>
+
+        <h3 class="text-xl font-semibold mb-4 text-slate-800">
+          Budget & Resource Management
+        </h3>
+
+        <p class="text-slate-600 leading-relaxed">
+          Track costs, allocate materials, and forecast budgets
+          with precision to maximize profitability.
+        </p>
+
+      </div>
+
     </div>
-</div>
+
+  </div>
 </section>
+
 
 
 
 <!-- Our Services -->
 
-<section class="py-8 mx-5 md:mx-30">
-  <div class="container mx-auto px-4">
+<section id="services" class="py-24 bg-linear-to-b from-white to-blue-50">
+
+  <div class="max-w-7xl mx-auto px-6">
 
     <!-- Title -->
-    <div class="title text-center">
-      <h2 class="text-3xl my-3 font-semibold">
-        <span class="main-color">Our</span> Services
+    <div class="text-center mb-20">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-800">
+        <span class="text-[#155DFC]">Our</span> Services
       </h2>
-      <p class="text-lg font-light">
-        Comprehensive solutions for every stage of your construction journey
+      <p class="text-slate-600 text-lg mt-6 max-w-2xl mx-auto">
+        Comprehensive solutions covering every stage of your construction journey —
+        from inspection and coordination to analytics and reporting.
       </p>
     </div>
 
-    <div class="body m-5 space-y-16">
+    <!-- SERVICES LIST -->
+    <div class="space-y-24">
 
-      <!-- Service 1 -->
-      <div class="parent flex flex-col md:flex-row justify-between items-center gap-8">
-        <div class="item w-full md:w-[45%] p-5">
-          <h3 class="text-xl md:text-2xl font-semibold">Home Inspection Services</h3>
-          <p class="font-light my-5">
-            Providing comprehensive solutions to manage projects from start to finish, with precise monitoring of all stages.
+      <!-- SERVICE ITEM -->
+      <div class="flex flex-col md:flex-row items-center gap-16">
+
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-bold text-slate-800 mb-6">
+            Home Inspection Services
+          </h3>
+          <p class="text-slate-600 text-lg leading-relaxed mb-8">
+            Comprehensive inspection tools to monitor every stage of construction,
+            ensuring safety, compliance, and quality control.
           </p>
-          <button class="btn-main">
-            Learn More <i class="fa-solid fa-sm fa-arrow-right text-white"></i>
+          <button class="group bg-[#155DFC] hover:bg-[#104bbf] 
+               text-white px-6 py-3 
+               rounded-xl 
+               flex items-center gap-3 
+               shadow-md hover:shadow-lg 
+               transition">
+
+            Learn More
+            <i class="fa-solid fa-arrow-right 
+              transition-transform duration-300 
+              group-hover:translate-x-1"></i>
+
           </button>
         </div>
-        <div class="w-full md:w-[45%]">
-          <img src="assets/Landing/HomeInspectionServices.jpg" class="w-full rounded h-[260px] md:h-65 object-cover" />
+
+        <div class="md:w-1/2">
+          <img src="assets/Landing/HomeInspectionServices.jpg"
+            class="w-full h-80 object-cover rounded-3xl shadow-xl">
         </div>
+
       </div>
 
-      <!-- Service 2 -->
-      <div class="parent flex flex-col md:flex-row-reverse justify-between items-center gap-8">
-        <div class="item w-full md:w-[45%] p-5">
-          <h3 class="text-xl md:text-2xl font-semibold">Engineering Team Coordination</h3>
-          <p class="font-light my-5">
-            Organizing the work of engineers and assigning them to different departments to ensure efficient execution.
+
+      <!-- SERVICE ITEM REVERSE -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-16">
+
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-bold text-slate-800 mb-6">
+            Engineering Team Coordination
+          </h3>
+          <p class="text-slate-600 text-lg leading-relaxed mb-8">
+            Assign roles, organize departments, and streamline communication
+            to ensure efficient and structured execution.
           </p>
-          <button class="btn-main">
-            Learn More <i class="fa-solid fa-sm fa-arrow-right text-white"></i>
+          <button class="group bg-[#155DFC] hover:bg-[#104bbf] 
+               text-white px-6 py-3 
+               rounded-xl 
+               flex items-center gap-3 
+               shadow-md hover:shadow-lg 
+               transition cursor-pointer">
+
+            Learn More
+            <i class="fa-solid fa-arrow-right 
+     transition-transform duration-300 
+     group-hover:translate-x-1"></i>
+
           </button>
         </div>
-        <div class="w-full md:w-[45%]">
-          <img src="assets/Landing/EngineeringTeamCoordination.jpg" class="w-full rounded h-[260px] md:h-65 object-cover" />
+
+        <div class="md:w-1/2">
+          <img src="assets/Landing/EngineeringTeamCoordination.jpg"
+            class="w-full h-[320px] object-cover rounded-3xl shadow-xl">
         </div>
+
       </div>
 
-      <!-- Service 3 -->
-      <div class="parent flex flex-col md:flex-row justify-between items-center gap-8">
-        <div class="item w-full md:w-[45%] p-5">
-          <h3 class="text-xl md:text-2xl font-semibold">Warehouse and Materials Management</h3>
-          <p class="font-light my-5">
-            Monitoring inventory and facilitating the process of requesting the materials needed for the project effectively.
+
+      <!-- SERVICE ITEM -->
+      <div class="flex flex-col md:flex-row items-center gap-16">
+
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-bold text-slate-800 mb-6">
+            Warehouse & Materials Management
+          </h3>
+          <p class="text-slate-600 text-lg leading-relaxed mb-8">
+            Monitor inventory, manage material requests, and optimize
+            procurement workflows for maximum efficiency.
           </p>
-          <button class="btn-main">
-            Learn More <i class="fa-solid fa-sm fa-arrow-right text-white"></i>
+          <button class="group bg-[#155DFC] hover:bg-[#104bbf] 
+               text-white px-6 py-3 
+               rounded-xl 
+               flex items-center gap-3 
+               shadow-md hover:shadow-lg 
+               transition cursor-pointer">
+
+            Learn More
+            <i class="fa-solid fa-arrow-right 
+     transition-transform duration-300 
+     group-hover:translate-x-1"></i>
+
           </button>
         </div>
-        <div class="w-full md:w-[45%]">
-          <img src="assets/Landing/WarehouseandMaterialsManagement.jpg" class="w-full rounded h-[260px] md:h-65 object-cover" />
+
+        <div class="md:w-1/2">
+          <img src="assets/Landing/WarehouseandMaterialsManagement.jpg"
+            class="w-full h-80 object-cover rounded-3xl shadow-xl">
         </div>
+
       </div>
 
-      <!-- Service 4 -->
-      <div class="parent flex flex-col md:flex-row-reverse justify-between items-center gap-8">
-        <div class="item w-full md:w-[45%] p-5">
-          <h3 class="text-xl md:text-2xl font-semibold">Communication with Contractors and Consultants</h3>
-          <p class="font-light my-5">
-            Building strong relationships with all parties to ensure the project is executed according to the required standards.
+
+      <!-- SERVICE ITEM REVERSE -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-16">
+
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-bold text-slate-800 mb-6">
+            Contractor & Consultant Communication
+          </h3>
+          <p class="text-slate-600 text-lg leading-relaxed mb-8">
+            Strengthen collaboration between stakeholders with structured
+            updates, documentation, and communication workflows.
           </p>
-          <button class="btn-main">
-            Learn More <i class="fa-solid fa-sm fa-arrow-right text-white"></i>
+          <button class="group bg-[#155DFC] hover:bg-[#104bbf] 
+               text-white px-6 py-3 
+               rounded-xl 
+               flex items-center gap-3 
+               shadow-md hover:shadow-lg 
+               transition cursor-pointer">
+
+            Learn More
+            <i class="fa-solid fa-arrow-right 
+     transition-transform duration-300 
+     group-hover:translate-x-1"></i>
+
           </button>
         </div>
-        <div class="w-full md:w-[45%]">
-          <img src="assets/Landing/CommunicationwithContractorsandConsultants.jpg" class="w-full rounded h-[260px] md:h-65 object-cover" />
+
+        <div class="md:w-1/2">
+          <img src="assets/Landing/CommunicationwithContractorsandConsultants.jpg"
+            class="w-full h-[320px] object-cover rounded-3xl shadow-xl">
         </div>
+
       </div>
 
-      <!-- Service 5 -->
-      <div class="parent flex flex-col md:flex-row justify-between items-center gap-8">
-        <div class="item w-full md:w-[45%] p-5">
-          <h3 class="text-xl md:text-2xl font-semibold">Reports and Analytics</h3>
-          <p class="font-light my-5">
-            Offering periodic reports and detailed analytics to track project progress and support decision-making.
+
+      <!-- SERVICE ITEM -->
+      <div class="flex flex-col md:flex-row items-center gap-16">
+
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-bold text-slate-800 mb-6">
+            Reports & Analytics
+          </h3>
+          <p class="text-slate-600 text-lg leading-relaxed mb-8">
+            Generate detailed performance reports and analytics dashboards
+            to support informed decision-making.
           </p>
-          <button class="btn-main">
-            Learn More <i class="fa-solid fa-sm fa-arrow-right text-white"></i>
+          <button class="group bg-[#155DFC] hover:bg-[#104bbf] 
+               text-white px-6 py-3 
+               rounded-xl 
+               flex items-center gap-3 
+               shadow-md hover:shadow-lg 
+               transition cursor-pointer">
+
+            Learn More
+            <i class="fa-solid fa-arrow-right 
+     transition-transform duration-300 
+     group-hover:translate-x-1"></i>
+
           </button>
         </div>
-        <div class="w-full md:w-[45%]">
-          <img src="assets/Landing/ReportsandAnalytics.jpg" class="w-full rounded h-[260px] md:h-56 object-cover" />
+
+        <div class="md:w-1/2">
+          <img src="assets/Landing/ReportsandAnalytics.jpg" class="w-full h-[320px] object-cover rounded-3xl shadow-xl">
         </div>
+
       </div>
 
     </div>
+
   </div>
 </section>
 
 
- <!-- <section class=" py-8  mx-5 md:mx-30">
-    <div class="container mx-auto px-4 ">
-        <div class="title text-center">
-            <h2 class="text-3xl my-3 font-semibold"><span class="main-color">Our</span> Services</h2>
-            <p class="text-lg font-light">Comprehensive solutions for every stage of your construction journey</p>
-        </div>
-        <div class="body m-5 ">
-            <div class="parent flex justify-between items-center gap-5 mt-15">
-                <div class="item w-[45%] p-5 ">
-                    <h3>Home Inspection Services</h3>
-                    <p class="font-light my-5">Providing comprehensive solutions to manage projects from start to finish, with precise monitoring of all stages.</p>
-                    <button class="btn-main">Learn More <i class="fa-solid fa-sm fa-arrow-right" style="color:#fff;"></i></button>
-                </div>  
-                <div class=" w-[45%] "> <img src="assets/Landing/HomeInspectionServices.jpg" class="w-full rounded h-65" alt="HomeInspectionServices"></div>
-            </div>
-            <div class="parent flex justify-between items-center gap-5 mt-15">
-                <div class=" w-[45%] "> <img src="assets/Landing/EngineeringTeamCoordination.jpg" class="w-full rounded h-65" alt="HomeInspectionServices"></div>
-                <div class="item w-[45%] p-5 ">
-                    <h3>Engineering Team Coordination</h3>
-                    <p class="font-light my-5">Organizing the work of engineers and assigning them to different departments to ensure efficient execution.</p>
-                    <button class="btn-main">Learn More <i class="fa-solid fa-sm fa-arrow-right" style="color:#fff;"></i></button>
-                </div> 
-            </div>
-            <div class="parent flex justify-between items-center gap-5 mt-15">
-                <div class="item w-[45%] p-5 ">
-                    <h3>Warehouse and Materials Management</h3>
-                    <p class="font-light my-5">Monitoring inventory and facilitating the process of requesting the materials needed for the project effectively.</p>
-                    <button class="btn-main">Learn More <i class="fa-solid fa-sm fa-arrow-right" style="color:#fff;"></i></button>
-                </div>  
-                <div class=" w-[45%] "> <img src="assets/Landing/WarehouseandMaterialsManagement.jpg" class="w-full rounded h-65" alt="HomeInspectionServices"></div>
-            </div>
-            <div class="parent flex justify-between items-center gap-5 mt-15">
-                <div class=" w-[45%] "> <img src="assets/Landing/CommunicationwithContractorsandConsultants.jpg" class="w-full h-65 rounded" alt="HomeInspectionServices"></div>
-                <div class="item w-[45%] p-5 ">
-                    <h3>Communication with Contractors and Consultants</h3>
-                    <p class="font-light my-5">Building strong relationships with all parties to ensure the project is executed according to the required standards.</p>
-                    <button class="btn-main">Learn More <i class="fa-solid fa-sm fa-arrow-right" style="color:#fff;"></i></button>
-                </div> 
-            </div>
-            <div class="parent flex justify-between items-center gap-5 mt-15">
-                <div class="item w-[45%] p-5 ">
-                    <h3>Reports and Analytics</h3>
-                    <p class="font-light my-5">Offering periodic reports and detailed analytics to track project progress and support decision-making.</p>
-                    <button class="btn-main">Learn More <i class="fa-solid fa-sm fa-arrow-right" style="color:#fff;"></i></button>
-                </div>  
-                <div class=" w-[45%] "> <img src="assets/Landing/ReportsandAnalytics.jpg" class="w-full h-56 rounded" alt="HomeInspectionServices"></div>
-            </div>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- How It Works -->
+<section id="how-it-works" class="bg-linear-to-b from-white to-blue-50/40 py-20 mx-5 md:mx-30">
+  <div class="container mx-auto px-4">
+
+    <!-- Title -->
+    <div class="text-center max-w-2xl mx-auto">
+      <h2 class="text-4xl font-bold text-slate-800">
+        How It <span class="text-[#155DFC]">Works</span>
+      </h2>
+      <p class="text-slate-500 mt-4 text-lg">
+        From setup to full project control in four simple steps.
+      </p>
     </div>
- </section> -->
 
+    <!-- Steps -->
+    <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
 
- <!-- Our Success Stories -->
- <section class=" py-8  mx-5 md:mx-30">
-    <div class="container mx-auto px-4 ">
-        <div class="title text-center">
-            <h2 class="text-3xl my-3 font-semibold">Our<span class="main-color">Success</span> Stories</h2>
-            <p class="text-lg font-light">See the transformation of real projects - from initial inspection to final construction</p>
+      <!-- STEP 1 -->
+      <div class="group bg-white p-8 rounded-2xl shadow-md border border-slate-200 hover:shadow-xl transition">
+
+        <div class="flex items-center justify-between">
+          <span class="text-5xl font-bold text-blue-100">01</span>
+          <div class="w-12 h-12 bg-[#155DFC] rounded-xl flex items-center justify-center text-white shadow-md">
+            <i class="fa-solid fa-user"></i>
+          </div>
         </div>
-        <div class="body m-5  ">
 
+        <h5 class="mt-6 text-xl font-semibold text-slate-800">
+          Create Your Project
+        </h5>
 
+        <p class="mt-3 text-slate-500 text-sm leading-relaxed">
+          Set up your company dashboard and add ongoing or upcoming projects.
+        </p>
 
-            
+      </div>
 
-            <div class="max-w-3xl mx-auto relative">
-            <!-- Before / After Container -->
-            <div class="relative overflow-hidden rounded-2xl shadow-lg">
-                <img src="assets/Landing/AfterBefore.jpg" alt="After Image" class="w-full" id="beforeAfterImage">
+      <!-- STEP 2 -->
+      <div class="group bg-white p-8 rounded-2xl shadow-md border border-slate-200 hover:shadow-xl transition">
 
-                <!-- Slider Divider Line -->
-                <div id="divider"
-                    class="absolute top-0 h-full w-1 bg-white cursor-col-resize"
-                    style="left: 50%;">
-                </div>
-
-                <!-- Before Tag -->
-                <span class="absolute top-5 left-5 bg-black/60 text-white px-3 py-1 rounded-full text-sm">
-                    Before
-                </span>
-
-                <!-- After Tag -->
-                <span class="absolute top-5 right-5 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
-                    After
-                </span>
-            </div>
-
-    <!-- Navigation Arrows -->
-    <button class="absolute left-[-30px] top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow hover:bg-gray-200">
-      ‹
-    </button>
-
-    <button class="absolute right-[-30px] top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow hover:bg-gray-200">
-      ›
-    </button>
-  </div>
-
-  <div class="text-center mt-8">
-    <h3 class="text-xl font-semibold">Modern Family Home</h3>
-    <p class="text-gray-600">Complete exterior renovation with 3D visualization</p>
-  </div>
-
-  <div class="flex justify-center mt-6 space-x-3">
-    <span class="w-8 h-8 flex items-center justify-center border rounded-full cursor-pointer">‹</span>
-    <span class="w-3 h-3 bg-blue-600 rounded-full"></span>
-    <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
-    <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
-    <span class="w-8 h-8 flex items-center justify-center border rounded-full cursor-pointer">›</span>
-  </div>
-
-  <div class="text-center mt-6">
-    <button class="btn me-5 font-light px-2 py-1 rounded hover:bg-blue-700" style=" background-color: #155DFC; color: #fff;">Get Started <i class="fa-solid fa-sm fa-arrow-right" style="color:#fff;"></i></button>
-
-    
-  </div>
-
-
-
-
-
-            
+        <div class="flex items-center justify-between">
+          <span class="text-5xl font-bold text-blue-100">02</span>
+          <div class="w-12 h-12 bg-[#155DFC] rounded-xl flex items-center justify-center text-white shadow-md">
+            <i class="fa-solid fa-folder-plus"></i>
+          </div>
         </div>
-    </div>
- </section>
 
+        <h5 class="mt-6 text-xl font-semibold text-slate-800">
+          Import or Start Projects
+        </h5>
 
+        <p class="mt-3 text-slate-500 text-sm leading-relaxed">
+          Upload existing data or start new projects with templates tailored for construction workflows.
+        </p>
 
+      </div>
 
- 
+      <!-- STEP 3 -->
+      <div class="group bg-white p-8 rounded-2xl shadow-md border border-slate-200 hover:shadow-xl transition">
 
-
-
-
- <!-- How It Works -->
-<section class="bg-gray-50 py-8 border-gray-400 mx-5 md:mx-30">
-<div class="container mx-auto px-4 ">
-    <div class="title text-center">
-        <h2 class="text-3xl my-5 font-semibold">How It <span class="main-color">Works</span> </h2>
-        <p class="text-xl font-light">From setup to full project control in four simple steps.</p>
-    </div>
-    <div class="body">
-        <div class="parent m-8 grid sm:grid-cols-2 md:grid-cols-4 gap-8">
-
-
-
-            
-            <div class="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">
-               <p class="text-4xl main-color my-4 font-medium" style="color:#DBEAFE;">01</p>
-               <span class="icon  p-2 rounded-xl " style="background-color:#155DFC;"><i class="fa-regular fa-lg fa-clock  " style="color:#fff;"></i></span>
-                <h5 class="mb-2 mt-4 text-xl font-semibold tracking-tight text-heading">Create Your Profile</h5>
-                <p class="mb-3 text-body">Set up your company dashboard and add ongoing or upcoming projects.</p>
-            </div>
-            <div class="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">
-               <p class="text-4xl main-color my-4 font-medium" style="color:#DBEAFE;">02</p>
-               <span class="icon  p-2 rounded-xl " style="background-color:#155DFC;"><i class="fa-regular fa-lg fa-clock  " style="color:#fff;"></i></span>
-                <h5 class="mb-2 mt-4 text-xl font-semibold tracking-tight text-heading">Import or Start Projects</h5>
-                <p class="mb-3 text-body">Upload existing data or start new projects with templates tailored for construction workflows.</p>
-            </div>
-            <div class="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">
-               <p class="text-4xl main-color my-4 font-medium" style="color:#DBEAFE;">03</p>
-               <span class="icon  p-2 rounded-xl " style="background-color:#155DFC;"><i class="fa-solid fa-user-group main-color fa-lg  " style="color:#fff;"></i></span>
-                <h5 class="mb-2 mt-4 text-xl font-semibold tracking-tight text-heading">Connect Teams & Clients</h5>
-                <p class="mb-3 text-body">Invite team members, partners, and clients to collaborate securely within your workspace.</p>
-            </div>
-            <div class="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">
-               <p class="text-4xl main-color my-4 font-medium" style="color:#DBEAFE;">04</p>
-               <span class="icon  p-2 rounded-xl " style="background-color:#155DFC;"><i class="fa-regular fa-lg fa-clock  " style="color:#fff;"></i></span>
-                <h5 class="mb-2 mt-4 text-xl font-semibold tracking-tight text-heading">Monitor, Report, & Deliver</h5>
-                <p class="mb-3 text-body">Track progress, manage documentation, and ensure every project is completed on time and within budget.</p>
-            </div>
-
-
-
-
-
-            <!-- <div class="card">
-                <p class="text-4xl main-color my-4 font-medium" style="color:#DBEAFE;">01</p>
-                <span class="icon  p-2 rounded-xl " style="background-color:#155DFC;"><i class="fa-regular fa-lg fa-clock  " style="color:#fff;"></i></span>
-                <h3 class="text-lg mt-4 mb-2">Create Your Profile</h3>
-                <p class="text-xs">Set up your company dashboard and add ongoing or upcoming projects.</p>
-            </div>
-            <div class="card">
-                <p class="text-4xl main-color my-4 font-medium" style="color:#DBEAFE;">02</p>
-                <span class="icon  p-2 rounded-xl " style="background-color:#155DFC;"><i class="fa-regular fa-lg fa-clock  " style="color:#fff;"></i></span>
-                <h3 class="text-lg mt-4 mb-2">Create Your Profile</h3>
-                <p class="text-xs">Set up your company dashboard and add ongoing or upcoming projects.</p>
-            </div>
-            <div class="card">
-                <p class="text-4xl main-color my-4 font-medium" style="color:#DBEAFE;">03</p>
-                <span class="icon  p-2 rounded-xl " style="background-color:#155DFC;"><i class="fa-regular fa-lg fa-clock  " style="color:#fff;"></i></span>
-                <h3 class="text-lg mt-4 mb-2">Create Your Profile</h3>
-                <p class="text-xs">Set up your company dashboard and add ongoing or upcoming projects.</p>
-            </div>
-            <div class="card">
-                <p class="text-4xl main-color my-4 font-medium" style="color:#DBEAFE;">04</p>
-                <span class="icon  p-2 rounded-xl " style="background-color:#155DFC;"><i class="fa-regular fa-lg fa-clock  " style="color:#fff;"></i></span>
-                <h3 class="text-lg mt-4 mb-2">Create Your Profile</h3>
-                <p class="text-xs">Set up your company dashboard and add ongoing or upcoming projects.</p>
-            </div> -->
-
-
-
-
+        <div class="flex items-center justify-between">
+          <span class="text-5xl font-bold text-blue-100">03</span>
+          <div class="w-12 h-12 bg-[#155DFC] rounded-xl flex items-center justify-center text-white shadow-md">
+            <i class="fa-solid fa-users"></i>
+          </div>
         </div>
+
+        <h5 class="mt-6 text-xl font-semibold text-slate-800">
+          Connect Teams & Clients
+        </h5>
+
+        <p class="mt-3 text-slate-500 text-sm leading-relaxed">
+          Invite team members, partners, and clients to collaborate securely within your workspace.
+        </p>
+
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="group bg-white p-8 rounded-2xl shadow-md border border-slate-200 hover:shadow-xl transition">
+
+        <div class="flex items-center justify-between">
+          <span class="text-5xl font-bold text-blue-100">04</span>
+          <div class="w-12 h-12 bg-[#155DFC] rounded-xl flex items-center justify-center text-white shadow-md">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+        </div>
+
+        <h5 class="mt-6 text-xl font-semibold text-slate-800">
+          Monitor, Report & Deliver
+        </h5>
+
+        <p class="mt-3 text-slate-500 text-sm leading-relaxed">
+          Track progress, manage documentation, and ensure every project is completed on time and within budget.
+        </p>
+
+      </div>
+
     </div>
-</div>
+
+  </div>
 </section>
