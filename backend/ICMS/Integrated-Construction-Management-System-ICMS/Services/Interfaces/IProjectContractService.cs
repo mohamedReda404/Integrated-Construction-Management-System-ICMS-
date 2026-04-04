@@ -1,8 +1,12 @@
-﻿public interface IProjectContractService
+﻿
+namespace Integrated_Construction_Management_System_ICMS.Services.Interfaces
 {
-    Task<IEnumerable<ProjectContract>> GetAll(CancellationToken cancellationToken);
-    Task<ProjectContract?> GetId(int id, CancellationToken cancellationToken);
-    Task<ProjectContract> AddNew(ProjectContract projectContract, CancellationToken cancellationToken);
-    Task<bool> Update(int id, ProjectContract projectContract, CancellationToken cancellationToken);
-    Task<bool> Delete(int id, CancellationToken cancellationToken);
+    public interface IProjectContractService
+    {
+        Task<IEnumerable<ProjectContractResponce?>> GetAll(CancellationToken cancellationToken = default);
+        Task<ProjectContractResponce?> GetId(int id, CancellationToken cancellationToken = default);
+        Task<ProjectContractResponce> AddNew(ProjectContractRequest request, CancellationToken cancellationToken = default);
+        Task<bool> Update(int id, ProjectContractRequest request, CancellationToken cancellationToken = default);
+        Task<bool> Delete(int id, CancellationToken cancellationToken = default);
+    }
 }

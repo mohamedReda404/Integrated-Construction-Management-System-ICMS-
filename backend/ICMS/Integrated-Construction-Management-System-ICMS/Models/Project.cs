@@ -6,62 +6,27 @@ namespace Integrated_Construction_Management_System_ICMS.Models
     {
 
         //========================ProjectINFO=========================
-        [Key]
-        public int  ProjectID { get; set; }
-        [Required,MaxLength(100)]
-        public string  ProjectName { get; set; }=string.Empty; 
-        [Required,MaxLength(200)]
-        public string  ProjectLocation { get; set; }= string.Empty;
-        [Required,MaxLength(500)]
-        public string  ProjectDescritpion { get; set; }= string.Empty;
+       
+        public int  Id { get; set; }
+        public string  Name { get; set; }=string.Empty; 
+        public string  Location { get; set; }= string.Empty;
+        public string  Descritpion { get; set; }= string.Empty;
+        public string  Category { get; set; }= string.Empty;
+        public string  ClientName { get; set; }= string.Empty;
+        public int  ContractValue { get; set; }
+        public byte[] ?Photo { get; set; }
+        public DateOnly  StartDate { get; set; }
+        public DateOnly EndDate { get; set; }
 
-
-
-        //======================ProjectRelations(M:1)===========================
-        [Required,ForeignKey("MainClientID")]
-        public  int MainClientID { get; set; }
-        public MainClient? mainClinet { get; set; }
-
-
-     
-        [Required, ForeignKey("ProjectManagerId")]
-        public int ProjectManagerId { get; set; }
-        public ProjectManager? _ProjectManager { get; set; }
-
-
-
-        [Required, ForeignKey("ForemanId")]
-        public int ForemanId { get; set; }
-        public Foreman? foreman {  get; set; }
-
-
-
-        //[Required, ForeignKey("mconID")]
-        //public int mconID { get; set; }
-        public MainConsultant? mainConsultantt { get; set; }
-
+       public ProjectContract? projectContract { get; set; }
+       public List<ProjectApplicationUser>? projectApplicationUser { get; set; }
+       public List<BOQ>? bOQ { get; set; }
+       //public List<BOQPricing>? bOQPricing { get; set; }
+       public List<Drawing>? brawing { get; set; }
+       public List<Invoice>? Invoice { get; set; }
+       //public List<InvoiceItem>? invoiceItem { get; set; }
+       public List<MaterialsRequest>? materialsRequest { get; set; }
         
-        //===========================ProjectRelationships(1:M)====================
-        public List<FormanTasks>? formanTasks {  get; set; }
-        public List<ProjectSubContractor>? projectSubContractors { get; set; }
-        public List<ProjectSiteEngineer>? projectsiteEngineer { get; set; }
-        public List<EngineerBoq>? engineerBoq { get; set; }
-        public List<SubConstractorInvoice>? subConstractorInvoice { get; set; }
-        public List<EngineerInvoice>? engineerInvoice { get; set; }
-        public List<ShopDrawing>? shopDrawing { get; set; }
-        public List<ProjectSubConsultant>? projectSubConsultant { get; set; }
-        public List<GeneralDrowing>? generalDrowing { get; set; }
-        public List<ConsultantBoq>? consultantBoq { get; set; }
-
-
-
-        //======================================ProjectRealtinship (1:1)=============
-        public ProjectContract? prjectContract { get; set; }
-        public Store? store { get; set; }
-       
-       
-       
-
 
     }
 }

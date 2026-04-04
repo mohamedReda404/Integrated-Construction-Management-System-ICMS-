@@ -7,7 +7,7 @@ namespace Integrated_Construction_Management_System_ICMS.Contracts.Validations
     {
         public ProjectValidator()
         {
-            RuleFor(x=>x.ProjectName).NotEmpty();
+            RuleFor(x=>x.Name).NotEmpty();
         }
 
     }

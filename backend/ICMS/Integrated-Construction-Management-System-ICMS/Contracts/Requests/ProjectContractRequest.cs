@@ -1,13 +1,14 @@
 ﻿namespace Integrated_Construction_Management_System_ICMS.Contracts.Requests
 {
     public record ProjectContractRequest
-    (
-        DateTime ContractDate,
-        string ContractDetails,
-        string EndContractIfs,
-        string ClientCondition,
-        string ClientSignature,
-        string ManagerSignature,
-        string ManagerCondition
+     (
+        string Name,
+        int ProjectId,
+        DateTime Duration,
+        DateOnly Date,
+        string RetentionPercentage,
+        string AdvancePayment,
+        long Value,
+        byte[]? File
         );
 }

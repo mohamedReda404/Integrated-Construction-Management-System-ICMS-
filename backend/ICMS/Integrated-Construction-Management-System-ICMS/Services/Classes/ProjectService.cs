@@ -1,64 +1,54 @@
 ﻿
 namespace Integrated_Construction_Management_System_ICMS.Services.Classes
 {
-    public class ProjectService : IProjectService
+    public class ProjectService(AppDbContext dbContext) : IProjectService
     {
-        private readonly AppDbContext _dbContext;
+        private readonly AppDbContext _dbContext = dbContext;
 
-        public ProjectService(AppDbContext dbContext)
+        public async Task<ProjectResponce> AddNew(ProjectRequest request, CancellationToken cancellationToken = default)
         {
-            _dbContext = dbContext;
-        }
-
-        public async Task<Project> AddNew(Project project, CancellationToken cancellationToken = default)
-        {
-           await _dbContext.projects.AddAsync(project, cancellationToken);
-           await _dbContext.SaveChangesAsync(cancellationToken);
-            return project;
+           var NewProject=request.Adapt<Project>();
+           await _dbContext.AddAsync(NewProject);
+            await _dbContext.SaveChangesAsync(cancellationToken);
+            return NewProject.Adapt<ProjectResponce>();
         }
 
         public async Task<bool> Delete(int id, CancellationToken cancellationToken = default)
         {
-            var _project = await GetId(id, cancellationToken);
-
-            if (_project is null)
-            {
-                return false;
-            }
-            else
-            {
-                _dbContext.projects.Remove(_project);
-                await _dbContext.SaveChangesAsync(cancellationToken);
-                return true;
-            }
-
+            var project = GetId(id).Adapt<Project>();
+            if (project is null) { return false; }
+            _dbContext.projects.Remove(project);
+            await _dbContext.SaveChangesAsync(cancellationToken);
+            return true;
         }
-
-        public async Task<IEnumerable<Project>> GetAll(CancellationToken cancellationToken = default)=>
-            await _dbContext.projects.ToListAsync(cancellationToken);
-
-        public async Task<Project> GetId(int id, CancellationToken cancellationToken = default) =>
-            await _dbContext.projects.FirstOrDefaultAsync(i => i.ProjectID==id, cancellationToken);
-
-        public async Task<bool> Update(int id, Project project, CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<ProjectResponce?>> GetAll(CancellationToken cancellationToken = default)
         {
-           var _project= await GetId(id, cancellationToken);
-            if (_project != null)
-            {
-                _project.ProjectName=project.ProjectName;
-                _project.ProjectDescritpion=project.ProjectDescritpion;
-                _project.ProjectLocation=project.ProjectLocation;
-                _project.prjectContract=project.prjectContract;
-                await _dbContext.SaveChangesAsync(cancellationToken);
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
+           var AllProjectsResponce=await _dbContext.projects.AsNoTracking().ToListAsync(cancellationToken);
+            return AllProjectsResponce.Adapt<IEnumerable<ProjectResponce>>();
         }
 
+        public async Task<ProjectResponce?> GetId(int id, CancellationToken cancellationToken = default)
+        {
+            var Oneproject = await _dbContext.projects.FirstOrDefaultAsync(x => x.Id == id,cancellationToken);
+            return Oneproject.Adapt<ProjectResponce>();
+        }
 
+        public async Task<bool> Update(int id, ProjectRequest request, CancellationToken cancellationToken = default)
+        {
+            var requestProject= request.Adapt<Project>();
+            var project = GetId(id).Adapt<Project>();
+            if (project is null) { return false; }
+            project.Name= requestProject.Name; 
+            project.Location = requestProject.Location; 
+            project.Descritpion = requestProject.Descritpion; 
+            project.Category = requestProject.Category; 
+            project.ClientName = requestProject.ClientName; 
+            project.ContractValue = requestProject.ContractValue; 
+            project.Photo = requestProject.Photo; 
+            project.StartDate = requestProject.StartDate; 
+            project.EndDate = requestProject.EndDate; 
+            await _dbContext.SaveChangesAsync(cancellationToken);
+            return true;
+        }
     }
 }

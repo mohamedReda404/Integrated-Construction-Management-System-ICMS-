@@ -2,11 +2,16 @@
 {
     public record ProjectRequest
     (
-        string ProjectName,
-        string ProjectLocation,
-        string ProjectDescritpion,
-         int MainClientID,
-         int ProjectManagerId,
-         int ForemanId
+        string Name,
+        string Location,
+        string Descritpion,
+        string Category,
+        string ClientName,
+        int ContractValue,
+        byte[] Photo,
+        DateOnly StartDate, 
+        DateOnly EndDate 
         );
 }
+
+

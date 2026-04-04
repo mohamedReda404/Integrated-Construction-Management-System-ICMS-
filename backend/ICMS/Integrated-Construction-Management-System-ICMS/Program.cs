@@ -1,44 +1,59 @@
-using FluentValidation;
-using Integrated_Construction_Management_System_ICMS;
-using Integrated_Construction_Management_System_ICMS.Persistence;
-using Integrated_Construction_Management_System_ICMS.Services;
-using Integrated_Construction_Management_System_ICMS.Services.Interfaces;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using SharpGrip.FluentValidation.AutoValidation.Mvc.Extensions;
-using System.Reflection;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 
-// Add services to the container.
+
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-
-builder.Services.AddOpenApi();
+builder.Services.AddIdentityApiEndpoints<ApplicationUser>().AddEntityFrameworkStores<AppDbContext>();
 builder.Services.AddSwagger();
 builder.Services.AddDBContext(builder.Configuration);
-builder.Services.AddapplicationServices();
+//builder.Services
+//    .AddIdentity<ApplicationUser, IdentityRole>()
+//    .AddEntityFrameworkStores<AppDbContext>()
+//    .AddDefaultTokenProviders();
+//builder.Services.AddapplicationServices();
+
+
+//builder.Services.AddAuthentication(options =>
+//{
+//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+//})
+//.AddJwtBearer(options =>
+//{
+//    options.SaveToken = true;
+//    options.TokenValidationParameters = new TokenValidationParameters
+//    {
+//        ValidateIssuerSigningKey = true,
+//        ValidateIssuer = true,
+//        ValidateAudience = false,
+//        ValidateLifetime = true,
+//        ValidIssuer = "Integrated_Construction_Management_System_ICMS",
+//        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("sk_live_TVN1rkjqmdbjSTV2McHrKctC8csmbbPC"))
+//    };
+//});
+
 builder.Services.AddFluentValidationAutoValidation();
-builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-builder.Services.AddIdentityApiEndpoints<ApplicationUser>().AddEntityFrameworkStores<AppDbContext>();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
     app.UseSwagger();
     app.UseSwaggerUI();
-
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
-app.UseAuthorization();
+
+//app.UseAuthentication();
+//app.UseAuthorization();
 app.MapIdentityApi<ApplicationUser>();
 app.MapControllers();
+
 
 app.Run();
