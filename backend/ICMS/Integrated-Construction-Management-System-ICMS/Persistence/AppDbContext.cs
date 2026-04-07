@@ -1,5 +1,7 @@
 ﻿
 
+using Azure.Core;
+
 namespace Integrated_Construction_Management_System_ICMS.Persistence
 {
     public class AppDbContext : IdentityDbContext<ApplicationUser>
@@ -24,5 +26,6 @@ namespace Integrated_Construction_Management_System_ICMS.Persistence
         public DbSet<Drawing> Drawing { get; set; }
         public DbSet<Invoice> Invoice { get; set; }
         public DbSet<InvoiceItem> InvoiceItem { get; set; }
+        public DbSet<MaterialsRequest> MaterialsRequest { get; set; }
     }
 }

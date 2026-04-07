@@ -6,59 +6,48 @@ public class InvoiceService(AppDbContext dbContext) : IInvoiceService
 
     public async Task<InvoiceResponse> AddNew(InvoiceRequest request, CancellationToken cancellationToken = default)
     {
-        var invoice = request.Adapt<Invoice>();
-
-        await _dbContext.Invoice.AddAsync(invoice, cancellationToken);
+        var New = request.Adapt<Invoice>();
+        await _dbContext.AddAsync(New);
         await _dbContext.SaveChangesAsync(cancellationToken);
-
-        return invoice.Adapt<InvoiceResponse>();
+        return New.Adapt<InvoiceResponse>();
     }
 
     public async Task<bool> Delete(int id, CancellationToken cancellationToken = default)
     {
-        var invoice = await _dbContext.Invoice.FindAsync(new object[] { id }, cancellationToken);
-
-        if (invoice is null)
-            return false;
-
+        var invoice = GetId(id).Adapt<Invoice>();
+        if (invoice is null) { return false; }
         _dbContext.Invoice.Remove(invoice);
         await _dbContext.SaveChangesAsync(cancellationToken);
-
         return true;
     }
-
     public async Task<IEnumerable<InvoiceResponse?>> GetAll(CancellationToken cancellationToken = default)
     {
-        var invoices = await _dbContext.Invoice
-            .AsNoTracking()
-            .ToListAsync(cancellationToken);
-
-        return invoices.Adapt<IEnumerable<InvoiceResponse>>();
+        var AllResponce = await _dbContext.Invoice.AsNoTracking().ToListAsync(cancellationToken);
+        return AllResponce.Adapt<IEnumerable<InvoiceResponse>>();
     }
 
-    public async Task<InvoiceResponse?> GetById(int id, CancellationToken cancellationToken = default)
+    public async Task<InvoiceResponse?> GetId(int id, CancellationToken cancellationToken = default)
     {
-        var invoice = await _dbContext.Invoice
-            .AsNoTracking()
-            .FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
-
-        if (invoice is null)
-            return null;
-
-        return invoice.Adapt<InvoiceResponse>();
+        var One = await _dbContext.Invoice.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
+        return One.Adapt<InvoiceResponse>();
     }
 
     public async Task<bool> Update(int id, InvoiceRequest request, CancellationToken cancellationToken = default)
     {
-        var invoice = await _dbContext.Invoice.FindAsync(new object[] { id }, cancellationToken);
-
-        if (invoice is null)
-            return false;
-
-        request.Adapt(invoice);
-
+        var invoicerequest = request.Adapt<Invoice>();
+        var invoice = GetId(id).Adapt<Invoice>();
+        if (invoicerequest is null) { return false; }
+        invoicerequest.ProjectId = invoice.ProjectId;
+        invoicerequest.Title = invoice.Title;
+        invoicerequest.Type = invoice.Type;
+        invoicerequest.Status = invoice.Status;
+        invoicerequest.File = invoice.File;
+        invoicerequest.PeriodFrom = invoice.PeriodFrom;
+        invoicerequest.PeriodTo = invoice.PeriodTo;
+        invoicerequest.InvoiceDate = invoice.InvoiceDate;
+        invoicerequest.TotalAmount = invoice.TotalAmount;
+        invoicerequest.ApplicationUserId = invoice.ApplicationUserId;
         await _dbContext.SaveChangesAsync(cancellationToken);
-
         return true;
     }
 }

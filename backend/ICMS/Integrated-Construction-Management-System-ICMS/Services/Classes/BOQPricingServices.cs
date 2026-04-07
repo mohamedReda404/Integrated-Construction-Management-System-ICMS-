@@ -1,4 +1,5 @@
 ﻿using Integrated_Construction_Management_System_ICMS.Contracts.Responces;
+using Integrated_Construction_Management_System_ICMS.Contracts.Responses;
 
 namespace Integrated_Construction_Management_System_ICMS.Services.Classes
 {
@@ -6,58 +7,48 @@ namespace Integrated_Construction_Management_System_ICMS.Services.Classes
     {
         private readonly AppDbContext _dbContext = dbContext;
 
-        public async Task<BOQPricingResponse> AddNew(BOQPricingRequest request, CancellationToken cancellationToken = default)
+        public async Task<BOQPricingReponce> AddNew(BOQPricingRequest request, CancellationToken cancellationToken = default)
         {
-            var entity = request.Adapt<BOQPricing>();
-
-            await _dbContext.AddAsync(entity, cancellationToken);
+            var New = request.Adapt<BOQPricing>();
+            await _dbContext.AddAsync(New);
             await _dbContext.SaveChangesAsync(cancellationToken);
-
-            return entity.Adapt<BOQPricingResponse>();
+            return New.Adapt<BOQPricingReponce>();
         }
 
         public async Task<bool> Delete(int id, CancellationToken cancellationToken = default)
         {
-            var entity = await _dbContext.Set<BOQPricing>().FindAsync(id);
-
-            if (entity is null)
-                return false;
-
-            _dbContext.Remove(entity);
+            var bOQPricing = GetId(id).Adapt<BOQPricing>();
+            if (bOQPricing is null) { return false; }
+            _dbContext.BOQPricing.Remove(bOQPricing);
             await _dbContext.SaveChangesAsync(cancellationToken);
             return true;
         }
 
-        public async Task<IEnumerable<BOQPricingResponse>> GetAll(CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<BOQPricingReponce?>> GetAll(CancellationToken cancellationToken = default)
         {
-            var list = await _dbContext.Set<BOQPricing>()
-            .AsNoTracking()
-                .ToListAsync(cancellationToken);
-            return list.Adapt<IEnumerable<BOQPricingResponse>>();
+            var AllResponce = await _dbContext.BOQPricing.AsNoTracking().ToListAsync(cancellationToken);
+            return AllResponce.Adapt<IEnumerable<BOQPricingReponce>>();
         }
 
-        public async Task<BOQPricingResponse?> GetId(int id, CancellationToken cancellationToken = default)
+        public async Task<BOQPricingReponce?> GetId(int id, CancellationToken cancellationToken = default)
         {
-            var entity = await _dbContext.Set<BOQPricing>()
-                .AsNoTracking()
-                .FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
-
-            return entity?.Adapt<BOQPricingResponse>();
+            var One = await _dbContext.BOQPricing.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
+            return One.Adapt<BOQPricingReponce>();
         }
 
         public async Task<bool> Update(int id, BOQPricingRequest request, CancellationToken cancellationToken = default)
         {
-            var requestBOQPricing = request.Adabt<BOQPricing>();
-            var boqPricing = GetId(id).Adabt<BOQPricing>();
+            var requestBOQPricing = request.Adapt<BOQPricing>();
+            var boqPricing = GetId(id).Adapt<BOQPricing>();
             if (boqPricing is null) { return false; }
-            entity.BOQId = request.BOQId;
-            entity.ApplicationUserId = request.ApplicationUserId;
-            entity.Title = request.Title;
-            entity.Description = request.Description;
-            entity.Status = request.Status;
-            entity.UnitRate = request.UnitRate;
-            entity.TotalPrice = request.TotalPrice;
-            entity.Date = request.Date;
+            requestBOQPricing.BOQId = boqPricing.BOQId;
+            requestBOQPricing.ApplicationUserId = boqPricing.ApplicationUserId;
+            requestBOQPricing.Title = boqPricing.Title;
+            requestBOQPricing.Description = boqPricing.Description;
+            requestBOQPricing.Status = boqPricing.Status;
+            requestBOQPricing.UnitRate = boqPricing.UnitRate;
+            requestBOQPricing.TotalPrice = boqPricing.TotalPrice;
+            requestBOQPricing.Date = boqPricing.Date;
 
             await _dbContext.SaveChangesAsync(cancellationToken);
 

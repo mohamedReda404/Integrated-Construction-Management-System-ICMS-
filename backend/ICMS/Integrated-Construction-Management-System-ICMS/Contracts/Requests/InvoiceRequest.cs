@@ -3,12 +3,14 @@
     public record InvoiceRequest
     (
         int ProjectId,
+        string ApplicationUserId,
         string Title,
         string Type,
         string Status,
         DateOnly PeriodFrom,
         DateOnly PeriodTo,
         DateOnly InvoiceDate,
-        long TotalAmount
+        long TotalAmount,
+        byte[]? File
     );
 }

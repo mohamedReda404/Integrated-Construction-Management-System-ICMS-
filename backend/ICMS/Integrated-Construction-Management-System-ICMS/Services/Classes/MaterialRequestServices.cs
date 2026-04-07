@@ -7,66 +7,52 @@ namespace Integrated_Construction_Management_System_ICMS.Services.Classes
     {
         private readonly AppDbContext _dbContext = dbContext;
 
-        public async Task<MaterialRequestResponse> AddNew(MaterialRequestRequest request, CancellationToken cancellationToken = default)
+        public async Task<MaterialRequestReponse> AddNew(MaterialRequestRequest request, CancellationToken cancellationToken = default)
         {
-            var entity = request.Adapt<MaterialRequest>();
-
-            await _dbContext.AddAsync(entity, cancellationToken);
+            var NewRequest = request.Adapt<MaterialsRequest>();
+            await _dbContext.AddAsync(NewRequest, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
-
-            return entity.Adapt<MaterialRequestResponse>();
+            return NewRequest.Adapt<MaterialRequestReponse>();
         }
 
         public async Task<bool> Delete(int id, CancellationToken cancellationToken = default)
         {
-            var entity = await _dbContext.Set<MaterialRequest>().FindAsync(id);
-
-            if (entity is null)
-                return false;
-
-            _dbContext.Remove(entity);
+            var Request = GetId(id).Adapt<MaterialsRequest>();
+            if (Request is null) { return false; }
+            _dbContext.MaterialsRequest.Remove(Request);
             await _dbContext.SaveChangesAsync(cancellationToken);
             return true;
         }
 
-        public async Task<IEnumerable<MaterialRequestResponse>> GetAll(CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<MaterialRequestReponse?>> GetAll(CancellationToken cancellationToken = default)
         {
-            var list = await _dbContext.Set<MaterialRequest>()
-                .AsNoTracking()
-            .ToListAsync(cancellationToken);
-
-            return list.Adapt<IEnumerable<MaterialRequestResponse>>();
+            var AllmResponce = await _dbContext.MaterialsRequest.AsNoTracking().ToListAsync(cancellationToken);
+            return AllmResponce.Adapt<IEnumerable<MaterialRequestReponse>>();
         }
 
-        public async Task<MaterialRequestResponse?> GetId(int id, CancellationToken cancellationToken = default)
+        public async Task<MaterialRequestReponse?> GetId(int id, CancellationToken cancellationToken = default)
         {
-            var entity = await _dbContext.Set<MaterialRequest>()
-            .AsNoTracking()
-                .FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
-
-            return entity?.Adapt<MaterialRequestResponse>();
+            var OnemResponce = await _dbContext.MaterialsRequest.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
+            return OnemResponce.Adapt<MaterialRequestReponse>();
         }
 
         public async Task<bool> Update(int id, MaterialRequestRequest request, CancellationToken cancellationToken = default)
         {
-            var requestMaterialRequest = request.Adabt<MaterialRequest>();
-            var materialRequest = GetId(id).Adabt<MaterialRequest>();
-
-            if (materialRequest is null) { return false; }
-
-            entity.ProjectId = request.ProjectId;
-            entity.ApplicationUserId = request.ApplicationUserId;
-            entity.Title = request.Title;
-            entity.Description = request.Description;
-            entity.Status = request.Status;
-            entity.Notes = request.Notes;
-            entity.RequestDate = request.RequestDate;
-            entity.RequiredDate = request.RequiredDate;
-
+            var mrequest = request.Adapt<MaterialsRequest>();
+            var project = GetId(id).Adapt<MaterialsRequest>();
+            if (project is null) { return false; }
+            project.ProjectId = mrequest.ProjectId;
+            project.ApplicationUserId = mrequest.ApplicationUserId;
+            project.Title = mrequest.Title;
+            project.Description = mrequest.Description;
+            project.Status = mrequest.Status;
+            project.Notes = mrequest.Notes;
+            project.RequestDate = mrequest.RequestDate;
+            project.RequiredDate = mrequest.RequiredDate;
             await _dbContext.SaveChangesAsync(cancellationToken);
-
             return true;
         }
 
+        
     }
 }

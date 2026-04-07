@@ -9,6 +9,8 @@
         string Status,
         string Type,
         DateOnly Date,
-        int ProjectId
+        byte[]? Photo,
+        int ProjectId,
+        string ApplicationUserId
     );
 }

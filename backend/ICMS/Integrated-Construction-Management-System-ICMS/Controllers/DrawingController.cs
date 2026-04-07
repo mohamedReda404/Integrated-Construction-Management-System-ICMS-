@@ -13,7 +13,6 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
         public async Task<IActionResult> Get(CancellationToken cancellationToken)
         {
             var response = await _drawingService.GetAll(cancellationToken);
-
             if (response is null)
                 return NotFound();
 
@@ -24,7 +23,7 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id, CancellationToken cancellationToken)
         {
-            var response = await _drawingService.GetById(id, cancellationToken);
+            var response = await _drawingService.GetId(id, cancellationToken);
 
             if (response != null)
             {

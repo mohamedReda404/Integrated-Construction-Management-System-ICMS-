@@ -24,7 +24,7 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id, CancellationToken cancellationToken)
         {
-            var response = await _invoiceService.GetById(id, cancellationToken);
+            var response = await _invoiceService.GetId(id, cancellationToken);
 
             if (response != null)
             {

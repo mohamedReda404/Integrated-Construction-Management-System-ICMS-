@@ -1,11 +1,12 @@
-﻿using Integrated_Construction_Management_System_ICMS.Contracts.Responces;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Integrated_Construction_Management_System_ICMS.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    public class BOQPricingController(IBOQPricingServices boqPricingService) : ControllerBase
+    public class BOQSPricingController(IBOQPricingServices boqPricingService) : ControllerBase
     {
         private readonly IBOQPricingServices _boqPricingService = boqPricingService;
 
@@ -14,7 +15,7 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
         {
             var responce = await _boqPricingService.GetAll(cancellationToken);
             if (responce is null) { return NotFound(); }
-            var responceMapping = responce.Adapt<List<BOQPricingResponse>>();
+            var responceMapping = responce.Adapt<List<BOQPricingReponce>>();
             return Ok(responceMapping);
         }
 
@@ -25,7 +26,7 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
 
             if (responce != null)
             {
-                var responceMapping = responce.Adapt<BOQPricingResponse>();
+                var responceMapping = responce.Adapt<BOQPricingReponce>();
                 return Ok(responceMapping);
             }
             else { return NotFound(); }
@@ -55,4 +56,3 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
         }
     }
 }
-

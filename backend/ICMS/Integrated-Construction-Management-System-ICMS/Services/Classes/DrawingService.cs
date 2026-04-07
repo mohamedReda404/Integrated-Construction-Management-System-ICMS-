@@ -1,64 +1,56 @@
-﻿using Integrated_Construction_Management_System_ICMS.Contracts.Responses;
+﻿
+using Integrated_Construction_Management_System_ICMS.Contracts.Responses;
 
-public class DrawingService(AppDbContext dbContext) : IDrawingService
+namespace Integrated_Construction_Management_System_ICMS.Services.Classes
 {
-    private readonly AppDbContext _dbContext = dbContext;
-
-    public async Task<DrawingResponse> AddNew(DrawingRequest request, CancellationToken cancellationToken = default)
+    public class DrawingService(AppDbContext dbContext) : IDrawingService
     {
-        var drawing = request.Adapt<Drawing>();
+        private readonly AppDbContext _dbContext = dbContext;
 
-        await _dbContext.Drawing.AddAsync(drawing, cancellationToken);
-        await _dbContext.SaveChangesAsync(cancellationToken);
+        public async Task<DrawingResponse> AddNew(DrawingRequest request, CancellationToken cancellationToken = default)
+        {
+            var New = request.Adapt<Drawing>();
+            await _dbContext.Drawing.AddAsync(New);
+            await _dbContext.SaveChangesAsync(cancellationToken);
+            return New.Adapt<DrawingResponse>();
+        }
 
-        return drawing.Adapt<DrawingResponse>();
-    }
+        public async Task<bool> Delete(int id, CancellationToken cancellationToken = default)
+        {
+            var Drawing = GetId(id).Adapt<Drawing>();
+            if (Drawing is null) { return false; }
+            _dbContext.Drawing.Remove(Drawing);
+            await _dbContext.SaveChangesAsync(cancellationToken);
+            return true;
+        }
+        public async Task<IEnumerable<DrawingResponse?>> GetAll(CancellationToken cancellationToken = default)
+        {
+            var AllDrawing = await _dbContext.Drawing.AsNoTracking().ToListAsync(cancellationToken);
+            return AllDrawing.Adapt<IEnumerable<DrawingResponse>>();
+        }
 
-    public async Task<bool> Delete(int id, CancellationToken cancellationToken = default)
-    {
-        var drawing = await _dbContext.Drawing.FindAsync(new object[] { id }, cancellationToken);
+        public async Task<DrawingResponse?> GetId(int id, CancellationToken cancellationToken = default)
+        {
+            var OneDrawing = await _dbContext.Drawing.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
+            return OneDrawing.Adapt<DrawingResponse>();
+        }
 
-        if (drawing is null)
-            return false;
-
-        _dbContext.Drawing.Remove(drawing);
-        await _dbContext.SaveChangesAsync(cancellationToken);
-
-        return true;
-    }
-
-    public async Task<IEnumerable<DrawingResponse?>> GetAll(CancellationToken cancellationToken = default)
-    {
-        var drawings = await _dbContext.Drawing
-            .AsNoTracking()
-            .ToListAsync(cancellationToken);
-
-        return drawings.Adapt<IEnumerable<DrawingResponse>>();
-    }
-
-    public async Task<DrawingResponse?> GetById(int id, CancellationToken cancellationToken = default)
-    {
-        var drawing = await _dbContext.Drawing
-            .AsNoTracking()
-            .FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
-
-        if (drawing is null)
-            return null;
-
-        return drawing.Adapt<DrawingResponse>();
-    }
-
-    public async Task<bool> Update(int id, DrawingRequest request, CancellationToken cancellationToken = default)
-    {
-        var drawing = await _dbContext.Drawing.FindAsync(new object[] { id }, cancellationToken);
-
-        if (drawing is null)
-            return false;
-
-        request.Adapt(drawing);
-
-        await _dbContext.SaveChangesAsync(cancellationToken);
-
-        return true;
+        public async Task<bool> Update(int id, DrawingRequest request, CancellationToken cancellationToken = default)
+        {
+            var requestDrawing = request.Adapt<Drawing>();
+            var drawing = GetId(id).Adapt<Drawing>();
+            if (drawing is null) { return false; }
+            drawing.Title = requestDrawing.Title;
+            drawing.Description = requestDrawing.Description;
+            drawing.Section = requestDrawing.Section;
+            drawing.Status = requestDrawing.Status;
+            drawing.Type = requestDrawing.Type;
+            drawing.Date = requestDrawing.Date;
+            drawing.Photo = requestDrawing.Photo;
+            drawing.ApplicationUserId = requestDrawing.ApplicationUserId;
+            drawing.ProjectId = requestDrawing.ProjectId;
+            await _dbContext.SaveChangesAsync(cancellationToken);
+            return true;
+        }
     }
 }
