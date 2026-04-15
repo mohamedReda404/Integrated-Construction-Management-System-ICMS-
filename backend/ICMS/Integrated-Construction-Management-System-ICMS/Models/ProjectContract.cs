@@ -13,5 +13,7 @@ namespace Integrated_Construction_Management_System_ICMS.Models
         public long Value { get; set; }
         public byte[] ?File { get; set; }
         public Project? project { get; set; }
+        //public List<ApplicationUser>?ApplicationUsers { get; set; }
+
     }
 }

@@ -1,9 +1,10 @@
-﻿using FluentValidation;
-using Integrated_Construction_Management_System_ICMS.Contracts.Authrization;
+﻿
+using Integrated_Construction_Management_System_ICMS.Contracts.Requests;
+using RegisterRequest = Integrated_Construction_Management_System_ICMS.Contracts.Requests.RegisterRequest;
 
 namespace Integrated_Construction_Management_System_ICMS.Contracts.Validations
 {
-    public class RejesterValidator : AbstractValidator<RejesterRequest>
+    public class RejesterValidator : AbstractValidator<RegisterRequest>
     {
         public RejesterValidator()
         {

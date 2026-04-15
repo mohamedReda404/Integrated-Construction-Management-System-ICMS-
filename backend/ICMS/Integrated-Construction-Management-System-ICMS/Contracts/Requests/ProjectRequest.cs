@@ -4,11 +4,11 @@
     (
         string Name,
         string Location,
-        string Descritpion,
+        string Descritpion, 
         string Category,
         string ClientName,
         int ContractValue,
-        byte[] Photo,
+        string Photourl,
         DateOnly StartDate, 
         DateOnly EndDate 
         );

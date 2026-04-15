@@ -28,10 +28,10 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
         }
 
         [HttpPost("")]
-        public async Task<IActionResult> Add(ProjectRequest projectRequest, CancellationToken cancellationToken)
+        public async Task<IActionResult> Add([FromBody] ProjectRequest request, CancellationToken cancellationToken)
         {
-            var NewProject = await _projectService.AddNew(projectRequest, cancellationToken);
-            return CreatedAtAction(nameof(Get), NewProject);
+            var NewProject = await _projectService.AddNew(request, cancellationToken);
+            return CreatedAtAction(nameof(Get), new { id = NewProject.Id }, NewProject);
         }
 
         [HttpPut("{id}")]

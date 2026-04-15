@@ -40,27 +40,27 @@ namespace Integrated_Construction_Management_System_ICMS.Contracts.configuration
 
             builder.HasMany(x => x.bOQ)
                  .WithOne(x => x.project)
-                 .HasForeignKey(f => f.ProjectId);
-
+                 .HasForeignKey(f => f.ProjectId)
+             .OnDelete(DeleteBehavior.Cascade);
             //builder.HasMany(x => x.bOQPricing)
             //     .WithOne(x => x.project)
             //     .HasForeignKey(f => f.ProjectId);
 
             builder.HasMany(x => x.brawing)
                  .WithOne(x => x.project)
-                 .HasForeignKey(f => f.ProjectId);
+                 .HasForeignKey(f => f.ProjectId).OnDelete(DeleteBehavior.Cascade);
 
             builder.HasMany(x => x.Invoice)
                  .WithOne(x => x.project)
-                 .HasForeignKey(f => f.ProjectId);
-
+                 .HasForeignKey(f => f.ProjectId).OnDelete(DeleteBehavior.Cascade);
+            
             //builder.HasMany(x => x.invoiceItem)
             //     .WithOne(x => x.Project)
             //     .HasForeignKey(f => f.ProjectId);
 
             builder.HasMany(x => x.materialsRequest)
              .WithOne(x => x.project)
-             .HasForeignKey(f => f.ProjectId);
+             .HasForeignKey(f => f.ProjectId).OnDelete(DeleteBehavior.Cascade);
 
         }
     }

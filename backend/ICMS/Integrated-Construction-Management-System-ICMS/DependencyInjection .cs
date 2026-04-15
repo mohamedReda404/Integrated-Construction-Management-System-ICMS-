@@ -1,4 +1,7 @@
-﻿ 
+﻿
+
+using Integrated_Construction_Management_System_ICMS.Authentication;
+using Integrated_Construction_Management_System_ICMS.Services;
 
 namespace Integrated_Construction_Management_System_ICMS
 {
@@ -12,13 +15,53 @@ namespace Integrated_Construction_Management_System_ICMS
             return services;
         }
 
-        public static IServiceCollection AddapplicationServices(this IServiceCollection services)
+        public static IServiceCollection AddapplicationServices(this IServiceCollection services, IConfiguration configuration)
         {
 
              services.AddScoped<IProjectService, ProjectService>();
-            //services.AddScoped<IProj, ProjectContractService>();
-            //services.AddScoped<IAuthServices, AuthServices>();
-            services.AddSingleton<JwtProvider>();
+             services.AddScoped<IBOQServices, BOQServices>();
+             services.AddScoped<IBOQPricingServices, BOQPricingServices>();
+             services.AddScoped<IDrawingService, DrawingService>();
+             services.AddScoped<IInvoiceService, InvoiceService>();
+             services.AddScoped<IInvoiceItemService, InvoiceItemService>();
+             services.AddScoped<IProjectContractService, ProjectContractService>();
+             services.AddScoped<IMaterialRequestServices, MaterialRequestServices>();
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+          .AddEntityFrameworkStores<AppDbContext>();
+            services.AddScoped<IAuthService, AuthService>();
+
+            services.AddSingleton<IJwtProvider, JwtProvider>();
+
+            //services.Configure<JwtOptions>(configuration.GetSection(JwtOptions.SectionName));
+            services.AddOptions<JwtOptions>()
+                .BindConfiguration(JwtOptions.SectionName)
+                .ValidateDataAnnotations()
+                .ValidateOnStart();
+
+            var jwtSettings = configuration.GetSection(JwtOptions.SectionName).Get<JwtOptions>();
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(o =>
+            {
+                o.SaveToken = true;
+                o.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings?.Key!)),
+                    ValidIssuer = jwtSettings?.Issuer,
+                    ValidAudience = jwtSettings?.Audience
+                };
+            });
+            services.Configure<JwtOptions>(
+            configuration.GetSection(JwtOptions.SectionName)
+);
             return services;
         }
 

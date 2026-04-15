@@ -4,19 +4,16 @@ using Integrated_Construction_Management_System_ICMS.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Integrated_Construction_Management_System_ICMS.Persistence.Migrations
+namespace Integrated_Construction_Management_System_ICMS.Persistence
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260331162207_initMainDatabaseTables")]
-    partial class initMainDatabaseTables
+    partial class AppDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,12 +35,19 @@ namespace Integrated_Construction_Management_System_ICMS.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -60,15 +64,16 @@ namespace Integrated_Construction_Management_System_ICMS.Persistence.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("PasswordHash")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
-                        .HasMaxLength(11)
-                        .HasColumnType("nvarchar(11)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<int>("ProjectContractId")
+                        .HasColumnType("int");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -436,8 +441,9 @@ namespace Integrated_Construction_Management_System_ICMS.Persistence.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<byte[]>("Photo")
-                        .HasColumnType("varbinary(max)");
+                    b.Property<string>("Photourl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateOnly>("StartDate")
                         .HasColumnType("date");
@@ -640,12 +646,49 @@ namespace Integrated_Construction_Management_System_ICMS.Persistence.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.ApplicationUser", b =>
+                {
+                    b.OwnsMany("Integrated_Construction_Management_System_ICMS.Models.RefreshToken", "RefreshTokens", b1 =>
+                        {
+                            b1.Property<string>("ApplicationUserId")
+                                .HasColumnType("nvarchar(450)");
+
+                            b1.Property<int>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("int");
+
+                            SqlServerPropertyBuilderExtensions.UseIdentityColumn(b1.Property<int>("Id"));
+
+                            b1.Property<DateTime>("CreatedOn")
+                                .HasColumnType("datetime2");
+
+                            b1.Property<DateTime>("ExpiresOn")
+                                .HasColumnType("datetime2");
+
+                            b1.Property<DateTime?>("RevokedOn")
+                                .HasColumnType("datetime2");
+
+                            b1.Property<string>("Token")
+                                .IsRequired()
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.HasKey("ApplicationUserId", "Id");
+
+                            b1.ToTable("RefreshToken");
+
+                            b1.WithOwner()
+                                .HasForeignKey("ApplicationUserId");
+                        });
+
+                    b.Navigation("RefreshTokens");
+                });
+
             modelBuilder.Entity("Integrated_Construction_Management_System_ICMS.Models.BOQ", b =>
                 {
                     b.HasOne("Integrated_Construction_Management_System_ICMS.Models.ApplicationUser", "ApplicationUser")
                         .WithMany("bOQ")
                         .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Integrated_Construction_Management_System_ICMS.Models.Project", "project")
@@ -675,7 +718,7 @@ namespace Integrated_Construction_Management_System_ICMS.Persistence.Migrations
                     b.HasOne("Integrated_Construction_Management_System_ICMS.Models.ApplicationUser", "ApplicationUser")
                         .WithMany("drawing")
                         .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Integrated_Construction_Management_System_ICMS.Models.Project", "project")
@@ -694,7 +737,7 @@ namespace Integrated_Construction_Management_System_ICMS.Persistence.Migrations
                     b.HasOne("Integrated_Construction_Management_System_ICMS.Models.ApplicationUser", "ApplicationUser")
                         .WithMany("invoice")
                         .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Integrated_Construction_Management_System_ICMS.Models.Project", "project")
@@ -724,7 +767,7 @@ namespace Integrated_Construction_Management_System_ICMS.Persistence.Migrations
                     b.HasOne("Integrated_Construction_Management_System_ICMS.Models.ApplicationUser", "ApplicationUser")
                         .WithMany("materialsRequest")
                         .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Integrated_Construction_Management_System_ICMS.Models.Project", "project")
@@ -743,7 +786,7 @@ namespace Integrated_Construction_Management_System_ICMS.Persistence.Migrations
                     b.HasOne("Integrated_Construction_Management_System_ICMS.Models.ApplicationUser", "ApplicationUser")
                         .WithMany("projectApplicationUser")
                         .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Integrated_Construction_Management_System_ICMS.Models.Project", "project")
