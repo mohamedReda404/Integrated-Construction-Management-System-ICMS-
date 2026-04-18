@@ -62,6 +62,16 @@ namespace Integrated_Construction_Management_System_ICMS
             services.Configure<JwtOptions>(
             configuration.GetSection(JwtOptions.SectionName)
 );
+
+
+            services.AddCors(O => 
+            O.AddDefaultPolicy(B => 
+            B.AllowAnyHeader()
+            .AllowAnyMethod()
+            .WithOrigins(configuration
+            .GetSection("AllowOrigin")
+            .Get<string>()!)));
+            
             return services;
         }
 
