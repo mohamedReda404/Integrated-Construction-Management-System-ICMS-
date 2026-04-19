@@ -5,7 +5,7 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    public class InvoiceController(IInvoiceService invoiceService) : ControllerBase
+    public class InvoicesController(IInvoiceService invoiceService) : ControllerBase
     {
         private readonly IInvoiceService _invoiceService = invoiceService;
 

@@ -10,7 +10,7 @@
         string Quantity,
         string Type,
         DateOnly Date,
-        byte[]? File,
+        string File,
         int ProjectId,
         string ApplicationUserId
         );

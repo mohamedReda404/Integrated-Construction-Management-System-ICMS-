@@ -6,7 +6,7 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    public class BOQSPricingController(IBOQPricingServices boqPricingService) : ControllerBase
+    public class BOQsPricingController(IBOQPricingServices boqPricingService) : ControllerBase
     {
         private readonly IBOQPricingServices _boqPricingService = boqPricingService;
 

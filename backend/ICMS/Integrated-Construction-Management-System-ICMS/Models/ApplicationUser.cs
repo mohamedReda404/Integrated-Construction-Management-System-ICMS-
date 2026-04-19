@@ -6,6 +6,8 @@ namespace Integrated_Construction_Management_System_ICMS.Models
     {
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
+        public string Section { get; set; } = string.Empty;
+        public string Role { get; set; } = string.Empty;
         public int ProjectContractId {  get; set; }
         public List<ProjectApplicationUser>? projectApplicationUser { get; set; }
         public List<MaterialsRequest>? materialsRequest { get; set; }

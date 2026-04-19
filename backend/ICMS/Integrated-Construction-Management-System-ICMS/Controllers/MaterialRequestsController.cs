@@ -1,11 +1,11 @@
-﻿using Integrated_Construction_Management_System_ICMS.Contracts.Responces;
+﻿
 
 namespace Integrated_Construction_Management_System_ICMS.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    public class BOQPricingController(IMaterialRequestServices IMaterialRequestServices) : ControllerBase
+    public class MaterialRequestsController(IMaterialRequestServices IMaterialRequestServices) : ControllerBase
     {
         private readonly IMaterialRequestServices _IMaterialRequestServices = IMaterialRequestServices;
 

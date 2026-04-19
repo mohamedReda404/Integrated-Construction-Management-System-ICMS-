@@ -1,3 +1,5 @@
+using Integrated_Construction_Management_System_ICMS.Mapping;
+
 var builder = WebApplication.CreateBuilder(args);
 var confi = builder.Configuration;
 builder.Services.AddControllers();
@@ -10,7 +12,7 @@ builder.Services.AddDBContext(confi);
 builder.Services.AddapplicationServices(confi);
 
 builder.Services.AddFluentValidationAutoValidation();
-
+TypeAdapterConfig.GlobalSettings.Scan(typeof(MappingConf).Assembly);
 var app = builder.Build();
 
 

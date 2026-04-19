@@ -5,30 +5,29 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    public class InvoiceItemController(IInvoiceItemService invoiceItemService) : ControllerBase
+    public class DrawingsController(IDrawingService drawingService) : ControllerBase
     {
-        private readonly IInvoiceItemService _invoiceItemService = invoiceItemService;
+        private readonly IDrawingService _drawingService = drawingService;
 
         [HttpGet]
         public async Task<IActionResult> Get(CancellationToken cancellationToken)
         {
-            var response = await _invoiceItemService.GetAll(cancellationToken);
-
+            var response = await _drawingService.GetAll(cancellationToken);
             if (response is null)
                 return NotFound();
 
-            var mapping = response.Adapt<List<InvoiceItemResponse>>();
+            var mapping = response.Adapt<List<DrawingResponse>>();
             return Ok(mapping);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id, CancellationToken cancellationToken)
         {
-            var response = await _invoiceItemService.GetId(id, cancellationToken);
+            var response = await _drawingService.GetId(id, cancellationToken);
 
             if (response != null)
             {
-                var mapping = response.Adapt<InvoiceItemResponse>();
+                var mapping = response.Adapt<DrawingResponse>();
                 return Ok(mapping);
             }
             else
@@ -38,17 +37,17 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
         }
 
         [HttpPost("")]
-        public async Task<IActionResult> Add(InvoiceItemRequest request, CancellationToken cancellationToken)
+        public async Task<IActionResult> Add(DrawingRequest drawingRequest, CancellationToken cancellationToken)
         {
-            var newItem = await _invoiceItemService.AddNew(request, cancellationToken);
+            var newDrawing = await _drawingService.AddNew(drawingRequest, cancellationToken);
 
-            return CreatedAtAction(nameof(Get), new { id = newItem.Id }, newItem);
+            return CreatedAtAction(nameof(Get), new { id = newDrawing.Id }, newDrawing);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, InvoiceItemRequest request, CancellationToken cancellationToken)
+        public async Task<IActionResult> Update(int id, DrawingRequest drawingRequest, CancellationToken cancellationToken)
         {
-            var updated = await _invoiceItemService.Update(id, request, cancellationToken);
+            var updated = await _drawingService.Update(id, drawingRequest, cancellationToken);
 
             if (!updated)
                 return NotFound();
@@ -59,7 +58,7 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken)
         {
-            var isDeleted = await _invoiceItemService.Delete(id, cancellationToken);
+            var isDeleted = await _drawingService.Delete(id, cancellationToken);
 
             if (!isDeleted)
                 return NotFound();

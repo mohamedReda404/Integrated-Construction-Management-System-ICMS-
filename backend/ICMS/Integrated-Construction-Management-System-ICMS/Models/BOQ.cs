@@ -14,7 +14,7 @@ namespace Integrated_Construction_Management_System_ICMS.Models
         public string Quantity {  get; set; }=string.Empty;
         public string Type {  get; set; }=string.Empty; //Engineer or Consultant
         public DateOnly Date { get; set; }
-        public byte[] ?File { get; set; } //Photo or bdf File
+        public string File { get; set; } = string.Empty;
         public ApplicationUser? ApplicationUser { get; set; }
         public BOQPricing? bOQPricing { get; set; }
         public Project? project { get; set; }

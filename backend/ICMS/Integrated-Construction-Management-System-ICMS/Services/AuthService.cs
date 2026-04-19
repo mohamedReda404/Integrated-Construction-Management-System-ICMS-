@@ -141,23 +141,21 @@ public class AuthService(UserManager<ApplicationUser> userManager, IJwtProvider 
      RegisterRequest request,
      CancellationToken cancellationToken = default)
     {
-        // 1. Check if email already exists
+       
         var emailExists = await _userManager.Users
             .AnyAsync(x => x.Email == request.Email, cancellationToken);
 
         if (emailExists)
             return Result.Failure<AuthResponse>(UserErrors.DuplicatedEmail);
 
-        // 2. Map request to ApplicationUser
+        
         var user = request.Adapt<ApplicationUser>();
 
-        // 🔴 مهم جدًا: حل مشكلة InvalidUserName
+      
         user.UserName = request.Email;
 
-        // (اختياري لكن أفضل)
         user.EmailConfirmed = true;
 
-        // 3. Create user
         var result = await _userManager.CreateAsync(user, request.Password);
 
         if (!result.Succeeded)
@@ -167,10 +165,8 @@ public class AuthService(UserManager<ApplicationUser> userManager, IJwtProvider 
                 new Error("UserCreationFailed", errors));
         }
 
-        // 4. Generate JWT
         var (token, expiresIn) = _jwtProvider.GenerateToken(user);
 
-        // 5. Generate Refresh Token
         var refreshToken = GenerateRefreshToken();
         var refreshTokenExpiration = DateTime.UtcNow.AddDays(_refreshTokenExpiryDays);
 
@@ -197,5 +193,85 @@ public class AuthService(UserManager<ApplicationUser> userManager, IJwtProvider 
         return Result.Success(response);
     }
 
-   
+    public async Task<Result<AuthResponse>> RegisterAsyncMember(AddMembersRequest request, CancellationToken cancellationToken = default)
+    {
+        var emailExists = await _userManager.Users
+            .AnyAsync(x => x.Email == request.Email, cancellationToken);
+
+        if (emailExists)
+            return Result.Failure<AuthResponse>(UserErrors.DuplicatedEmail);
+
+
+        var user = request.Adapt<ApplicationUser>();
+
+
+        user.UserName = request.Email;
+
+        user.EmailConfirmed = true;
+
+        var result = await _userManager.CreateAsync(user, request.PermissionNumber);
+
+        if (!result.Succeeded)
+        {
+            var errors = string.Join(", ", result.Errors.Select(e => e.Description));
+            return Result.Failure<AuthResponse>(
+                new Error("UserCreationFailed", errors));
+        }
+
+        var (token, expiresIn) = _jwtProvider.GenerateToken(user);
+
+        var refreshToken = GenerateRefreshToken();
+        var refreshTokenExpiration = DateTime.UtcNow.AddDays(_refreshTokenExpiryDays);
+
+        user.RefreshTokens.Add(new RefreshToken
+        {
+            Token = refreshToken,
+            ExpiresOn = refreshTokenExpiration
+        });
+
+        await _userManager.UpdateAsync(user);
+
+        // 6. Response
+        var response = new AuthResponse(
+            user.Id,
+            user.Email!,
+            user.FirstName,
+            user.LastName,
+            token,
+            expiresIn,
+            refreshToken,
+            refreshTokenExpiration
+        );
+
+        return Result.Success(response);
+    }
+
+    public async Task<Result<AuthResponse>> GetTokenMemberAsync(string email, string PermissionNumber, string Section, CancellationToken cancellationToken = default)
+    {
+        var user = await _userManager.FindByEmailAsync(email);
+
+        if (user is null)
+            return Result.Failure<AuthResponse>(UserErrors.InvalidCredentials);
+
+        var isValidPassword = await _userManager.CheckPasswordAsync(user, PermissionNumber);
+
+        if (!isValidPassword)
+            return Result.Failure<AuthResponse>(UserErrors.InvalidCredentials); ;
+
+        var (token, expiresIn) = _jwtProvider.GenerateToken(user);
+        var refreshToken = GenerateRefreshToken();
+        var refreshTokenExpiration = DateTime.UtcNow.AddDays(_refreshTokenExpiryDays);
+
+        user.RefreshTokens.Add(new RefreshToken
+        {
+            Token = refreshToken,
+            ExpiresOn = refreshTokenExpiration
+        });
+
+        await _userManager.UpdateAsync(user);
+
+        var response = new AuthResponse(user.Id, user.Email, user.FirstName, user.LastName, token, expiresIn, refreshToken, refreshTokenExpiration);
+
+        return Result.Success(response);
+    }
 }

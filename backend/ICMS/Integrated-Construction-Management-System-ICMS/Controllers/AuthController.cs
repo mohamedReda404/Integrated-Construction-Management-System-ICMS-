@@ -27,6 +27,25 @@ public class AuthController(IAuthService authService) : ControllerBase
         return Ok(result.Value);
     }
 
+
+    [HttpPost("MemberLogin")]
+    public async Task<IActionResult> LoginMemberAsync(
+   [FromBody] LoginMemberRequest request,
+   CancellationToken cancellationToken)
+    {
+        var result = await _authService.GetTokenAsync(
+            request.Email,
+            request.PermissionNumber,
+            cancellationToken);
+
+        if (result.IsFailure)
+            return BadRequest(result.Error);
+
+        return Ok(result.Value);
+    }
+
+
+
     //[HttpPost("refresh")]
     //public async Task<IActionResult> RefreshAsync([FromBody] RefreshTokenRequest request, CancellationToken cancellationToken)
     //{
