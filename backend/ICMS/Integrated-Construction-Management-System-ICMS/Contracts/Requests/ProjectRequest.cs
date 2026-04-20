@@ -8,7 +8,7 @@
         string Category,
         string ClientName,
         int ContractValue,
-        string Photourl,
+        string Photo,
         DateOnly StartDate, 
         DateOnly EndDate 
         );

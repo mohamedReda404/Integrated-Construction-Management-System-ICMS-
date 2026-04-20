@@ -14,7 +14,7 @@ namespace Integrated_Construction_Management_System_ICMS.Models
         public string  Category { get; set; }= string.Empty;
         public string  ClientName { get; set; }= string.Empty;
         public int  ContractValue { get; set; }
-        public string Photourl { get; set; } = string.Empty;
+        public string Photo { get; set; } = string.Empty;
         public DateOnly  StartDate { get; set; }
         public DateOnly EndDate { get; set; }
 

@@ -9,7 +9,7 @@
         string Category,
         string ClientName,
         int ContractValue,
-        byte[] Photo,
+        string Photo,
         DateOnly StartDate, 
         DateOnly EndDate 
         );

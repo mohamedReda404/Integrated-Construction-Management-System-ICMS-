@@ -44,7 +44,7 @@ namespace Integrated_Construction_Management_System_ICMS.Services.Classes
             project.Category = requestProject.Category; 
             project.ClientName = requestProject.ClientName; 
             project.ContractValue = requestProject.ContractValue; 
-            project.Photourl = requestProject.Photourl; 
+            project.Photo = requestProject.Photo; 
             project.StartDate = requestProject.StartDate; 
             project.EndDate = requestProject.EndDate; 
             await _dbContext.SaveChangesAsync(cancellationToken);
