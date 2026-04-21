@@ -50,5 +50,10 @@ namespace Integrated_Construction_Management_System_ICMS.Services.Classes
             await _dbContext.SaveChangesAsync(cancellationToken);
             return true;
         }
+
+        public async Task<bool> ExistsByNameAsync(string name)
+        {
+            return await _dbContext.projects.AnyAsync(p => p.Name == name);
+        }
     }
 }

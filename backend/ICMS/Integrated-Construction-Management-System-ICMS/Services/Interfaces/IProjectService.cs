@@ -8,5 +8,6 @@ namespace Integrated_Construction_Management_System_ICMS.Services.Interfaces
         Task<ProjectResponce> AddNew(ProjectRequest request, CancellationToken cancellationToken = default);
         Task<bool> Update(int id, ProjectRequest request, CancellationToken cancellationToken = default);
         Task<bool> Delete(int id, CancellationToken cancellationToken = default);
+        Task<bool> ExistsByNameAsync(string name);
     }
 }

@@ -20,6 +20,11 @@
             return true;
         }
 
+        public async Task<bool> ExistsByNameAsync(string Title)
+        {
+            return await _dbContext.BOQ.AnyAsync(x => x.Title == Title);
+        }
+
         public async Task<IEnumerable<BOQResponce?>> GetAll(CancellationToken cancellationToken = default)
         {
             var AllBOQResponce = await _dbContext.BOQ.AsNoTracking().ToListAsync(cancellationToken);
