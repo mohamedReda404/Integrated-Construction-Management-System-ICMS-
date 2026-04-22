@@ -20,15 +20,6 @@ export class RegisterComponent {
   private readonly router = inject(Router);
 
 
-//  حرف صغير واحد على الأقل
-
-// حرف كبير واحد على الأقل
-
-// رقم واحد على الأقل
-
-// رمز واحد على الأقل
-
-// طول 8 أحرف أو أكثر
 
 
 registerForm = this.fb.group({
@@ -40,15 +31,6 @@ registerForm = this.fb.group({
 
 } , {validators : this.confirmPassword } );
 
-
-// registerForm : FormGroup = new FormGroup({
-
-//   name : new FormControl(null, [Validators.required , Validators.minLength(3) , Validators.maxLength(50)]),
-//   email : new FormControl(null, [Validators.required , Validators.email]),
-//   password : new FormControl(null, [Validators.required , Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)]),
-//   rePassword : new FormControl(null, [Validators.required , Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)]),
-
-// } , {validators : this.confirmPassword } );
 
 confirmPassword(group : AbstractControl)
 {
@@ -71,49 +53,6 @@ submitForm(): void {
 
   this.registerForm.reset();
 }
-
-
-
-// submitForm():void
-// {
-//   if(this.registerForm.valid)
-//   {
-//     console.log(this.registerForm);
-//     console.log(this.registerForm.value);
-
-//     this.registerForm.reset();
-//   }
-  
-
-
-// }
-
-
-
-// const menuIcon = document.getElementById('menu-btn');
-//         const mobileMenu = document.getElementById('mobileMenu');
-        
-//         menuIcon.addEventListener('click', () => {
-//             mobileMenu.classList.toggle('hidden');
-//             // Toggle icon between bars and X
-//             if (mobileMenu.classList.contains('hidden')) {
-//                 menuIcon.classList.remove('fa-times');
-//                 menuIcon.classList.add('fa-bars');
-//             } else {
-//                 menuIcon.classList.remove('fa-bars');
-//                 menuIcon.classList.add('fa-times');
-//             }
-//         });
-        
-//         // Close mobile menu when clicking outside
-//         document.addEventListener('click', (e) => {
-//             if (!menuIcon.contains(e.target) && !mobileMenu.contains(e.target)) {
-//                 mobileMenu.classList.add('hidden');
-//                 menuIcon.classList.remove('fa-times');
-//                 menuIcon.classList.add('fa-bars');
-//             }
-//         });
-
 
 
 }
