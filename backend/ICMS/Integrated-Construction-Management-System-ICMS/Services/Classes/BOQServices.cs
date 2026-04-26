@@ -13,8 +13,9 @@
 
         public async Task<bool> Delete(int id, CancellationToken cancellationToken = default)
         {
-            var boq = GetId(id).Adapt<BOQ>();
-            if (boq is null) { return false; }
+            var boq = await _dbContext.BOQ.FindAsync(id);
+            if (boq is null)
+                return false;
             _dbContext.BOQ.Remove(boq);
             await _dbContext.SaveChangesAsync(cancellationToken);
             return true;

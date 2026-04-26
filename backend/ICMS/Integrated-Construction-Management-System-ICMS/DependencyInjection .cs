@@ -25,8 +25,8 @@ namespace Integrated_Construction_Management_System_ICMS
              services.AddScoped<IInvoiceItemService, InvoiceItemService>();
              services.AddScoped<IProjectContractService, ProjectContractService>();
              services.AddScoped<IMaterialRequestServices, MaterialRequestServices>();
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-          .AddEntityFrameworkStores<AppDbContext>();
+             services.AddIdentity<ApplicationUser, IdentityRole>()
+             .AddEntityFrameworkStores<AppDbContext>();
             services.AddScoped<IAuthService, AuthService>();
 
             services.AddSingleton<IJwtProvider, JwtProvider>();

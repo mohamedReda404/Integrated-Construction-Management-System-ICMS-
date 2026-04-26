@@ -23,5 +23,12 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
 
             return Ok(result.Value);
         }
+
+        [HttpGet("Count")]
+        public async Task<IActionResult> Count(CancellationToken cancellationToken)
+        {
+            var countResult=await _authService.NumbrOfMemebers(cancellationToken);
+            return Ok(countResult);
+        }
     }
 }

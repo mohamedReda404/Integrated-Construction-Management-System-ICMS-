@@ -9,10 +9,11 @@ using RegisterRequest = Integrated_Construction_Management_System_ICMS.Contracts
 
 namespace Integrated_Construction_Management_System_ICMS.Services;
 
-public class AuthService(UserManager<ApplicationUser> userManager, IJwtProvider jwtProvider) : IAuthService
+public class AuthService(UserManager<ApplicationUser> userManager, IJwtProvider jwtProvider, AppDbContext appDbContext) : IAuthService
 {
     private readonly UserManager<ApplicationUser> _userManager = userManager;
     private readonly IJwtProvider _jwtProvider = jwtProvider;
+    private readonly AppDbContext _appDbContext= appDbContext;
 
     private readonly int _refreshTokenExpiryDays = 14;
 
@@ -44,33 +45,6 @@ public class AuthService(UserManager<ApplicationUser> userManager, IJwtProvider 
 
         return Result.Success(response);
     }
-
-    //public async Task<OneOf<AuthResponse, Error>> GetTokenAsync(string email, string password, CancellationToken cancellationToken = default)
-    //{
-    //    var user = await _userManager.FindByEmailAsync(email);
-
-    //    if (user is null)
-    //        return UserErrors.InvalidCredentials;
-
-    //    var isValidPassword = await _userManager.CheckPasswordAsync(user, password);
-
-    //    if (!isValidPassword)
-    //        return UserErrors.InvalidCredentials;
-
-    //    var (token, expiresIn) = _jwtProvider.GenerateToken(user);
-    //    var refreshToken = GenerateRefreshToken();
-    //    var refreshTokenExpiration = DateTime.UtcNow.AddDays(_refreshTokenExpiryDays);
-
-    //    user.RefreshTokens.Add(new RefreshToken
-    //    {
-    //        Token = refreshToken,
-    //        ExpiresOn = refreshTokenExpiration
-    //    });
-
-    //    await _userManager.UpdateAsync(user);
-
-    //    return new AuthResponse(user.Id, user.Email, user.FirstName, user.LastName, token, expiresIn, refreshToken, refreshTokenExpiration);
-    //}
 
     public async Task<Result<AuthResponse>> GetRefreshTokenAsync(string token, string refreshToken, CancellationToken cancellationToken = default)
     {
@@ -273,5 +247,11 @@ public class AuthService(UserManager<ApplicationUser> userManager, IJwtProvider 
         var response = new AuthResponse(user.Id, user.Email, user.FirstName, user.LastName, token, expiresIn, refreshToken, refreshTokenExpiration);
 
         return Result.Success(response);
+    }
+
+    public async Task<int> NumbrOfMemebers(CancellationToken cancellationToken = default)
+    {
+       var countResult=await _userManager.Users.Where(s=>s.Section!=" ").CountAsync(cancellationToken);
+        return countResult;
     }
 }

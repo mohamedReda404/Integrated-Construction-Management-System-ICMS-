@@ -49,5 +49,18 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
             if(!isDelete) { return NotFound(); } 
             else { return NoContent(); }   
         }
-    }
+
+        [HttpGet("Count")]
+        public async Task<IActionResult> Count(CancellationToken cancellationToken)
+        {
+            var CountResult= await _projectService.NomberOfProjects(cancellationToken);
+            if(CountResult == 0)
+            {
+                return NotFound("You Have not any projects Now");
+            }
+            return Ok(CountResult);
+        }
+
+
+   }
 }

@@ -18,4 +18,6 @@ public interface IAuthService
     Task<Result<AuthResponse>> RegisterAsyncMember(
        AddMembersRequest request,
        CancellationToken cancellationToken = default);
+
+    Task<int> NumbrOfMemebers(CancellationToken cancellationToken = default);
 }
