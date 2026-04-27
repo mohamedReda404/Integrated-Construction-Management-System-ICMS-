@@ -4,7 +4,6 @@
     (
          int Id,
          int BOQId,
-         int ApplicationUserId,
          string Title,
          string Description,
          string Status,

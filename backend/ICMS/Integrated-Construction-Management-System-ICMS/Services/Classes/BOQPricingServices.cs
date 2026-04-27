@@ -39,10 +39,9 @@ namespace Integrated_Construction_Management_System_ICMS.Services.Classes
         public async Task<bool> Update(int id, BOQPricingRequest request, CancellationToken cancellationToken = default)
         {
             var requestBOQPricing = request.Adapt<BOQPricing>();
-            var boqPricing = GetId(id).Adapt<BOQPricing>();
+            var boqPricing = await _dbContext.BOQPricing.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
             if (boqPricing is null) { return false; }
             requestBOQPricing.BOQId = boqPricing.BOQId;
-            requestBOQPricing.ApplicationUserId = boqPricing.ApplicationUserId;
             requestBOQPricing.Title = boqPricing.Title;
             requestBOQPricing.Description = boqPricing.Description;
             requestBOQPricing.Status = boqPricing.Status;
@@ -51,7 +50,6 @@ namespace Integrated_Construction_Management_System_ICMS.Services.Classes
             requestBOQPricing.Date = boqPricing.Date;
 
             await _dbContext.SaveChangesAsync(cancellationToken);
-
             return true;
 
 

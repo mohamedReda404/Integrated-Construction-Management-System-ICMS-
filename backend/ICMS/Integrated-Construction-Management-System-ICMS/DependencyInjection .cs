@@ -16,22 +16,29 @@ namespace Integrated_Construction_Management_System_ICMS
 
         public static IServiceCollection AddapplicationServices(this IServiceCollection services, IConfiguration configuration)
         {
-
              services.AddScoped<IProjectService, ProjectService>();
+
              services.AddScoped<IBOQServices, BOQServices>();
+
              services.AddScoped<IBOQPricingServices, BOQPricingServices>();
+
              services.AddScoped<IDrawingService, DrawingService>();
+
              services.AddScoped<IInvoiceService, InvoiceService>();
+
              services.AddScoped<IInvoiceItemService, InvoiceItemService>();
+
              services.AddScoped<IProjectContractService, ProjectContractService>();
+
              services.AddScoped<IMaterialRequestServices, MaterialRequestServices>();
+
              services.AddIdentity<ApplicationUser, IdentityRole>()
-             .AddEntityFrameworkStores<AppDbContext>();
+            .AddEntityFrameworkStores<AppDbContext>();
+
             services.AddScoped<IAuthService, AuthService>();
 
             services.AddSingleton<IJwtProvider, JwtProvider>();
 
-            //services.Configure<JwtOptions>(configuration.GetSection(JwtOptions.SectionName));
             services.AddOptions<JwtOptions>()
                 .BindConfiguration(JwtOptions.SectionName)
                 .ValidateDataAnnotations()

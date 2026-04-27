@@ -45,14 +45,16 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, DrawingRequest drawingRequest, CancellationToken cancellationToken)
+        public async Task<IActionResult> Update(int id,[FromBody] DrawingRequest drawingRequest, CancellationToken cancellationToken)
         {
             var updated = await _drawingService.Update(id, drawingRequest, cancellationToken);
 
             if (!updated)
-                return NotFound();
+            { return NotFound(); }
             else
+            {
                 return NoContent();
+             }
         }
 
         [HttpDelete("{id}")]
