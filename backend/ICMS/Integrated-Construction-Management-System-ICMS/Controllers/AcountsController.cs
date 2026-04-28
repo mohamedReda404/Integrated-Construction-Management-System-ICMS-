@@ -23,7 +23,7 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
             return Ok(result);
         }
 
-        [HttpGet("Update")]
+        [HttpPut("Update")]
         public async Task<IActionResult> Update([FromBody] UpdateAccountUserRequest request)
         {
             await _authService.UpdateUserprofile(User.GetUserId()!, request);
