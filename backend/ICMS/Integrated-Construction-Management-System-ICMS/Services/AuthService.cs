@@ -1,4 +1,5 @@
-﻿using Integrated_Construction_Management_System_ICMS.Abstractions;
+﻿using Azure.Core;
+using Integrated_Construction_Management_System_ICMS.Abstractions;
 using Integrated_Construction_Management_System_ICMS.Authentication;
 using Integrated_Construction_Management_System_ICMS.Errors;
 using Microsoft.AspNetCore.Identity;
@@ -9,7 +10,11 @@ using RegisterRequest = Integrated_Construction_Management_System_ICMS.Contracts
 
 namespace Integrated_Construction_Management_System_ICMS.Services;
 
-public class AuthService(UserManager<ApplicationUser> userManager, IJwtProvider jwtProvider, AppDbContext appDbContext) : IAuthService
+public class AuthService(UserManager<ApplicationUser> userManager,
+    IJwtProvider jwtProvider,
+    AppDbContext appDbContext) : IAuthService
+
+
 {
     private readonly UserManager<ApplicationUser> _userManager = userManager;
     private readonly IJwtProvider _jwtProvider = jwtProvider;
@@ -253,5 +258,27 @@ public class AuthService(UserManager<ApplicationUser> userManager, IJwtProvider 
     {
        var countResult=await _userManager.Users.Where(s=>s.Section!=" ").CountAsync(cancellationToken);
         return countResult;
+    }
+
+    public async Task<AccountInfoReponse> Getprofile(string UserId, CancellationToken cancellationToken = default)
+    {
+        var user = await _userManager.Users.
+            Where(x=>x.Id==UserId)
+            .SingleAsync();
+
+        return (user.Adapt<AccountInfoReponse>());
+    }
+
+    public async Task<Result> UpdateUserprofile(string UserId, UpdateAccountUserRequest updateAccountUserRequest, CancellationToken cancellationToken = default)
+    {
+        await _userManager.Users
+           .Where(x => x.Id == UserId)
+           .ExecuteUpdateAsync(setters =>
+               setters
+                   .SetProperty(x => x.FirstName, updateAccountUserRequest.FirstName)
+                   .SetProperty(x => x.LastName, updateAccountUserRequest.LastName)
+           );
+
+        return Result.Success();
     }
 }

@@ -18,6 +18,7 @@ public interface IAuthService
     Task<Result<AuthResponse>> RegisterAsyncMember(
        AddMembersRequest request,
        CancellationToken cancellationToken = default);
-
     Task<int> NumbrOfMemebers(CancellationToken cancellationToken = default);
+    Task<AccountInfoReponse> Getprofile(string UserId,CancellationToken cancellationToken = default);
+    Task<Result> UpdateUserprofile(string UserId, UpdateAccountUserRequest updateAccountUserRequest, CancellationToken cancellationToken = default);
 }
