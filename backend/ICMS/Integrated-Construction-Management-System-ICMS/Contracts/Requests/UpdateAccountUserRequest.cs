@@ -3,6 +3,7 @@
     public record UpdateAccountUserRequest
     (
         string FirstName,
-        string LastName
+        string LastName,
+        string PhoneNumber
         );
 }

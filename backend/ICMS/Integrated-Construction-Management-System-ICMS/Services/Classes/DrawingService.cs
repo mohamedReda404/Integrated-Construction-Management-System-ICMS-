@@ -17,7 +17,7 @@ namespace Integrated_Construction_Management_System_ICMS.Services.Classes
 
         public async Task<bool> Delete(int id, CancellationToken cancellationToken = default)
         {
-            var Drawing = GetId(id).Adapt<Drawing>();
+            var Drawing = await _dbContext.Drawing.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
             if (Drawing is null) { return false; }
             _dbContext.Drawing.Remove(Drawing);
             await _dbContext.SaveChangesAsync(cancellationToken);

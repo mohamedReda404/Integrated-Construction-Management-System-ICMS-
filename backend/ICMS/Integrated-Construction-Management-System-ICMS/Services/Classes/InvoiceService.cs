@@ -6,6 +6,7 @@ public class InvoiceService(AppDbContext dbContext) : IInvoiceService
 
     public async Task<InvoiceResponse> AddNew(InvoiceRequest request, CancellationToken cancellationToken = default)
     {
+
         var New = request.Adapt<Invoice>();
         await _dbContext.AddAsync(New);
         await _dbContext.SaveChangesAsync(cancellationToken);
@@ -14,7 +15,7 @@ public class InvoiceService(AppDbContext dbContext) : IInvoiceService
 
     public async Task<bool> Delete(int id, CancellationToken cancellationToken = default)
     {
-        var invoice = GetId(id).Adapt<Invoice>();
+        var invoice = await _dbContext.Invoice.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
         if (invoice is null) { return false; }
         _dbContext.Invoice.Remove(invoice);
         await _dbContext.SaveChangesAsync(cancellationToken);
@@ -35,18 +36,18 @@ public class InvoiceService(AppDbContext dbContext) : IInvoiceService
     public async Task<bool> Update(int id, InvoiceRequest request, CancellationToken cancellationToken = default)
     {
         var invoicerequest = request.Adapt<Invoice>();
-        var invoice = GetId(id).Adapt<Invoice>();
+        var invoice = await _dbContext.Invoice.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
         if (invoicerequest is null) { return false; }
-        invoicerequest.ProjectId = invoice.ProjectId;
-        invoicerequest.Title = invoice.Title;
-        invoicerequest.Type = invoice.Type;
-        invoicerequest.Status = invoice.Status;
-        invoicerequest.File = invoice.File;
-        invoicerequest.PeriodFrom = invoice.PeriodFrom;
-        invoicerequest.PeriodTo = invoice.PeriodTo;
-        invoicerequest.InvoiceDate = invoice.InvoiceDate;
-        invoicerequest.TotalAmount = invoice.TotalAmount;
-        invoicerequest.ApplicationUserId = invoice.ApplicationUserId;
+        invoice.ProjectId = invoicerequest.ProjectId;
+        invoice.Title = invoicerequest.Title;
+        invoice.Type = invoicerequest.Type;
+        invoice.Status = invoicerequest.Status;
+        invoice.File = invoicerequest.File;
+        invoice.PeriodFrom = invoicerequest.PeriodFrom;
+        invoice.PeriodTo = invoicerequest.PeriodTo;
+        invoice.InvoiceDate = invoicerequest.InvoiceDate;
+        invoice.TotalAmount = invoicerequest.TotalAmount;
+        invoice.ApplicationUserId = invoicerequest.ApplicationUserId;
         await _dbContext.SaveChangesAsync(cancellationToken);
         return true;
     }

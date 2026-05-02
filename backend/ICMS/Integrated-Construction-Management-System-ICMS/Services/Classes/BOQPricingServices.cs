@@ -17,7 +17,7 @@ namespace Integrated_Construction_Management_System_ICMS.Services.Classes
 
         public async Task<bool> Delete(int id, CancellationToken cancellationToken = default)
         {
-            var bOQPricing = GetId(id).Adapt<BOQPricing>();
+            var bOQPricing = await _dbContext.BOQPricing.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
             if (bOQPricing is null) { return false; }
             _dbContext.BOQPricing.Remove(bOQPricing);
             await _dbContext.SaveChangesAsync(cancellationToken);
@@ -41,13 +41,13 @@ namespace Integrated_Construction_Management_System_ICMS.Services.Classes
             var requestBOQPricing = request.Adapt<BOQPricing>();
             var boqPricing = await _dbContext.BOQPricing.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
             if (boqPricing is null) { return false; }
-            requestBOQPricing.BOQId = boqPricing.BOQId;
-            requestBOQPricing.Title = boqPricing.Title;
-            requestBOQPricing.Description = boqPricing.Description;
-            requestBOQPricing.Status = boqPricing.Status;
-            requestBOQPricing.UnitRate = boqPricing.UnitRate;
-            requestBOQPricing.TotalPrice = boqPricing.TotalPrice;
-            requestBOQPricing.Date = boqPricing.Date;
+            boqPricing.BOQId = requestBOQPricing.BOQId;
+            boqPricing.Title = requestBOQPricing.Title;
+            boqPricing.Description = requestBOQPricing.Description;
+            boqPricing.Status = requestBOQPricing.Status;
+            boqPricing.UnitRate = requestBOQPricing.UnitRate;
+            boqPricing.TotalPrice = requestBOQPricing.TotalPrice;
+            boqPricing.Date = requestBOQPricing.Date;
 
             await _dbContext.SaveChangesAsync(cancellationToken);
             return true;

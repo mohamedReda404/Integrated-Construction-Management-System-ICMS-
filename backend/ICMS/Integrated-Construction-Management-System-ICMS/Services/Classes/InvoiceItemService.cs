@@ -14,7 +14,7 @@ public class InvoiceItemService(AppDbContext dbContext) : IInvoiceItemService
 
     public async Task<bool> Delete(int id, CancellationToken cancellationToken = default)
     {
-        var invoiceItem = GetId(id).Adapt<InvoiceItem>();
+        var invoiceItem = await _dbContext.InvoiceItem.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
         if (invoiceItem is null) { return false; }
         _dbContext.InvoiceItem.Remove(invoiceItem);
         await _dbContext.SaveChangesAsync(cancellationToken);
@@ -35,14 +35,14 @@ public class InvoiceItemService(AppDbContext dbContext) : IInvoiceItemService
     public async Task<bool> Update(int id, InvoiceItemRequest request, CancellationToken cancellationToken = default)
     {
         var invoiceItemrequest = request.Adapt<InvoiceItem>();
-        var invoiceitem = GetId(id).Adapt<InvoiceItem>();
+        var invoiceitem = await _dbContext.InvoiceItem.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
         if (invoiceitem is null) { return false; }
-        invoiceItemrequest.InvoiceId = invoiceitem.InvoiceId;
-        invoiceItemrequest.Previous_qty = invoiceitem.Previous_qty;
-        invoiceItemrequest.Current_qty = invoiceitem.Current_qty;
-        invoiceItemrequest.Total_qty = invoiceitem.Total_qty;
-        invoiceItemrequest.Rate = invoiceitem.Rate;
-        invoiceItemrequest.Amount = invoiceitem.Amount;
+        invoiceitem.InvoiceId = invoiceItemrequest.InvoiceId;
+        invoiceitem.Previous_qty = invoiceItemrequest.Previous_qty;
+        invoiceitem.Current_qty = invoiceItemrequest.Current_qty;
+        invoiceitem.Total_qty = invoiceItemrequest.Total_qty;
+        invoiceitem.Rate = invoiceItemrequest.Rate;
+        invoiceitem.Amount = invoiceItemrequest.Amount;
         await _dbContext.SaveChangesAsync(cancellationToken);
         return true;
     }

@@ -10,7 +10,7 @@ namespace Integrated_Construction_Management_System_ICMS.Models
         public string Title { get; set; } = string.Empty;
         public string Type { get; set; } = string.Empty;
         public string Status { get; set; } = string.Empty;
-        public byte[]? File {  get; set; }
+        public string File {  get; set; }=string.Empty;
         public DateOnly PeriodFrom {  get; set; }
         public DateOnly PeriodTo {  get; set; }
         public DateOnly InvoiceDate {  get; set; }

@@ -41,7 +41,7 @@
         public async Task<bool> Update(int id, BOQRequest request, CancellationToken cancellationToken = default)
         {
             var requestBOQ = request.Adapt<BOQ>();
-            var boq = GetId(id).Adapt<BOQ>();
+            var boq = await _dbContext.BOQ.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
             if (boq is null) { return false; }
             boq.Title = requestBOQ.Title; 
             boq.Description = requestBOQ.Description; 

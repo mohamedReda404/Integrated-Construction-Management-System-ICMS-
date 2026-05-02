@@ -2,9 +2,10 @@
 {
     public record AccountInfoReponse
    (
-        string FirtName,
+        string FirstName, 
         string LastName,
         string Email,
+        string PhoneNumber,
         string Role,
         string Section
         );

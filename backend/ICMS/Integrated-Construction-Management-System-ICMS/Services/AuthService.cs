@@ -277,6 +277,7 @@ public class AuthService(UserManager<ApplicationUser> userManager,
                setters
                    .SetProperty(x => x.FirstName, updateAccountUserRequest.FirstName)
                    .SetProperty(x => x.LastName, updateAccountUserRequest.LastName)
+                   .SetProperty(x => x.PhoneNumber, updateAccountUserRequest.PhoneNumber)
            );
 
         return Result.Success();
