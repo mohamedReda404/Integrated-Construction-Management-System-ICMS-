@@ -12,6 +12,6 @@
         DateOnly PeriodTo,
         DateOnly InvoiceDate,
         long TotalAmount,
-        byte[]? File
+        string File
     );
 }

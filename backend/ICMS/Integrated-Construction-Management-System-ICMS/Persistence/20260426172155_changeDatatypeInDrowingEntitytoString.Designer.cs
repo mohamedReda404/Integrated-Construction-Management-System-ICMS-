@@ -4,6 +4,7 @@ using Integrated_Construction_Management_System_ICMS.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Integrated_Construction_Management_System_ICMS.Persistence
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260426172155_changeDatatypeInDrowingEntitytoString")]
+    partial class changeDatatypeInDrowingEntitytoString
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -180,6 +183,9 @@ namespace Integrated_Construction_Management_System_ICMS.Persistence
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("ApplicationUserId")
+                        .HasColumnType("int");
+
                     b.Property<int>("BOQId")
                         .HasColumnType("int");
 
@@ -284,9 +290,9 @@ namespace Integrated_Construction_Management_System_ICMS.Persistence
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("File")
+                    b.Property<byte[]>("File")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<DateOnly>("InvoiceDate")
                         .HasColumnType("date");

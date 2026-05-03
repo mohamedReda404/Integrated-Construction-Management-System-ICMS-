@@ -13,8 +13,9 @@
 
         public async Task<bool> Delete(int id, CancellationToken cancellationToken = default)
         {
-            var boq = GetId(id).Adapt<BOQ>();
-            if (boq is null) { return false; }
+            var boq = await _dbContext.BOQ.FindAsync(id);
+            if (boq is null)
+                return false;
             _dbContext.BOQ.Remove(boq);
             await _dbContext.SaveChangesAsync(cancellationToken);
             return true;
@@ -40,7 +41,7 @@
         public async Task<bool> Update(int id, BOQRequest request, CancellationToken cancellationToken = default)
         {
             var requestBOQ = request.Adapt<BOQ>();
-            var boq = GetId(id).Adapt<BOQ>();
+            var boq = await _dbContext.BOQ.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
             if (boq is null) { return false; }
             boq.Title = requestBOQ.Title; 
             boq.Description = requestBOQ.Description; 

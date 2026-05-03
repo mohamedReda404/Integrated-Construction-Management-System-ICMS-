@@ -17,7 +17,7 @@ namespace Integrated_Construction_Management_System_ICMS.Services.Classes
         {
             var project = GetId(id).Adapt<Project>();
             if (project is null) { return false; }
-            _dbContext.projects.Remove(project);
+             _dbContext.projects.Remove(project);
             await _dbContext.SaveChangesAsync(cancellationToken);
             return true;
         }
@@ -54,6 +54,12 @@ namespace Integrated_Construction_Management_System_ICMS.Services.Classes
         public async Task<bool> ExistsByNameAsync(string name)
         {
             return await _dbContext.projects.AnyAsync(p => p.Name == name);
+        }
+
+        public async Task<int> NomberOfProjects(CancellationToken cancellationToken = default)
+        {
+            var Result=await _dbContext.projects.CountAsync();
+            return Result;
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Integrated_Construction_Management_System_ICMS.Services.Classes
 
         public async Task<bool> Delete(int id, CancellationToken cancellationToken = default)
         {
-            var Drawing = GetId(id).Adapt<Drawing>();
+            var Drawing = await _dbContext.Drawing.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
             if (Drawing is null) { return false; }
             _dbContext.Drawing.Remove(Drawing);
             await _dbContext.SaveChangesAsync(cancellationToken);
@@ -38,8 +38,9 @@ namespace Integrated_Construction_Management_System_ICMS.Services.Classes
         public async Task<bool> Update(int id, DrawingRequest request, CancellationToken cancellationToken = default)
         {
             var requestDrawing = request.Adapt<Drawing>();
-            var drawing = GetId(id).Adapt<Drawing>();
+            var drawing = await _dbContext.Drawing.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
             if (drawing is null) { return false; }
+
             drawing.Title = requestDrawing.Title;
             drawing.Description = requestDrawing.Description;
             drawing.Section = requestDrawing.Section;

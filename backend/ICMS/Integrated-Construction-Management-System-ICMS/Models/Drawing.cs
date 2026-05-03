@@ -12,7 +12,7 @@
         public string Status {  get; set; }=string.Empty;
         public string Type {  get; set; }=string.Empty;
         public DateOnly Date {  get; set; }
-        public byte[] ?Photo {  get; set; }
+        public string Photo { get; set; } = string.Empty;
 
         public ApplicationUser? ApplicationUser { get; set; }
         public Project? project { get; set; }
