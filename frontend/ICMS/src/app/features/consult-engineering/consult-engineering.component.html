@@ -1,269 +1,378 @@
 <div class="bg-slate-100 min-h-screen pb-20">
 
-  <!-- ================= HEADER ================= -->
-  <div class="bg-linear-to-r from-white via-slate-50 to-[#155DFC]/5 border-b border-slate-200">
+  <!-- HEADER -->
+  <div class="bg-white border-b border-slate-200 px-8 py-4 flex justify-between items-center">
 
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-[#155DFC] text-white flex items-center justify-center">
+        <i class="fa-solid fa-building"></i>
+      </div>
 
-    <!-- ===== Back Button (Standard Design) ===== -->
-
-    <div class="w-full px-6 md:px-10 xl:px-16 pt-8">
-
-      <a routerLink="/home" class="group inline-flex items-center gap-3 
-          bg-linear-to-br from-white to-[#155DFC]/5
-          px-6 py-3 rounded-xl
-          border border-slate-200 shadow-sm
-          text-[#155DFC] text-base md:text-lg font-medium
-          hover:shadow-lg hover:-translate-y-0.5
-          transition duration-300 cursor-pointer">
-
-        <i class="fa-solid fa-arrow-left transition group-hover:-translate-x-1"></i>
-        <span>Back to Home</span>
-
-      </a>
-
+      <h2 class="text-2xl font-bold text-slate-800">
+        AEC-HUB
+      </h2>
     </div>
 
+    <div class="flex items-center gap-6">
 
+      <i class="fa-regular fa-clock text-xl text-slate-700"></i>
+      <i class="fa-regular fa-bell text-xl text-slate-700"></i>
 
-    <!-- ================= PAGE TITLE ================= -->
-    <div class="w-full px-6 md:px-10 xl:px-16 mt-12">
-
-      <div class="bg-linear-to-r from-white to-[#155DFC]/5
-              border border-slate-200
-              rounded-2xl
-              py-10 px-8
-              text-center shadow-sm">
-
-        <h1 class="text-3xl md:text-4xl lg:text-5xl 
-               font-bold text-slate-800 tracking-tight">
-          Consult Engineer Details
-        </h1>
-
-        <p class="text-slate-500 text-base md:text-lg mt-4 max-w-2xl mx-auto">
-          Gulf Commercial Tower Project
-        </p>
-
+      <div class="w-11 h-11 rounded-full bg-[#155DFC] text-white flex items-center justify-center font-bold">
+        AA
       </div>
-
-    </div>
-
-
-
-
-
-
-    <!-- ================= MAIN CONTENT ================= -->
-    <div class="w-full px-6 md:px-10 xl:px-16 py-14">
-
-      <!-- ================= PROFILE ================= -->
-      <div class="bg-linear-to-br from-white to-[#155DFC]/5
-                rounded-2xl shadow-sm border border-slate-200 p-8">
-
-        <div class="flex items-start gap-8">
-          <div class="w-24 h-24 rounded-2xl bg-[#155DFC]/10 flex items-center justify-center text-[#155DFC] text-3xl">
-            <i class="fa-solid fa-user-tie"></i>
-          </div>
-
-          <div class="flex-1">
-            <h2 class="text-2xl font-semibold text-slate-800">
-              Mohamed Rashid
-            </h2>
-
-            <p class="text-[#155DFC] font-medium text-lg mt-1">
-              Structural Engineer
-            </p>
-
-            <p class="text-slate-600 text-base mt-1">
-              Engineering Department
-            </p>
-
-            <div class="mt-6 space-y-3 text-base text-slate-700">
-              <p class="flex items-center gap-3">
-                <i class="fa-solid fa-layer-group text-[#155DFC]"></i>
-                High-rise Structures
-              </p>
-
-              <p class="flex items-center gap-3">
-                <i class="fa-solid fa-envelope text-[#155DFC]"></i>
-                mohamed.rashid@construction.ae
-              </p>
-
-              <p class="flex items-center gap-3">
-                <i class="fa-solid fa-phone text-[#155DFC]"></i>
-                +971 50 345 6789
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- ================= GRID LAYOUT ================= -->
-      <div class="grid grid-cols-1 xl:grid-cols-3 gap-10">
-
-        <!-- LEFT COLUMN -->
-        <div class="xl:col-span-2 space-y-10">
-
-          <!-- ===== TASKS ===== -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 space-y-8">
-
-            <div class="flex justify-between items-center">
-              <h3 class="text-2xl font-semibold text-slate-800 flex items-center gap-3">
-                <i class="fa-solid fa-list-check text-[#155DFC]"></i>
-                Measuring & Tasks
-              </h3>
-
-              <button
-                class="bg-[#155DFC] hover:bg-[#104bbf] text-white px-6 py-3 rounded-lg text-base font-medium transition">
-                <i class="fa-solid fa-plus mr-2"></i>
-                Add Task
-              </button>
-            </div>
-
-            <div class="border border-slate-200 rounded-xl p-6 bg-slate-50">
-
-              <div class="flex items-center gap-4 mb-6">
-                <input type="text" placeholder="Foundation Measurements" class="flex-1 px-5 py-3 border border-slate-200 rounded-lg
-                            focus:ring-2 focus:ring-[#155DFC] focus:border-[#155DFC]
-                            outline-none text-base">
-
-                <button class="text-slate-400 hover:text-red-500 transition text-lg">
-                  <i class="fa-solid fa-trash"></i>
-                </button>
-              </div>
-
-              <textarea placeholder="Task description or measurements..." class="w-full px-5 py-4 border border-slate-200 rounded-lg h-28
-                     focus:ring-2 focus:ring-[#155DFC] focus:border-[#155DFC]
-                     outline-none text-base mb-6">
-            </textarea>
-
-              <label class="inline-flex items-center gap-3 text-base text-[#155DFC]
-                          cursor-pointer hover:opacity-80 transition">
-                <input type="file" class="hidden">
-                <i class="fa-solid fa-paperclip"></i>
-                Upload File
-              </label>
-
-            </div>
-
-          </div>
-
-
-          <!-- ===== TERMS ===== -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 space-y-8">
-
-            <h3 class="text-2xl font-semibold text-slate-800 flex items-center gap-3">
-              <i class="fa-solid fa-file-contract text-[#155DFC]"></i>
-              Terms & Conditions
-            </h3>
-
-            <div class="bg-slate-50 rounded-xl p-8 border border-slate-200">
-
-              <h4 class="text-xl font-semibold text-slate-800 mb-4">
-                Execution Engineer Responsibilities
-              </h4>
-
-              <ul class="space-y-3 text-base text-slate-700 list-decimal list-inside">
-                <li>All measurements are accurate and verified on-site.</li>
-                <li>Errors may affect timelines and costs.</li>
-                <li>Timely updates must be provided.</li>
-                <li>Uploaded documents become part of official records.</li>
-                <li>Compliance with safety regulations is mandatory.</li>
-                <li>Approval is required before proceeding.</li>
-              </ul>
-
-            </div>
-
-            <button class="bg-[#155DFC] hover:bg-[#104bbf] text-white px-8 py-3 rounded-lg text-base transition">
-              Approve Terms
-            </button>
-
-          </div>
-
-        </div>
-
-
-        <!-- RIGHT COLUMN -->
-        <div class="space-y-10">
-
-          <!-- ===== DRAWINGS ===== -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 text-center">
-
-            <h3 class="text-xl font-semibold text-slate-800 mb-6 flex justify-center items-center gap-3">
-              <i class="fa-solid fa-image text-[#155DFC]"></i>
-              Drawings & Photos
-            </h3>
-
-            <div class="py-10 text-slate-500">
-              <i class="fa-regular fa-image text-5xl mb-4 text-slate-300"></i>
-              <p class="text-base">No drawings uploaded yet</p>
-
-              <button class="mt-5 bg-[#155DFC] hover:bg-[#104bbf] text-white px-6 py-3 rounded-lg text-base transition">
-                Upload First Image
-              </button>
-            </div>
-
-          </div>
-
-
-          <!-- ===== COMMENTS ===== -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 space-y-6">
-
-            <h3 class="text-xl font-semibold text-slate-800 flex items-center gap-3">
-              <i class="fa-solid fa-comments text-[#155DFC]"></i>
-              Edits & Comments
-            </h3>
-
-            <div class="border border-slate-200 rounded-xl p-5 bg-slate-50">
-              <h4 class="font-medium text-slate-800">Senior Engineer</h4>
-              <p class="text-sm text-slate-400 mb-2">12/13/2025 at 03:25 PM</p>
-              <p class="text-base text-slate-700">
-                Initial review completed. Foundation measurements look good.
-              </p>
-            </div>
-
-            <div>
-              <textarea placeholder="Add a comment..." class="w-full p-4 border border-slate-200 rounded-lg h-28
-                     focus:ring-2 focus:ring-[#155DFC] focus:border-[#155DFC]
-                     outline-none text-base mb-4">
-            </textarea>
-
-              <div class="flex gap-4">
-                <button
-                  class="border border-slate-300 text-slate-700 px-5 py-3 rounded-lg text-base hover:bg-slate-100 transition">
-                  <i class="fa-solid fa-paperclip mr-2"></i>
-                  Attach
-                </button>
-
-                <button class="bg-[#155DFC] hover:bg-[#104bbf] text-white px-6 py-3 rounded-lg text-base transition">
-                  Add Comment
-                </button>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- ================= FOOTER ACTIONS ================= -->
-      <div class="flex justify-end gap-6 pt-10">
-
-        <button
-          class="border border-slate-300 text-slate-700 px-7 py-3 rounded-lg text-base hover:bg-slate-100 transition">
-          Save as Draft
-        </button>
-
-        <button class="bg-[#155DFC] hover:bg-[#104bbf] text-white px-8 py-3 rounded-lg text-base transition">
-          Submit Details
-        </button>
-
-      </div>
-
-
 
     </div>
 
   </div>
+
+  <!-- PAGE -->
+  <div class="max-w-6xl mx-auto px-6 py-8">
+
+    <!-- BACK -->
+    <a routerLink="/allproject"
+      class="inline-flex items-center gap-2 text-slate-600 hover:text-[#155DFC] mb-6">
+
+      <i class="fa-solid fa-arrow-left"></i>
+      Back to Projects
+
+    </a>
+
+    <!-- TITLE -->
+    <h1 class="text-4xl font-bold text-slate-800">
+      Consult Engineer Details
+    </h1>
+
+    <p class="text-slate-500 text-lg mt-2 mb-8">
+      Gulf Commercial Tower Project
+    </p>
+
+    <!-- CARD -->
+    <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm mb-8">
+
+      <div class="border border-slate-200 rounded-2xl p-6 flex gap-5">
+
+        <img
+          src="https://i.pravatar.cc/100?img=13"
+          class="w-20 h-20 rounded-full object-cover">
+
+        <div>
+
+          <h3 class="text-2xl font-semibold text-slate-800">
+            Mohamed Rashid
+          </h3>
+
+          <p class="text-[#155DFC] mt-1 text-lg">
+            Structural Engineer
+          </p>
+
+          <p class="text-slate-600">
+            Engineering
+          </p>
+
+          <div class="bg-slate-100 px-4 py-2 rounded-xl inline-flex gap-2 mt-4">
+            <i class="fa-solid fa-ruler-combined text-slate-500"></i>
+            High-rise structures
+          </div>
+
+          <p class="mt-5 text-slate-600">
+            mohamed.rashid@construction.ae
+          </p>
+
+          <p class="text-slate-600 mt-1">
+            +971 50 345 6789
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- TABS -->
+    <div class="grid grid-cols-2 gap-5 mb-8">
+
+      <button
+        (click)="setTab('boq')"
+        [ngClass]="activeTab === 'boq'
+        ? 'bg-[#155DFC] text-white'
+        : 'bg-white border border-slate-200 text-slate-700'"
+        class="py-4 rounded-2xl font-semibold text-lg">
+
+        <i class="fa-solid fa-file-lines mr-2"></i>
+        BOQ
+
+      </button>
+
+      <button
+        (click)="setTab('drawing')"
+        [ngClass]="activeTab === 'drawing'
+        ? 'bg-[#155DFC] text-white'
+        : 'bg-white border border-slate-200 text-slate-700'"
+        class="py-4 rounded-2xl font-semibold text-lg">
+
+        <i class="fa-solid fa-pen-ruler mr-2"></i>
+        Drawing
+
+      </button>
+
+    </div>
+
+    <!-- ================= BOQ ================= -->
+    <div
+      *ngIf="activeTab === 'boq'"
+      class="bg-[#eef7ff] rounded-2xl border border-slate-200 p-6">
+
+      <div class="bg-white rounded-2xl border border-slate-200 p-5 flex justify-between items-center mb-8">
+
+        <div class="font-semibold flex gap-2 items-center">
+          <i class="fa-regular fa-comment-dots text-[#155DFC]"></i>
+          Measuring & tasks
+        </div>
+
+        <button
+          (click)="openModal()"
+          class="bg-[#155DFC] text-white px-5 py-2 rounded-xl">
+
+          <i class="fa-solid fa-plus mr-2"></i>
+          BOQ
+
+        </button>
+
+      </div>
+
+      <div *ngIf="boqList.length === 0" class="text-center py-20 text-slate-400">
+
+        <i class="fa-regular fa-file-lines text-5xl block mb-4"></i>
+
+        No BOQ items yet. Click
+        <span class="font-semibold text-slate-600">+ BOQ</span>
+        to add one.
+
+      </div>
+
+      <div *ngIf="boqList.length > 0" class="space-y-4">
+
+        <div *ngFor="let item of boqList"
+          class="bg-white rounded-xl border border-slate-200 p-5">
+
+          <h3 class="font-bold text-xl">
+            {{ item.title }}
+          </h3>
+
+          <p class="text-slate-500 mt-2">
+            {{ item.description }}
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ================= DRAWING ================= -->
+    <div
+      *ngIf="activeTab === 'drawing'"
+      class="bg-[#eef7ff] rounded-2xl border border-slate-200 p-6">
+
+      <div class="bg-white rounded-2xl border border-slate-200 p-5 flex justify-between items-center mb-8">
+
+        <div class="font-semibold flex gap-2 items-center">
+          <i class="fa-solid fa-pen-ruler text-[#155DFC]"></i>
+          Drawings
+        </div>
+
+        <button
+          (click)="openDrawingModal()"
+          class="border border-[#155DFC] text-[#155DFC] px-5 py-2 rounded-xl">
+
+          <i class="fa-solid fa-file-arrow-up mr-2"></i>
+          Add Drawing
+
+        </button>
+
+      </div>
+
+      <div *ngIf="drawingList.length === 0" class="text-center py-20 text-slate-400">
+
+        <i class="fa-regular fa-image text-5xl block mb-4"></i>
+
+        No drawings yet. Click
+        <span class="font-semibold text-slate-600">Upload file</span>
+        to add one.
+
+      </div>
+
+      <div *ngIf="drawingList.length > 0" class="space-y-4">
+
+        <div *ngFor="let item of drawingList"
+          class="bg-white rounded-xl border border-slate-200 p-5">
+
+          <h3 class="font-bold text-xl">
+            {{ item.title }}
+          </h3>
+
+          <p class="text-slate-500 mt-2">
+            {{ item.description }}
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ================= BOQ MODAL ================= -->
+  <div *ngIf="showModal"
+    class="fixed inset-0 bg-black/40 flex justify-center items-center z-50 px-4">
+
+    <div class="bg-white rounded-2xl w-full max-w-2xl p-8">
+
+      <div class="flex justify-between items-center mb-8">
+
+        <h2 class="text-2xl font-bold">Add New BOQ</h2>
+
+        <button (click)="closeModal()">
+          <i class="fa-solid fa-xmark text-xl text-slate-400"></i>
+        </button>
+
+      </div>
+
+      <form [formGroup]="boqForm" (ngSubmit)="submitBOQ()" class="space-y-4">
+
+        <input formControlName="title" placeholder="Enter title"
+          class="w-full px-4 py-3 border rounded-xl">
+
+        <textarea formControlName="description" rows="3"
+          placeholder="Enter description"
+          class="w-full px-4 py-3 border rounded-xl"></textarea>
+
+        <div class="grid grid-cols-2 gap-4">
+
+          <input formControlName="unit" placeholder="Enter unit"
+            class="px-4 py-3 border rounded-xl">
+
+          <input formControlName="condition" placeholder="Enter condition"
+            class="px-4 py-3 border rounded-xl">
+
+          <input formControlName="quantity" placeholder="Enter quantity"
+            class="px-4 py-3 border rounded-xl">
+
+          <input formControlName="section" placeholder="Enter section"
+            class="px-4 py-3 border rounded-xl">
+
+          <input formControlName="type" placeholder="Enter type"
+            class="px-4 py-3 border rounded-xl">
+
+          <input formControlName="date" type="date"
+            class="px-4 py-3 border rounded-xl">
+
+        </div>
+
+        <label class="border-2 border-dashed rounded-2xl p-10 text-center block cursor-pointer">
+
+          <input hidden type="file" (change)="onFileSelected($event)">
+
+          <p class="text-slate-500">
+            {{ selectedFileName || 'Upload File' }}
+          </p>
+
+        </label>
+
+        <button
+          type="submit"
+          class="w-full bg-[#155DFC] text-white py-3 rounded-xl">
+
+          Add
+
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- ================= DRAWING MODAL ================= -->
+  <div *ngIf="showDrawingModal"
+    class="fixed inset-0 bg-black/40 flex justify-center items-center z-50 px-4">
+
+    <div class="bg-white rounded-2xl w-full max-w-2xl p-8">
+
+      <div class="flex justify-between items-center mb-8">
+
+        <h2 class="text-2xl font-bold">
+          Upload Drawing
+        </h2>
+
+        <button (click)="closeDrawingModal()">
+          <i class="fa-solid fa-xmark text-xl text-slate-400"></i>
+        </button>
+
+      </div>
+
+      <form [formGroup]="drawingForm" (ngSubmit)="submitDrawing()" class="space-y-4">
+
+        <input formControlName="title" placeholder="Enter title"
+          class="w-full px-4 py-3 border rounded-xl">
+
+        <textarea formControlName="description" rows="3"
+          placeholder="Enter description"
+          class="w-full px-4 py-3 border rounded-xl"></textarea>
+
+        <div class="grid grid-cols-2 gap-4">
+
+          <input formControlName="section" placeholder="Enter Section"
+            class="px-4 py-3 border rounded-xl">
+
+          <input formControlName="status" placeholder="Enter Status"
+            class="px-4 py-3 border rounded-xl">
+
+          <input formControlName="type" placeholder="Enter Type"
+            class="px-4 py-3 border rounded-xl">
+
+          <input formControlName="date" type="date"
+            class="px-4 py-3 border rounded-xl">
+
+        </div>
+
+        <label class="border-2 border-dashed rounded-2xl p-10 text-center block cursor-pointer">
+
+          <input hidden type="file" (change)="onDrawingFileSelected($event)">
+
+          <p class="text-slate-500">
+            {{ selectedDrawingFile || 'Upload Drawing File' }}
+          </p>
+
+        </label>
+
+        <div class="grid grid-cols-2 gap-4">
+
+          <button
+            type="button"
+            (click)="closeDrawingModal()"
+            class="border py-3 rounded-xl">
+
+            Cancel
+
+          </button>
+
+          <button
+            type="submit"
+            class="bg-[#155DFC] text-white py-3 rounded-xl">
+
+            Save
+
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>

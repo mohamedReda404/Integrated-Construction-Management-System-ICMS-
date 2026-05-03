@@ -1,6 +1,11 @@
-<!-- blank-navbar -->
-<app-navbar [isLogin]="true" [isLand]="false"/>
+<app-navbar [isLogin]="true" [isLand]="false"></app-navbar>
 
+<div class="w-full">
 
-<!-- home -->
-<router-outlet/>
+  <div class="p-6 bg-slate-100 min-h-screen">
+
+    <router-outlet></router-outlet>
+
+  </div>
+
+</div>

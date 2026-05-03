@@ -1,12 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { FormControl, FormGroup, Validators, ɵInternalFormsSharedModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
+import { ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { Subscription } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login',
-  imports: [ɵInternalFormsSharedModule, ReactiveFormsModule, RouterModule, CommonModule],
+  imports: [ReactiveFormsModule, RouterModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 
@@ -14,112 +17,173 @@ import { trigger, transition, style, animate } from '@angular/animations';
     trigger('fadeSlide', [
       transition(':enter', [
         style({ opacity: 0, transform: 'translateY(15px)' }),
-        animate('300ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+        animate(
+          '300ms ease-out',
+          style({ opacity: 1, transform: 'translateY(0)' })
+        )
       ]),
       transition(':leave', [
-        animate('200ms ease-in', style({ opacity: 0, transform: 'translateY(10px)' }))
+        animate(
+          '200ms ease-in',
+          style({ opacity: 0, transform: 'translateY(10px)' })
+        )
       ])
     ])
   ]
 })
-
 export class LoginComponent {
 
-  userType: 'admin' | 'member' = 'admin';
   showPassword = false;
+  isLoading = false;
+  msgError = '';
+  subscription: Subscription = new Subscription();
 
   private readonly fb = inject(FormBuilder);
   private readonly router = inject(Router);
+  private readonly authService = inject(AuthService);
+  private readonly cookieService = inject(CookieService);
 
-
+  userType: 'admin' | 'member' = 'admin';
 
   loginForm = this.fb.group({
+    email: [
+      null,
+      [
+        Validators.required,
+        Validators.email
+      ]
+    ],
 
-    email: [null, [Validators.required, Validators.email]],
-    password: [null, [Validators.required, Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)]],
-    role: [null],
-    permissionNumber: [null]
+    password: [null],
 
+    permissionNumber: [null],
 
+    section: [null]
   });
 
   setUserType(type: 'admin' | 'member') {
     this.userType = type;
 
-    const role = this.loginForm.get('role');
-    const perm = this.loginForm.get('permissionNumber');
+    const password = this.loginForm.get('password');
+    const permissionNumber = this.loginForm.get('permissionNumber');
+    const section = this.loginForm.get('section');
 
     if (type === 'admin') {
-      role?.clearValidators();
-      perm?.clearValidators();
 
-      role?.setValue(null);
-      perm?.setValue(null);
-    } else {
-      role?.setValidators([
+      password?.setValidators([
         Validators.required,
-        Validators.minLength(3),
-        Validators.pattern(/^[a-zA-Z\s]+$/)
+        Validators.pattern(
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/
+        )
       ]);
 
-      perm?.setValidators([
-        Validators.required,
-        Validators.pattern(/^\d{4}$/)
+      permissionNumber?.clearValidators();
+      section?.clearValidators();
+
+    } else {
+
+      password?.clearValidators();
+
+      permissionNumber?.setValidators([
+        Validators.required
+      ]);
+
+      section?.setValidators([
+        Validators.required
       ]);
     }
 
-    role?.updateValueAndValidity();
-    perm?.updateValueAndValidity();
+    password?.updateValueAndValidity();
+    permissionNumber?.updateValueAndValidity();
+    section?.updateValueAndValidity();
   }
 
   submitForm(): void {
+
     if (this.loginForm.invalid) {
       this.loginForm.markAllAsTouched();
       return;
     }
 
-    const formValue = this.loginForm.value;
+    this.subscription.unsubscribe();
 
-    let payload: any;
+    this.isLoading = true;
+    this.msgError = '';
 
+    // ================= ADMIN LOGIN =================
     if (this.userType === 'admin') {
-      payload = {
-        email: formValue.email,
-        password: formValue.password
+
+      const payload = {
+        email: this.loginForm.value.email,
+        password: this.loginForm.value.password
       };
-    } else {
-      payload = {
-        email: formValue.email,
-        password: formValue.password,
-        role: formValue.role,
-        permissionNumber: formValue.permissionNumber
-      };
+
+      this.subscription = this.authService.loginForm(payload).subscribe({
+
+        next: (res: any) => {
+
+          this.cookieService.set('token', res.token, 1);
+
+          localStorage.setItem('role', 'admin');
+          localStorage.setItem('name', res.firstName || '');
+          localStorage.setItem('email', res.email || '');
+
+          this.router.navigate(['/home']);
+
+          this.loginForm.reset();
+          this.isLoading = false;
+        },
+
+        error: (err) => {
+
+          this.msgError =
+            err.error?.description ||
+            'Invalid admin credentials';
+
+          this.isLoading = false;
+        }
+
+      });
+
     }
 
-    console.log('Payload:', payload);
+    // ================= MEMBER LOGIN =================
+    else {
 
-    this.router.navigate(['/home']);
-    this.loginForm.reset();
+      const payload = {
+        email: this.loginForm.value.email,
+        permissionNumber: this.loginForm.value.permissionNumber,
+        section: this.loginForm.value.section
+      };
+
+      this.subscription = this.authService.memberLogin(payload).subscribe({
+
+        next: (res: any) => {
+
+          this.cookieService.set('token', res.token, 1);
+
+          localStorage.setItem('role', 'member');
+          localStorage.setItem('name', res.firstName || '');
+          localStorage.setItem('email', res.email || '');
+          localStorage.setItem('section', this.loginForm.value.section || '');
+
+          this.router.navigate(['/home']);
+
+          this.loginForm.reset();
+          this.isLoading = false;
+        },
+
+        error: (err) => {
+
+          this.msgError =
+            err.error?.description ||
+            'Invalid member credentials';
+
+          this.isLoading = false;
+        }
+
+      });
+
+    }
   }
-
-  // submitForm(): void {
-
-  //   if (this.loginForm.invalid) {
-
-  //     this.loginForm.markAllAsTouched();
-  //     return;
-  //   }
-
-  //   console.log(this.loginForm);
-  //   console.log(this.loginForm.value);
-
-
-  //   this.router.navigate(['/home']);
-
-
-  //   this.loginForm.reset();
-  // }
-
-
-
 }

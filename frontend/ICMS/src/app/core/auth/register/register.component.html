@@ -196,7 +196,30 @@
 
 
       <!-- ================= SUBMIT ================= -->
+
       <button
+  type="submit"
+  [disabled]="registerForm.invalid || isLoading"
+  class="w-full py-5 text-xl font-semibold rounded-2xl transition
+         bg-[#155DFC] hover:bg-[#104bbf] text-white shadow-md hover:shadow-xl
+         disabled:bg-gray-300 disabled:cursor-not-allowed">
+
+  @if (isLoading) {
+
+    <span class="flex items-center justify-center gap-3">
+      <i class="fa-solid fa-spinner fa-spin"></i>
+      Loading...
+    </span>
+
+  } @else {
+
+    <span>Create Account</span>
+
+  }
+
+</button>
+
+      <!-- <button
         type="submit"
         [disabled]="registerForm.invalid"
         class="w-full py-5 text-xl font-semibold rounded-2xl transition
@@ -204,7 +227,13 @@
                disabled:bg-gray-300 disabled:cursor-not-allowed">
 
         Create Account
-      </button>
+      </button> -->
+
+      @if (msgError) {
+        <div class="animate-pulse mt-4 rounded-xl border border-red-300 bg-red-50 px-4 py-3 text-red-700 text-center">
+              {{ msgError }}
+        </div>
+}
 
       <p class="text-center text-lg text-slate-600 mt-6">
         Already have an account?

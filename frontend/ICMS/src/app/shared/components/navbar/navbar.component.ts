@@ -1,5 +1,6 @@
+import { AuthService } from './../../../core/auth/services/auth.service';
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -10,17 +11,19 @@ import { RouterModule } from '@angular/router';
 })
 export class NavbarComponent {
 
+  private readonly authService = inject(AuthService);
+
   @Input({ required: true }) isLogin!: boolean
   @Input({ required: true }) isLand!: boolean
 
   isMobileOpen = false;
   currentLang: 'en' | 'ar' = 'en';
-
-
   isProfileOpen = false;
 
+signOut(): void {
 
+    this.authService.logout();
 
-
+}
 
 }
