@@ -1,0 +1,147 @@
+<section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 px-4 sm:px-6 lg:px-8">
+
+  <div class="w-full max-w-xl bg-white rounded-2xl shadow-xl border border-gray-100 p-6 sm:p-10 lg:p-12">
+
+    <!-- Header -->
+    <div class="text-center space-y-3 mb-8">
+
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-800">
+        Create Account
+      </h2>
+
+      <p class="text-slate-500 text-base sm:text-lg">
+        Register to start managing your construction projects
+      </p>
+
+    </div>
+
+    <!-- Form -->
+    <form [formGroup]="registerForm"
+          (ngSubmit)="submitForm()"
+          class="space-y-6">
+
+      <!-- NAME -->
+      <div>
+        <label class="text-sm sm:text-base font-semibold text-slate-700">
+          Full Name
+        </label>
+
+        <input
+          formControlName="name"
+          type="text"
+          placeholder="Enter your full name"
+          class="mt-2 w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-sm sm:text-base
+                 focus:outline-none focus:ring-2 focus:ring-[#155DFC]">
+      </div>
+
+      <!-- EMAIL -->
+      <div>
+        <label class="text-sm sm:text-base font-semibold text-slate-700">
+          Email Address
+        </label>
+
+        <input
+          formControlName="email"
+          type="email"
+          placeholder="Enter your email"
+          class="mt-2 w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-sm sm:text-base
+                 focus:outline-none focus:ring-2 focus:ring-[#155DFC]">
+      </div>
+
+      <!-- PASSWORD -->
+      <div>
+        <label class="text-sm sm:text-base font-semibold text-slate-700">
+          Password
+        </label>
+
+        <div class="relative">
+
+          <input
+            formControlName="password"
+            [type]="showPassword ? 'text' : 'password'"
+            placeholder="Enter password"
+            class="mt-2 w-full px-4 py-3 pr-12 rounded-xl border border-gray-200 bg-gray-50 text-sm sm:text-base
+                   focus:outline-none focus:ring-2 focus:ring-[#155DFC]">
+
+          <button
+            type="button"
+            (click)="showPassword = !showPassword"
+            class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400">
+
+            <i class="fa-solid"
+               [class.fa-eye]="!showPassword"
+               [class.fa-eye-slash]="showPassword"></i>
+
+          </button>
+
+        </div>
+      </div>
+
+      <!-- CONFIRM PASSWORD -->
+      <div>
+        <label class="text-sm sm:text-base font-semibold text-slate-700">
+          Confirm Password
+        </label>
+
+        <div class="relative">
+
+          <input
+            formControlName="rePassword"
+            [type]="showConfirmPassword ? 'text' : 'password'"
+            placeholder="Confirm password"
+            class="mt-2 w-full px-4 py-3 pr-12 rounded-xl border border-gray-200 bg-gray-50 text-sm sm:text-base
+                   focus:outline-none focus:ring-2 focus:ring-[#155DFC]">
+
+          <button
+            type="button"
+            (click)="showConfirmPassword = !showConfirmPassword"
+            class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400">
+
+            <i class="fa-solid"
+               [class.fa-eye]="!showConfirmPassword"
+               [class.fa-eye-slash]="showConfirmPassword"></i>
+
+          </button>
+
+        </div>
+      </div>
+
+      <!-- SUBMIT -->
+      <button
+        type="submit"
+        [disabled]="registerForm.invalid || isLoading"
+        class="w-full py-3.5 rounded-xl text-base font-semibold transition
+               bg-[#155DFC] hover:bg-[#104bbf] text-white shadow-md
+               disabled:opacity-50">
+
+        <span *ngIf="!isLoading">Create Account</span>
+        <span *ngIf="isLoading">Loading...</span>
+
+      </button>
+
+      <!-- ERROR -->
+      <div
+        *ngIf="msgError"
+        class="text-sm rounded-lg border border-red-300 bg-red-50 px-3 py-2 text-red-700 text-center">
+
+        {{ msgError }}
+
+      </div>
+
+      <!-- LOGIN -->
+      <p class="text-center text-sm text-slate-600 mt-4">
+
+        Already have an account?
+
+        <a routerLink="/login"
+           class="text-[#155DFC] font-semibold hover:underline">
+          Login
+        </a>
+
+      </p>
+
+    </form>
+
+  </div>
+
+</section>

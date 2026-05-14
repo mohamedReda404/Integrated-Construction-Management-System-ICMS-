@@ -1,0 +1,48 @@
+body.dark-mode .bg-slate-100 {
+  background-color: #0f172a !important;
+}
+
+/* cards */
+body.dark-mode .bg-white {
+  background-color: #1e293b !important;
+}
+
+/* text colors */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode span {
+  color: #e2e8f0 !important;
+}
+
+/* secondary text */
+body.dark-mode .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .text-slate-400 {
+  color: #64748b !important;
+}
+
+body.dark-mode .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+/* borders */
+body.dark-mode .border,
+body.dark-mode .border-slate-200 {
+  border-color: #334155 !important;
+}
+
+/* hover effects */
+body.dark-mode .hover\:bg-slate-50:hover {
+  background-color: #334155 !important;
+}
+
+/* gradient header fix */
+body.dark-mode .from-white,
+body.dark-mode .via-slate-50,
+body.dark-mode .to-\[\#155DFC\]\/5 {
+  background: #1e293b !important;
+}

@@ -1,0 +1,201 @@
+<!-- ================= BACK TO HOME ================= -->
+<!-- <div class="w-full px-6 md:px-10 xl:px-16 pt-8">
+
+  <a
+    routerLink="/home"
+    class="group inline-flex items-center gap-3 
+           bg-linear-to-br from-white to-[#155DFC]/5
+           px-6 py-3 rounded-xl
+           border border-slate-200 shadow-sm
+           text-[#155DFC] text-base md:text-lg font-medium
+           hover:shadow-lg hover:-translate-y-0.5
+           transition duration-300">
+
+    <i class="fa-solid fa-arrow-left transition group-hover:-translate-x-1"></i>
+    <span>Back to Home</span>
+
+  </a>
+
+</div> -->
+
+<!-- ================= PAGE TITLE ================= -->
+<div class="w-full px-6 md:px-10 xl:px-16 mt-12">
+
+  <div class="bg-linear-to-r from-white to-[#155DFC]/5
+              border border-slate-200
+              rounded-2xl
+              py-10 px-8
+              text-center shadow-sm">
+
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 tracking-tight">
+      All Projects
+    </h1>
+
+    <p class="text-slate-500 text-base md:text-lg mt-4 max-w-2xl mx-auto">
+      View all completed and active projects in the system
+    </p>
+
+  </div>
+
+</div>
+
+<!-- ================= LOADING ================= -->
+<div *ngIf="isLoading" class="text-center py-20">
+
+  <i class="fa-solid fa-spinner fa-spin text-4xl text-[#155DFC]"></i>
+
+  <p class="mt-4 text-slate-600 text-lg">
+    Loading Projects...
+  </p>
+
+</div>
+
+<!-- ================= ERROR ================= -->
+<div *ngIf="errorMsg && !isLoading" class="w-full px-6 md:px-10 xl:px-16 mt-8">
+
+  <div class="bg-red-50 border border-red-200 text-red-600 px-6 py-4 rounded-2xl text-center">
+    {{ errorMsg }}
+  </div>
+
+</div>
+
+<!-- ================= MAIN ================= -->
+<main *ngIf="!isLoading && !errorMsg" class="w-full px-6 md:px-10 xl:px-16 py-14">
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+    <!-- ================= COMPLETED ================= -->
+    <div class="bg-linear-to-br from-white to-[#155DFC]/5
+                border border-slate-200
+                rounded-2xl p-8 shadow-sm">
+
+      <div class="flex flex-col items-center mb-10 text-center">
+
+        <div class="w-14 h-14 bg-[#155DFC]/10 rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-circle-check text-2xl text-[#155DFC]"></i>
+        </div>
+
+        <h2 class="text-2xl font-semibold text-slate-800">
+          Completed Projects
+        </h2>
+
+      </div>
+
+      <div class="space-y-6">
+
+        <div
+  *ngFor="let project of activeProjects"
+  [routerLink]="['/projectdetails', project.id]"
+  class="p-6 border border-slate-200 rounded-xl bg-white hover:shadow-lg transition cursor-pointer">
+
+          <div>
+
+            <h3 class="font-semibold text-lg text-slate-800">
+              {{ project.name }}
+            </h3>
+
+            <p class="text-slate-600 mt-2">
+              <i class="fa-solid fa-location-dot text-[#155DFC] mr-2"></i>
+              {{ project.location }}
+            </p>
+
+            <p class="text-slate-600">
+              <i class="fa-solid fa-calendar text-[#155DFC] mr-2"></i>
+              {{ project.endDate | date:'mediumDate' }}
+            </p>
+
+          </div>
+
+        </div>
+
+        <div
+          *ngIf="completedProjects.length === 0"
+          class="text-center text-slate-500 py-10">
+
+          No Completed Projects
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ================= ACTIVE ================= -->
+    <div class="bg-linear-to-br from-white to-[#155DFC]/5
+                border border-slate-200
+                rounded-2xl p-8 shadow-sm">
+
+      <div class="flex flex-col items-center mb-10 text-center">
+
+        <div class="w-14 h-14 bg-[#155DFC]/10 rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-spinner text-2xl text-[#155DFC]"></i>
+        </div>
+
+        <h2 class="text-2xl font-semibold text-slate-800">
+          Active Projects
+        </h2>
+
+      </div>
+
+      <div class="space-y-6">
+
+        <div
+  *ngFor="let project of activeProjects"
+  [routerLink]="['/projectdetails', project.id]"
+  class="p-6 border border-slate-200 rounded-xl bg-white hover:shadow-lg transition cursor-pointer">
+
+          <h3 class="font-semibold text-lg text-slate-800">
+            {{ project.name }}
+          </h3>
+
+          <p class="text-slate-600 mt-2">
+            <i class="fa-solid fa-location-dot text-[#155DFC] mr-2"></i>
+            {{ project.location }}
+          </p>
+
+          <p class="text-slate-600">
+            <i class="fa-solid fa-calendar text-[#155DFC] mr-2"></i>
+            {{ project.endDate | date:'mediumDate' }}
+          </p>
+
+          <!-- Progress -->
+          <div class="mt-4">
+
+            <div class="flex justify-between text-sm font-medium">
+              <span>Progress</span>
+              <span class="text-[#155DFC]">
+                {{ getProgress() }}%
+              </span>
+            </div>
+
+            <div class="w-full bg-slate-200 h-2 rounded-full mt-2">
+
+              <div
+                class="bg-[#155DFC] h-full rounded-full"
+                [style.width.%]="getProgress()">
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div
+          *ngIf="activeProjects.length === 0"
+          class="text-center text-slate-500 py-10">
+
+          No Active Projects
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+<button class="ai-float-btn" routerLink="/chat">
+  🤖
+</button>
+
+</main>

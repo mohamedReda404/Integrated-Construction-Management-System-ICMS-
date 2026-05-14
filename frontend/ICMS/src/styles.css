@@ -1,0 +1,331 @@
+/* =========================
+   TAILWIND + FLOWBITE SETUP
+========================= */
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+/* =========================
+   BASE SETTINGS
+========================= */
+
+@utility container {
+  margin-inline: auto;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* =========================
+   ROOT VARIABLES
+========================= */
+
+:root {
+  --main-color: #155DFC;
+  --bg-color: #DBEAFE;
+}
+
+/* =========================
+   UTILITIES
+========================= */
+
+.main-color {
+  color: var(--main-color);
+}
+
+.bg-color {
+  background-color: var(--bg-color);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-main {
+  color: #fff;
+  background-color: var(--main-color);
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s;
+  border: 1px solid transparent;
+}
+
+.btn-main:hover {
+  background-color: #0d47a1;
+}
+
+.btn-main:disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* =========================
+   CARD COMPONENT
+========================= */
+
+.card {
+  @apply bg-white border border-gray-200 p-6 rounded-xl shadow-sm;
+}
+
+/* =========================
+   DARK MODE SYSTEM
+========================= */
+
+body.dark-mode {
+  background: #0f172a !important;
+}
+
+/* backgrounds */
+body.dark-mode .bg-white {
+  background-color: #1e293b !important;
+}
+
+body.dark-mode .bg-slate-100 {
+  background-color: #0f172a !important;
+}
+
+/* text */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode p,
+body.dark-mode span {
+  color: #e2e8f0 !important;
+}
+
+/* secondary text */
+body.dark-mode .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .text-slate-400 {
+  color: #64748b !important;
+}
+
+body.dark-mode .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+/* borders */
+body.dark-mode .border,
+body.dark-mode .border-gray-200,
+body.dark-mode .border-slate-200 {
+  border-color: #334155 !important;
+}
+
+/* hover states */
+body.dark-mode .hover\:bg-slate-50:hover {
+  background-color: #334155 !important;
+}
+
+/* shadows */
+body.dark-mode .shadow,
+body.dark-mode .shadow-sm,
+body.dark-mode .shadow-md,
+body.dark-mode .shadow-lg,
+body.dark-mode .shadow-xl {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+}
+body.dark-mode nav {
+  background-color: #0f172a !important;
+  border-color: #334155 !important;
+}
+
+/* links */
+body.dark-mode nav a {
+  color: #e2e8f0 !important;
+}
+
+/* hover links */
+body.dark-mode nav a:hover {
+  color: #60a5fa !important;
+}
+
+/* dropdown */
+body.dark-mode nav .bg-white {
+  background-color: #1e293b !important;
+}
+
+/* profile text */
+body.dark-mode nav span {
+  color: #e2e8f0 !important;
+}
+
+/* icons */
+body.dark-mode nav i {
+  color: #cbd5e1 !important;
+}
+body.dark-mode nav .bg-gray-50 {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+/* ================= NAVBAR + HEADER DARK FIX ================= */
+
+body.dark-mode .bg-gray-50 {
+  background-color: #1e293b !important;
+}
+
+body.dark-mode .bg-gradient-to-r {
+  background: linear-gradient(to right, #0f172a, #1e293b, #0f172a) !important;
+}
+
+/* borders أقوى */
+body.dark-mode .border-slate-200 {
+  border-color: #334155 !important;
+}
+
+/* النصوص داخل الهيدر */
+body.dark-mode .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+/* ================= DARK MODE BASE ================= */
+body.dark-mode {
+  background-color: #0f172a !important;
+  color: #e2e8f0 !important;
+}
+
+/* ===== backgrounds ===== */
+body.dark-mode .bg-white {
+  background-color: #1e293b !important;
+}
+
+body.dark-mode .bg-slate-100 {
+  background-color: #0f172a !important;
+}
+
+body.dark-mode .bg-gray-50 {
+  background-color: #1e293b !important;
+}
+
+/* ===== text ===== */
+body.dark-mode .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+body.dark-mode .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+/* ===== borders ===== */
+body.dark-mode .border,
+body.dark-mode .border-slate-200,
+body.dark-mode .border-gray-200 {
+  border-color: #334155 !important;
+}
+
+/* ===== hover ===== */
+body.dark-mode .hover\:bg-gray-50:hover,
+body.dark-mode .hover\:bg-slate-50:hover {
+  background-color: #334155 !important;
+}
+
+/* ===== shadows ===== */
+body.dark-mode .shadow-sm,
+body.dark-mode .shadow {
+  box-shadow: 0 0 20px rgba(0,0,0,0.4) !important;
+}
+
+/* ===== gradients fix (مهم جداً للصفحات اللي عندك) ===== */
+body.dark-mode .from-white {
+  --tw-gradient-from: #1e293b !important;
+}
+
+body.dark-mode .to-white {
+  --tw-gradient-to: #1e293b !important;
+}
+
+body.dark-mode .via-slate-50 {
+  --tw-gradient-via: #1e293b !important;
+}
+
+/* ================= DARK MODE BASE ================= */
+body.dark-mode {
+  background-color: #0f172a !important;
+  color: #e2e8f0 !important;
+}
+
+/* ===== backgrounds ===== */
+body.dark-mode .bg-white,
+body.dark-mode .bg-slate-50,
+body.dark-mode .bg-slate-100 {
+  background-color: #1e293b !important;
+}
+
+/* ===== gradients fix (important) ===== */
+body.dark-mode .bg-gradient-to-r,
+body.dark-mode .bg-gradient-to-br {
+  background-image: none !important;
+  background-color: #1e293b !important;
+}
+
+/* ===== text colors ===== */
+body.dark-mode .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+body.dark-mode .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .text-slate-400 {
+  color: #64748b !important;
+}
+
+/* ===== borders ===== */
+body.dark-mode .border,
+body.dark-mode .border-slate-200,
+body.dark-mode .border-gray-200 {
+  border-color: #334155 !important;
+}
+
+/* ===== hover states ===== */
+body.dark-mode .hover\:bg-slate-50:hover {
+  background-color: #334155 !important;
+}
+
+body.dark-mode .hover\:bg-gray-50:hover {
+  background-color: #334155 !important;
+}
+
+/* ===== cards shadow ===== */
+body.dark-mode .shadow-sm,
+body.dark-mode .shadow,
+body.dark-mode .shadow-xl {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35) !important;
+}
+
+/* ===== inputs / buttons safety ===== */
+body.dark-mode button,
+body.dark-mode a {
+  transition: all 0.2s ease;
+}
+
+

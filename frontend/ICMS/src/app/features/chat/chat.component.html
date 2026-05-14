@@ -1,0 +1,182 @@
+
+<div class="flex h-screen bg-[#0f0f10] text-white font-sans overflow-hidden">
+
+  <!-- ═════════ SIDEBAR ═════════ -->
+  <aside class="w-[280px] bg-[#161618] border-r border-white/10 flex flex-col">
+
+    <!-- Logo -->
+    <div class="p-4 border-b border-white/10">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-xl bg-[#10a37f] flex items-center justify-center">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+            <polygon points="12 2 2 7 12 12 22 7"/>
+            <polyline points="2 17 12 22 22 17"/>
+          </svg>
+        </div>
+        <div>
+          <div class="text-sm font-semibold">ConstrucAI</div>
+          <div class="text-[10px] text-gray-400 uppercase">Construction AI</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Chat -->
+    <div class="p-3">
+      <button
+        (click)="clearChat()"
+        class="w-full flex items-center gap-2 bg-[#10a37f]/10 border border-[#10a37f]/20 hover:bg-[#10a37f]/20 px-3 py-2 rounded-xl text-sm transition"
+      >
+        ＋ New Chat
+      </button>
+    </div>
+
+    <!-- History -->
+    <div class="flex-1 overflow-y-auto px-3">
+      <p class="text-[10px] text-gray-500 uppercase mb-2">Recent</p>
+      <div class="text-sm text-gray-300 opacity-70">
+        Current conversation
+      </div>
+    </div>
+
+  <div class="p-3 border-t border-white/10">
+
+  <div class="bg-white/5 border border-white/10 rounded-xl p-3">
+
+    <div class="flex items-center gap-3">
+
+      <div class="w-8 h-8 rounded-full bg-[#10a37f] flex items-center justify-center text-white text-sm font-bold">
+        {{ userData?.firstName?.charAt(0) }}
+      </div>
+
+      <div>
+        <div class="text-sm text-white font-medium">
+          {{ userData?.firstName }} 
+        </div>
+        <div class="text-[11px] text-gray-400">
+          {{ userData?.email }}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+  </aside>
+
+  <!-- ═════════ MAIN ═════════ -->
+  <main class="flex flex-col flex-1">
+
+    <!-- HEADER -->
+    <header class="h-[52px] flex items-center justify-between px-4 border-b border-white/10 bg-[#0f0f10]/80 backdrop-blur">
+      <div class="flex items-center gap-2">
+        <h1><div class="w-2 h-2 rounded-full bg-[#10a37f] animate-pulse"></div></h1>
+        <span class="text-sm text-gray-300">AI Assistant</span>
+      </div>
+
+      <button (click)="clearChat()" class="text-gray-400 hover:text-white">
+        ⟳
+      </button>
+    </header>
+
+    <!-- ═════════ MESSAGES AREA ═════════ -->
+    <div class="flex-1 overflow-y-auto p-6">
+
+      <!-- 🔥 EMPTY STATE (FIXED) -->
+      <div
+        *ngIf="!messages || messages.length === 0"
+        class="h-full flex flex-col items-center justify-center text-center px-6"
+      >
+
+        <div class="w-20 h-20 rounded-3xl bg-[#10a37f]/10 border border-[#10a37f]/20 flex items-center justify-center mb-6">
+          🤖
+        </div>
+
+        <h2 class="text-2xl font-semibold mb-3">
+          Construction AI Assistant
+        </h2>
+
+        <p class="text-sm text-gray-400 max-w-md leading-relaxed">
+          Analyze project delays, estimate costs, optimize labor, track materials, and generate site reports — all in one conversation.
+        </p>
+
+      </div>
+
+      <!-- CHAT MESSAGES -->
+      <div *ngFor="let msg of messages" class="flex mb-4"
+        [ngClass]="msg.role === 'user' ? 'justify-end' : 'justify-start'">
+
+        <!-- AI Avatar -->
+        <div *ngIf="msg.role === 'assistant'" class="w-8 h-8 mr-2 bg-[#10a37f]/20 rounded-lg flex items-center justify-center">
+          🤖
+        </div>
+
+        <!-- Bubble -->
+        <div
+          class="max-w-[75%] px-4 py-3 rounded-2xl text-sm leading-relaxed"
+          [ngClass]="msg.role === 'user'
+            ? 'bg-[#10a37f] text-white rounded-br-sm'
+            : 'bg-[#1c1c1f] border border-white/10 text-gray-200 rounded-bl-sm'"
+        >
+          <p>{{ msg.content }}</p>
+          <div class="text-[10px] text-gray-400 mt-1">
+            {{ msg.timestamp | date:'shortTime' }}
+          </div>
+        </div>
+
+        <!-- User Avatar -->
+        <div *ngIf="msg.role === 'user'" class="w-8 h-8 ml-2 bg-[#10a37f] rounded-lg flex items-center justify-center text-xs">
+          U
+        </div>
+
+      </div>
+
+      <!-- TYPING -->
+      <div *ngIf="isLoading" class="flex items-center gap-2 mt-2">
+
+        <div class="w-8 h-8 bg-[#10a37f]/20 rounded-lg flex items-center justify-center">
+          🤖
+        </div>
+
+        <div class="bg-[#1c1c1f] px-4 py-2 rounded-2xl border border-white/10 flex gap-1">
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-bounce"></span>
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-bounce delay-100"></span>
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-bounce delay-200"></span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ═════════ INPUT ═════════ -->
+    <div class="p-4 border-t border-white/10">
+
+      <div class="flex items-center gap-2 bg-[#1c1c1f] rounded-2xl px-3 py-2">
+
+        <textarea
+          [(ngModel)]="userInput"
+          (keydown)="onKeyDown($event)"
+          rows="1"
+          placeholder="Type a message..."
+          class="flex-1 bg-transparent outline-none text-sm resize-none"
+        ></textarea>
+
+        <button
+          (click)="sendMessage()"
+          [disabled]="!userInput.trim() || isLoading"
+          class="w-8 h-8 rounded-lg bg-[#10a37f] disabled:opacity-40 flex items-center justify-center"
+        >
+          ➤
+        </button>
+
+      </div>
+
+      <!-- <p class="text-center text-[10px] text-gray-500 mt-2">
+        Press Enter to send · Shift+Enter for new line
+      </p> -->
+
+    </div>
+
+  </main>
+</div>

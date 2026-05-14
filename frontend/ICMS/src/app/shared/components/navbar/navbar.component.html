@@ -1,0 +1,219 @@
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200 shadow-sm">
+
+  <div class="w-full px-6 lg:px-12 xl:px-20 h-16 flex justify-between items-center">
+
+    <!-- Logo -->
+    <section class="shrink-0">
+      <img src="assets/Navbar/logo.png" alt="logo" class="h-9 w-auto">
+    </section>
+
+    <!-- ================= LANDING NAV ================= -->
+    @if (isLand && !isLogin) {
+
+    <ul class="hidden md:flex items-center gap-10 text-[15px] font-semibold text-slate-700">
+
+      <li>
+        <a routerLink="/" routerLinkActive="text-[#155DFC] border-b-2 border-[#155DFC]"
+          class="pb-1 hover:text-[#155DFC] transition">
+          Home
+        </a>
+      </li>
+
+      <li><a href="#services" class="pb-1 hover:text-[#155DFC] transition">Services</a></li>
+      <li><a href="#how-it-works" class="pb-1 hover:text-[#155DFC] transition">How It Works</a></li>
+      <li><a href="#projects" class="pb-1 hover:text-[#155DFC] transition">Projects</a></li>
+      <li><a href="#contact" class="pb-1 hover:text-[#155DFC] transition">Contact</a></li>
+
+    </ul>
+    }
+
+    <!-- ================= DASHBOARD NAV ================= -->
+    @if (isLogin) {
+
+    <ul class="hidden lg:flex items-center gap-14 text-[15px] font-semibold text-slate-700">
+
+      <!-- <li>
+        <a routerLink="/dashboard"
+          routerLinkActive="text-[#155DFC] border-b-2 border-[#155DFC]"
+          class="flex items-center gap-2 pb-1 hover:text-[#155DFC] transition">
+          <i class="fa-solid fa-chart-line text-[#155DFC] text-sm"></i>
+          Dashboard
+        </a>
+      </li> -->
+
+      <li>
+        <a routerLink="/allprojects"
+          routerLinkActive="text-[#155DFC] border-b-2 border-[#155DFC]"
+          class="flex items-center gap-2 pb-1 hover:text-[#155DFC] transition">
+          <i class="fa-solid fa-diagram-project text-[#155DFC] text-sm"></i>
+          All Projects
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/subcontractors"
+          routerLinkActive="text-[#155DFC] border-b-2 border-[#155DFC]"
+          class="flex items-center gap-2 pb-1 hover:text-[#155DFC] transition">
+          <i class="fa-solid fa-helmet-safety text-[#155DFC] text-sm"></i>
+          Material Requests
+        </a>
+      </li>
+
+    
+
+    </ul>
+    }
+
+    <!-- ================= RIGHT SIDE ================= -->
+    <div class="flex items-center gap-6">
+
+      <!-- AUTH -->
+      @if (!isLogin) {
+
+      <a routerLink="/login"
+        class="text-sm font-semibold text-slate-700 hover:text-[#155DFC] transition duration-200 relative group">
+
+        Sign In
+
+        <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#155DFC]
+                     transition-all duration-300 group-hover:w-full"></span>
+
+      </a>
+
+      <button routerLink="/register"
+        class="bg-[#155DFC] hover:bg-[#104bbf] active:scale-[0.98]
+               text-white px-6 py-2.5 text-sm font-semibold
+               rounded-lg shadow-md hover:shadow-lg transition-all">
+
+        Get Started
+
+      </button>
+
+      }
+
+      <!-- ================= PROFILE ================= -->
+      @if (isLogin) {
+
+      <div class="relative">
+
+        <!-- Profile Button -->
+        <button (click)="isProfileOpen = !isProfileOpen"
+          class="flex items-center gap-3 bg-white hover:bg-gray-50
+                 px-3 py-2 rounded-xl border border-gray-200 shadow-sm">
+
+          <!-- Avatar -->
+          <div class="w-9 h-9 bg-[#155DFC] rounded-full flex items-center justify-center text-white text-sm font-semibold">
+            {{ userData?.firstName?.charAt(0)?.toUpperCase() || 'U' }}{{ userData?.lastName?.charAt(0)?.toUpperCase() || 'U' }}
+          </div>
+
+          <!-- Info -->
+          <div class="hidden md:flex flex-col text-left leading-tight">
+
+            <span class="text-sm font-semibold text-slate-800">
+              {{ userData?.firstName }} {{ userData?.lastName }}
+            </span>
+
+            <span class="text-xs text-slate-500">
+              {{ userData?.role }} - {{ userData?.section }}
+            </span>
+
+          </div>
+
+          <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition duration-200"
+            [class.rotate-180]="isProfileOpen"></i>
+
+        </button>
+
+        <!-- Dropdown -->
+        <div *ngIf="isProfileOpen"
+          class="absolute right-0 mt-3 w-64 bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+
+          <!-- Header -->
+          <div class="px-5 py-4 border-b bg-gray-50">
+
+            <p class="text-sm font-semibold text-slate-800">
+              {{ userData?.firstName }} {{ userData?.lastName }}
+            </p>
+
+            <p class="text-xs text-slate-500">
+              {{ userData?.email }}
+            </p>
+
+          </div>
+
+          <!-- Links -->
+          <div class="py-2">
+
+            <a routerLink="/setting"
+              class="flex items-center gap-3 px-5 py-3 text-sm text-slate-700 hover:bg-gray-50">
+
+              <i class="fa-solid fa-gear text-[#155DFC] text-sm"></i>
+              Settings
+            </a>
+
+            <a routerLink="/home"
+              class="flex items-center gap-3 px-5 py-3 text-sm text-slate-700 hover:bg-gray-50">
+
+              <i class="fa-solid fa-chart-line text-[#155DFC] text-sm"></i>
+              Dashboard
+            </a>
+              <!-- DARK / LIGHT MODE BUTTON -->
+<button
+  (click)="toggleTheme()"
+  class="w-full flex items-center justify-between px-5 py-3 text-sm text-slate-700 hover:bg-gray-50 transition-all rounded-lg">
+
+  <div class="flex items-center gap-3">
+
+    <i
+      class="fa-solid transition-all duration-300"
+      [ngClass]="isDarkMode ? 'fa-moon text-indigo-600' : 'fa-sun text-yellow-500'">
+    </i>
+
+    <span>
+      {{ isDarkMode ? 'Dark Mode' : 'Light Mode' }}
+    </span>
+
+  </div>
+
+  <!-- TOGGLE -->
+  <div
+    class="w-11 h-6 rounded-full relative transition-all duration-300"
+    [ngClass]="isDarkMode ? 'bg-indigo-600' : 'bg-gray-300'">
+
+    <div
+      class="absolute top-1 w-4 h-4 bg-white rounded-full transition-all duration-300"
+      [ngClass]="isDarkMode ? 'right-1' : 'left-1'">
+    </div>
+
+  </div>
+
+</button>
+          </div>
+
+          <div class="border-t"></div>
+
+          <!-- Logout -->
+          <div class="py-2">
+
+            <button (click)="signOut()"
+              class="flex items-center gap-3 px-5 py-3 text-sm text-red-500 hover:bg-red-50 w-full">
+
+              <i class="fa-solid fa-right-from-bracket text-sm"></i>
+              Logout
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</nav>
+
+<div class="h-16"></div>

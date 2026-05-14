@@ -1,0 +1,6 @@
+@Integrated_Construction_Management_System_ICMS_HostAddress = http://localhost:5206
+
+GET {{Integrated_Construction_Management_System_ICMS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

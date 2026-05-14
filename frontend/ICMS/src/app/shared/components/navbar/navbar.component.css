@@ -1,0 +1,15 @@
+.dashboard-card {
+  background: white;
+  color: #111827;
+  border-radius: 16px;
+  padding: 20px;
+  transition: 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+/* ✅ الحل الصح في Angular */
+:host-context(body.dark-mode) .dashboard-card {
+  background: #1e293b;
+  color: #f1f5f9;
+  border: 1px solid #334155;
+}
