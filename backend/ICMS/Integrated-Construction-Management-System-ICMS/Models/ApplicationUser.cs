@@ -17,6 +17,6 @@ namespace Integrated_Construction_Management_System_ICMS.Models
         public List<WorkerTasksRequest>? workerTasksRequest { get; set; }
         public List<Invoice>? invoice { get; set; }
         public ICollection<RefreshToken> RefreshTokens { get; set; } = new List<RefreshToken>();
-        //public ProjectContract? projectContract { get; set; }
+        
     }
 }
