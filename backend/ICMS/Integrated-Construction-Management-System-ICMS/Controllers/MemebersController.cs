@@ -46,5 +46,22 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
             var result = await _authService.GetAllConsultantMembers(cancellationToken);
             return Ok(result);
         }
+
+
+        [HttpGet("WorkersMembers")]
+        public async Task<IActionResult> GetAllWorkersMembers(CancellationToken cancellationToken)
+        {
+            var result = await _authService.GetAllConsultantMembers(cancellationToken);
+            return Ok(result);
+        }
+
+        [HttpGet("SubcontractorMembers")]
+        public async Task<IActionResult> GetAllSubcontractorMembers(CancellationToken cancellationToken)
+        {
+            var result = await _authService.GetAllConsultantMembers(cancellationToken);
+            return Ok(result);
+        }
+
+
     }
 }
