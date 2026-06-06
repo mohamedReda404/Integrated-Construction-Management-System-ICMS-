@@ -2,7 +2,7 @@
 {
     public record BOQPricingRequest
     (
-         int BOQId,
+         
          string Title,
          string Description,
          string Status,

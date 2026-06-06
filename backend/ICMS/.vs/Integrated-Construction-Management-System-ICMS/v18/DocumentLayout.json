@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|d:\\projectgratudation\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\services\\classes\\boqpricingservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\services\\classes\\boqpricingservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Presistence\\20260606225322_initrr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Integrated-Construction-Management-System-ICMS\\Presistence\\20260606225322_initrr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|d:\\projectgratudation\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\models\\boq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\models\\boq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|d:\\projectgratudation\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\models\\boqpricing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\models\\boqpricing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|d:\\projectgratudation\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\contracts\\configurations\\boqpricingconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\contracts\\configurations\\boqpricingconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|d:\\projectgratudation\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\contracts\\requests\\boqrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\contracts\\requests\\boqrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|d:\\projectgratudation\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\contracts\\requests\\boqpricingrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\contracts\\requests\\boqpricingrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|d:\\projectgratudation\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\models\\workertasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\models\\workertasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|d:\\projectgratudation\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\controllers\\memeberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\controllers\\memeberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -41,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|d:\\projectgratudation\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\services\\interfaces\\iboqpricingservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\services\\interfaces\\iboqpricingservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|d:\\projectgratudation\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\services\\classes\\boqpricingservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\services\\classes\\boqpricingservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|d:\\projectgratudation\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -236,10 +264,6 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ELking 01156909010\\AppData\\Local\\Temp\\ivvgwemy..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|d:\\projectgratudation\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\contracts\\requests\\boqpricingrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\contracts\\requests\\boqpricingrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|d:\\projectgratudation\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\contracts\\validations\\boqvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\contracts\\validations\\boqvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -314,10 +338,6 @@
       "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\contracts\\responces\\projectcontractresponce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|d:\\projectgratudation\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\contracts\\configurations\\boqpricingconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\contracts\\configurations\\boqpricingconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\20260415221241_initfix-ProjectModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -349,10 +369,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|d:\\projectgratudation\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\contracts\\responces\\boqresponce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\contracts\\responces\\boqresponce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|d:\\projectgratudation\\integrated-construction-management-system-icms-\\backend\\icms\\integrated-construction-management-system-icms\\contracts\\requests\\boqrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{406EE2B8-2AB4-45E6-8E29-9E4F7E4DE290}|Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj|solutionrelative:integrated-construction-management-system-icms\\contracts\\requests\\boqrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\20260415180942_initRefreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -532,11 +548,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\appsettings.json",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\appsettings.json",
@@ -561,19 +577,122 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "JwtOptions.cs",
-              "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Authentication\\JwtOptions.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Authentication\\JwtOptions.cs",
-              "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Authentication\\JwtOptions.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Authentication\\JwtOptions.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowAUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "BOQPricingServices.cs",
+              "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\BOQPricingServices.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\BOQPricingServices.cs",
+              "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\BOQPricingServices.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\BOQPricingServices.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T16:26:59.022Z"
+              "WhenOpened": "2026-04-07T15:20:53.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BOQ.cs",
+              "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Models\\BOQ.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Models\\BOQ.cs",
+              "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Models\\BOQ.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Models\\BOQ.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA8wBMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T22:50:53.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BOQPricing.cs",
+              "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Models\\BOQPricing.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Models\\BOQPricing.cs",
+              "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Models\\BOQPricing.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Models\\BOQPricing.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAIwAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T22:50:38.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BOQPricingRequest.cs",
+              "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\BOQPricingRequest.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\BOQPricingRequest.cs",
+              "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\BOQPricingRequest.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\BOQPricingRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T21:35:51.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BOQRequest.cs",
+              "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\BOQRequest.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\BOQRequest.cs",
+              "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\BOQRequest.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\BOQRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T21:24:42.525Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "BOQPricingConfigurations.cs",
+              "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\BOQPricingConfigurations.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\BOQPricingConfigurations.cs",
+              "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\BOQPricingConfigurations.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\BOQPricingConfigurations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T23:28:23.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WorkerTasks.cs",
+              "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Models\\WorkerTasks.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Models\\WorkerTasks.cs",
+              "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Models\\WorkerTasks.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Models\\WorkerTasks.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA4wBAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T22:43:48.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\AuthService.cs",
+              "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\AuthService.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\AuthService.cs",
+              "ViewState": "AgIAADUBAAAAAAAAAAAiwD4BAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T17:26:51.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "JwtProvider.cs",
+              "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Authentication\\JwtProvider.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Authentication\\JwtProvider.cs",
+              "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Authentication\\JwtProvider.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Authentication\\JwtProvider.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T16:24:39.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "IJwtProvider.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Authentication\\IJwtProvider.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Authentication\\IJwtProvider.cs",
@@ -585,33 +704,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "JwtProvider.cs",
-              "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Authentication\\JwtProvider.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Authentication\\JwtProvider.cs",
-              "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Authentication\\JwtProvider.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Authentication\\JwtProvider.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAwAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "JwtOptions.cs",
+              "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Authentication\\JwtOptions.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Authentication\\JwtOptions.cs",
+              "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Authentication\\JwtOptions.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Authentication\\JwtOptions.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T16:24:39.727Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T16:26:59.022Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\AuthService.cs",
-              "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\AuthService.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\AuthService.cs",
-              "ViewState": "AgIAADUBAAAAAAAAAAAiwD4BAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T17:26:51.118Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Controllers\\AuthController.cs",
@@ -619,25 +724,24 @@
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAAwwEUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T17:25:21.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T17:25:21.777Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "MemebersController.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Controllers\\MemebersController.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Controllers\\MemebersController.cs",
               "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Controllers\\MemebersController.cs",
               "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Controllers\\MemebersController.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAQwDkAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAgwEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-18T23:12:10.836Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "ProjectService.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectService.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectService.cs",
@@ -649,7 +753,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Models\\ApplicationUser.cs",
@@ -661,7 +765,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Persistence\\AppDbContext.cs",
@@ -673,19 +777,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BOQPricingServices.cs",
-              "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\BOQPricingServices.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\BOQPricingServices.cs",
-              "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\BOQPricingServices.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\BOQPricingServices.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAgwDUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T15:20:53.925Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "IBOQPricingServices.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IBOQPricingServices.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IBOQPricingServices.cs",
@@ -697,7 +789,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "ProjectContract.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Models\\ProjectContract.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Models\\ProjectContract.cs",
@@ -709,7 +801,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\IAuthService.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\IAuthService.cs",
@@ -721,7 +813,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "ProjectApplicationUser.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Models\\ProjectApplicationUser.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Models\\ProjectApplicationUser.cs",
@@ -733,7 +825,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "AcountsController.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Controllers\\AcountsController.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Controllers\\AcountsController.cs",
@@ -745,7 +837,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "AddMembersRequest.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\AddMembersRequest.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\AddMembersRequest.cs",
@@ -757,7 +849,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "MappingConf.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Mapping\\MappingConf.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Mapping\\MappingConf.cs",
@@ -769,7 +861,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Program.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Program.cs",
@@ -781,7 +873,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\appsettings.Development.json",
@@ -793,7 +885,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "uxcgecxr..sql",
               "DocumentMoniker": "C:\\Users\\ELking 01156909010\\AppData\\Local\\Temp\\uxcgecxr..sql",
               "ToolTip": "C:\\Users\\ELking 01156909010\\AppData\\Local\\Temp\\uxcgecxr..sql",
@@ -802,7 +894,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "ProjectsController.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Controllers\\ProjectsController.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Controllers\\ProjectsController.cs",
@@ -814,7 +906,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "DependencyInjection .cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\DependencyInjection .cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\DependencyInjection .cs",
@@ -826,7 +918,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "GlobalUsing.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\GlobalUsing.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\GlobalUsing.cs",
@@ -838,7 +930,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "ChatController.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Controllers\\ChatController.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Controllers\\ChatController.cs",
@@ -850,7 +942,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "IProjectService.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectService.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectService.cs",
@@ -862,7 +954,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "IProjectContractService.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectContractService.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IProjectContractService.cs",
@@ -874,7 +966,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 34,
               "Title": "UserExtention.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Extentions\\UserExtention.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Extentions\\UserExtention.cs",
@@ -886,7 +978,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 35,
               "Title": "UserConfigurations.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\UserConfigurations.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\UserConfigurations.cs",
@@ -898,7 +990,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 36,
               "Title": "e01kgj44..sql",
               "DocumentMoniker": "C:\\Users\\ELking 01156909010\\AppData\\Local\\Temp\\e01kgj44..sql",
               "ToolTip": "C:\\Users\\ELking 01156909010\\AppData\\Local\\Temp\\e01kgj44..sql",
@@ -907,7 +999,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 37,
               "Title": "UpdateAccountUserRequest.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\UpdateAccountUserRequest.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\UpdateAccountUserRequest.cs",
@@ -919,7 +1011,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 40,
               "Title": "GroqRequest.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\GroqRequest.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\GroqRequest.cs",
@@ -931,7 +1023,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 41,
               "Title": "QueryAnalyzer.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\QueryAnalyzer.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\QueryAnalyzer.cs",
@@ -943,7 +1035,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 38,
               "Title": "RagService.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\RagService.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\RagService.cs",
@@ -955,7 +1047,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 39,
               "Title": "ProjectDataService.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\ProjectDataService.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Persistence\\ProjectDataService.cs",
@@ -967,7 +1059,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 42,
               "Title": "GroqService.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\GroqService.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\GroqService.cs",
@@ -979,7 +1071,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 43,
               "Title": "InvoiceItemService.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\InvoiceItemService.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\InvoiceItemService.cs",
@@ -991,7 +1083,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 44,
               "Title": "InvoiceService.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\InvoiceService.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\InvoiceService.cs",
@@ -1003,7 +1095,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 45,
               "Title": "MaterialRequestServices.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MaterialRequestServices.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\MaterialRequestServices.cs",
@@ -1015,7 +1107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 46,
               "Title": "ProjectContractService.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectContractService.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ProjectContractService.cs",
@@ -1027,7 +1119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 47,
               "Title": "QueryRouter.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\QueryRouter.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\QueryRouter.cs",
@@ -1039,7 +1131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 48,
               "Title": "ContextBuilder.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ContextBuilder.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\ContextBuilder.cs",
@@ -1051,7 +1143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 49,
               "Title": "BOQServices.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\BOQServices.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\BOQServices.cs",
@@ -1063,7 +1155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 50,
               "Title": "DrawingService.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Classes\\DrawingService.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Classes\\DrawingService.cs",
@@ -1075,7 +1167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 51,
               "Title": "IBOQServices.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IBOQServices.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IBOQServices.cs",
@@ -1087,7 +1179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 52,
               "Title": "IGroqService.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IGroqService.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IGroqService.cs",
@@ -1099,7 +1191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 53,
               "Title": "GroqResponse.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\GroqResponse.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\GroqResponse.cs",
@@ -1111,7 +1203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 137,
+              "DocumentIndex": 141,
               "Title": "20260507181746_inittablestasksandtasksrequestforworkers.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\20260507181746_inittablestasksandtasksrequestforworkers.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Persistence\\20260507181746_inittablestasksandtasksrequestforworkers.cs",
@@ -1123,7 +1215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 56,
               "Title": "Error.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Abstractions\\Error.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Abstractions\\Error.cs",
@@ -1135,7 +1227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 55,
               "Title": "Result.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Abstractions\\Result.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Abstractions\\Result.cs",
@@ -1147,7 +1239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 54,
               "Title": "UserErrors.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Errors\\UserErrors.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Errors\\UserErrors.cs",
@@ -1159,7 +1251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 57,
               "Title": "MaterialRequestsController.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Controllers\\MaterialRequestsController.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Controllers\\MaterialRequestsController.cs",
@@ -1171,7 +1263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 59,
               "Title": "ProjectContractsController.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Controllers\\ProjectContractsController.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Controllers\\ProjectContractsController.cs",
@@ -1183,7 +1275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 58,
               "Title": "20260507040512_initdbforchatboot.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\20260507040512_initdbforchatboot.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Persistence\\20260507040512_initdbforchatboot.cs",
@@ -1195,7 +1287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 60,
               "Title": "InvoicesController.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Controllers\\InvoicesController.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Controllers\\InvoicesController.cs",
@@ -1207,7 +1299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 61,
               "Title": "InvoiceItemsController.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Controllers\\InvoiceItemsController.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Controllers\\InvoiceItemsController.cs",
@@ -1219,7 +1311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 62,
               "Title": "DrawingsController.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Controllers\\DrawingsController.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Controllers\\DrawingsController.cs",
@@ -1231,7 +1323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 63,
               "Title": "BOQsPricingController.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Controllers\\BOQsPricingController.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Controllers\\BOQsPricingController.cs",
@@ -1243,7 +1335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 64,
               "Title": "BOQsController.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Controllers\\BOQsController.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Controllers\\BOQsController.cs",
@@ -1255,7 +1347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 65,
               "Title": "ivvgwemy..sql",
               "DocumentMoniker": "C:\\Users\\ELking 01156909010\\AppData\\Local\\Temp\\ivvgwemy..sql",
               "ToolTip": "C:\\Users\\ELking 01156909010\\AppData\\Local\\Temp\\ivvgwemy..sql",
@@ -1264,19 +1356,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "BOQPricingRequest.cs",
-              "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\BOQPricingRequest.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\BOQPricingRequest.cs",
-              "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\BOQPricingRequest.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\BOQPricingRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T21:35:51.012Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 66,
               "Title": "BOQValidator.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Validations\\BOQValidator.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Validations\\BOQValidator.cs",
@@ -1288,7 +1368,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 70,
               "Title": "RegisterRequest.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\RegisterRequest.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\RegisterRequest.cs",
@@ -1300,7 +1380,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 67,
               "Title": "Integrated-Construction-Management-System-ICMS.csproj",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj",
@@ -1312,7 +1392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 136,
+              "DocumentIndex": 140,
               "Title": "20260428113601_ChangeDatatTypeInInvoiceModelInPropertyFileTOString.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\20260428113601_ChangeDatatTypeInInvoiceModelInPropertyFileTOString.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Persistence\\20260428113601_ChangeDatatTypeInInvoiceModelInPropertyFileTOString.cs",
@@ -1324,7 +1404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 69,
               "Title": "InvoiceRequest.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\InvoiceRequest.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\InvoiceRequest.cs",
@@ -1336,7 +1416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 68,
               "Title": "InvoiceResponse.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\InvoiceResponse.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\InvoiceResponse.cs",
@@ -1348,7 +1428,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 71,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\LoginRequest.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\LoginRequest.cs",
@@ -1360,7 +1440,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 72,
               "Title": "BOQConfigurations.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\BOQConfigurations.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\BOQConfigurations.cs",
@@ -1372,7 +1452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 74,
               "Title": "IDrawingService.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IDrawingService.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IDrawingService.cs",
@@ -1384,7 +1464,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 135,
+              "DocumentIndex": 139,
               "Title": "20260427103625_changeDatatypeINBOQPricingToString.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\20260427103625_changeDatatypeINBOQPricingToString.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Persistence\\20260427103625_changeDatatypeINBOQPricingToString.cs",
@@ -1396,7 +1476,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 73,
               "Title": "BOQPricingReponce.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\BOQPricingReponce.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\BOQPricingReponce.cs",
@@ -1408,7 +1488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 75,
               "Title": "z3v2rdru..sql",
               "DocumentMoniker": "C:\\Users\\ELking 01156909010\\AppData\\Local\\Temp\\z3v2rdru..sql",
               "ToolTip": "C:\\Users\\ELking 01156909010\\AppData\\Local\\Temp\\z3v2rdru..sql",
@@ -1417,7 +1497,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 76,
               "Title": "AppDbContextModelSnapshot.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\AppDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Persistence\\AppDbContextModelSnapshot.cs",
@@ -1429,7 +1509,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 77,
               "Title": "DrawingResponse.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\DrawingResponse.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\DrawingResponse.cs",
@@ -1441,7 +1521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 134,
+              "DocumentIndex": 138,
               "Title": "20260426172155_changeDatatypeInDrowingEntitytoString.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\20260426172155_changeDatatypeInDrowingEntitytoString.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Persistence\\20260426172155_changeDatatypeInDrowingEntitytoString.cs",
@@ -1453,7 +1533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 78,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Properties\\launchSettings.json",
@@ -1465,7 +1545,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 80,
               "Title": "DrawingValidator.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Validations\\DrawingValidator.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Validations\\DrawingValidator.cs",
@@ -1477,7 +1557,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 79,
               "Title": "ProjectValidator.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Validations\\ProjectValidator.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Validations\\ProjectValidator.cs",
@@ -1489,7 +1569,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 81,
               "Title": "dbo.RefreshToken.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/./ICMS/True/SqlTable/dbo.RefreshToken.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/./ICMS/True/SqlTable/dbo.RefreshToken.sql",
@@ -1498,7 +1578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 83,
               "Title": "ProjectResponce.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\ProjectResponce.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\ProjectResponce.cs",
@@ -1510,7 +1590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 84,
               "Title": "ProjectContractResponce.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\ProjectContractResponce.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\ProjectContractResponce.cs",
@@ -1522,7 +1602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 133,
+              "DocumentIndex": 137,
               "Title": "20260420213352_changeNamePropartyNameFromPhotourlToPhoto.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\20260420213352_changeNamePropartyNameFromPhotourlToPhoto.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Persistence\\20260420213352_changeNamePropartyNameFromPhotourlToPhoto.cs",
@@ -1534,7 +1614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 82,
               "Title": "ProjectRequest.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\ProjectRequest.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\ProjectRequest.cs",
@@ -1546,19 +1626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
-              "Title": "BOQPricingConfigurations.cs",
-              "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\BOQPricingConfigurations.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\BOQPricingConfigurations.cs",
-              "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\BOQPricingConfigurations.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\BOQPricingConfigurations.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwBwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T23:28:23.308Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 85,
               "Title": "20260415221241_initfix-ProjectModel.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\20260415221241_initfix-ProjectModel.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\20260415221241_initfix-ProjectModel.cs",
@@ -1569,7 +1637,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 86,
               "Title": "ProjectConfigurations.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\ProjectConfigurations.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\ProjectConfigurations.cs",
@@ -1581,7 +1649,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 87,
               "Title": "20260415215232_initfix-Refreshtoken.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\20260415215232_initfix-Refreshtoken.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\20260415215232_initfix-Refreshtoken.cs",
@@ -1593,7 +1661,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 88,
               "Title": "20260415214515_initfix-conflictinPorjectCintract.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\20260415214515_initfix-conflictinPorjectCintract.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\20260415214515_initfix-conflictinPorjectCintract.cs",
@@ -1605,7 +1673,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 89,
               "Title": "ProjectContractConfigurations.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\ProjectContractConfigurations.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\ProjectContractConfigurations.cs",
@@ -1617,7 +1685,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 90,
               "Title": "RejesterValidator.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Validations\\RejesterValidator.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Validations\\RejesterValidator.cs",
@@ -1629,7 +1697,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 91,
               "Title": "AuthResponce.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\AuthResponce.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\AuthResponce.cs",
@@ -1641,7 +1709,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 92,
               "Title": "InvoiceItemResponse.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\InvoiceItemResponse.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\InvoiceItemResponse.cs",
@@ -1653,19 +1721,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
-              "Title": "BOQRequest.cs",
-              "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\BOQRequest.cs",
-              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\BOQRequest.cs",
-              "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\BOQRequest.cs",
-              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\BOQRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T21:24:42.525Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 93,
               "Title": "BOQResponce.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\BOQResponce.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\BOQResponce.cs",
@@ -1677,7 +1733,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 94,
               "Title": "20260415180942_initRefreshtoken.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\20260415180942_initRefreshtoken.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\20260415180942_initRefreshtoken.cs",
@@ -1689,7 +1745,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 95,
               "Title": "LoginRequestValidator.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Validations\\LoginRequestValidator.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Validations\\LoginRequestValidator.cs",
@@ -1701,7 +1757,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 138,
+              "DocumentIndex": 142,
               "Title": "ForemanValidator.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Validations\\ForemanValidator.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Validations\\ForemanValidator.cs",
@@ -1713,7 +1769,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 96,
               "Title": "20260415172052_Persistence.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\initDb\\20260415172052_Persistence.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\initDb\\20260415172052_Persistence.cs",
@@ -1725,7 +1781,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 97,
               "Title": "20260415171904_Persistence.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\initDb\\20260415171904_Persistence.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\initDb\\20260415171904_Persistence.cs",
@@ -1737,7 +1793,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 98,
               "Title": "20260415164235_Persistence.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\initDb\\20260415164235_Persistence.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\initDb\\20260415164235_Persistence.cs",
@@ -1749,7 +1805,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 99,
               "Title": "InvoiceItemValidator.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Validations\\InvoiceItemValidator.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Validations\\InvoiceItemValidator.cs",
@@ -1761,7 +1817,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 100,
               "Title": "ProjectApplicationUserConfigurations.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\ProjectApplicationUserConfigurations.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\ProjectApplicationUserConfigurations.cs",
@@ -1773,7 +1829,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 101,
               "Title": "InvoiceConfigurations.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\InvoiceConfigurations.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\InvoiceConfigurations.cs",
@@ -1785,7 +1841,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 102,
               "Title": "DrawingConfigurations.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\DrawingConfigurations.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\DrawingConfigurations.cs",
@@ -1797,7 +1853,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 103,
               "Title": "IInvoiceItemService.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IInvoiceItemService.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Services\\Interfaces\\IInvoiceItemService.cs",
@@ -1809,7 +1865,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 104,
               "Title": "MaterialRequestReponse.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\MaterialRequestReponse.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Responces\\MaterialRequestReponse.cs",
@@ -1821,7 +1877,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 106,
               "Title": "ProjectContractRequest.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\ProjectContractRequest.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\ProjectContractRequest.cs",
@@ -1833,7 +1889,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 105,
               "Title": "MaterialRequestRequest.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\MaterialRequestRequest.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Requests\\MaterialRequestRequest.cs",
@@ -1845,7 +1901,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 107,
               "Title": "Integrated-Construction-Management-System-ICMS.http",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.http",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.http",
@@ -1857,7 +1913,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 108,
               "Title": "20260329234837_initMainDatabaseTables.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistance\\Migrations\\20260329234837_initMainDatabaseTables.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistance\\Migrations\\20260329234837_initMainDatabaseTables.cs",
@@ -1869,7 +1925,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 109,
               "Title": "InvoiceItemConfigurations.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\InvoiceItemConfigurations.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\configurations\\InvoiceItemConfigurations.cs",
@@ -1881,7 +1937,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 110,
               "Title": "20260329233603_initMainDatabaseTables.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistance\\Migrations\\20260329233603_initMainDatabaseTables.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistance\\Migrations\\20260329233603_initMainDatabaseTables.cs",
@@ -1893,7 +1949,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 111,
               "Title": "20260329232716_initMainDatabaseTables.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistance\\Migrations\\20260329232716_initMainDatabaseTables.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistance\\Migrations\\20260329232716_initMainDatabaseTables.cs",
@@ -1905,7 +1961,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 112,
               "Title": "20260329232439_init2.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistance\\Migrations\\20260329232439_init2.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistance\\Migrations\\20260329232439_init2.cs",
@@ -1917,7 +1973,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 113,
               "Title": "20260323044625_Init2.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\Migrations\\20260323044625_Init2.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Persistence\\Migrations\\20260323044625_Init2.cs",
@@ -1929,7 +1985,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 139,
+              "DocumentIndex": 143,
               "Title": "ProjectContractValidator.cs",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Contracts\\Validations\\ProjectContractValidator.cs",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Contracts\\Validations\\ProjectContractValidator.cs",
@@ -1941,7 +1997,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 114,
               "Title": "dbo.AspNetUsers.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/./ICMS/True/SqlTable/dbo.AspNetUsers.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/./ICMS/True/SqlTable/dbo.AspNetUsers.sql",
@@ -1950,7 +2006,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 115,
               "Title": "PACKAGE.md",
               "DocumentMoniker": "C:\\Users\\ELking 01156909010\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.2\\PACKAGE.md",
               "ToolTip": "C:\\Users\\ELking 01156909010\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.2\\PACKAGE.md",
@@ -1960,7 +2016,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 116,
               "Title": "Microsoft.AspNetCore.OpenApi.targets",
               "DocumentMoniker": "C:\\Users\\ELking 01156909010\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.2\\build\\Microsoft.AspNetCore.OpenApi.targets",
               "ToolTip": "C:\\Users\\ELking 01156909010\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.2\\build\\Microsoft.AspNetCore.OpenApi.targets",
@@ -1970,7 +2026,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 117,
               "Title": ".gitignore",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\.gitignore",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\.gitignore",
@@ -1982,7 +2038,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 118,
               "Title": "dbo.Projects.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/./ICMS/True/SqlTable/dbo.Projects.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/./ICMS/True/SqlTable/dbo.Projects.sql",
@@ -1991,7 +2047,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 119,
               "Title": "foremenService.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\foremenService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\foremenService.cs",
@@ -2002,7 +2058,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 132,
+              "DocumentIndex": 136,
               "Title": "IProjectManager.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\IProjectManager.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\IProjectManager.cs",
@@ -2013,7 +2069,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 131,
+              "DocumentIndex": 135,
               "Title": "projectmanagerService.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\projectmanagerService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\projectmanagerService.cs",
@@ -2024,7 +2080,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 130,
+              "DocumentIndex": 134,
               "Title": "IForeman.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\IForeman.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Services\\IForeman.cs",
@@ -2035,7 +2091,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 116,
+              "DocumentIndex": 120,
               "Title": "dbo.Foremen.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/./ICMS/True/SqlTable/dbo.Foremen.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/./ICMS/True/SqlTable/dbo.Foremen.sql",
@@ -2044,7 +2100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 129,
+              "DocumentIndex": 133,
               "Title": "20251213183637_InitialCreate.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213183637_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213183637_InitialCreate.cs",
@@ -2055,7 +2111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 117,
+              "DocumentIndex": 121,
               "Title": "20251213183144_InitialCreate.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213183144_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213183144_InitialCreate.cs",
@@ -2066,7 +2122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 118,
+              "DocumentIndex": 122,
               "Title": "Integrated-Construction-Management-System-ICMS",
               "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj",
               "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Integrated-Construction-Management-System-ICMS.csproj",
@@ -2077,7 +2133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 119,
+              "DocumentIndex": 123,
               "Title": "20251213182225_InitialCreate.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213182225_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213182225_InitialCreate.cs",
@@ -2088,7 +2144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 120,
+              "DocumentIndex": 124,
               "Title": "20251213181834_InitialCreate.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213181834_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213181834_InitialCreate.cs",
@@ -2099,7 +2155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 121,
+              "DocumentIndex": 125,
               "Title": "20251213173204_InitialCreate.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213173204_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213173204_InitialCreate.cs",
@@ -2110,7 +2166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 122,
+              "DocumentIndex": 126,
               "Title": "20251213170406_InitialCreate.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213170406_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213170406_InitialCreate.cs",
@@ -2121,7 +2177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 123,
+              "DocumentIndex": 127,
               "Title": "20251213164119_InitialCreate.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213164119_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213164119_InitialCreate.cs",
@@ -2132,7 +2188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 124,
+              "DocumentIndex": 128,
               "Title": "20251213163553_InitialCreate.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213163553_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213163553_InitialCreate.cs",
@@ -2143,7 +2199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 125,
+              "DocumentIndex": 129,
               "Title": "20251213163523_InitialCreate.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213163523_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213163523_InitialCreate.cs",
@@ -2154,7 +2210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 126,
+              "DocumentIndex": 130,
               "Title": "20251213163415_Init.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213163415_Init.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213163415_Init.cs",
@@ -2165,7 +2221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 127,
+              "DocumentIndex": 131,
               "Title": "20251213162338_FixCascadePaths.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213162338_FixCascadePaths.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213162338_FixCascadePaths.cs",
@@ -2176,7 +2232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 128,
+              "DocumentIndex": 132,
               "Title": "20251213161548_UpdateModels.cs",
               "DocumentMoniker": "D:\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213161548_UpdateModels.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Migrations\\20251213161548_UpdateModels.cs",
@@ -2189,8 +2245,21 @@
         },
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20260606225322_initrr.cs",
+              "DocumentMoniker": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Presistence\\20260606225322_initrr.cs",
+              "RelativeDocumentMoniker": "Integrated-Construction-Management-System-ICMS\\Presistence\\20260606225322_initrr.cs",
+              "ToolTip": "D:\\ProjectGratudation\\Integrated-Construction-Management-System-ICMS-\\backend\\ICMS\\Integrated-Construction-Management-System-ICMS\\Presistence\\20260606225322_initrr.cs",
+              "RelativeToolTip": "Integrated-Construction-Management-System-ICMS\\Presistence\\20260606225322_initrr.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T22:53:22.71Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"

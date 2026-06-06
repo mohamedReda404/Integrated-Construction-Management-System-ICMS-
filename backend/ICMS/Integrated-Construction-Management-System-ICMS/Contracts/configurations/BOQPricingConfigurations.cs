@@ -27,9 +27,7 @@ namespace Integrated_Construction_Management_System_ICMS.Contracts.configuration
             builder.Property(p=>p.Date)
                 .IsRequired();
 
-            builder.HasOne(p => p.bOQ)
-                .WithOne(b => b.bOQPricing)
-                .HasForeignKey<BOQPricing>(f=>f.BOQId);
+           
 
         }
     }
