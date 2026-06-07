@@ -1,378 +1,629 @@
+<a
+  routerLink="/projectdetails/{{ project?.id }}"
+  class="group inline-flex items-center gap-2 bg-linear-to-r from-white to-[#155DFC]/5 px-4 py-2 rounded-lg border border-slate-200 shadow-sm text-[#155DFC] text-sm font-medium hover:shadow-md hover:border-[#155DFC]/20 transition-all duration-300"
+>
+  <i class="fa-solid fa-arrow-left text-xs group-hover:-translate-x-1 transition-transform"></i>
+
+  <span>Back to Project Details</span>
+</a>
+
 <div class="bg-slate-100 min-h-screen pb-20">
+  <!-- PAGE TITLE -->
+  <div class="max-w-7xl mx-auto px-4 mt-5">
+    <h2 class="text-2xl font-bold text-gray-900">Consult Details</h2>
 
-  <!-- HEADER -->
-  <div class="bg-white border-b border-slate-200 px-8 py-4 flex justify-between items-center">
-
-    <div class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded-xl bg-[#155DFC] text-white flex items-center justify-center">
-        <i class="fa-solid fa-building"></i>
-      </div>
-
-      <h2 class="text-2xl font-bold text-slate-800">
-        AEC-HUB
-      </h2>
-    </div>
-
-    <div class="flex items-center gap-6">
-
-      <i class="fa-regular fa-clock text-xl text-slate-700"></i>
-      <i class="fa-regular fa-bell text-xl text-slate-700"></i>
-
-      <div class="w-11 h-11 rounded-full bg-[#155DFC] text-white flex items-center justify-center font-bold">
-        AA
-      </div>
-
-    </div>
-
+    <p class="text-gray-500 mt-1">
+      {{ project?.name }}
+    </p>
   </div>
 
-  <!-- PAGE -->
-  <div class="max-w-6xl mx-auto px-6 py-8">
-
-    <!-- BACK -->
-    <a routerLink="/allproject"
-      class="inline-flex items-center gap-2 text-slate-600 hover:text-[#155DFC] mb-6">
-
-      <i class="fa-solid fa-arrow-left"></i>
-      Back to Projects
-
-    </a>
-
-    <!-- TITLE -->
-    <h1 class="text-4xl font-bold text-slate-800">
-      Consult Engineer Details
-    </h1>
-
-    <p class="text-slate-500 text-lg mt-2 mb-8">
-      Gulf Commercial Tower Project
-    </p>
-
-    <!-- CARD -->
-    <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm mb-8">
-
-      <div class="border border-slate-200 rounded-2xl p-6 flex gap-5">
-
-        <img
-          src="https://i.pravatar.cc/100?img=13"
-          class="w-20 h-20 rounded-full object-cover">
-
-        <div>
-
-          <h3 class="text-2xl font-semibold text-slate-800">
-            Mohamed Rashid
-          </h3>
-
-          <p class="text-[#155DFC] mt-1 text-lg">
-            Structural Engineer
-          </p>
-
-          <p class="text-slate-600">
-            Engineering
-          </p>
-
-          <div class="bg-slate-100 px-4 py-2 rounded-xl inline-flex gap-2 mt-4">
-            <i class="fa-solid fa-ruler-combined text-slate-500"></i>
-            High-rise structures
-          </div>
-
-          <p class="mt-5 text-slate-600">
-            mohamed.rashid@construction.ae
-          </p>
-
-          <p class="text-slate-600 mt-1">
-            +971 50 345 6789
-          </p>
-
-        </div>
-
+  <!-- CONSULTANT CARD -->
+  <div class="max-w-7xl mx-auto bg-white rounded-2xl border border-gray-200 p-6 mt-5">
+    <div class="flex items-start gap-4">
+      <div
+        class="w-16 h-16 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xl font-bold"
+      >
+        {{ consultant?.firstName?.charAt(0) }}
+        {{ consultant?.lastName?.charAt(0) }}
       </div>
 
+      <div>
+        <h3 class="text-lg font-bold text-gray-900">
+          {{ consultant?.firstName }}
+          {{ consultant?.lastName }}
+        </h3>
+
+        <p class="text-blue-600 text-sm">
+          {{ consultant?.role }}
+        </p>
+
+        <div class="mt-4 space-y-2 text-sm text-gray-500">
+          <div class="flex items-center gap-2">
+            <i class="fa-regular fa-envelope"></i>
+
+            {{ consultant?.email }}
+          </div>
+
+          <div *ngIf="consultant?.phoneNumber" class="flex items-center gap-2">
+            <i class="fa-solid fa-phone"></i>
+
+            {{ consultant?.phoneNumber }}
+          </div>
+
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-briefcase"></i>
+
+            {{ consultant?.section }}
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- TABS -->
-    <div class="grid grid-cols-2 gap-5 mb-8">
+  <!-- ================= TABS ================= -->
 
+  <div
+    class="max-w-6xl mx-auto bg-white border border-gray-200 rounded-2xl mt-6 p-2 overflow-x-auto"
+  >
+    <div class="grid grid-cols-3 gap-2">
       <button
         (click)="setTab('boq')"
-        [ngClass]="activeTab === 'boq'
-        ? 'bg-[#155DFC] text-white'
-        : 'bg-white border border-slate-200 text-slate-700'"
-        class="py-4 rounded-2xl font-semibold text-lg">
-
-        <i class="fa-solid fa-file-lines mr-2"></i>
+        [ngClass]="activeTab === 'boq' ? 'bg-[#155DFC] text-white' : 'text-gray-500'"
+        class="py-4 rounded-xl font-bold transition-all"
+      >
         BOQ
-
       </button>
 
       <button
         (click)="setTab('drawing')"
-        [ngClass]="activeTab === 'drawing'
-        ? 'bg-[#155DFC] text-white'
-        : 'bg-white border border-slate-200 text-slate-700'"
-        class="py-4 rounded-2xl font-semibold text-lg">
-
-        <i class="fa-solid fa-pen-ruler mr-2"></i>
+        [ngClass]="activeTab === 'drawing' ? 'bg-[#155DFC] text-white' : 'text-gray-500'"
+        class="py-4 rounded-xl font-bold transition-all"
+      >
         Drawing
+      </button>
+
+      <button
+        (click)="setTab('worker')"
+        [ngClass]="activeTab === 'worker' ? 'bg-[#155DFC] text-white' : 'text-gray-500'"
+        class="py-4 rounded-xl font-bold transition-all"
+      >
+        Worker Request
+      </button>
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto bg-white border border-gray-200 rounded-2xl overflow-hidden mt-6">
+    <div class="p-6 border-b border-gray-100 flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-[#155DFC] text-white flex items-center justify-center">
+          <i
+            class="fa-solid"
+            [ngClass]="{
+              'fa-list-check': activeTab === 'boq',
+              'fa-pen-ruler': activeTab === 'drawing',
+              'fa-helmet-safety': activeTab === 'worker',
+            }"
+          >
+          </i>
+        </div>
+
+        <h3 class="font-bold text-xl text-gray-900">
+          {{ activeTab === 'boq' ? 'BOQ' : activeTab === 'drawing' ? 'Drawing' : 'Worker Request' }}
+        </h3>
+      </div>
+
+      <button
+        *ngIf="canManage"
+        (click)="openAddModal()"
+        class="bg-[#155DFC] hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-bold cursor-pointer"
+      >
+        {{
+          activeTab === 'boq'
+            ? '+ Add BOQ'
+            : activeTab === 'drawing'
+              ? '+ Add Drawing'
+              : '+ Add Worker Request'
+        }}
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= CONTENT CARD ================= -->
+
+  <!-- BOQ LIST -->
+
+  <div *ngIf="activeTab === 'boq' && boqList.length > 0" class="p-6 space-y-4">
+    <div
+      *ngFor="let boq of boqList"
+      class="bg-white border border-gray-200 rounded-2xl p-5 flex items-center justify-between hover:shadow-md transition-all"
+    >
+      <div class="flex items-center gap-4">
+        <div
+          class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-[#155DFC]"
+        >
+          <i class="fa-solid fa-list-check"></i>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-gray-900">
+            {{ boq.title }}
+          </h4>
+
+          <p class="text-sm text-gray-500 mt-1">
+            {{ boq.description }}
+          </p>
+        </div>
+      </div>
+
+      <div *ngIf="canManage" class="flex items-center gap-2">
+        <button
+          (click)="openEditBoqModal(boq)"
+          class="w-10 h-10 rounded-xl border border-gray-200 text-blue-600 hover:bg-blue-50 transition"
+        >
+          <i class="fa-regular fa-pen-to-square"></i>
+        </button>
+
+        <button
+          (click)="openDeleteModal(boq.id)"
+          class="w-10 h-10 rounded-xl border border-gray-200 text-red-600 hover:bg-red-50 transition"
+        >
+          <i class="fa-regular fa-trash-can"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DRAWING LIST -->
+
+  <div *ngIf="activeTab === 'drawing' && drawingList.length > 0" class="p-6 space-y-4">
+    <div
+      *ngFor="let drawing of drawingList"
+      class="bg-white border border-gray-200 rounded-2xl p-5 flex items-center justify-between hover:shadow-md transition-all"
+    >
+      <div class="flex items-center gap-4">
+        <div
+          class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-[#155DFC]"
+        >
+          <i class="fa-solid fa-pen-ruler"></i>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-gray-900">
+            {{ drawing.title }}
+          </h4>
+
+          <p class="text-sm text-gray-500 mt-1">
+            {{ drawing.description }}
+          </p>
+        </div>
+      </div>
+
+      <div *ngIf="canManage" class="flex items-center gap-2">
+        <button
+          (click)="openEditDrawingModal(drawing)"
+          class="w-10 h-10 rounded-xl border border-gray-200 text-blue-600 hover:bg-blue-50 transition"
+        >
+          <i class="fa-regular fa-pen-to-square"></i>
+        </button>
+
+        <button
+          (click)="openDeleteDrawingModal(drawing.id)"
+          class="w-10 h-10 rounded-xl border border-gray-200 text-red-600 hover:bg-red-50 transition"
+        >
+          <i class="fa-regular fa-trash-can"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKER LIST -->
+
+  <div *ngIf="activeTab === 'worker' && workerList.length > 0" class="p-6 space-y-4">
+    <div
+      *ngFor="let worker of workerList"
+      class="bg-white border border-gray-200 rounded-2xl p-5 flex items-center justify-between hover:shadow-md transition-all"
+    >
+      <div class="flex items-center gap-4">
+        <div
+          class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-[#155DFC]"
+        >
+          <i class="fa-solid fa-helmet-safety"></i>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-gray-900">
+            {{ worker.name }}
+          </h4>
+
+          <p class="text-sm text-gray-500 mt-1">
+            {{ worker.trade }}
+          </p>
+        </div>
+      </div>
+
+      <div *ngIf="canManage" class="flex items-center gap-2">
+        <button
+          class="w-10 h-10 rounded-xl border border-gray-200 text-blue-600 hover:bg-blue-50 transition"
+        >
+          <i class="fa-regular fa-pen-to-square"></i>
+        </button>
+
+        <button
+          class="w-10 h-10 rounded-xl border border-gray-200 text-red-600 hover:bg-red-50 transition"
+        >
+          <i class="fa-regular fa-trash-can"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= DELETE MODAL ================= -->
+
+  <div
+    *ngIf="showDeleteDrawingModal"
+    class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+  >
+    <div class="bg-white rounded-3xl w-full max-w-md shadow-2xl overflow-hidden">
+      <div class="p-8 text-center">
+        <!-- Icon -->
+
+        <div
+          class="w-20 h-20 mx-auto rounded-full bg-red-100 flex items-center justify-center mb-5"
+        >
+          <i class="fa-solid fa-triangle-exclamation text-red-600 text-4xl"> </i>
+        </div>
+
+        <!-- Title -->
+
+        <h3 class="text-2xl font-bold text-gray-900">Delete BOQ ?</h3>
+
+        <!-- Text -->
+
+        <p class="text-gray-500 mt-3 leading-7">
+          This action cannot be undone. The selected BOQ will be permanently deleted.
+        </p>
+      </div>
+
+      <!-- Buttons -->
+
+      <div class="border-t border-gray-100 p-5 flex gap-3">
+        <button
+          (click)="closeDeleteDrawingModal()"
+          class="flex-1 py-3 rounded-xl border border-gray-200 font-semibold hover:bg-gray-50"
+        >
+          Cancel
+        </button>
+
+        <button
+          (click)="confirmDeleteDrawing()"
+          class="flex-1 py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <div
+  *ngIf="showAddDrawingModal"
+  class="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4">
+
+  <div
+    class="bg-white rounded-2xl w-full max-w-[480px] shadow-2xl overflow-hidden">
+
+    <!-- HEADER -->
+
+    <div class="p-5 border-b border-gray-100 flex items-center justify-between">
+
+      <h3 class="font-bold text-xl">
+
+        {{ isEditDrawingMode ? 'Edit Drawing' : 'Add Drawing' }}
+
+      </h3>
+
+      <button
+        (click)="closeAddDrawingModal()"
+        class="text-gray-400 hover:text-gray-700">
+
+        <i class="fa-solid fa-xmark text-xl"></i>
 
       </button>
 
     </div>
 
-    <!-- ================= BOQ ================= -->
-    <div
-      *ngIf="activeTab === 'boq'"
-      class="bg-[#eef7ff] rounded-2xl border border-slate-200 p-6">
+    <!-- BODY -->
 
-      <div class="bg-white rounded-2xl border border-slate-200 p-5 flex justify-between items-center mb-8">
+    <div class="p-5 space-y-4 max-h-[75vh] overflow-y-auto">
 
-        <div class="font-semibold flex gap-2 items-center">
-          <i class="fa-regular fa-comment-dots text-[#155DFC]"></i>
-          Measuring & tasks
-        </div>
+      <!-- TITLE -->
 
-        <button
-          (click)="openModal()"
-          class="bg-[#155DFC] text-white px-5 py-2 rounded-xl">
+      <div>
 
-          <i class="fa-solid fa-plus mr-2"></i>
-          BOQ
-
-        </button>
-
-      </div>
-
-      <div *ngIf="boqList.length === 0" class="text-center py-20 text-slate-400">
-
-        <i class="fa-regular fa-file-lines text-5xl block mb-4"></i>
-
-        No BOQ items yet. Click
-        <span class="font-semibold text-slate-600">+ BOQ</span>
-        to add one.
-
-      </div>
-
-      <div *ngIf="boqList.length > 0" class="space-y-4">
-
-        <div *ngFor="let item of boqList"
-          class="bg-white rounded-xl border border-slate-200 p-5">
-
-          <h3 class="font-bold text-xl">
-            {{ item.title }}
-          </h3>
-
-          <p class="text-slate-500 mt-2">
-            {{ item.description }}
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- ================= DRAWING ================= -->
-    <div
-      *ngIf="activeTab === 'drawing'"
-      class="bg-[#eef7ff] rounded-2xl border border-slate-200 p-6">
-
-      <div class="bg-white rounded-2xl border border-slate-200 p-5 flex justify-between items-center mb-8">
-
-        <div class="font-semibold flex gap-2 items-center">
-          <i class="fa-solid fa-pen-ruler text-[#155DFC]"></i>
-          Drawings
-        </div>
-
-        <button
-          (click)="openDrawingModal()"
-          class="border border-[#155DFC] text-[#155DFC] px-5 py-2 rounded-xl">
-
-          <i class="fa-solid fa-file-arrow-up mr-2"></i>
-          Add Drawing
-
-        </button>
-
-      </div>
-
-      <div *ngIf="drawingList.length === 0" class="text-center py-20 text-slate-400">
-
-        <i class="fa-regular fa-image text-5xl block mb-4"></i>
-
-        No drawings yet. Click
-        <span class="font-semibold text-slate-600">Upload file</span>
-        to add one.
-
-      </div>
-
-      <div *ngIf="drawingList.length > 0" class="space-y-4">
-
-        <div *ngFor="let item of drawingList"
-          class="bg-white rounded-xl border border-slate-200 p-5">
-
-          <h3 class="font-bold text-xl">
-            {{ item.title }}
-          </h3>
-
-          <p class="text-slate-500 mt-2">
-            {{ item.description }}
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- ================= BOQ MODAL ================= -->
-  <div *ngIf="showModal"
-    class="fixed inset-0 bg-black/40 flex justify-center items-center z-50 px-4">
-
-    <div class="bg-white rounded-2xl w-full max-w-2xl p-8">
-
-      <div class="flex justify-between items-center mb-8">
-
-        <h2 class="text-2xl font-bold">Add New BOQ</h2>
-
-        <button (click)="closeModal()">
-          <i class="fa-solid fa-xmark text-xl text-slate-400"></i>
-        </button>
-
-      </div>
-
-      <form [formGroup]="boqForm" (ngSubmit)="submitBOQ()" class="space-y-4">
-
-        <input formControlName="title" placeholder="Enter title"
-          class="w-full px-4 py-3 border rounded-xl">
-
-        <textarea formControlName="description" rows="3"
-          placeholder="Enter description"
-          class="w-full px-4 py-3 border rounded-xl"></textarea>
-
-        <div class="grid grid-cols-2 gap-4">
-
-          <input formControlName="unit" placeholder="Enter unit"
-            class="px-4 py-3 border rounded-xl">
-
-          <input formControlName="condition" placeholder="Enter condition"
-            class="px-4 py-3 border rounded-xl">
-
-          <input formControlName="quantity" placeholder="Enter quantity"
-            class="px-4 py-3 border rounded-xl">
-
-          <input formControlName="section" placeholder="Enter section"
-            class="px-4 py-3 border rounded-xl">
-
-          <input formControlName="type" placeholder="Enter type"
-            class="px-4 py-3 border rounded-xl">
-
-          <input formControlName="date" type="date"
-            class="px-4 py-3 border rounded-xl">
-
-        </div>
-
-        <label class="border-2 border-dashed rounded-2xl p-10 text-center block cursor-pointer">
-
-          <input hidden type="file" (change)="onFileSelected($event)">
-
-          <p class="text-slate-500">
-            {{ selectedFileName || 'Upload File' }}
-          </p>
-
+        <label class="text-xs font-bold text-gray-400 block mb-2">
+          Title
         </label>
 
-        <button
-          type="submit"
-          class="w-full bg-[#155DFC] text-white py-3 rounded-xl">
-
-          Add
-
-        </button>
-
-      </form>
-
-    </div>
-
-  </div>
-
-  <!-- ================= DRAWING MODAL ================= -->
-  <div *ngIf="showDrawingModal"
-    class="fixed inset-0 bg-black/40 flex justify-center items-center z-50 px-4">
-
-    <div class="bg-white rounded-2xl w-full max-w-2xl p-8">
-
-      <div class="flex justify-between items-center mb-8">
-
-        <h2 class="text-2xl font-bold">
-          Upload Drawing
-        </h2>
-
-        <button (click)="closeDrawingModal()">
-          <i class="fa-solid fa-xmark text-xl text-slate-400"></i>
-        </button>
+        <input
+          [(ngModel)]="newDrawing.title"
+          type="text"
+          placeholder="Enter title"
+          class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]">
 
       </div>
 
-      <form [formGroup]="drawingForm" (ngSubmit)="submitDrawing()" class="space-y-4">
+      <!-- DESCRIPTION -->
 
-        <input formControlName="title" placeholder="Enter title"
-          class="w-full px-4 py-3 border rounded-xl">
+      <div>
 
-        <textarea formControlName="description" rows="3"
-          placeholder="Enter description"
-          class="w-full px-4 py-3 border rounded-xl"></textarea>
-
-        <div class="grid grid-cols-2 gap-4">
-
-          <input formControlName="section" placeholder="Enter Section"
-            class="px-4 py-3 border rounded-xl">
-
-          <input formControlName="status" placeholder="Enter Status"
-            class="px-4 py-3 border rounded-xl">
-
-          <input formControlName="type" placeholder="Enter Type"
-            class="px-4 py-3 border rounded-xl">
-
-          <input formControlName="date" type="date"
-            class="px-4 py-3 border rounded-xl">
-
-        </div>
-
-        <label class="border-2 border-dashed rounded-2xl p-10 text-center block cursor-pointer">
-
-          <input hidden type="file" (change)="onDrawingFileSelected($event)">
-
-          <p class="text-slate-500">
-            {{ selectedDrawingFile || 'Upload Drawing File' }}
-          </p>
-
+        <label class="text-xs font-bold text-gray-400 block mb-2">
+          Description
         </label>
 
-        <div class="grid grid-cols-2 gap-4">
+        <textarea
+          [(ngModel)]="newDrawing.description"
+          rows="3"
+          placeholder="Enter description"
+          class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none resize-none focus:border-[#155DFC]">
+        </textarea>
 
-          <button
-            type="button"
-            (click)="closeDrawingModal()"
-            class="border py-3 rounded-xl">
+      </div>
 
-            Cancel
+      <div class="grid grid-cols-2 gap-3">
 
-          </button>
+        <div>
 
-          <button
-            type="submit"
-            class="bg-[#155DFC] text-white py-3 rounded-xl">
+          <label class="text-xs font-bold text-gray-400 block mb-2">
+            Section
+          </label>
 
-            Save
-
-          </button>
+          <input
+            [(ngModel)]="newDrawing.section"
+            type="text"
+            placeholder="Enter section"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]">
 
         </div>
 
-      </form>
+        <div>
+
+          <label class="text-xs font-bold text-gray-400 block mb-2">
+            Status
+          </label>
+
+          <input
+            [(ngModel)]="newDrawing.status"
+            type="text"
+            placeholder="Pending"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]">
+
+        </div>
+
+      </div>
+
+      <div class="grid grid-cols-2 gap-3">
+
+        <div>
+
+          <label class="text-xs font-bold text-gray-400 block mb-2">
+            Type
+          </label>
+
+          <input
+            [(ngModel)]="newDrawing.type"
+            type="text"
+            placeholder="Issue"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]">
+
+        </div>
+
+        <div>
+
+          <label class="text-xs font-bold text-gray-400 block mb-2">
+            Date
+          </label>
+
+          <input
+            [(ngModel)]="newDrawing.date"
+            type="date"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]">
+
+        </div>
+
+      </div>
+
+      <!-- PHOTO -->
+
+      <div>
+
+        <label class="text-xs font-bold text-gray-400 block mb-2">
+          Photo URL
+        </label>
+
+        <input
+          [(ngModel)]="newDrawing.photo"
+          type="text"
+          placeholder="https://example.com/photo.jpg"
+          class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]">
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="p-5 border-t border-gray-100">
+
+      <button
+        (click)="isEditDrawingMode ? updateDrawing() : addDrawing()"
+        class="w-full bg-[#155DFC] hover:bg-blue-700 text-white py-3 rounded-2xl font-bold transition-all">
+
+        Save
+
+      </button>
 
     </div>
 
   </div>
 
+</div>
+
+
+
+  <!-- ================= ADD BOQ MODAL ================= -->
+
+  <div
+    *ngIf="showAddBoqModal"
+    class="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4"
+  >
+    <div class="bg-white rounded-2xl w-full max-w-[480px] shadow-2xl overflow-hidden">
+      <!-- HEADER -->
+
+      <div class="p-5 border-b border-gray-100 flex items-center justify-between">
+        <h3 class="font-bold text-xl">
+          {{ isEditMode ? 'Edit BOQ' : 'Add BOQ' }}
+        </h3>
+
+        <button (click)="closeAddBoqModal()" class="text-gray-400 hover:text-gray-700">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
+
+      <!-- BODY -->
+
+      <div class="p-5 space-y-4 max-h-[75vh] overflow-y-auto">
+        <!-- TITLE -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> Title </label>
+
+          <input
+            [(ngModel)]="newBoq.title"
+            type="text"
+            placeholder="Enter title"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+          />
+        </div>
+
+        <!-- DESCRIPTION -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> Description </label>
+
+          <textarea
+            [(ngModel)]="newBoq.description"
+            rows="3"
+            placeholder="Enter description"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none resize-none focus:border-[#155DFC]"
+          >
+          </textarea>
+        </div>
+
+        <!-- ROW -->
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> Quantity </label>
+
+            <input
+              [(ngModel)]="newBoq.quantity"
+              type="number"
+              placeholder="Enter qty"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> Type </label>
+
+            <input
+              [(ngModel)]="newBoq.type"
+              type="text"
+              placeholder="Enter type"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+        </div>
+
+        <!-- ROW -->
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> Section </label>
+
+            <input
+              [(ngModel)]="newBoq.section"
+              type="text"
+              placeholder="Enter section"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> Date </label>
+
+            <input
+              [(ngModel)]="newBoq.date"
+              type="date"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+        </div>
+
+        <!-- CONDITION -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> Condition </label>
+
+          <input
+            [(ngModel)]="newBoq.condetion"
+            type="text"
+            placeholder="Enter condition"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+          />
+        </div>
+
+        <!-- UNIT -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> Unit </label>
+
+          <input
+            [(ngModel)]="newBoq.unit"
+            type="text"
+            placeholder="Enter unit"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+          />
+        </div>
+
+        <!-- FILE -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2">
+            File / Image
+            <input type="file" />
+          </label>
+
+          <div
+            class="border-2 border-dashed border-gray-200 rounded-2xl p-8 flex flex-col items-center justify-center"
+          >
+            <i class="fa-solid fa-cloud-arrow-up text-3xl text-gray-300 mb-2"></i>
+
+            <p class="text-xs font-bold text-gray-400">Click to browse</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+
+      <div class="p-5 border-t border-gray-100">
+        <button
+          (click)="isEditMode ? updateBOQ() : addBOQ()"
+          class="w-full bg-[#155DFC] hover:bg-blue-700 text-white py-3 rounded-2xl font-bold transition-all"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

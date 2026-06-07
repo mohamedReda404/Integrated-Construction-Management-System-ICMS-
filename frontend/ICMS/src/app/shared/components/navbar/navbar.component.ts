@@ -60,8 +60,8 @@ export class NavbarComponent implements OnInit {
 
       next: (res) => {
         this.userData = res;
-        console.log('User Info:', res);
-      },
+console.log('User Info Full');
+console.log(JSON.stringify(res, null, 2));      },
 
       error: (err) => {
         console.error('Failed to load user info', err);

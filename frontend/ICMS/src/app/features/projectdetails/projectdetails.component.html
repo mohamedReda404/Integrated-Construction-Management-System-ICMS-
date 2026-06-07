@@ -1,240 +1,113 @@
-<div *ngIf="isLoading"
-     class="h-screen flex items-center justify-center">
+<div class="mb-6">
+  <a
+    routerLink="/home"
+    class="group inline-flex items-center gap-2 bg-linear-to-r from-white to-[#155DFC]/5 px-4 py-2 rounded-lg border border-slate-200 shadow-sm text-[#155DFC] text-sm font-medium hover:shadow-md hover:border-[#155DFC]/20 transition-all duration-300"
+  >
+    <i class="fa-solid fa-arrow-left text-xs group-hover:-translate-x-1 transition-transform"></i>
 
-  <h1 class="text-3xl font-bold text-blue-600">
-    Loading...
-  </h1>
-
+    <span>Back to Dashboard</span>
+  </a>
 </div>
 
-
-
-
+<div *ngIf="isLoading" class="h-screen flex items-center justify-center">
+  <h1 class="text-3xl font-bold text-blue-600">Loading...</h1>
+</div>
 
 <div *ngIf="!isLoading && project">
-
   <!-- HEADER -->
 
   <div class="max-w-7xl mx-auto px-4 md:px-6 xl:px-0">
-
     <div
-      class="flex flex-col md:flex-row justify-between items-start md:items-center
-             gap-5 shadow-sm bg-white rounded-xl p-4 md:p-6">
-
+      class="flex flex-col md:flex-row justify-between items-start md:items-center gap-5 shadow-sm bg-white rounded-xl p-4 md:p-6"
+    >
       <section class="font-semibold">
-
-        <p class="text-[#4A5565] pb-4">
-
-          <a
-            routerLink="/projects"
-            class="flex items-center gap-2 hover:text-blue-500">
-
-            ← Back to Projects
-
-          </a>
-
-        </p>
-
-
-
-
-
-        <h3
-          class="text-[#101828] text-lg md:text-xl xl:text-2xl font-bold pb-2">
-
+        <h3 class="text-[#101828] text-lg md:text-xl xl:text-2xl font-bold pb-2">
           {{ project?.name }}
-
         </h3>
 
-
-
-
-
-        <p class="text-[#4A5565]">
-
-          View project details and team members
-
-        </p>
-
+        <p class="text-[#4A5565]">View project details and team members</p>
       </section>
 
-
-
-
-
       <button
-        class="bg-blue-600 hover:bg-blue-700
-               text-white px-5 py-2 rounded-xl">
-
+        routerLink=""
+       class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-xl">
         Edit Project
-
       </button>
-
     </div>
-
   </div>
-
-
-
-
 
   <!-- MAIN -->
 
   <main class="max-w-7xl mx-auto mt-6 px-4 md:px-6 xl:px-0">
-
     <!-- DETAILS -->
 
-    <div
-      class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-
-      <h2 class="text-xl font-bold mb-6">
-
-        Project Details
-
-      </h2>
-
-
-
-
+    <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+      <h2 class="text-xl font-bold mb-6">Project Details</h2>
 
       <div class="grid md:grid-cols-2 gap-10">
-
         <!-- LEFT -->
 
         <div class="space-y-5">
-
           <div>
-
-            <p class="text-gray-500 mb-1">
-              Description
-            </p>
+            <p class="text-gray-500 mb-1">Description</p>
 
             <p class="text-gray-900 leading-7">
-
               {{ project?.descritpion }}
-
             </p>
-
           </div>
 
-
-
-
-
           <div>
-
-            <p class="text-gray-500 mb-1">
-              Client Name
-            </p>
+            <p class="text-gray-500 mb-1">Client Name</p>
 
             <p class="text-gray-900">
-
               {{ project?.clientName }}
-
             </p>
-
           </div>
 
-
-
-
-
           <div>
-
-            <p class="text-gray-500 mb-1">
-              Contract Value
-            </p>
+            <p class="text-gray-500 mb-1">Contract Value</p>
 
             <p class="text-gray-900">
-
               {{ project?.contractValue | number }}
               EGP
-
             </p>
-
           </div>
-
-
-
-
 
           <div>
-
-            <p class="text-gray-500 mb-1">
-              Category
-            </p>
+            <p class="text-gray-500 mb-1">Category</p>
 
             <p class="text-gray-900">
-
               {{ project?.category }}
-
             </p>
-
           </div>
-
         </div>
-
-
-
-
 
         <!-- RIGHT -->
 
         <div class="space-y-5">
-
           <div>
-
-            <p class="text-gray-500 mb-1">
-              Start Date
-            </p>
+            <p class="text-gray-500 mb-1">Start Date</p>
 
             <p class="text-gray-900">
-
-              {{ project?.startDate | date:'yyyy-MM-dd' }}
-
+              {{ project?.startDate | date: 'yyyy-MM-dd' }}
             </p>
-
           </div>
 
-
-
-
-
           <div>
-
-            <p class="text-gray-500 mb-1">
-              End Date
-            </p>
+            <p class="text-gray-500 mb-1">End Date</p>
 
             <p class="text-gray-900">
-
-              {{ project?.endDate | date:'yyyy-MM-dd' }}
-
+              {{ project?.endDate | date: 'yyyy-MM-dd' }}
             </p>
-
           </div>
 
-
-
-
-
           <div>
-
-            <p class="text-gray-500 mb-1">
-              Location
-            </p>
+            <p class="text-gray-500 mb-1">Location</p>
 
             <p class="text-gray-900">
-
               {{ project?.location }}
-
             </p>
-
           </div>
-
-
-
-
 
           <!-- <div>
 
@@ -248,308 +121,240 @@
               class="w-full h-56 object-cover rounded-xl border">
 
           </div> -->
-
         </div>
-
       </div>
-
     </div>
-
-
-
-
 
     <!-- TABS -->
 
     <div
-      class="max-w-6xl mx-auto bg-white border border-gray-200 rounded-2xl mt-6 p-2 overflow-x-auto">
-
+      class="max-w-6xl mx-auto bg-white border border-gray-200 rounded-2xl mt-6 p-2 overflow-x-auto"
+    >
       <div class="flex md:grid md:grid-cols-5 gap-2 min-w-max md:min-w-0">
-
         <!-- CONSULTANTS -->
 
         <button
           (click)="switchTab('consultants')"
-
-          [ngClass]="activeTab === 'consultants'
-          ? 'bg-blue-600 text-white'
-          : 'text-gray-500'"
-
-          class="whitespace-nowrap px-5 md:px-0 py-2.5 rounded-xl font-bold text-sm transition-all">
-
+          [ngClass]="activeTab === 'consultants' ? 'bg-blue-600 text-white' : 'text-gray-500'"
+          class="whitespace-nowrap px-5 md:px-0 py-2.5 rounded-xl font-bold text-sm transition-all"
+        >
           Consultants
-
         </button>
-
-
-
-
 
         <!-- ENGINEERS -->
 
         <button
           (click)="switchTab('engineers')"
-
-          [ngClass]="activeTab === 'engineers'
-          ? 'bg-blue-600 text-white'
-          : 'text-gray-500'"
-
-          class="whitespace-nowrap px-5 md:px-0 py-2.5 rounded-xl font-bold text-sm transition-all">
-
+          [ngClass]="activeTab === 'engineers' ? 'bg-blue-600 text-white' : 'text-gray-500'"
+          class="whitespace-nowrap px-5 md:px-0 py-2.5 rounded-xl font-bold text-sm transition-all"
+        >
           Engineers
-
         </button>
-
-
-
-
 
         <!-- SUBCONTRACTORS -->
 
         <button
           (click)="switchTab('subcontractors')"
-
-          [ngClass]="activeTab === 'subcontractors'
-          ? 'bg-blue-600 text-white'
-          : 'text-gray-500'"
-
-          class="whitespace-nowrap px-5 md:px-0 py-2.5 rounded-xl font-bold text-sm transition-all">
-
+          [ngClass]="activeTab === 'subcontractors' ? 'bg-blue-600 text-white' : 'text-gray-500'"
+          class="whitespace-nowrap px-5 md:px-0 py-2.5 rounded-xl font-bold text-sm transition-all"
+        >
           Subcontractors
-
         </button>
-
-
-
-
 
         <!-- WORKERS -->
 
         <button
           (click)="switchTab('workers')"
-
-          [ngClass]="activeTab === 'workers'
-          ? 'bg-blue-600 text-white'
-          : 'text-gray-500'"
-
-          class="whitespace-nowrap px-5 md:px-0 py-2.5 rounded-xl font-bold text-sm transition-all">
-
+          [ngClass]="activeTab === 'workers' ? 'bg-blue-600 text-white' : 'text-gray-500'"
+          class="whitespace-nowrap px-5 md:px-0 py-2.5 rounded-xl font-bold text-sm transition-all"
+        >
           Workers
-
         </button>
-
-
-
-
 
         <!-- MATERIALS -->
 
         <button
           (click)="switchTab('materials')"
-
-          [ngClass]="activeTab === 'materials'
-          ? 'bg-blue-600 text-white'
-          : 'text-gray-500'"
-
-          class="whitespace-nowrap px-5 md:px-0 py-2.5 rounded-xl font-bold text-sm transition-all">
-
+          [ngClass]="activeTab === 'materials' ? 'bg-blue-600 text-white' : 'text-gray-500'"
+          class="whitespace-nowrap px-5 md:px-0 py-2.5 rounded-xl font-bold text-sm transition-all"
+        >
           Material Requests
-
         </button>
-
       </div>
-
     </div>
-
-
-
-
 
     <!-- CONTENT -->
 
     <div
-      class="max-w-6xl mx-auto bg-white border border-gray-200 rounded-2xl overflow-hidden mt-6 mb-10">
-
+      class="max-w-6xl mx-auto bg-white border border-gray-200 rounded-2xl overflow-hidden mt-6 mb-10"
+    >
       <!-- HEADER -->
 
-      <div
-        class="p-5 border-b border-gray-100 flex items-center justify-between">
-
+      <div class="p-5 border-b border-gray-100 flex items-center justify-between">
         <h3 class="font-bold text-gray-900 capitalize">
-
           {{ activeTab }}
-
         </h3>
-
       </div>
-
-
-
-
 
       <!-- CONSULTANTS -->
 
-      <div
-        *ngIf="activeTab === 'consultants'"
-        class="p-5 space-y-3">
+      <div *ngIf="activeTab === 'consultants'" class="p-5">
+        <!-- EMPTY -->
 
         <div
-          *ngFor="let c of consultants"
-          class="border rounded-xl p-4 flex justify-between">
+          *ngIf="consultants.length === 0"
+          class="flex flex-col items-center justify-center py-20"
+        >
+          <i class="fa-solid fa-users text-6xl text-slate-300 mb-4"> </i>
 
-          <div>
+          <h3 class="text-xl font-bold text-slate-800">No Consultants Found</h3>
 
-            <h3 class="font-bold">
-              {{ c.firstName }} {{ c.lastName }}
-            </h3>
-
-            <p class="text-gray-500">
-              {{ c.email }}
-            </p>
-
-          </div>
-          <span class="text-blue-600 font-semibold">
-           {{ c.section }}
-          </span>
-
+          <p class="text-slate-500 mt-2">No consultants assigned to this project yet.</p>
         </div>
 
+        <!-- LIST -->
+
+        <div *ngIf="consultants.length > 0" class="space-y-4">
+          <div
+            *ngFor="let c of consultants"
+            class="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-lg hover:border-blue-200 transition-all"
+          >
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
+              <!-- LEFT -->
+
+              <div class="flex items-center gap-4">
+                <!-- AVATAR -->
+
+                <div
+                  class="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xl"
+                >
+                  {{ c.firstName.charAt(0) }}
+                </div>
+
+                <div>
+                  <h3 class="text-xl font-bold text-slate-900">
+                    {{ c.firstName }}
+                    {{ c.lastName }}
+                  </h3>
+                  <p class="text-slate-500 mt-1">
+                    {{ c.email }}
+                  </p>
+                </div>
+              </div>
+
+              <!-- RIGHT -->
+
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold">
+                  {{ c.section }}
+                </span>
+
+                <span
+                  class="px-4 py-2 rounded-full bg-indigo-50 text-indigo-700 text-sm font-semibold"
+                >
+                  Consultant
+                </span>
+
+                <span
+                  class="px-4 py-2 rounded-full bg-green-50 text-green-700 text-sm font-semibold"
+                >
+                  Active
+                </span>
+
+                <a
+                  [routerLink]="['/consult-engineering', projectId]"
+                  class="w-10 h-10 rounded-xl border border-slate-200 flex items-center justify-center text-blue-600 hover:bg-blue-50 hover:border-blue-200 transition"
+                >
+                  <i class="fa-solid fa-eye"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-
-
 
 
       <!-- ENGINEERS -->
 
-      <div
-        *ngIf="activeTab === 'engineers'"
-        class="p-5 space-y-3">
+<div *ngIf="activeTab === 'engineers'" class="p-5">
 
-        <div
-          *ngFor="let e of engineers"
-          class="border rounded-xl p-4 flex justify-between">
+  <div
+    *ngIf="engineers.length === 0"
+    class="flex flex-col items-center justify-center py-20"
+  >
+    <i class="fa-solid fa-users text-6xl text-slate-300 mb-4"></i>
+
+    <h3 class="text-xl font-bold text-slate-800">
+      No Engineers Found
+    </h3>
+
+    <p class="text-slate-500 mt-2">
+      No engineers assigned to this project yet.
+    </p>
+  </div>
+
+  <div *ngIf="engineers.length > 0" class="space-y-4">
+
+    <div
+      *ngFor="let e of engineers"
+      class="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-lg hover:border-blue-200 transition-all"
+    >
+
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
+
+        <!-- LEFT -->
+
+        <div class="flex items-center gap-4">
+
+          <div
+            class="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xl"
+          >
+            {{ e.firstName.charAt(0) }}
+          </div>
 
           <div>
 
-            <h3 class="font-bold">
-              {{ e.name }}
+            <h3 class="text-xl font-bold text-slate-900">
+              {{ e.firstName }}
+              {{ e.lastName }}
             </h3>
 
-            <p class="text-gray-500">
+            <p class="text-slate-500 mt-1">
               {{ e.email }}
             </p>
 
           </div>
 
-          <span class="text-green-600 font-semibold">
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="flex flex-wrap items-center gap-3">
+
+          <span
+            class="px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold"
+          >
+            {{ e.section }}
+          </span>
+
+          <span
+            class="px-4 py-2 rounded-full bg-indigo-50 text-indigo-700 text-sm font-semibold"
+          >
             Engineer
           </span>
 
-        </div>
-
-      </div>
-
-
-
-
-
-      <!-- SUBCONTRACTORS -->
-
-      <div
-        *ngIf="activeTab === 'subcontractors'"
-        class="p-5 space-y-3">
-
-        <div
-          *ngFor="let s of subcontractors"
-          class="border rounded-xl p-4 flex justify-between">
-
-          <div>
-
-            <h3 class="font-bold">
-              {{ s.name }}
-            </h3>
-
-            <p class="text-gray-500">
-              {{ s.email }}
-            </p>
-
-          </div>
-
-          <span class="text-orange-600 font-semibold">
-            Subcontractor
+          <span
+            class="px-4 py-2 rounded-full bg-green-50 text-green-700 text-sm font-semibold"
+          >
+            Active
           </span>
 
-        </div>
-
-      </div>
-
-
-
-
-
-      <!-- WORKERS -->
-
-      <div
-        *ngIf="activeTab === 'workers'"
-        class="p-5 space-y-3">
-
-        <div
-          *ngFor="let w of workers"
-          class="border rounded-xl p-4 flex justify-between">
-
-          <div>
-
-            <h3 class="font-bold">
-              {{ w.name }}
-            </h3>
-
-            <p class="text-gray-500">
-              {{ w.email }}
-            </p>
-
-          </div>
-
-          <span class="text-purple-600 font-semibold">
-            Worker
-          </span>
-
-        </div>
-
-      </div>
-
-
-
-
-
-      <!-- MATERIAL REQUESTS -->
-
-      <div
-        *ngIf="activeTab === 'materials'"
-        class="p-5 space-y-3">
-
-        <div
-          *ngFor="let m of materialRequests"
-          class="border rounded-xl p-4 flex justify-between">
-
-          <div>
-
-            <h3 class="font-bold">
-              {{ m.materialName }}
-            </h3>
-
-            <p class="text-gray-500">
-
-              Quantity:
-              {{ m.quantity }}
-
-            </p>
-
-          </div>
-
-          <span class="text-red-600 font-semibold">
-            Request
-          </span>
+          <a
+            [routerLink]="['/engineer', projectId]"
+            class="w-10 h-10 rounded-xl border border-slate-200 flex items-center justify-center text-blue-600 hover:bg-blue-50 hover:border-blue-200 transition"
+          >
+            <i class="fa-solid fa-eye"></i>
+          </a>
 
         </div>
 
@@ -557,6 +362,60 @@
 
     </div>
 
-  </main>
+  </div>
 
+</div>
+
+      <!-- SUBCONTRACTORS -->
+
+      <div *ngIf="activeTab === 'subcontractors'" class="p-5 space-y-3">
+        <div *ngFor="let s of subcontractors" class="border rounded-xl p-4 flex justify-between">
+          <div>
+            <h3 class="font-bold">{{ s.firstName }} {{ s.lastName }}</h3>
+
+            <p class="text-gray-500">
+              {{ s.email }}
+            </p>
+          </div>
+
+          <span class="text-orange-600 font-semibold"> Subcontractor </span>
+        </div>
+      </div>
+
+      <!-- WORKERS -->
+
+      <div *ngIf="activeTab === 'workers'" class="p-5 space-y-3">
+        <div *ngFor="let w of workers" class="border rounded-xl p-4 flex justify-between">
+          <div>
+            <h3 class="font-bold">{{ w.firstName }} {{ w.lastName }}</h3>
+
+            <p class="text-gray-500">
+              {{ w.email }}
+            </p>
+          </div>
+
+          <span class="text-purple-600 font-semibold"> Worker </span>
+        </div>
+      </div>
+
+      <!-- MATERIAL REQUESTS -->
+
+      <div *ngIf="activeTab === 'materials'" class="p-5 space-y-3">
+        <div *ngFor="let m of materialRequests" class="border rounded-xl p-4 flex justify-between">
+          <div>
+            <h3 class="font-bold">
+              {{ m.materialName }}
+            </h3>
+
+            <p class="text-gray-500">
+              Quantity:
+              {{ m.quantity }}
+            </p>
+          </div>
+
+          <span class="text-red-600 font-semibold"> Request </span>
+        </div>
+      </div>
+    </div>
+  </main>
 </div>

@@ -30,10 +30,10 @@ userRole: string = '';
 
   ngOnInit(): void {
     this.loadUserInfo();
-    this.loadProjectsCount();
     this.loadMembersCount();
     this.loadCompletedProjects();
     this.loadLatestProjects();
+    this.loadActiveProjects();
   }
 
   // ================= HELPER (ADDED ONLY) =================
@@ -69,26 +69,32 @@ userRole: string = '';
   }
 
   // ================= PROJECTS COUNT =================
-  loadProjectsCount(): void {
+activeProjectsCount = 0;
 
-    const token = this.cookie.get('token');
-    if (!token) return;
+loadActiveProjects(): void {
 
-    const headers = new HttpHeaders({
-      Authorization: `Bearer ${token}`
-    });
+  const headers = this.getHeaders();
 
-    this.http.get<any>('https://localhost:7139/api/Projects/Count', { headers })
-      .subscribe({
-        next: (res) => {
-          this.projectsCount =
-            typeof res === 'number' ? res : res?.count ?? 0;
-        },
-        error: () => {
-          this.projectsCount = 0;
-        }
-      });
-  }
+  this.http.get<any[]>(
+    'https://localhost:7139/api/Projects/Active',
+    { headers }
+  ).subscribe({
+
+    next: (res) => {
+
+      this.activeProjectsCount = res.length;
+
+    },
+
+    error: () => {
+
+      this.activeProjectsCount = 0;
+
+    }
+
+  });
+
+}
 
   // ================= MEMBERS COUNT =================
   loadMembersCount(): void {
@@ -112,28 +118,34 @@ userRole: string = '';
       });
   }
 
+
+
+
   // ================= COMPLETED PROJECTS =================
-  loadCompletedProjects(): void {
+loadCompletedProjects(): void {
 
-    const token = this.cookie.get('token');
-    if (!token) return;
+  const headers = this.getHeaders();
 
-    const headers = new HttpHeaders({
-      Authorization: `Bearer ${token}`
-    });
+  this.http.get<number>(
+    'https://localhost:7139/api/Projects/Completed',
+    { headers }
+  ).subscribe({
 
-    this.http.get<any>('https://localhost:7139/api/Projects/Active', { headers })
-      .subscribe({
-        next: (res) => {
-          this.completedProjectsCount =
-            typeof res === 'number' ? res : res?.count ?? 0;
-        },
-        error: () => {
-          this.completedProjectsCount = 0;
-        }
-      });
-  }
+    next: (res) => {
 
+      this.completedProjectsCount = res;
+
+    },
+
+    error: () => {
+
+      this.completedProjectsCount = 0;
+
+    }
+
+  });
+
+}
   // ================= LATEST 5 PROJECTS =================
   loadLatestProjects(): void {
 

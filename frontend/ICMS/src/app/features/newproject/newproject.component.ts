@@ -35,7 +35,7 @@ export class NewprojectComponent {
   // ================= PROJECT FORM =================
   projectForm: FormGroup = this.fb.group({
     projectName: ['', Validators.required],
-    description: [''],
+    descritpion: [''],
     startDate: ['', Validators.required],
     endDate: ['', Validators.required],
     budget: [''],
@@ -90,7 +90,7 @@ export class NewprojectComponent {
     const payload = {
       name: this.projectForm.value.projectName,
       location: this.projectForm.value.location,
-      descritpion: this.projectForm.value.description,
+      descritpion: this.projectForm.value.descritpion,
       category: this.projectForm.value.category,
       clientName: this.projectForm.value.clientName,
       contractValue: this.projectForm.value.budget || 0,
@@ -122,12 +122,13 @@ export class NewprojectComponent {
 
       error: (err) => {
 
-        console.log('ERROR:', err);
+  console.log('Validation Errors');
 
-        this.isLoadingProject = false;
-        this.errorMsg = 'Failed To Create Project';
+  console.log(err.error.errors);
 
-      }
+  this.isLoadingProject = false;
+  this.errorMsg = 'Failed To Create Project';
+}
 
     });
   }

@@ -12,7 +12,6 @@ import { HomeComponent } from './features/home/home.component';
 import { NotfoundComponent } from './features/notfound/notfound.component';
 import { ProjectdetailsComponent } from './features/projectdetails/projectdetails.component';
 import { SettingComponent } from './features/setting/setting.component';
-import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { NewprojectComponent } from './features/newproject/newproject.component';
 import { AllprojectComponent } from './features/allproject/allproject.component';
 import { SubcontractorsComponent } from './features/subcontractors/subcontractors.component';
@@ -23,6 +22,7 @@ import { UnauthorizedComponent } from './features/unauthorized/unauthorized.comp
 import { authGuard } from './core/guards/auth-guard';
 import { isLoggedGuard } from './core/guards/is-logged-guard';
 import { roleGuard } from './core/guards/role-guard';
+import { EngineerComponent } from './features/engineer/engineer.component';
 
 export const routes: Routes = [
 
@@ -76,12 +76,6 @@ export const routes: Routes = [
       },
 
       {
-        path: 'dashboard',
-        component: DashboardComponent,
-        title: 'Dashboard'
-      },
-
-      {
        path: 'projectdetails/:id',
         component: ProjectdetailsComponent,
         title: 'Project Details'
@@ -124,11 +118,18 @@ export const routes: Routes = [
       },
 
       {
-        path: 'consultengineering',
+        path: 'consult-engineering/:id',
         component: ConsultEngineeringComponent,
         title: 'Consult Engineering',
         canActivate: [roleGuard],
-        data: { roles: ['admin', 'engineer'] }
+        data: { roles: ['admin', 'engineer', 'consultant'] }
+      },
+      {
+        path: 'engineer/:id',
+        component: EngineerComponent,
+        title: 'Engineering',
+        canActivate: [roleGuard],
+        data: { roles: ['admin', 'engineer', 'consultant'] }
       }
 
     ]

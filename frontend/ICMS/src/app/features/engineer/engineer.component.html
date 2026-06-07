@@ -1,0 +1,1132 @@
+<a
+  routerLink="/projectdetails/{{ project?.id }}"
+  class="group inline-flex items-center gap-2 bg-linear-to-r from-white to-[#155DFC]/5 px-4 py-2 rounded-lg border border-slate-200 shadow-sm text-[#155DFC] text-sm font-medium hover:shadow-md hover:border-[#155DFC]/20 transition-all duration-300"
+>
+  <i class="fa-solid fa-arrow-left text-xs group-hover:-translate-x-1 transition-transform"></i>
+
+  <span>Back to Project Details</span>
+</a>
+
+<div class="bg-slate-100 min-h-screen pb-20">
+  <!-- PAGE TITLE -->
+  <div class="max-w-7xl mx-auto px-4 mt-5">
+    <h2 class="text-2xl font-bold text-gray-900">Engineer Details</h2>
+
+    <p class="text-gray-500 mt-1">
+      {{ project?.name }}
+    </p>
+  </div>
+
+  <!-- ENGINEER CARD -->
+  <!-- ENGINEER CARD -->
+
+  <div class="max-w-7xl mx-auto bg-white rounded-3xl border border-gray-200 p-8 mt-6">
+    <div class="flex items-start gap-6">
+      <!-- Avatar -->
+      <div
+        class="w-20 h-20 rounded-full bg-blue-100 text-[#155DFC] flex items-center justify-center text-3xl font-bold flex-shrink-0"
+      >
+        {{ engineer?.firstName?.charAt(0) }}
+        {{ engineer?.lastName?.charAt(0) }}
+      </div>
+
+      <!-- Info -->
+      <div>
+        <h3 class="text-4xl font-bold text-gray-900">
+          {{ engineer?.firstName }}
+          {{ engineer?.lastName }}
+        </h3>
+
+        <p class="text-[#155DFC] text-xl mt-1">
+          {{ engineer?.specialization || 'Engineer' }}
+        </p>
+
+        <div class="mt-6 space-y-3 text-gray-600">
+          <div class="flex items-center gap-3">
+            <i class="fa-regular fa-envelope text-lg"></i>
+
+            <span>
+              {{ engineer?.email }}
+            </span>
+          </div>
+
+          <div *ngIf="engineer?.phoneNumber" class="flex items-center gap-3">
+            <i class="fa-solid fa-phone text-lg"></i>
+
+            <span>
+              {{ engineer?.phoneNumber }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= TABS ================= -->
+  <!-- ================= TABS ================= -->
+
+  <div class="max-w-7xl mx-auto bg-white border border-gray-200 rounded-3xl mt-8 p-2">
+    <div class="grid grid-cols-5 gap-2">
+      <button
+        (click)="setTab('boq')"
+        [ngClass]="
+          activeTab === 'boq'
+            ? 'bg-[#155DFC] text-white shadow-sm'
+            : 'text-gray-600 hover:bg-gray-50'
+        "
+        class="rounded-2xl py-4 font-bold transition-all"
+      >
+        BOQ
+      </button>
+
+      <button
+        (click)="setTab('boqPrice')"
+        [ngClass]="
+          activeTab === 'boqPrice'
+            ? 'bg-[#155DFC] text-white shadow-sm'
+            : 'text-gray-600 hover:bg-gray-50'
+        "
+        class="rounded-2xl py-4 font-bold transition-all"
+      >
+        BOQ Price
+      </button>
+
+      <button
+        (click)="setTab('invoice')"
+        [ngClass]="
+          activeTab === 'invoice'
+            ? 'bg-[#155DFC] text-white shadow-sm'
+            : 'text-gray-600 hover:bg-gray-50'
+        "
+        class="rounded-2xl py-4 font-bold transition-all"
+      >
+        Invoice
+      </button>
+
+      <button
+        (click)="setTab('drawing')"
+        [ngClass]="
+          activeTab === 'drawing'
+            ? 'bg-[#155DFC] text-white shadow-sm'
+            : 'text-gray-600 hover:bg-gray-50'
+        "
+        class="rounded-2xl py-4 font-bold transition-all"
+      >
+        Drawing
+      </button>
+
+      <button
+        (click)="setTab('material')"
+        [ngClass]="
+          activeTab === 'material'
+            ? 'bg-[#155DFC] text-white shadow-sm'
+            : 'text-gray-600 hover:bg-gray-50'
+        "
+        class="rounded-2xl py-4 font-bold transition-all"
+      >
+        Material Request
+      </button>
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto bg-white border border-gray-200 rounded-2xl overflow-hidden mt-6">
+    <div class="p-6 border-b border-gray-100 flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-[#155DFC] text-white flex items-center justify-center">
+          <i
+            class="fa-solid"
+            [ngClass]="{
+              'fa-list-check': activeTab === 'boq',
+              'fa-money-bill-wave': activeTab === 'boqPrice',
+              'fa-file-invoice-dollar': activeTab === 'invoice',
+              'fa-pen-ruler': activeTab === 'drawing',
+              'fa-boxes-stacked': activeTab === 'material',
+            }"
+          >
+          </i>
+        </div>
+
+        <h3 class="font-bold text-2xl text-gray-900">
+          {{
+            activeTab === 'boq'
+              ? 'BOQ'
+              : activeTab === 'boqPrice'
+                ? 'BOQ Price'
+                : activeTab === 'invoice'
+                  ? 'Invoice'
+                  : activeTab === 'drawing'
+                    ? 'Drawing'
+                    : 'Material Request'
+          }}
+        </h3>
+      </div>
+
+      <button
+        *ngIf="canManage"
+        (click)="openAddModal()"
+        class="bg-[#155DFC] hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-bold cursor-pointer"
+      >
+        {{
+          activeTab === 'boq'
+            ? '+ Add BOQ'
+            : activeTab === 'boqPrice'
+              ? '+ Add BOQ Price'
+              : activeTab === 'invoice'
+                ? '+ Add Invoice'
+                : activeTab === 'drawing'
+                  ? '+ Add Drawing'
+                  : '+ Add Material Request'
+        }}
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= CONTENT CARD ================= -->
+
+  <!-- BOQ LIST -->
+
+  <div *ngIf="activeTab === 'boq' && boqList.length > 0" class="p-6 space-y-4">
+    <div
+      *ngFor="let boq of boqList"
+      class="bg-white border border-gray-200 rounded-2xl p-5 flex items-center justify-between hover:shadow-md transition-all"
+    >
+      <div class="flex items-center gap-4">
+        <div
+          class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-[#155DFC]"
+        >
+          <i class="fa-solid fa-list-check"></i>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-gray-900">
+            {{ boq.title }}
+          </h4>
+
+          <p class="text-sm text-gray-500 mt-1">
+            {{ boq.description }}
+          </p>
+        </div>
+      </div>
+
+      <div *ngIf="canManage" class="flex items-center gap-2">
+        <button
+          (click)="openEditBoqModal(boq)"
+          class="w-10 h-10 rounded-xl border border-gray-200 text-blue-600 hover:bg-blue-50 transition"
+        >
+          <i class="fa-regular fa-pen-to-square"></i>
+        </button>
+
+        <button
+          (click)="openDeleteModal(boq.id)"
+          class="w-10 h-10 rounded-xl border border-gray-200 text-red-600 hover:bg-red-50 transition"
+        >
+          <i class="fa-regular fa-trash-can"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- boqPriceList -->
+
+  <div *ngIf="activeTab === 'boqPrice' && boqPriceList.length > 0" class="p-6 space-y-4">
+    <div
+      *ngFor="let item of boqPriceList"
+      class="bg-white border border-gray-200 rounded-2xl p-5 flex items-center justify-between hover:shadow-md transition-all"
+    >
+      <div class="flex items-center gap-4">
+        <div
+          class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-[#155DFC]"
+        >
+          <i class="fa-solid fa-money-bill-wave"></i>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-gray-900">
+            {{ item.title }}
+          </h4>
+
+          <p class="text-sm text-gray-500 mt-1">
+            {{ item.totalPrice }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INVOICE LIST -->
+
+  <div *ngIf="activeTab === 'invoice' && invoiceList.length > 0" class="p-6 space-y-4">
+    <div
+      *ngFor="let invoice of invoiceList"
+      class="bg-white border border-gray-200 rounded-2xl p-5 flex items-center justify-between hover:shadow-md transition-all"
+    >
+      <div class="flex items-center gap-4">
+        <div
+          class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-[#155DFC]"
+        >
+          <i class="fa-solid fa-file-invoice-dollar"></i>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-gray-900">
+            {{ invoice.title }}
+          </h4>
+
+          <p class="text-sm text-gray-500 mt-1">Type: {{ invoice.type }}</p>
+
+          <p class="text-sm text-gray-500">Status: {{ invoice.status }}</p>
+
+          <p class="text-sm text-gray-500">Amount: {{ invoice.totalAmount }}</p>
+
+          <p class="text-sm text-gray-500">Date: {{ invoice.invoiceDate }}</p>
+        </div>
+      </div>
+      <div *ngIf="canManage" class="flex items-center gap-2">
+        <button
+          (click)="openEditInvoiceModal(invoice)"
+          class="w-10 h-10 rounded-xl border border-gray-200 text-blue-600 hover:bg-blue-50 transition"
+        >
+          <i class="fa-regular fa-pen-to-square"></i>
+        </button>
+
+        <button
+          (click)="openDeleteInvoiceModal(invoice.id)"
+          class="w-10 h-10 rounded-xl border border-gray-200 text-red-600 hover:bg-red-50 transition"
+        >
+          <i class="fa-regular fa-trash-can"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DRAWING LIST -->
+
+  <div *ngIf="activeTab === 'drawing' && drawingList.length > 0" class="p-6 space-y-4">
+    <div
+      *ngFor="let drawing of drawingList"
+      class="bg-white border border-gray-200 rounded-2xl p-5 flex items-center justify-between hover:shadow-md transition-all"
+    >
+      <div class="flex items-center gap-4">
+        <div
+          class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-[#155DFC]"
+        >
+          <i class="fa-solid fa-pen-ruler"></i>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-gray-900">
+            {{ drawing.title }}
+          </h4>
+
+          <p class="text-sm text-gray-500 mt-1">
+            {{ drawing.description }}
+          </p>
+        </div>
+      </div>
+
+      <div *ngIf="canManage" class="flex items-center gap-2">
+        <button
+          (click)="openEditDrawingModal(drawing)"
+          class="w-10 h-10 rounded-xl border border-gray-200 text-blue-600 hover:bg-blue-50 transition"
+        >
+          <i class="fa-regular fa-pen-to-square"></i>
+        </button>
+
+        <button
+          (click)="openDeleteDrawingModal(drawing.id)"
+          class="w-10 h-10 rounded-xl border border-gray-200 text-red-600 hover:bg-red-50 transition"
+        >
+          <i class="fa-regular fa-trash-can"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MATERIAL REQUEST LIST -->
+
+  <div *ngIf="activeTab === 'material' && materialList.length > 0" class="p-6 space-y-4">
+    <div
+      *ngFor="let material of materialList"
+      class="bg-white border border-gray-200 rounded-2xl p-5 flex items-center justify-between hover:shadow-md transition-all"
+    >
+      <div class="flex items-center gap-4">
+        <div
+          class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-[#155DFC]"
+        >
+          <i class="fa-solid fa-boxes-stacked"></i>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-gray-900">
+            {{ material.title }}
+          </h4>
+
+          <p class="text-sm text-gray-500 mt-1">
+            {{ material.description }}
+          </p>
+        </div>
+        <div *ngIf="canManage" class="flex items-center gap-2">
+          <button
+            class="w-10 h-10 rounded-xl border border-gray-200 text-blue-600 hover:bg-blue-50 transition"
+          >
+            <i class="fa-regular fa-pen-to-square"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 rounded-xl border border-gray-200 text-red-600 hover:bg-red-50 transition"
+          >
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= DELETE MODAL ================= -->
+
+  <div
+    *ngIf="showDeleteDrawingModal"
+    class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+  >
+    <div class="bg-white rounded-3xl w-full max-w-md shadow-2xl overflow-hidden">
+      <div class="p-8 text-center">
+        <div
+          class="w-20 h-20 mx-auto rounded-full bg-red-100 flex items-center justify-center mb-5"
+        >
+          <i class="fa-solid fa-triangle-exclamation text-red-600 text-4xl"></i>
+        </div>
+
+        <h3 class="text-2xl font-bold text-gray-900">Delete Drawing ?</h3>
+
+        <p class="text-gray-500 mt-3 leading-7">
+          This action cannot be undone. The selected Drawing will be permanently deleted.
+        </p>
+      </div>
+
+      <div class="border-t border-gray-100 p-5 flex gap-3">
+        <button
+          (click)="closeDeleteDrawingModal()"
+          class="flex-1 py-3 rounded-xl border border-gray-200 font-semibold hover:bg-gray-50"
+        >
+          Cancel
+        </button>
+
+        <button
+          (click)="confirmDeleteDrawing()"
+          class="flex-1 py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ADD DRAWING MODAL ================= -->
+
+  <div
+    *ngIf="showAddDrawingModal"
+    class="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4"
+  >
+    <div class="bg-white rounded-2xl w-full max-w-[480px] shadow-2xl overflow-hidden">
+      <!-- HEADER -->
+
+      <div class="p-5 border-b border-gray-100 flex items-center justify-between">
+        <h3 class="font-bold text-xl">
+          {{ isEditDrawingMode ? 'Edit Drawing' : 'Add Drawing' }}
+        </h3>
+
+        <button (click)="closeAddDrawingModal()" class="text-gray-400 hover:text-gray-700">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
+
+      <!-- BODY -->
+
+      <div class="p-5 space-y-4 max-h-[75vh] overflow-y-auto">
+        <!-- TITLE -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> Title </label>
+
+          <input
+            [(ngModel)]="newDrawing.title"
+            type="text"
+            placeholder="Enter title"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+          />
+        </div>
+
+        <!-- DESCRIPTION -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> Description </label>
+
+          <textarea
+            [(ngModel)]="newDrawing.description"
+            rows="3"
+            placeholder="Enter description"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none resize-none focus:border-[#155DFC]"
+          >
+          </textarea>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> Section </label>
+
+            <input
+              [(ngModel)]="newDrawing.section"
+              type="text"
+              placeholder="Enter section"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> Status </label>
+
+            <input
+              [(ngModel)]="newDrawing.status"
+              type="text"
+              placeholder="Pending"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> Type </label>
+
+            <input
+              [(ngModel)]="newDrawing.type"
+              type="text"
+              placeholder="Issue"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> Date </label>
+
+            <input
+              [(ngModel)]="newDrawing.date"
+              type="date"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+        </div>
+
+        <!-- PHOTO -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> Photo URL </label>
+
+          <input
+            [(ngModel)]="newDrawing.photo"
+            type="text"
+            placeholder="https://example.com/photo.jpg"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+          />
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+
+      <div class="p-5 border-t border-gray-100">
+        <button
+          (click)="isEditDrawingMode ? updateDrawing() : addDrawing()"
+          class="w-full bg-[#155DFC] hover:bg-blue-700 text-white py-3 rounded-2xl font-bold transition-all"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ADD BOQ MODAL ================= -->
+
+  <div
+    *ngIf="showAddBoqModal"
+    class="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4"
+  >
+    <div class="bg-white rounded-2xl w-full max-w-[480px] shadow-2xl overflow-hidden">
+      <!-- HEADER -->
+
+      <div class="p-5 border-b border-gray-100 flex items-center justify-between">
+        <h3 class="font-bold text-xl">
+          {{ isEditMode ? 'Edit BOQ' : 'Add BOQ' }}
+        </h3>
+
+        <button (click)="closeAddBoqModal()" class="text-gray-400 hover:text-gray-700">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
+
+      <!-- BODY -->
+
+      <div class="p-5 space-y-4 max-h-[75vh] overflow-y-auto">
+        <!-- TITLE -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> Title </label>
+
+          <input
+            [(ngModel)]="newBoq.title"
+            type="text"
+            placeholder="Enter title"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+          />
+        </div>
+
+        <!-- DESCRIPTION -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> Description </label>
+
+          <textarea
+            [(ngModel)]="newBoq.description"
+            rows="3"
+            placeholder="Enter description"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none resize-none focus:border-[#155DFC]"
+          >
+          </textarea>
+        </div>
+
+        <!-- ROW -->
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> Quantity </label>
+
+            <input
+              [(ngModel)]="newBoq.quantity"
+              type="number"
+              placeholder="Enter qty"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> Type </label>
+
+            <input
+              [(ngModel)]="newBoq.type"
+              type="text"
+              placeholder="Enter type"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+        </div>
+
+        <!-- ROW -->
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> Section </label>
+
+            <input
+              [(ngModel)]="newBoq.section"
+              type="text"
+              placeholder="Enter section"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> Date </label>
+
+            <input
+              [(ngModel)]="newBoq.date"
+              type="date"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+        </div>
+
+        <!-- CONDITION -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> Condition </label>
+
+          <input
+            [(ngModel)]="newBoq.condetion"
+            type="text"
+            placeholder="Enter condition"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+          />
+        </div>
+
+        <!-- UNIT -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> Unit </label>
+
+          <input
+            [(ngModel)]="newBoq.unit"
+            type="text"
+            placeholder="Enter unit"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+          />
+        </div>
+
+        <!-- FILE -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2">
+            File / Image
+            <input type="file" />
+          </label>
+
+          <div
+            class="border-2 border-dashed border-gray-200 rounded-2xl p-8 flex flex-col items-center justify-center"
+          >
+            <i class="fa-solid fa-cloud-arrow-up text-3xl text-gray-300 mb-2"></i>
+
+            <p class="text-xs font-bold text-gray-400">Click to browse</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+
+      <div class="p-5 border-t border-gray-100">
+        <button
+          (click)="isEditMode ? updateBOQ() : addBOQ()"
+          class="w-full bg-[#155DFC] hover:bg-blue-700 text-white py-3 rounded-2xl font-bold transition-all"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ADD BOQ PRICE MODAL ================= -->
+
+  <div
+    *ngIf="showAddBoqPriceModal"
+    class="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4"
+  >
+    <div class="bg-white rounded-2xl w-full max-w-[550px] shadow-2xl overflow-hidden">
+      <!-- HEADER -->
+
+      <div class="p-5 border-b border-gray-100 flex items-center justify-between">
+        <h3 class="font-bold text-xl">Add BOQ Price</h3>
+
+        <button (click)="closeAddBoqPriceModal()" class="text-gray-400 hover:text-gray-700">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
+
+      <!-- BODY -->
+
+      <div class="p-5 space-y-4 max-h-[75vh] overflow-y-auto">
+        <!-- TITLE -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> Title </label>
+
+          <input
+            [(ngModel)]="newBoqPrice.title"
+            type="text"
+            placeholder="Enter title"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+          />
+        </div>
+
+        <!-- DESCRIPTION -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> Description </label>
+
+          <textarea
+            [(ngModel)]="newBoqPrice.description"
+            rows="3"
+            placeholder="Enter description"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none resize-none focus:border-[#155DFC]"
+          >
+          </textarea>
+        </div>
+
+        <!-- STATUS -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> Status </label>
+
+          <input
+            [(ngModel)]="newBoqPrice.status"
+            type="text"
+            placeholder="Enter status"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+          />
+        </div>
+
+        <!-- ROW -->
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> Unit Rate </label>
+
+            <input
+              [(ngModel)]="newBoqPrice.unitRate"
+              type="text"
+              placeholder="Enter unit rate"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> Total Price </label>
+
+            <input
+              [(ngModel)]="newBoqPrice.totalPrice"
+              type="number"
+              placeholder="Enter total price"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+        </div>
+
+        <!-- ROW -->
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> BOQ ID </label>
+
+            <input
+              [(ngModel)]="newBoqPrice.boqId"
+              type="number"
+              placeholder="Enter BOQ ID"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> Date </label>
+
+            <input
+              [(ngModel)]="newBoqPrice.date"
+              type="date"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+
+      <div class="p-5 border-t border-gray-100">
+        <button
+          (click)="addBOQPrice()"
+          class="w-full bg-[#155DFC] hover:bg-blue-700 text-white py-3 rounded-2xl font-bold transition-all"
+        >
+          Save BOQ Price
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ADD INVOICE MODAL ================= -->
+
+  <div
+    *ngIf="showAddInvoiceModal"
+    class="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4"
+  >
+    <div class="bg-white rounded-2xl w-full max-w-[550px] shadow-2xl overflow-hidden">
+      <!-- HEADER -->
+
+      <div class="p-5 border-b border-gray-100 flex items-center justify-between">
+        <h3 class="font-bold text-xl">Add Invoice</h3>
+
+        <button (click)="closeAddInvoiceModal()" class="text-gray-400 hover:text-gray-700">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
+
+      <!-- BODY -->
+
+      <div class="p-5 space-y-4 max-h-[75vh] overflow-y-auto">
+        <!-- TITLE -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> Title </label>
+
+          <input
+            [(ngModel)]="newInvoice.title"
+            type="text"
+            placeholder="Enter title"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+          />
+        </div>
+
+        <!-- TYPE -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> Type </label>
+
+          <input
+            [(ngModel)]="newInvoice.type"
+            type="text"
+            placeholder="Enter type"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+          />
+        </div>
+
+        <!-- STATUS -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> Status </label>
+
+          <input
+            [(ngModel)]="newInvoice.status"
+            type="text"
+            placeholder="Enter status"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+          />
+        </div>
+
+        <!-- TOTAL AMOUNT -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> Total Amount </label>
+
+          <input
+            [(ngModel)]="newInvoice.totalAmount"
+            type="number"
+            placeholder="Enter total amount"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+          />
+        </div>
+
+        <!-- DATES -->
+
+        <div class="grid grid-cols-3 gap-3">
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> Period From </label>
+
+            <input
+              [(ngModel)]="newInvoice.periodFrom"
+              type="date"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> Period To </label>
+
+            <input
+              [(ngModel)]="newInvoice.periodTo"
+              type="date"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+
+          <div>
+            <label class="text-xs font-bold text-gray-400 block mb-2"> Invoice Date </label>
+
+            <input
+              [(ngModel)]="newInvoice.invoiceDate"
+              type="date"
+              class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+            />
+          </div>
+        </div>
+
+        <!-- FILE -->
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2"> File URL </label>
+
+          <input
+            [(ngModel)]="newInvoice.file"
+            type="text"
+            placeholder="Enter file url"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+          />
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+
+      <div class="p-5 border-t border-gray-100">
+        <button
+          (click)="addInvoice()"
+          class="w-full bg-[#155DFC] hover:bg-blue-700 text-white py-3 rounded-2xl font-bold transition-all"
+        >
+          Save Invoice
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    *ngIf="showDeleteInvoiceModal"
+    class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+  >
+    <div class="bg-white rounded-3xl w-full max-w-md shadow-2xl overflow-hidden">
+      <div class="p-8 text-center">
+        <div
+          class="w-20 h-20 mx-auto rounded-full bg-red-100 flex items-center justify-center mb-5"
+        >
+          <i class="fa-solid fa-triangle-exclamation text-red-600 text-4xl"></i>
+        </div>
+
+        <h3 class="text-2xl font-bold text-gray-900">Delete Invoice ?</h3>
+
+        <p class="text-gray-500 mt-3 leading-7">
+          This action cannot be undone. The selected Invoice will be permanently deleted.
+        </p>
+      </div>
+
+      <div class="border-t border-gray-100 p-5 flex gap-3">
+        <button
+          (click)="closeDeleteInvoiceModal()"
+          class="flex-1 py-3 rounded-xl border border-gray-200 font-semibold hover:bg-gray-50"
+        >
+          Cancel
+        </button>
+
+        <button
+          (click)="confirmDeleteInvoice()"
+          class="flex-1 py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+<!-- ================= ADD MATERIAL REQUEST MODAL ================= -->
+
+<div
+  *ngIf="showAddMaterialRequestModal"
+  class="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4"
+>
+  <div class="bg-white rounded-2xl w-full max-w-[550px] shadow-2xl overflow-hidden">
+
+    <!-- HEADER -->
+
+    <div class="p-5 border-b border-gray-100 flex items-center justify-between">
+
+      <h3 class="font-bold text-xl">
+        {{ isEditMaterialRequestMode ? 'Edit Material Request' : 'Add Material Request' }}
+      </h3>
+
+      <button
+        (click)="closeAddMaterialRequestModal()"
+        class="text-gray-400 hover:text-gray-700"
+      >
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+    </div>
+
+    <!-- BODY -->
+
+    <div class="p-5 space-y-4 max-h-[75vh] overflow-y-auto">
+
+      <div>
+        <label class="text-xs font-bold text-gray-400 block mb-2">
+          Title
+        </label>
+
+        <input
+          [(ngModel)]="newMaterialRequest.title"
+          type="text"
+          placeholder="Enter title"
+          class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+        />
+      </div>
+
+      <div>
+        <label class="text-xs font-bold text-gray-400 block mb-2">
+          Description
+        </label>
+
+        <textarea
+          [(ngModel)]="newMaterialRequest.description"
+          rows="3"
+          placeholder="Enter description"
+          class="w-full border border-gray-200 px-4 py-3 rounded-2xl resize-none outline-none focus:border-[#155DFC]"
+        ></textarea>
+      </div>
+
+      <div>
+        <label class="text-xs font-bold text-gray-400 block mb-2">
+          Status
+        </label>
+
+        <input
+          [(ngModel)]="newMaterialRequest.status"
+          type="text"
+          placeholder="Pending"
+          class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+        />
+      </div>
+
+      <div>
+        <label class="text-xs font-bold text-gray-400 block mb-2">
+          Notes
+        </label>
+
+        <textarea
+          [(ngModel)]="newMaterialRequest.notes"
+          rows="3"
+          placeholder="Enter notes"
+          class="w-full border border-gray-200 px-4 py-3 rounded-2xl resize-none outline-none focus:border-[#155DFC]"
+        ></textarea>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3">
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2">
+            Request Date
+          </label>
+
+          <input
+            [(ngModel)]="newMaterialRequest.requestDate"
+            type="date"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+          />
+        </div>
+
+        <div>
+          <label class="text-xs font-bold text-gray-400 block mb-2">
+            Required Date
+          </label>
+
+          <input
+            [(ngModel)]="newMaterialRequest.requiredDate"
+            type="date"
+            class="w-full border border-gray-200 px-4 py-3 rounded-2xl outline-none focus:border-[#155DFC]"
+          />
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="p-5 border-t border-gray-100">
+
+      <button
+        (click)="isEditMaterialRequestMode ? updateMaterialRequest() : addMaterialRequest()"
+        class="w-full bg-[#155DFC] hover:bg-blue-700 text-white py-3 rounded-2xl font-bold transition-all"
+      >
+        Save
+      </button>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>

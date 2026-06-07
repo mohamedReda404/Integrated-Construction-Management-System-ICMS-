@@ -8,6 +8,9 @@ export const roleGuard: CanActivateFn = (route) => {
   const role = localStorage.getItem('role');
   const allowedRoles = route.data?.['roles'] || [];
 
+  console.log('Role:', role);
+  console.log('Allowed Roles:', allowedRoles);
+
   if (role && allowedRoles.includes(role)) {
     return true;
   }
