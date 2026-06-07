@@ -97,6 +97,7 @@ export class ProjectdetailsComponent implements OnInit {
     }
 
     // ENGINEERS
+<<<<<<< HEAD
     if (tab === 'engineers' && this.engineers.length === 0) {
       this.http
         .get<Member[]>(`https://localhost:7139/api/Memebers/EngineerMembers`, {
@@ -106,6 +107,12 @@ export class ProjectdetailsComponent implements OnInit {
           next: (res) => {
             this.engineers = res || [];
           },
+=======
+    if (
+      tab === 'engineers' &&
+      this.engineers.length === 0                                                                                                                                                                                
+    ) {
+>>>>>>> 86f9c6aefee7aad2767fc27506dbad74de7c7ffa
 
           error: (err) => {
             console.log(err);

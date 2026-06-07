@@ -41,7 +41,7 @@ namespace Integrated_Construction_Management_System_ICMS.Services.Classes
             var requestBOQPricing = request.Adapt<BOQPricing>();
             var boqPricing = await _dbContext.BOQPricing.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
             if (boqPricing is null) { return false; }
-            boqPricing.BOQId = requestBOQPricing.BOQId;
+            //boqPricing.BOQId = requestBOQPricing.BOQId;
             boqPricing.Title = requestBOQPricing.Title;
             boqPricing.Description = requestBOQPricing.Description;
             boqPricing.Status = requestBOQPricing.Status;

@@ -11,12 +11,13 @@ namespace Integrated_Construction_Management_System_ICMS.Authentication
         public (string token, int expiresIn) GenerateToken(ApplicationUser user)
         {
             Claim[] claims = [
-            new(JwtRegisteredClaimNames.Sub, user.Id),
-            new(JwtRegisteredClaimNames.Email, user.Email!),
-            new(JwtRegisteredClaimNames.GivenName, user.FirstName),
-            new(JwtRegisteredClaimNames.FamilyName, user.LastName),
-            new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-            ];
+    new(JwtRegisteredClaimNames.Sub, user.Id),
+    new(JwtRegisteredClaimNames.Email, user.Email!),
+    new(JwtRegisteredClaimNames.GivenName, user.FirstName),
+    new(JwtRegisteredClaimNames.FamilyName, user.LastName),
+    new(ClaimTypes.Role, user.Role), 
+    new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+];
 
             var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_options.Key));
 

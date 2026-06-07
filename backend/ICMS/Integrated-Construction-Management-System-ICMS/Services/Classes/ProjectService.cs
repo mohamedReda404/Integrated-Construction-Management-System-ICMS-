@@ -38,7 +38,7 @@ namespace Integrated_Construction_Management_System_ICMS.Services.Classes
         public async Task<bool> Update(int id, ProjectRequest request, CancellationToken cancellationToken = default)
         {
             var requestProject= request.Adapt<Project>();
-            var project = GetId(id).Adapt<Project>();
+            var project = await _dbContext.projects.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
             if (project is null) { return false; }
             project.Name= requestProject.Name; 
             project.Location = requestProject.Location; 
