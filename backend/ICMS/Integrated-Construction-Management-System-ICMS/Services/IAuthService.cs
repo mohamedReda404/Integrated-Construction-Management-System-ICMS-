@@ -23,4 +23,11 @@ public interface IAuthService
     Task<Result> UpdateUserprofile(string UserId, UpdateAccountUserRequest updateAccountUserRequest, CancellationToken cancellationToken = default);
 
     Task<List<AccountInfoReponse>> GetAllConsultantMembers(CancellationToken cancellationToken = default);
+
+    Task<List<AccountInfoReponse>> GetAllEngineerMembers(CancellationToken cancellationToken = default);
+
+    Task<List<AccountInfoReponse>> GetAllSubcontractorMembers(CancellationToken cancellationToken = default);
+
+    Task<List<AccountInfoReponse>> GetAllWorkersMembers(CancellationToken cancellationToken = default);
+
 }

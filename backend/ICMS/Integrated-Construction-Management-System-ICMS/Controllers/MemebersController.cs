@@ -43,7 +43,7 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
         [HttpGet("EngineerMembers")]
         public async Task<IActionResult> GetAllEngineerMembers(CancellationToken cancellationToken)
         {
-            var result = await _authService.GetAllConsultantMembers(cancellationToken);
+            var result = await _authService.GetAllEngineerMembers(cancellationToken);
             return Ok(result);
         }
     }
