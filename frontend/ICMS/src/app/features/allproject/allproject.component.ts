@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { environment } from '../../../environments/environment.development';
-import { Project } from '../../core/interfaces/project.interface';
 
 @Component({
   selector: 'app-allproject',
@@ -40,16 +39,14 @@ export class AllprojectComponent implements OnInit {
     });
 
     this.http.get<any[]>(
-      `${environment.baseUrl}/api/Projects`,
+      `${environment.baseUrl}/api/Projects/Active`,
       { headers }
     ).subscribe({
 
-next: (res: any[]) => {
-  
-this.projects = (res || []).map((project: Project) => ({
-  ...project,
-  progress: this.generateProgress()
-}));
+      next: (res: any) => {
+
+        this.projects = res || [];
+
         // تقسيم المشاريع
         const today = new Date();
 
@@ -76,7 +73,8 @@ this.projects = (res || []).map((project: Project) => ({
   }
 
   // ================= RANDOM PROGRESS =================
-  generateProgress(): number {
-  return Math.floor(Math.random() * 70) + 20;
-}
+  getProgress(): number {
+    return Math.floor(Math.random() * 70) + 20;
+  }
+
 }

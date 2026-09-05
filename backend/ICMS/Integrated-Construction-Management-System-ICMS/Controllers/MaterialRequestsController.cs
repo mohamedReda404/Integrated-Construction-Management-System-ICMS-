@@ -1,4 +1,4 @@
-﻿
+﻿using Mapster;
 
 namespace Integrated_Construction_Management_System_ICMS.Controllers
 {
@@ -37,7 +37,7 @@ namespace Integrated_Construction_Management_System_ICMS.Controllers
         public async Task<IActionResult> Add(MaterialRequestRequest materialRequestRequest, CancellationToken cancellationToken)
         {
             var New = await _IMaterialRequestServices.AddNew(materialRequestRequest, cancellationToken);
-            return CreatedAtAction(nameof(Get), New);
+            return CreatedAtAction(nameof(Get), new { id = New.Id }, New);
         }
 
         [HttpPut("{id}")]

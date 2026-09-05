@@ -1,5 +1,6 @@
-
 using Integrated_Construction_Management_System_ICMS.Mapping;
+using Mapster;
+using SharpGrip.FluentValidation.AutoValidation.Mvc.Extensions;
 
 //using Integrated_Construction_Management_System_ICMS.Services.LLM.Integrated_Construction_Management_System_ICMS.Services.LLM;
 
@@ -19,7 +20,7 @@ builder.Services.AddScoped<ProjectDataService>();
 builder.Services.AddScoped<RagService>();
 //builder.Services.AddScoped<ProjectDataService>();
 builder.Services.AddScoped<QueryAnalyzer>();
-builder.Services.AddScoped<ContextBuilder > ();
+builder.Services.AddScoped<ContextBuilder>();
 builder.Services.AddFluentValidationAutoValidation();
 TypeAdapterConfig.GlobalSettings.Scan(typeof(MappingConf).Assembly);
 builder.Services.AddHttpClient();

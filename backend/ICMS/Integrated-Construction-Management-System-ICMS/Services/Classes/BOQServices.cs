@@ -1,4 +1,6 @@
-﻿namespace Integrated_Construction_Management_System_ICMS.Services.Classes
+﻿using Mapster;
+
+namespace Integrated_Construction_Management_System_ICMS.Services.Classes
 {
     public class BOQServices(AppDbContext dbContext) : IBOQServices
     {

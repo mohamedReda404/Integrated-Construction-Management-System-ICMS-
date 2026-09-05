@@ -6,8 +6,6 @@ namespace Integrated_Construction_Management_System_ICMS
 {
     public static class DepandancyInjection
     {
-        
-
         public static IServiceCollection AddSwagger(this IServiceCollection services)
         {
             services.AddSwaggerGen();
@@ -31,6 +29,7 @@ namespace Integrated_Construction_Management_System_ICMS
              services.AddScoped<IProjectContractService, ProjectContractService>();
 
              services.AddScoped<IMaterialRequestServices, MaterialRequestServices>();
+            services.AddScoped<IWorkerTasks, WworkerTasksServices>();
 
              services.AddIdentity<ApplicationUser, IdentityRole>()
             .AddEntityFrameworkStores<AppDbContext>();

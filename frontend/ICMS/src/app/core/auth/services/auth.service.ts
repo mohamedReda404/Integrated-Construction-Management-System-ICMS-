@@ -118,22 +118,4 @@ export class AuthService {
     this.router.navigate(['/login']);
 
   }
-
-
-  getUserInfo(): Observable<any> {
-
-  const headers = new HttpHeaders({
-    Authorization: `Bearer ${this.getToken()}`
-  });
-
-  return this.httpClient.get(
-    `${environment.baseUrl}/me/Info`,
-    { headers }
-  );
-
-}
-
-
-
-
 }

@@ -1,5 +1,6 @@
 ﻿
 using Integrated_Construction_Management_System_ICMS.Contracts.Requests;
+using FluentValidation;
 using RegisterRequest = Integrated_Construction_Management_System_ICMS.Contracts.Requests.RegisterRequest;
 
 namespace Integrated_Construction_Management_System_ICMS.Contracts.Validations

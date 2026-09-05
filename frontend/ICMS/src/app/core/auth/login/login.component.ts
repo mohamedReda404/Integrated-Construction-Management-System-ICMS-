@@ -160,48 +160,18 @@ export class LoginComponent {
 
         next: (res: any) => {
 
-  this.cookieService.set('token', res.token, 1);
+          this.cookieService.set('token', res.token, 1);
 
-  this.authService.getUserInfo().subscribe({
+          localStorage.setItem('role', 'member');
+          localStorage.setItem('name', res.firstName || '');
+          localStorage.setItem('email', res.email || '');
+          localStorage.setItem('section', this.loginForm.value.section || '');
 
-    next: (user: any) => {
+          this.router.navigate(['/home']);
 
-      localStorage.setItem(
-        'role',
-        user.role.toLowerCase()
-      );
-
-      localStorage.setItem(
-        'name',
-        user.firstName || ''
-      );
-
-      localStorage.setItem(
-        'email',
-        user.email || ''
-      );
-
-      localStorage.setItem(
-        'section',
-        user.section || ''
-      );
-
-      this.router.navigate(['/home']);
-
-      this.loginForm.reset();
-      this.isLoading = false;
-
-    },
-
-    error: () => {
-
-      this.isLoading = false;
-
-    }
-
-  });
-
-},
+          this.loginForm.reset();
+          this.isLoading = false;
+        },
 
         error: (err) => {
 
